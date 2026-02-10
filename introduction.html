@@ -720,7 +720,7 @@
 <p><a id="refheading99511454977699"></a></p>
 <h2 id="11-la-place-de-aspnet-mvc-dans-une-application-web">1.1. La place de ASP.NET MVC dans une application Web</h2>
 <p>Tout d&#x27;abord, situons ASP.NET MVC dans le développement d&#x27;une application Web. Le plus souvent, celle-ci sera bâtie sur une architecture multicouche telle que la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007D8000001C76DFA2B2A.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.078cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007D8000001C76DFA2B2A.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.078cm;" class="odt-zoomable" data-zoom-src="images/10000000000007D8000001C76DFA2B2A.png" /></td></tr></table>
 
 <ul>
 <li>la couche [<strong>Web</strong>] est la couche en contact avec l&#x27;utilisateur de l&#x27;application Web. Celui-ci interagit avec l&#x27;application Web au travers de pages Web visualisées par un navigateur. <strong>C&#x27;est dans cette couche que se situe ASP.NET MVC et uniquement dans cette couche ;</strong></li>
@@ -729,15 +729,15 @@
 <li>l&#x27;intégration des couches peut être réalisée par un conteneur d&#x27;injection de dépendances (Dependency Injection Container) tel que Spring (<a href="http://www.springframework.net/">http://www.springframework.net/</a> ) ;</li>
 </ul>
 <p>La plupart des exemples donnés dans la suite, n&#x27;utiliseront qu&#x27;une seule couche, la couche [Web] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002CB000001344402A749.png" style="display:inline-block; margin:4px;width:6.62cm;height:2.85cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002CB000001344402A749.png" style="display:inline-block; margin:4px;width:6.62cm;height:2.85cm;" class="odt-zoomable" data-zoom-src="images/10000000000002CB000001344402A749.png" /></td></tr></table>
 
 <p>Ce document se terminera cependant par la construction d&#x27;une application Web multicouche :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007E50000018DC284155D.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.535cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007E50000018DC284155D.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.535cm;" class="odt-zoomable" data-zoom-src="images/10000000000007E50000018DC284155D.png" /></td></tr></table>
 
 <p><a id="refheading99531454977699"></a></p>
 <h2 id="12-le-modele-de-developpement-de-aspnet-mvc">1.2. Le modèle de développement de ASP.NET MVC</h2>
 <p>ASP.NET MVC implémente le modèle d&#x27;architecture dit MVC (Modèle – Vue – Contrôleur) de la façon suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000718000002334AE9A6E1.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.579cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000718000002334AE9A6E1.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.579cm;" class="odt-zoomable" data-zoom-src="images/1000000000000718000002334AE9A6E1.png" /></td></tr></table>
 
 <p>Le traitement d&#x27;une demande d&#x27;un client se déroule de la façon suivante :</p>
 <ol>
@@ -754,16 +754,16 @@
 <li><strong>réponse</strong> - la vue <strong>V</strong> choisie utilise le modèle <strong>M</strong> construit par l&#x27;action pour initialiser les parties dynamiques de la réponse HTML qu&#x27;elle doit envoyer au client puis envoie cette réponse.</li>
 </ol>
 <p>Maintenant, précisons le lien entre architecture Web MVC et architecture en couches. Selon la définition qu&#x27;on donne au <strong>modèle</strong>, ces deux concepts sont liés ou non. Prenons une application Web ASP.NET MVC à une couche :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062E00000242EE335F0F.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.576cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062E00000242EE335F0F.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.576cm;" class="odt-zoomable" data-zoom-src="images/100000000000062E00000242EE335F0F.png" /></td></tr></table>
 
 <p>Si nous implémentons la couche [Web] avec ASP.NET MVC, nous aurons bien une architecture Web MVC mais pas une architecture multicouche. Ici, la couche [Web] s&#x27;occupera de tout : présentation, métier, accès aux données. Ce sont les actions qui feront ce travail.</p>
 <p>Maintenant, considérons une architecture Web multicouche :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007260000018CC3D6C76D.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.895cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007260000018CC3D6C76D.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.895cm;" class="odt-zoomable" data-zoom-src="images/10000000000007260000018CC3D6C76D.png" /></td></tr></table>
 
 <p>La couche [Web] peut être implémentée sans framework et sans suivre le modèle MVC. On a bien alors une architecture multicouche mais la couche Web n&#x27;implémente pas le modèle MVC.</p>
 <p>Ainsi, la couche [Web] ci-dessus peut être implémentée avec ASP.NET MVC et on a alors une architecture en couches avec une couche [Web] de type MVC. Ceci fait, on peut remplacer cette couche ASP.NET MVC par une couche ASP.NET classique (WebForms) tout en gardant le reste (métier, DAO, ORM) <strong>à l&#x27;identique</strong>.  On a alors une architecture en couches avec une couche [Web] qui n&#x27;est plus de type MVC.</p>
 <p>Dans MVC, nous avons dit que le modèle M était celui de la vue V, c.a.d. l&#x27;ensemble des données affichées par la vue V. Une autre définition du modèle M de MVC est donnée :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076E0000019EAC026A07.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.918cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000076E0000019EAC026A07.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.918cm;" class="odt-zoomable" data-zoom-src="images/100000000000076E0000019EAC026A07.png" /></td></tr></table>
 
 <p>Beaucoup d&#x27;auteurs considèrent que ce qui est à droite de la couche [Web] forme le modèle M du MVC. Pour éviter les ambigüités on peut parler :</p>
 <ul>
@@ -784,17 +784,17 @@
 <li>aller sur le site de [Google Web store] (<a href="https://chrome.google.com/webstore">https://chrome.google.com/webstore</a>) avec le navigateur Chrome ;</li>
 <li>chercher l&#x27;application [Advanced Rest Client] :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B0000000D21DA44C58.png" style="display:inline-block; margin:4px;width:7.999cm;height:3.889cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B0000000D21DA44C58.png" style="display:inline-block; margin:4px;width:7.999cm;height:3.889cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B0000000D21DA44C58.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li>l&#x27;application est alors disponible au téléchargement :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003BB000000AE1112526C.png" style="display:inline-block; margin:4px;width:17.48cm;height:3.184cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003BB000000AE1112526C.png" style="display:inline-block; margin:4px;width:17.48cm;height:3.184cm;" class="odt-zoomable" data-zoom-src="images/10000000000003BB000000AE1112526C.png" /></td></tr></table>
 
 <ul>
 <li>pour l&#x27;obtenir, il vous faudra créer un compte Google. [Google Web Store] demande ensuite confirmation [1] :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000083800000381099DA849.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.673cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000083800000381099DA849.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.673cm;" class="odt-zoomable" data-zoom-src="images/100000000000083800000381099DA849.png" /></td></tr></table>
 
 <ul>
 <li>en [2], l&#x27;extension ajoutée est disponible dans l&#x27;option [Applications] [3]. Cette option est affichée sur chaque nouvel onglet que vous créez (CTRL-T) dans le navigateur.</li>
@@ -802,10 +802,10 @@
 <p><a id="refheading99631454977699"></a></p>
 <h2 id="14-les-exemples">1.4. Les exemples</h2>
 <p>La plupart des exemples d&#x27;apprentissage seront réduits à la seule couche Web :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006370000023DEEFC5AC7.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.482cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006370000023DEEFC5AC7.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.482cm;" class="odt-zoomable" data-zoom-src="images/10000000000006370000023DEEFC5AC7.png" /></td></tr></table>
 
 <p>Une fois terminé cet apprentissage, nous présenterons une application Web multicouche :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000071F000002349B70ADB8.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.567cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000071F000002349B70ADB8.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.567cm;" class="odt-zoomable" data-zoom-src="images/100000000000071F000002349B70ADB8.png" /></td></tr></table>
 
 
 

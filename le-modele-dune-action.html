@@ -795,10 +795,10 @@
 <p><a id="refheading58052676630786"></a></p>
 <h1 id="4-le-modele-dune-action">4. Le modèle d&#x27;une action</h1>
 <p>Revenons à l&#x27;architecture d&#x27;une application ASP.NET MVC :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000537000001A9E40F6010.png" style="display:inline-block; margin:4px;width:17.662cm;height:5.623cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000537000001A9E40F6010.png" style="display:inline-block; margin:4px;width:17.662cm;height:5.623cm;" class="odt-zoomable" data-zoom-src="images/1000000000000537000001A9E40F6010.png" /></td></tr></table>
 
 <p>Dans le chapitre précédent, nous avons regardé le processus qui amène la requête [1] au contrôleur et à l&#x27;action [2a] qui vont la traiter, un mécanisme qu&#x27;on appelle le routage. Nous avons présenté par ailleurs les différentes réponses que peut faire une action au navigateur. Nous avons pour l&#x27;instant présenté des actions qui n&#x27;exploitaient pas la requête qui leur était présentée. Une requête [1] transporte avec elle diverses informations que ASP.NET MVC présente [2a] à l&#x27;action sous forme d&#x27;un <strong>modèle</strong>. On ne confondra pas ce terme avec le modèle <strong>M</strong> d&#x27;une vue <strong>V</strong> [2c] qui est produit par l&#x27;action :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000061C00000091EF5447AE.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.669cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000061C00000091EF5447AE.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.669cm;" class="odt-zoomable" data-zoom-src="images/100000000000061C00000091EF5447AE.png" /></td></tr></table>
 
 <ul>
 <li>la requête HTTP du client arrive en [1] ;</li>
@@ -811,9 +811,9 @@
 <p><a id="refheading58054676630786"></a></p>
 <h2 id="41-initialisation-des-parametres-de-laction">4.1. Initialisation des paramètres de l&#x27;action</h2>
 <p>Nous ajoutons [1] à la solution existante un nouveau projet ASP.NET MVC de base :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A600000222F42F5117.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.795cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A600000222F42F5117.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.795cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A600000222F42F5117.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052E0000031BFB58988F.png" style="display:inline-block; margin:4px;width:17.542cm;height:10.518cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052E0000031BFB58988F.png" style="display:inline-block; margin:4px;width:17.542cm;height:10.518cm;" class="odt-zoomable" data-zoom-src="images/100000000000052E0000031BFB58988F.png" /></td></tr></table>
 
 <ul>
 <li>en [2], le nom du nouveau projet ;</li>
@@ -822,7 +822,7 @@
 </ul>
 <p>On fera du nouveau projet, le projet de démarrage de la solution.</p>
 <p>Comme il a été fait au paragraphe <a href="controleurs-actions-routage.html#refheading10128914791633">3.1</a>, nous créons un contrôleur nommé [First] [1] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000AF000000900D740575.png" style="display:inline-block; margin:4px;width:3.24cm;height:2.671cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000AF000000900D740575.png" style="display:inline-block; margin:4px;width:3.24cm;height:2.671cm;" class="odt-zoomable" data-zoom-src="images/10000000000000AF000000900D740575.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Dans ce contrôleur, nous créons l&#x27;action [Action01] suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -846,7 +846,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Request.Form[&quot;nom&quot;]</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">un paramètre nommé [nom] envoyé par une commande POST</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>RouteData.Values[&quot;nom&quot;]</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">un élément d&#x27;URL nommé [nom]</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Request.QueryString[&quot;nom&quot;]</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">un paramètre nommé [nom] envoyé par une commande GET</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Request.Files[&quot;nom&quot;]</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">un fichier uploadé nommé [nom]</p></td></tr></table>
 
 <p>Examinons ces différents cas. Demandons directement dans le navigateur l&#x27;URL [/First/Action01?nom=someone]. On obtient la réponse suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E30000007C82924AE4.png" style="display:inline-block; margin:4px;width:8.939cm;height:2.3cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E30000007C82924AE4.png" style="display:inline-block; margin:4px;width:8.939cm;height:2.3cm;" class="odt-zoomable" data-zoom-src="images/10000000000001E30000007C82924AE4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La requête HTTP du navigateur a été la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -868,7 +868,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Ce code fournit la réponse envoyée au client :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016800000059F2477EEE.png" style="display:inline-block; margin:4px;width:6.669cm;height:1.649cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016800000059F2477EEE.png" style="display:inline-block; margin:4px;width:6.669cm;height:1.649cm;" class="odt-zoomable" data-zoom-src="images/100000000000016800000059F2477EEE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><strong>Note</strong> : le mécanisme de liaison des paramètres est <strong>insensible à la casse</strong>. Ainsi si notre action est définie comme :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -877,7 +877,7 @@
 
 <p>et que le paramètre passé est [?NoM=zébulon], la liaison aura bien lieu. Le paramètre [NOM] de [Action01] recevra la valeur [zébulon].</p>
 <p><span style="color: #000000">Maintenant, demandons la même URL avec un POST. Pour cela, nous utilisons l&#x27;application [Advanced Rest Client] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FA0000021A09A529B6.png" style="display:inline-block; margin:4px;width:6.694cm;height:7.117cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FA0000021A09A529B6.png" style="display:inline-block; margin:4px;width:6.694cm;height:7.117cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FA0000021A09A529B6.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1], l&#x27;URL demandée ;</span></li>
@@ -885,7 +885,7 @@
 <li><span style="color: #000000">en [3], les paramètres du POST.</span></li>
 </ul>
 <p><span style="color: #000000">Envoyons cette requête et regardons les logs HTTP. La requête HTTP est la suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005490000020F18457CB3.png" style="display:inline-block; margin:4px;width:17.9cm;height:6.973cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005490000020F18457CB3.png" style="display:inline-block; margin:4px;width:17.9cm;height:6.973cm;" class="odt-zoomable" data-zoom-src="images/10000000000005490000020F18457CB3.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1], le POST ;</span></li>
@@ -915,11 +915,11 @@
 <li><span style="color: #000000">ligne 4, cet élément est déclaré optionnel.</span></li>
 </ul>
 <p><span style="color: #000000">Maintenant, recompilons l&#x27;application et demandons l&#x27;URL [/First/Action01/zébulon] directement dans le navigateur. Nous obtenons, la réponse suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B300000083D6AE41C1.png" style="display:inline-block; margin:4px;width:8.05cm;height:2.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B300000083D6AE41C1.png" style="display:inline-block; margin:4px;width:8.05cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B300000083D6AE41C1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Dans les valeurs essayées pour le paramètre nom </span><em><span style="color: #000000">Request.Form[&quot;nom&quot;], </span></em><em><span style="color: #2323dc">RouteData.Values[&quot;nom&quot;]</span></em><em><span style="color: #000000">, Request.QueryString[&quot;nom&quot;], Request.Files[&quot;nom&quot;]</span></em><span style="color: #000000">, c&#x27;est la deuxième qui a marché.</span></p>
 <p><span style="color: #000000">Faisons la même requête avec un POST et [Advanced Rest Client] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AD00000222A11C4649.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.763cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AD00000222A11C4649.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.763cm;" class="odt-zoomable" data-zoom-src="images/10000000000005AD00000222A11C4649.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1], nous avons donné une valeur à l&#x27;élément {nom} de la route ;</span></li>
@@ -944,10 +944,10 @@
 <li><span style="color: #000000">ligne 2, l&#x27;action [Action02] admet un paramètre nommé [age] de type </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000">. Il faudra que la chaîne de caractères récupérée soit convertible en </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000">.</span></li>
 </ul>
 <p><span style="color: #000000">Demandons l&#x27;URL [</span><span style="color: #000000">http://localhost:55483/First/Action02?age=</span><strong><span style="color: #000000">21</span></strong><span style="color: #000000">]. On obtient la page suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B80000007669369E94.png" style="display:inline-block; margin:4px;width:8.149cm;height:2.191cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B80000007669369E94.png" style="display:inline-block; margin:4px;width:8.149cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B80000007669369E94.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Demandons l&#x27;URL [</span><span style="color: #000000">http://localhost:55483/First/Action02?age=</span><strong><span style="color: #000000">21x</span></strong><span style="color: #000000">]. On obtient la page suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001DF00000145F65CEB4F.png" style="display:inline-block; margin:4px;width:8.871cm;height:6.02cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001DF00000145F65CEB4F.png" style="display:inline-block; margin:4px;width:8.871cm;height:6.02cm;" class="odt-zoomable" data-zoom-src="images/10000000000001DF00000145F65CEB4F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Cette fois-ci, on a récupéré une page d&#x27;erreur. Il est intéressant de regarder les entêtes HTTP envoyés par le serveur dans ce cas :</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -974,7 +974,7 @@
 
 <p><span style="color: #000000">[Action03] est identique à [Action02] si ce n&#x27;est qu&#x27;on a changé le type du paramètre [age] en </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000">, ce qui signifie </span><strong><span style="color: #000000">entier</span></strong><span style="color: #000000"> ou </span><strong><span style="color: #000000">null</span></strong><span style="color: #000000">.</span></p>
 <p><span style="color: #000000">Demandons l&#x27;URL [http://localhost:55483/First/Action03?age=</span><strong><span style="color: #000000">21x</span></strong><span style="color: #000000">]. On obtient la page suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B30000007821A5ED57.png" style="display:inline-block; margin:4px;width:8.05cm;height:2.221cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B30000007821A5ED57.png" style="display:inline-block; margin:4px;width:8.05cm;height:2.221cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B30000007821A5ED57.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">ASP.NET MVC n&#x27;a pas réussi à convertir [21x] en type </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000">. Il a alors affecté la valeur </span><strong><span style="color: #000000">null</span></strong><span style="color: #000000"> au paramètre [age] comme l&#x27;autorise son type </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000">. Il est cependant possible de savoir si le paramètre a pu recevoir une valeur de la requête ou non.</span></p>
 <p><span style="color: #000000">Nous construisons la nouvelle action [Action04] suivante :</span></p>
@@ -994,7 +994,7 @@
 <li><span style="color: #000000">ligne 5 : on ajoute la valeur de la variable [valide] dans le text envoyé au client.</span></li>
 </ul>
 <p><span style="color: #000000">Demandons l&#x27;URL [http://localhost:55483/First/Action04?age=</span><strong><span style="color: #000000">21x</span></strong><span style="color: #000000">]. On obtient la page suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BD00000076AF114E5F.png" style="display:inline-block; margin:4px;width:8.241cm;height:2.191cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BD00000076AF114E5F.png" style="display:inline-block; margin:4px;width:8.241cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BD00000076AF114E5F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">ASP.NET MVC n&#x27;a pas réussi à convertir [21x] en type </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000">. Il a alors affecté la valeur </span><strong><span style="color: #000000">null</span></strong><span style="color: #000000"> au paramètre [age] comme l&#x27;autorise son type </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000">. Mais il y a eu des erreurs de conversion comme le montre la valeur de [valide].</span></p>
 <p><span style="color: #000000">Il est possible d&#x27;avoir le message d&#x27;erreur associé à une conversion ratée. Examinons la nouvelle action suivante :</span></p>
@@ -1083,7 +1083,7 @@
 </ul>
 <p><span style="color: #000000">Durant les tests, on remarque que le message d&#x27;erreur est trouvé dans ces trois endroits selon la nature de l&#x27;élément du modèle. Il doit y avoir une règle qui permette d&#x27;obtenir à coup sûr le message d&#x27;erreur associé à un élément du modèle, mais je ne la connais pas. Je le cherche donc aux différents endroits où je peux le trouver et ce dans un certain ordre. Dès qu&#x27;un message non vide a été trouvé, il est retourné.</span></p>
 <p><span style="color: #000000">Demandons l&#x27;URL [http://localhost:55483/First/Action05?age=</span><strong><span style="color: #000000">21x</span></strong><span style="color: #000000">]. On obtient la page suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002DD0000008E8489DDD0.png" style="display:inline-block; margin:4px;width:13.57cm;height:2.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002DD0000008E8489DDD0.png" style="display:inline-block; margin:4px;width:13.57cm;height:2.63cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DD0000008E8489DDD0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58058676630786"></a></p>
 <h2 id="43-une-action-a-plusieurs-parametres">4.3. Une action à plusieurs paramètres</h2>
@@ -1102,14 +1102,14 @@
 <li><span style="color: #000000">ligne 2 : nous avons deux paramètres [poids] et [age].</span></li>
 </ul>
 <p><span style="color: #000000">Les règles décrites précédemment s&#x27;appliquent maintenant aux deux paramètres. Voici quelques exemples d&#x27;exécution :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D0000000919132A93E.png" style="display:inline-block; margin:4px;width:13.33cm;height:2.701cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D0000000919132A93E.png" style="display:inline-block; margin:4px;width:13.33cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D0000000919132A93E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025C0000007DD19712C8.png" style="display:inline-block; margin:4px;width:11.15cm;height:2.311cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025C0000007DD19712C8.png" style="display:inline-block; margin:4px;width:11.15cm;height:2.311cm;" class="odt-zoomable" data-zoom-src="images/100000000000025C0000007DD19712C8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58060676630786"></a></p>
 <h2 id="44-utiliser-une-classe-comme-modele-dune-action">4.4. Utiliser une classe comme modèle d&#x27;une action</h2>
 <p><span style="color: #000000">Définissons une classe qui sera le modèle d&#x27;une action. Nous la mettons dans le dossier [Models] [1].</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000160000000B7E5E62470.png" style="display:inline-block; margin:4px;width:4.657cm;height:2.422cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000160000000B7E5E62470.png" style="display:inline-block; margin:4px;width:4.657cm;height:2.422cm;" class="odt-zoomable" data-zoom-src="images/1000000000000160000000B7E5E62470.png" /></td></tr></table>
 
 <p><span style="color: #000000">Son code sera le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1138,13 +1138,13 @@
 <li><span style="color: #000000">ligne 2 : le modèle de l&#x27;action est une instance de type [ActionModel01].</span></li>
 </ul>
 <p><span style="color: #000000">Reprenons les mêmes deux exemples que précédemment :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D400000092CCDC4975.png" style="display:inline-block; margin:4px;width:13.33cm;height:2.701cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D400000092CCDC4975.png" style="display:inline-block; margin:4px;width:13.33cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D400000092CCDC4975.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025D000000809AA65E67.png" style="display:inline-block; margin:4px;width:11.15cm;height:2.371cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025D000000809AA65E67.png" style="display:inline-block; margin:4px;width:11.15cm;height:2.371cm;" class="odt-zoomable" data-zoom-src="images/100000000000025D000000809AA65E67.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">On remarquera que la liaison des paramètres n&#x27;est pas sensible à la casse. Les paramètres de la requête étaient [age] et [poids]. Ils ont alimenté les propriétés [Age] et [Poids] de la classe [ModelAction01].</span></p>
 <p><span style="color: #000000">Par ailleurs, nous avons jusqu&#x27;à maintenant utilisé des requêtes HTTP [GET]. Montrons que les requêtes [POST] ont le même comportement. Pour cela utilisons de nouveau l&#x27;application [Advanced Rest Client] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D700000229F6675F40.png" style="display:inline-block; margin:4px;width:6.232cm;height:7.317cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D700000229F6675F40.png" style="display:inline-block; margin:4px;width:6.232cm;height:7.317cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D700000229F6675F40.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1], l&#x27;URL demandée ;</span></li>
@@ -1152,7 +1152,7 @@
 <li><span style="color: #000000">en [3], les paramètres du POST.</span></li>
 </ul>
 <p><span style="color: #000000">On obtient la même réponse qu&#x27;avec le GET :</span></p>
-<p><img src="images/100000000000049300000055ECCB8246.png" style="width:17.729cm;height:1.286cm;" alt="Image" /></p>
+<p><img src="images/100000000000049300000055ECCB8246.png" style="width:17.729cm;height:1.286cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000049300000055ECCB8246.png" /></p>
 <p><a id="refheading258461901815618"></a></p>
 <h2 id="45-modele-de-laction-avec-contraintes-de-validite-1">4.5. Modèle de l&#x27;action avec contraintes de validité - 1</h2>
 <p><span style="color: #000000">Avec le modèle précédent :</span></p>
@@ -1180,7 +1180,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Lignes 5 et 6, les propriétés [Poids] et [Age] ne peuvent plus avoir la valeur [null]. Voyons ce qui se passe avec ce nouveau modèle lorsque les paramètres [poids] et [age] sont absents de la requête.</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024C0000007FC4C3BCC7.png" style="display:inline-block; margin:4px;width:10.89cm;height:2.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024C0000007FC4C3BCC7.png" style="display:inline-block; margin:4px;width:10.89cm;height:2.35cm;" class="odt-zoomable" data-zoom-src="images/100000000000024C0000007FC4C3BCC7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Il n&#x27;y a pas eu d&#x27;erreurs et les propriétés [Poids] et [Age] ont gardé leur valeur d&#x27;initialisation : 0. ASP.NET MVC : </span></p>
 <ul>
@@ -1189,7 +1189,7 @@
 </ul>
 <p><span style="color: #000000">Le premier modèle nous permet de vérifier l&#x27;absence d&#x27;un paramètre : la propriété correspondante a alors la valeur [null]. Le second ne nous le permet pas. Il est possible d&#x27;ajouter d&#x27;autres contraintes de validation que le simple type des paramètres. Nous allons maintenant les présenter.</span></p>
 <p><span style="color: #000000">Considérons le nouveau modèle d&#x27;action suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B90000006B7CED3721.png" style="display:inline-block; margin:4px;width:3.431cm;height:1.981cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B90000006B7CED3721.png" style="display:inline-block; margin:4px;width:3.431cm;height:1.981cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B90000006B7CED3721.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.ComponentModel.DataAnnotations;</span></span>
@@ -1228,13 +1228,13 @@
 <li><span style="color: #000000">ligne 2 : l&#x27;action reçoit une instance du modèle [ActionModel02] ;</span></li>
 </ul>
 <p><span style="color: #000000">Faisons quelques tests :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002DF0000008B2A9D7224.png" style="display:inline-block; margin:4px;width:13.61cm;height:2.57cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002DF0000008B2A9D7224.png" style="display:inline-block; margin:4px;width:13.61cm;height:2.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DF0000008B2A9D7224.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002F10000008D4185AEE0.png" style="display:inline-block; margin:4px;width:13.94cm;height:2.611cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002F10000008D4185AEE0.png" style="display:inline-block; margin:4px;width:13.94cm;height:2.611cm;" class="odt-zoomable" data-zoom-src="images/10000000000002F10000008D4185AEE0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E30000009092A6B982.png" style="display:inline-block; margin:4px;width:13.681cm;height:2.671cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E30000009092A6B982.png" style="display:inline-block; margin:4px;width:13.681cm;height:2.671cm;" class="odt-zoomable" data-zoom-src="images/10000000000002E30000009092A6B982.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025E0000007DF1993F2E.png" style="display:inline-block; margin:4px;width:11.22cm;height:2.311cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025E0000007DF1993F2E.png" style="display:inline-block; margin:4px;width:11.22cm;height:2.311cm;" class="odt-zoomable" data-zoom-src="images/100000000000025E0000007DF1993F2E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Les erreurs sont bien détectées. Maintenant, faisons évoluer le modèle comme suit :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1254,7 +1254,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Lignes 8 et 11, les propriétés ne peuvent plus avoir la valeur [null]. Compilons et refaisons le test sans paramètres :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002FB0000008BEB209C5E.png" style="display:inline-block; margin:4px;width:14.131cm;height:2.57cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002FB0000008BEB209C5E.png" style="display:inline-block; margin:4px;width:14.131cm;height:2.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000002FB0000008BEB209C5E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">L&#x27;absence de paramètres a fait que les propriétés [Poids] et [Age] ont gardé leur valeur acquise lors de l&#x27;instanciation du modèle : 0. La validation intervient </span><strong><span style="color: #000000">ensuite</span></strong><span style="color: #000000">. L&#x27;attribut [Required] est alors satisfait. On voit que le message d&#x27;erreur ci-dessus est celui de l&#x27;attribut [Range]. Donc pour vérifier la présence d&#x27;un paramètre, il faut que la propriété associée soit </span><em><span style="color: #000000">nullable</span></em><span style="color: #000000">, ç-à-d puisse recevoir la valeur </span><em><span style="color: #000000">null</span></em><span style="color: #000000">.</span></p>
 <p><span style="color: #000000">Revenons au modèle [ActionModel02] initial et considérons une action dont le modèle est constitué d&#x27;une instance [ActionModel02] et d&#x27;un type [DateTime] </span><em><span style="color: #000000">nullable</span></em><span style="color: #000000"> :</span></p>
@@ -1269,17 +1269,17 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Faisons quelques tests :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002F30000008C11907953.png" style="display:inline-block; margin:4px;width:13.981cm;height:2.589cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002F30000008C11907953.png" style="display:inline-block; margin:4px;width:13.981cm;height:2.589cm;" class="odt-zoomable" data-zoom-src="images/10000000000002F30000008C11907953.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">On n&#x27;a pas passé de paramètres à l&#x27;action. Les attributs [Required] des propriétés [Poids] et [Age] ont joué leur rôle. La date elle, a reçu la valeur </span><em><span style="color: #000000">null</span></em><span style="color: #000000"> et aucune erreur n&#x27;a été signalée.</span></p>
 <p><span style="color: #000000">On passe maintenant des paramètres invalides :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E40000009E74F5DE21.png" style="display:inline-block; margin:4px;width:13.7cm;height:2.93cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E40000009E74F5DE21.png" style="display:inline-block; margin:4px;width:13.7cm;height:2.93cm;" class="odt-zoomable" data-zoom-src="images/10000000000002E40000009E74F5DE21.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">On passe maintenant des valeurs valides :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000033300000084EE2C4D47.png" style="display:inline-block; margin:4px;width:15.169cm;height:2.439cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000033300000084EE2C4D47.png" style="display:inline-block; margin:4px;width:15.169cm;height:2.439cm;" class="odt-zoomable" data-zoom-src="images/100000000000033300000084EE2C4D47.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Examinons d&#x27;autres contraintes de validité. Le nouveau modèle d&#x27;action est le suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000AB000000793D923D1F.png" style="display:inline-block; margin:4px;width:3.17cm;height:2.24cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000AB000000793D923D1F.png" style="display:inline-block; margin:4px;width:3.17cm;height:2.24cm;" class="odt-zoomable" data-zoom-src="images/10000000000000AB000000793D923D1F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.ComponentModel.DataAnnotations;</span></span>
@@ -1333,18 +1333,18 @@
 
 <p><span style="color: #000000">Faisons quelques tests avec cette action.</span></p>
 <p><span style="color: #000000">Tout d&#x27;abord sans paramètres :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000038100000092744C1112.png" style="display:inline-block; margin:4px;width:16.611cm;height:2.701cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000038100000092744C1112.png" style="display:inline-block; margin:4px;width:16.611cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/100000000000038100000092744C1112.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Puis avec des paramètres invalides :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000388000000A1676642CB.png" style="display:inline-block; margin:4px;width:16.739cm;height:2.979cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000388000000A1676642CB.png" style="display:inline-block; margin:4px;width:16.739cm;height:2.979cm;" class="odt-zoomable" data-zoom-src="images/1000000000000388000000A1676642CB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Puis avec des paramètres valides :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003150000007E26B3CF8D.png" style="display:inline-block; margin:4px;width:14.61cm;height:2.33cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003150000007E26B3CF8D.png" style="display:inline-block; margin:4px;width:14.61cm;height:2.33cm;" class="odt-zoomable" data-zoom-src="images/10000000000003150000007E26B3CF8D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58062676630786"></a></p>
 <h2 id="46-modele-de-laction-avec-contraintes-de-validite-2">4.6. Modèle de l&#x27;action avec contraintes de validité - 2</h2>
 <p><span style="color: #000000">Nous présentons d&#x27;autres contraintes d&#x27;intégrité. Le nouveau modèle de l&#x27;action sera la classe [ActionModel04] suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000159000000F3A47872E8.png" style="display:inline-block; margin:4px;width:4.565cm;height:3.216cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000159000000F3A47872E8.png" style="display:inline-block; margin:4px;width:4.565cm;height:3.216cm;" class="odt-zoomable" data-zoom-src="images/1000000000000159000000F3A47872E8.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.ComponentModel.DataAnnotations;</span>
@@ -1386,7 +1386,7 @@
 </code></pre></div>
 
 <p>Pour tester l&#x27;action [Action11], nous utilisons l&#x27;application [Advanced Rest Client] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002ED0000036355D360A3.png" style="display:inline-block; margin:4px;width:9.91cm;height:11.471cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002ED0000036355D360A3.png" style="display:inline-block; margin:4px;width:9.91cm;height:11.471cm;" class="odt-zoomable" data-zoom-src="images/10000000000002ED0000036355D360A3.png" /></td></tr></table>
 
 <ul>
 <li>en [1], l&#x27;URL de l&#x27;action [Action11] ;</li>
@@ -1394,24 +1394,24 @@
 <li>en [3], on sélectionne l&#x27;onglet [Form] ;</li>
 <li>en [4], les valeurs des quatre paramètres attendus. Cette initialisation est une facilité offerte par [ARC]. Les paramètres réellement envoyés peuvent être vus dans l&#x27;onglet [Raw] [5] ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AA000000C6C52B9039.png" style="display:inline-block; margin:4px;width:15.796cm;height:2.619cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AA000000C6C52B9039.png" style="display:inline-block; margin:4px;width:15.796cm;height:2.619cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AA000000C6C52B9039.png" /></td></tr></table>
 
 <ul>
 <li>en [6], les paramètres du POST.</li>
 </ul>
 <p>Pour cette requête, on reçoit la réponse suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004120000005C525584F9.png" style="display:inline-block; margin:4px;width:16.54cm;height:1.461cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004120000005C525584F9.png" style="display:inline-block; margin:4px;width:16.54cm;height:1.461cm;" class="odt-zoomable" data-zoom-src="images/10000000000004120000005C525584F9.png" /></td></tr></table>
 
 <p>Passons des paramètres invalides :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010F000001EFDF14E5EC.png" style="display:inline-block; margin:4px;width:5.02cm;height:9.17cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010F000001EFDF14E5EC.png" style="display:inline-block; margin:4px;width:5.02cm;height:9.17cm;" class="odt-zoomable" data-zoom-src="images/100000000000010F000001EFDF14E5EC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Nous obtenons alors la réponse suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004A900000054CF6C1668.png" style="display:inline-block; margin:4px;width:17.36cm;height:1.221cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004A900000054CF6C1668.png" style="display:inline-block; margin:4px;width:17.36cm;height:1.221cm;" class="odt-zoomable" data-zoom-src="images/10000000000004A900000054CF6C1668.png" /></td></tr></table>
 
 <p><a id="refheading58064676630786"></a></p>
 <h2 id="47-modele-de-laction-avec-contraintes-de-validite-3">4.7. Modèle de l&#x27;action avec contraintes de validité - 3</h2>
 <p><span style="color: #000000">Parfois les contraintes d&#x27;intégrité disponibles  ne suffisent pas. On peut alors en créer soit même. On peut notamment utiliser un modèle implémentant l&#x27;interface [IValidatableObject]. Dans ce cas, on ajoute nos propres vérifications du modèle dans la méthode [Validate] de cette interface. Voyons un exemple. Le nouveau modèle de l&#x27;action sera la classe [ActionModel05] suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000CFF06C3098.png" style="display:inline-block; margin:4px;width:3.942cm;height:2.739cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000CFF06C3098.png" style="display:inline-block; margin:4px;width:3.942cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000CFF06C3098.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Collections.Generic;</span>
@@ -1457,7 +1457,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FC00000079F4909684.png" style="display:inline-block; margin:4px;width:9.41cm;height:2.24cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FC00000079F4909684.png" style="display:inline-block; margin:4px;width:9.41cm;height:2.24cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FC00000079F4909684.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58066676630786"></a></p>
 <h2 id="48-modele-daction-de-type-tableau-ou-liste">4.8. Modèle d&#x27;action de type Tableau ou Liste</h2>
@@ -1480,7 +1480,7 @@
 <li><span style="color: #000000">ligne 2 : le modèle de l&#x27;action est constitué d&#x27;un tableau de [string]. Il nous permet de récupérer un paramètre nommé [data] qui peut être présent plusieurs fois dans les paramètres de la requête comme dans [?data=data1&amp;data=data2&amp;data=data3]. Les différents paramètres [data] de la requête vont alimenter le tableau [data] du modèle de l&#x27;action. Ce cas se rencontre avec les listes à choix multiple. Le navigateur envoie alors les différentes valeurs sélectionnées par l&#x27;utilisateur, avec le même nom de paramètre.</span></li>
 </ul>
 <p><span style="color: #000000">Voici un exemple :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002830000007DBA96483F.png" style="display:inline-block; margin:4px;width:11.91cm;height:2.311cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002830000007DBA96483F.png" style="display:inline-block; margin:4px;width:11.91cm;height:2.311cm;" class="odt-zoomable" data-zoom-src="images/10000000000002830000007DBA96483F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Le modèle peut être également une liste :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1499,10 +1499,10 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Le modèle est ici une liste d&#x27;entiers (ligne 2). Voici une première exécution :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022C0000007B7504D046.png" style="display:inline-block; margin:4px;width:10.299cm;height:2.281cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022C0000007B7504D046.png" style="display:inline-block; margin:4px;width:10.299cm;height:2.281cm;" class="odt-zoomable" data-zoom-src="images/100000000000022C0000007B7504D046.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">et une seconde :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023F00000089748B880F.png" style="display:inline-block; margin:4px;width:10.719cm;height:2.54cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023F00000089748B880F.png" style="display:inline-block; margin:4px;width:10.719cm;height:2.54cm;" class="odt-zoomable" data-zoom-src="images/100000000000023F00000089748B880F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58068676630786"></a></p>
 <h2 id="49-filtrage-dun-modele-daction">4.9. Filtrage d&#x27;un modèle d&#x27;action</h2>
@@ -1540,7 +1540,7 @@
 </code></pre></div>
 
 <p>Voici un exemple d&#x27;exécution :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004180000011A7343A515.png" style="display:inline-block; margin:4px;width:13.864cm;height:3.731cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004180000011A7343A515.png" style="display:inline-block; margin:4px;width:13.864cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004180000011A7343A515.png" /></td></tr></table>
 
 <ul>
 <li>en [1] : on passe le paramètre [info2] dans l&#x27;URL ;</li>
@@ -1549,7 +1549,7 @@
 <p><a id="refheading2400667523874"></a></p>
 <h2 id="410-etendre-le-modele-de-liaison-des-donnees">4.10. Étendre le modèle de liaison des données</h2>
 <p>Revenons sur l&#x27;architecture d&#x27;exécution d&#x27;une action :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003FA0000013117EB7B56.png" style="display:inline-block; margin:4px;width:13.467cm;height:4.036cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003FA0000013117EB7B56.png" style="display:inline-block; margin:4px;width:13.467cm;height:4.036cm;" class="odt-zoomable" data-zoom-src="images/10000000000003FA0000013117EB7B56.png" /></td></tr></table>
 
 <p>La classe de l&#x27;action est instanciée au début de la requête du client et détruite à la la fin de celle-ci. Aussi ne peut-elle servir à mémoriser des données entre deux requêtes même si elle est appelée de façon répétée. On peut vouloir mémoriser deux types de données :</p>
 <ul>
@@ -1563,7 +1563,7 @@
 <ul>
 <li>des données partagées par les requêtes d&#x27;<strong>un même client</strong>. Ces données sont mémorisées dans un objet appelé <strong>Session</strong>. On parle alors de <strong>session client</strong> pour désigner la mémoire du client. Toutes les requêtes d&#x27;un client ont accès à cette session. Elles peuvent y stocker et y lire des informations.</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005930000011EB8C6AD74.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.605cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005930000011EB8C6AD74.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.605cm;" class="odt-zoomable" data-zoom-src="images/10000000000005930000011EB8C6AD74.png" /></td></tr></table>
 
 <p>Ci-dessus, nous montrons les types de mémoire auxquels a accès une action :</p>
 <ul>
@@ -1646,11 +1646,11 @@
 </ul>
 <p><span style="color: #000000">Voici des exemples d&#x27;exécution :</span></p>
 <p><span style="color: #000000">[Action16] est demandée une première fois [1] puis la page est rafraîchie [F5] deux fois [2] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C4000000F6927C44F8.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.999cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C4000000F6927C44F8.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.999cm;" class="odt-zoomable" data-zoom-src="images/10000000000005C4000000F6927C44F8.png" /></td></tr></table>
 
 <p><span style="color: #000000">En [2], le client a fait au total trois requêtes. A chaque fois, il a pu récupérer le compteur mis à jour par la précédente requête.</span></p>
 <p><span style="color: #000000">Pour simuler un second utilisateur, nous utilisons un deuxième navigateur pour demander la même URL :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028F000000FDC947C3D9.png" style="display:inline-block; margin:4px;width:8.666cm;height:3.348cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028F000000FDC947C3D9.png" style="display:inline-block; margin:4px;width:8.666cm;height:3.348cm;" class="odt-zoomable" data-zoom-src="images/100000000000028F000000FDC947C3D9.png" /></td></tr></table>
 
 <p><span style="color: #000000">En [3], le second utilisateur récupère bien la même information de portée [Application] mais a son propre compteur de portée [Session].</span></p>
 <p><span style="color: #000000">Revenons au code de l&#x27;action [Action16] :</span></p>
@@ -1689,7 +1689,7 @@
 
 <p><span style="color: #000000">Le code ne comporte désormais plus de dépendances envers la requête HTTP. Elle peut donc être testée isolément d&#x27;un serveur web.</span></p>
 <p><span style="color: #000000">Voyons comment y arriver. Tout d&#x27;abord, il nous faut créer les classes [ApplicationModel] et [SessionModel] qui vont encapsuler respectivement les données de portée [Application] et [Session]. Ce sont les suivantes :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001410000013948D0013A.png" style="display:inline-block; margin:4px;width:4.247cm;height:4.142cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001410000013948D0013A.png" style="display:inline-block; margin:4px;width:4.247cm;height:4.142cm;" class="odt-zoomable" data-zoom-src="images/10000000000001410000013948D0013A.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
@@ -1763,7 +1763,7 @@
 </ul>
 <p><span style="color: #000000">Il faut pour cela créer des classes implémentant l&#x27;interface [IModelBinder].</span></p>
 <p><span style="color: #000000">Nous commençons par créer un dossier [Infrastructure] dans le projet [Exemple-02] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E40000005E1D40097B.png" style="display:inline-block; margin:4px;width:4.219cm;height:1.739cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E40000005E1D40097B.png" style="display:inline-block; margin:4px;width:4.219cm;height:1.739cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E40000005E1D40097B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Nous y créons la classe [ApplicationModelBinder] suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1851,7 +1851,7 @@
 </ul>
 <p><span style="color: #000000">Ces deux données peuvent être aussi complexes que l&#x27;on veut et regrouper pour l&#x27;une toutes les données de portée [Application] et pour l&#x27;autre toutes les données de portée [Session].</span></p>
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution de l&#x27;action [Action17] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017F0000008B307028DC.png" style="display:inline-block; margin:4px;width:7.091cm;height:2.57cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017F0000008B307028DC.png" style="display:inline-block; margin:4px;width:7.091cm;height:2.57cm;" class="odt-zoomable" data-zoom-src="images/100000000000017F0000008B307028DC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58070676630786"></a></p>
 <h2 id="411-liaison-tardive-du-modele-de-laction">4.11. Liaison tardive du modèle de l&#x27;action</h2>
@@ -1891,15 +1891,15 @@
 <li><span style="color: #000000">ligne 6 : on est désormais dans la même situation que dans l&#x27;action [Action12].</span></li>
 </ul>
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001C4000000880BFA7F6D.png" style="display:inline-block; margin:4px;width:8.37cm;height:2.521cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001C4000000880BFA7F6D.png" style="display:inline-block; margin:4px;width:8.37cm;height:2.521cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C4000000880BFA7F6D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58072676630786"></a></p>
 <h2 id="412-conclusion">4.12. Conclusion</h2>
 <p>Revenons à l&#x27;architecture d&#x27;une application ASP.NET MVC :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000530000001A3C3A7DB2B.png" style="display:inline-block; margin:4px;width:17.568cm;height:5.544cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000530000001A3C3A7DB2B.png" style="display:inline-block; margin:4px;width:17.568cm;height:5.544cm;" class="odt-zoomable" data-zoom-src="images/1000000000000530000001A3C3A7DB2B.png" /></td></tr></table>
 
 <p>Une requête [1] transporte avec elle diverses informations que ASP.NET MVC présente [2a] à l&#x27;action sous forme d&#x27;un <strong>modèle</strong> que nous avons appelé <strong>modèle d&#x27;action</strong>.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006000000008ED32B6F3B.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.663cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006000000008ED32B6F3B.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.663cm;" class="odt-zoomable" data-zoom-src="images/10000000000006000000008ED32B6F3B.png" /></td></tr></table>
 
 <ul>
 <li>la requête HTTP du client arrive en [1] ;</li>

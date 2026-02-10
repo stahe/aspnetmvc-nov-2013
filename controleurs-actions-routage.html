@@ -828,22 +828,22 @@
 <p><a id="refheading58022676630786"></a></p>
 <h1 id="3-controleurs-actions-routage">3. Contrôleurs, Actions, Routage</h1>
 <p>Considérons l&#x27;architecture d&#x27;une application ASP.NET MVC :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000535000001A54D09B830.png" style="display:inline-block; margin:4px;width:17.635cm;height:5.57cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000535000001A54D09B830.png" style="display:inline-block; margin:4px;width:17.635cm;height:5.57cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000001A54D09B830.png" /></td></tr></table>
 
 <p>Dans ce chapitre, nous regardons le processus qui amène la requête [1] au contrôleur et à l&#x27;action [2a] qui vont la traiter, un mécanisme qu&#x27;on appelle le routage. Nous présentons par ailleurs les différentes réponses [3] que peut faire une action au navigateur. Ce peut être autre chose qu&#x27;une vue <strong>V</strong> [4b].</p>
 <p><a id="refheading10128914791633"></a></p>
 <h2 id="31-la-structure-dun-projet-aspnet-mvc">3.1. La structure d&#x27;un projet ASP.NET MVC</h2>
 <p>Construisons un premier projet ASP.NET MVC avec Visual Studio Express 2012. Nous allons l&#x27;ajouter [1] à la solution utilisée dans le chapitre précédent :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005D80000021E8F8AD477.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.519cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005D80000021E8F8AD477.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.519cm;" class="odt-zoomable" data-zoom-src="images/10000000000005D80000021E8F8AD477.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000515000002D013AB9480.png" style="display:inline-block; margin:4px;width:17.212cm;height:9.525cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000515000002D013AB9480.png" style="display:inline-block; margin:4px;width:17.212cm;height:9.525cm;" class="odt-zoomable" data-zoom-src="images/1000000000000515000002D013AB9480.png" /></td></tr></table>
 
 <ul>
 <li>en [2], le nom du nouveau projet ;</li>
 <li>en [3, 4], nous choisissons un projet ASP.NET MVC de base. Ce modèle nous fournit une application Web vide avec cependant toutes les ressources (DLL, bibliothèques javascript, ...) pour travailler.</li>
 </ul>
 <p>Le projet résultant est présenté en [5]. On en fera [6] le <a id="projet-de-demarrage"></a>projet de démarrage de la solution :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000356000003396474F365.png" style="display:inline-block; margin:4px;width:11.298cm;height:10.915cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000356000003396474F365.png" style="display:inline-block; margin:4px;width:11.298cm;height:10.915cm;" class="odt-zoomable" data-zoom-src="images/1000000000000356000003396474F365.png" /></td></tr></table>
 
 <p>On notera en [5] les points suivants :</p>
 <ul>
@@ -852,7 +852,7 @@
 <li>les modèles de données <strong>M</strong> seront placés dans le dossier [Models],</li>
 <li>les vues <strong>V</strong> seront placées dans le dossier [Views],</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A4000002293447BEB9.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.893cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A4000002293447BEB9.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.893cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A4000002293447BEB9.png" /></td></tr></table>
 
 <ul>
 <li>en [1], le fichier [Site.css] sera le fichier CSS par défaut de l&#x27;application ;</li>
@@ -911,7 +911,7 @@
 <li><span style="color: #000000">ligne 9 : l&#x27;entête commun à toutes les vues ;</span></li>
 <li><span style="color: #000000">ligne 10 : le contenu propre à la vue affichée.</span></li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000960000003AABB03712.png" style="display:inline-block; margin:4px;width:3.971cm;height:1.529cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000960000003AABB03712.png" style="display:inline-block; margin:4px;width:3.971cm;height:1.529cm;" class="odt-zoomable" data-zoom-src="images/10000000000000960000003AABB03712.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li><span style="color: #000000">[Web.config] est le fichier de configuration de l&#x27;application Web. Il est complexe. On sera amené à le modifier lorsqu&#x27;on utilisera le framework [Spring.net] dans une architecture multicouche.</span></li>
@@ -942,8 +942,8 @@
 <ul>
 <li><span style="color: #000000">ligne 6, le </span><em><span style="color: #000000">namespace</span></em><span style="color: #000000"> de la classe. Il vient directement du nom du projet et est présent dans les propriétés du projet :</span></li>
 </ul>
-<p><img src="images/100000000000021E0000026DA93E2986.png" style="width:10.04cm;height:11.501cm;" alt="Image" /></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004210000006F383712A7.png" style="display:inline-block; margin:4px;width:13.984cm;height:1.469cm;" /></td></tr></table>
+<p><img src="images/100000000000021E0000026DA93E2986.png" style="width:10.04cm;height:11.501cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000021E0000026DA93E2986.png" /></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004210000006F383712A7.png" style="display:inline-block; margin:4px;width:13.984cm;height:1.469cm;" class="odt-zoomable" data-zoom-src="images/10000000000004210000006F383712A7.png" /></td></tr></table>
 
 <p><span style="color: #000000">On fixe en [1], l&#x27;espace de noms par défaut. Il est alors utilisé par défaut pour toutes les classes qui seront créées dans le projet.</span></p>
 <p><span style="color: #000000">Revenons au code de [Global.asax] :</span></p>
@@ -984,10 +984,10 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Pour l&#x27;instant, on n&#x27;a pas besoin de comprendre l&#x27;intégralité de ce code. Les lignes 5-8 définissent les routes acceptées par l&#x27;application Web. Revenons à l&#x27;architecture d&#x27;une application ASP.NET MVC :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000546000001A892AB2DCF.png" style="display:inline-block; margin:4px;width:17.859cm;height:5.609cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000546000001A892AB2DCF.png" style="display:inline-block; margin:4px;width:17.859cm;height:5.609cm;" class="odt-zoomable" data-zoom-src="images/1000000000000546000001A892AB2DCF.png" /></td></tr></table>
 
 <p><span style="color: #000000">Nous avons expliqué que le [Front Controller] devait router une URL vers l&#x27;action chargée de la traiter. Une route sert à faire le lien entre un modèle d&#x27;URL et une action. Ces routes sont définies dans le dossier [App_Start] du projet par les classes [WebApiConfig, FilterConfig, RouteConfig, BundleConfig] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A90000005B0B6C09C4.png" style="display:inline-block; margin:4px;width:3.129cm;height:1.679cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A90000005B0B6C09C4.png" style="display:inline-block; margin:4px;width:3.129cm;height:1.679cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A90000005B0B6C09C4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Seule la classe [RouteConfig] nous intéresse pour l&#x27;instant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1039,9 +1039,9 @@
 <p><a id="refheading58026676630786"></a></p>
 <h2 id="33-creation-dun-controleur-et-dune-premiere-action">3.3. Création d&#x27;un contrôleur et d&#x27;une première action</h2>
 <p>Créons un premier contrôleur :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000359000000A19E6EE445.png" style="display:inline-block; margin:4px;width:14.392cm;height:2.704cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000359000000A19E6EE445.png" style="display:inline-block; margin:4px;width:14.392cm;height:2.704cm;" class="odt-zoomable" data-zoom-src="images/1000000000000359000000A19E6EE445.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000368000001382C98CD67.png" style="display:inline-block; margin:4px;width:11.536cm;height:4.128cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000368000001382C98CD67.png" style="display:inline-block; margin:4px;width:11.536cm;height:4.128cm;" class="odt-zoomable" data-zoom-src="images/1000000000000368000001382C98CD67.png" /></td></tr></table>
 
 <ul>
 <li>en [1] donnez le nom du contrôleur avec son suffixe [Controller] ;</li>
@@ -1079,7 +1079,7 @@
 <li>ligne 16 : la méthode ne fait rien. Elle se contente de rendre une vue, donc un type [ViewResult]. Le nom de la vue n&#x27;est pas précisé. Dans ce cas, le framework cherche dans le dossier [Views / First] une vue portant le nom de l&#x27;action, donc ici : [Index.cshtml].</li>
 </ul>
 <p>Créons la vue [Index.cshtml] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005820000026E4E43F847.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.939cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005820000026E4E43F847.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.939cm;" class="odt-zoomable" data-zoom-src="images/10000000000005820000026E4E43F847.png" /></td></tr></table>
 
 <ul>
 <li>en [1], on clique droit dans le code de l&#x27;action et on prend l&#x27;option [Ajouter une vue] ;</li>
@@ -1117,10 +1117,10 @@
 <li>/First, car [Index] est également l&#x27;action par défaut dans les routes.</li>
 </ul>
 <p>Exécutons l&#x27;application (CTRL-F5). Nous obtenons la page suivante :</p>
-<p><img src="images/10000000000001EB00000112B2039E6A.png" style="width:9.089cm;height:5.069cm;" alt="Image" /></p>
+<p><img src="images/10000000000001EB00000112B2039E6A.png" style="width:9.089cm;height:5.069cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EB00000112B2039E6A.png" /></p>
 <p>En [1], l&#x27;URL demandée a été <strong>http://localhost:49302</strong>. Il n&#x27;y a pas de chemin. On sait que notre routeur attend des URL de la forme <strong>/{controller}/{action}/{id}. </strong>Ces éléments étant absents, les valeurs par défaut sont utilisées. L&#x27;URL devient <strong>http://localhost:49302/Home/Index</strong>. Le contrôleur [Home] n&#x27;existe pas. Donc l&#x27;URL est rejetée.</p>
 <p>Essayons maintenant l&#x27;URL <strong>http://localhost:49302/First/Index</strong> en la tapant directement dans le navigateur :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028400000136A17562B6.png" style="display:inline-block; margin:4px;width:8.52cm;height:4.101cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028400000136A17562B6.png" style="display:inline-block; margin:4px;width:8.52cm;height:4.101cm;" class="odt-zoomable" data-zoom-src="images/100000000000028400000136A17562B6.png" /></td></tr></table>
 
 <p>La page ci-dessus a été générée par l&#x27;action [Index] du contrôleur [First]. La page générée par cette action est la vue [Index] dont le code était le suivant :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1170,7 +1170,7 @@
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p>Essayons maintenant l&#x27;URL [/First] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001270000009D2838ADF6.png" style="display:inline-block; margin:4px;width:5.459cm;height:2.91cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001270000009D2838ADF6.png" style="display:inline-block; margin:4px;width:5.459cm;height:2.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001270000009D2838ADF6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;URL [/First] était incomplète. Elle a été complétée avec les valeurs par défaut de la route et est devenue [/First/Index]. On obtient donc le même résultat que précédemment.</p>
 <p><a id="refheading58028676630786"></a></p>
@@ -1206,7 +1206,7 @@
 </ol>
 <p>Plutôt que d&#x27;utiliser le type abstrait [ActionResult], nos méthodes précisent le type réel rendu (lignes 9 et 14). </p>
 <p>Demandons l&#x27;URL [/First/Action01]. On obtient la page suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001680000007B99162A37.png" style="display:inline-block; margin:4px;width:6.669cm;height:2.281cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001680000007B99162A37.png" style="display:inline-block; margin:4px;width:6.669cm;height:2.281cm;" class="odt-zoomable" data-zoom-src="images/10000000000001680000007B99162A37.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Regardons le code source de la page reçue :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&lt;h1&gt;Action [Action01]&lt;/h1&gt;
@@ -1284,7 +1284,7 @@
 <li>ligne 13 : on l&#x27;envoie au navigateur en précisant que c&#x27;est du XML avec le type MIME &quot; text/xml &quot;.</li>
 </ul>
 <p>Dans le navigateur, on obtient la page suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002BE000000B7B494D346.png" style="display:inline-block; margin:4px;width:13cm;height:3.39cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002BE000000B7B494D346.png" style="display:inline-block; margin:4px;width:13cm;height:3.39cm;" class="odt-zoomable" data-zoom-src="images/10000000000002BE000000B7B494D346.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Regardons dans Chrome la réponse HTTP du serveur :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
@@ -1316,7 +1316,7 @@
 <li>ligne 12 : la taille en octets du document envoyé par le serveur.</li>
 </ul>
 <p>Le document envoyé par le serveur est celui-ci (copie Chrome) :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002760000005B81C3C0C6.png" style="display:inline-block; margin:4px;width:13.771cm;height:1.988cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002760000005B81C3C0C6.png" style="display:inline-block; margin:4px;width:13.771cm;height:1.988cm;" class="odt-zoomable" data-zoom-src="images/10000000000002760000005B81C3C0C6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58032676630786"></a></p>
 <h2 id="36-action-avec-un-resultat-de-type-jsonresult">3.6. Action avec un résultat de type [JsonResult]</h2>
@@ -1339,7 +1339,7 @@
 <li>ligne 2 : l&#x27;action retourne un type [JsonResult]. Ce type ne peut être retourné que pour une requête POST. Si on veut la retourner pour une méthode GET, il faut donner au second paramètre du constructeur de la class Json (ligne 7), la valeur <span style="color: #2b91af">JsonRequestBehavior</span><span style="color: #000000">.AllowGet</span>.</li>
 </ul>
 <p>Lorsqu&#x27;on demande l&#x27;URL [/First/Action03], le navigateur affiche la chose suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001DA000000766AC21245.png" style="display:inline-block; margin:4px;width:8.781cm;height:2.191cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001DA000000766AC21245.png" style="display:inline-block; margin:4px;width:8.781cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/10000000000001DA000000766AC21245.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La réponse HTTP du serveur est elle, la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -1385,7 +1385,7 @@
 </code></pre></div>
 
 <p>Lorsque nous demandons l&#x27;URL [/First/Action04] avec Chrome, on obtient la réponse suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016D000000769909198B.png" style="display:inline-block; margin:4px;width:6.759cm;height:2.191cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016D000000769909198B.png" style="display:inline-block; margin:4px;width:6.759cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000016D000000769909198B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>On voit que la balise &lt;h3&gt; a été interprétée. Regardons la réponse HTTP du serveur :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
@@ -1462,10 +1462,10 @@
 
 <p>L&#x27;action rend un type [RedirectResult]. Ce type permet d&#x27;envoyer au client un ordre de redirection vers l&#x27;URL paramètre du constructeur (ligne 4). Le client va alors émettre une nouvelle requête GET vers [/First/Action05]. Le client fait donc deux requêtes au total. </p>
 <p>Le navigateur affiche le résultat de la seconde requête :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016E0000007EE49A70A7.png" style="display:inline-block; margin:4px;width:6.78cm;height:2.33cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016E0000007EE49A70A7.png" style="display:inline-block; margin:4px;width:6.78cm;height:2.33cm;" class="odt-zoomable" data-zoom-src="images/100000000000016E0000007EE49A70A7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Examinons la réponse HTTP du serveur dans Chrome :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A1000000C0DD2AF862.png" style="display:inline-block; margin:4px;width:2.979cm;height:3.56cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A1000000C0DD2AF862.png" style="display:inline-block; margin:4px;width:2.979cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A1000000C0DD2AF862.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>On voit ci-dessus, les deux requêtes du navigateur. Examinons la première requête [Action06]. La réponse HTTP du serveur est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
@@ -1604,7 +1604,7 @@
 <li>ligne 6 : on écrit dans le flux de la réponse, une chaîne de caractères. On y a inclus des balises HTML qui ne doivent pas être interprétées par le navigateur puisque celui-ci aura reçu auparavant l&#x27;entête HTTP [Content-Type : text/plain&quot;]. C&#x27;est ce qu&#x27;on veut vérifier.</li>
 </ul>
 <p>Compilons le projet et demandons l&#x27;URL [/First/Action09?nom=someone ][1] puis l&#x27;URL [/First/Action09 ] [2] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FC000000F0C6E72D5F.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.819cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FC000000F0C6E72D5F.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000005FC000000F0C6E72D5F.png" /></td></tr></table>
 
 <p>Regardons maintenant dans Chrome la réponse HTTP du serveur :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
@@ -1623,7 +1623,7 @@
 <p><a id="refheading58046676630786"></a></p>
 <h2 id="313-un-second-controleur">3.13. Un second contrôleur</h2>
 <p>Créons dans le projet un second contrôleur. On suivra la méthode décrite au paragraphe <a href="#refheading10128914791633">3.1</a>, page <a href="#refheading10128914791633">39</a>. On l&#x27;appellera [Second].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C50000006F78BB882F.png" style="display:inline-block; margin:4px;width:3.649cm;height:2.05cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C50000006F78BB882F.png" style="display:inline-block; margin:4px;width:3.649cm;height:2.05cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C50000006F78BB882F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Son code généré est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1663,13 +1663,13 @@
 </code></pre></div>
 
 <p>Puis demandons l&#x27;URL [/Second/Action01] avec un navigateur. Nous obtenons la réponse suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001840000007C98FE446F.png" style="display:inline-block; margin:4px;width:7.181cm;height:2.3cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001840000007C98FE446F.png" style="display:inline-block; margin:4px;width:7.181cm;height:2.3cm;" class="odt-zoomable" data-zoom-src="images/10000000000001840000007C98FE446F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Cette URL a été demandée avec une commande HTTP GET comme le montrent les logs HTTP de la requête dans Chrome :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>GET /Second/Action01 HTTP/1.1
 </code></pre></div>
 <p>L&#x27;URL peut être demandée également avec une commande HTTP POST. Pour le montrer, utilisons de nouveau l&#x27;application [Advanced Rest Client] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FB00000180482AEB96.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.514cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FB00000180482AEB96.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.514cm;" class="odt-zoomable" data-zoom-src="images/10000000000005FB00000180482AEB96.png" /></td></tr></table>
 
 <ul>
 <li>en [1], on lance l&#x27;application (dans l&#x27;onglet [Applications] d&#x27;un nouvel onglet Chrome) ;</li>
@@ -1733,7 +1733,7 @@
 <li>ligne 12 : de 148 caractères.</li>
 </ul>
 <p>Le document envoyé est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001170000006643970F20.png" style="display:inline-block; margin:4px;width:5.159cm;height:1.891cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001170000006643970F20.png" style="display:inline-block; margin:4px;width:5.159cm;height:1.891cm;" class="odt-zoomable" data-zoom-src="images/10000000000001170000006643970F20.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>On obtient le même document qu&#x27;avec le GET.</p>
 <p><a id="refheading58048676630786"></a></p>
@@ -1752,7 +1752,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>HttpGet</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ne sert que la commande GET</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>HttpHead</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ne sert que la commande HEAD</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>HttpOptions</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ne sert que la commande OPTIONS</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>HttpPut</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ne sert que la commande PUT</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>HttpDelete</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">ne sert que la commande DELETE</p></td></tr></table>
 
 <p>Demandons l&#x27;URL [/Second/Action02] directement dans le navigateur. Elle est alors demandée par un GET. Le navigateur affiche alors la réponse suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000026900000132851B890B.png" style="display:inline-block; margin:4px;width:11.419cm;height:5.669cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000026900000132851B890B.png" style="display:inline-block; margin:4px;width:11.419cm;height:5.669cm;" class="odt-zoomable" data-zoom-src="images/100000000000026900000132851B890B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La réponse HTTP du serveur a été la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
@@ -1765,7 +1765,7 @@
 <li>ligne 1 : le code HTTP <strong>404 Not Found</strong> indique que le serveur n&#x27;a pas trouvé le document demandé. Ici, l&#x27;action [Action02] n&#x27;a pu servir la requête GET car elle ne sert que les commandes POST ;</li>
 <li>ligne 3 : la taille du document renvoyé. C&#x27;est la page qui a été affichée par le navigateur :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AD000001572D04E269.png" style="display:inline-block; margin:4px;width:7.939cm;height:6.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AD000001572D04E269.png" style="display:inline-block; margin:4px;width:7.939cm;height:6.35cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AD000001572D04E269.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58050676630786"></a></p>
 <h2 id="315-recuperer-les-elements-dune-route">3.15. Récupérer les éléments d&#x27;une route</h2>
@@ -1798,7 +1798,7 @@
 
 <p>Ligne 3, les trois éléments de la route peuvent être obtenus par <strong>RouteData.Values[&quot;élément&quot;]</strong> avec <strong>élément</strong> dans [controller, action, id].</p>
 <p>Demandons l&#x27;URL [http://localhost:49302/Second/Action03] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018100000072F6504BF3.png" style="display:inline-block; margin:4px;width:7.13cm;height:2.11cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018100000072F6504BF3.png" style="display:inline-block; margin:4px;width:7.13cm;height:2.11cm;" class="odt-zoomable" data-zoom-src="images/100000000000018100000072F6504BF3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Nous avons bien récupéré et le nom du contrôleur et le nom de l&#x27;action.</p>
 

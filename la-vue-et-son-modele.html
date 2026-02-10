@@ -1074,11 +1074,11 @@
 <p><a id="refheading58076676630786"></a></p>
 <h2 id="51-introduction">5.1. Introduction</h2>
 <p>Revenons à l&#x27;architecture d&#x27;une application ASP.NET MVC :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000542000001A8FD741B1F.png" style="display:inline-block; margin:4px;width:17.806cm;height:5.609cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000542000001A8FD741B1F.png" style="display:inline-block; margin:4px;width:17.806cm;height:5.609cm;" class="odt-zoomable" data-zoom-src="images/1000000000000542000001A8FD741B1F.png" /></td></tr></table>
 
 <p>Dans le chapitre précédent, nous avons étudié comment ASP.NET MVC présentait les informations de la requête [1] à une action [2a] sous la forme d&#x27;un modèle qui pouvait contenir des contraintes de validation. Ce modèle était fourni en entrée à l&#x27;action et nous l&#x27;avons appelé le modèle de l&#x27;action. Nous nous intéressons maintenant au résultat le plus courant d&#x27;une action, le type [ViewResult] qui correspond à une vue <strong>V</strong> [3] accompagnée de son modèle <strong>M</strong> [2c]. Ce modèle sera appelé <strong>modèle de la vue V</strong>, à ne pas confondre avec le <strong>modèle de l&#x27;action</strong> que nous venons d&#x27;étudier. L&#x27;un est en entrée de l&#x27;action, l&#x27;autre est en sortie.</p>
 <p><span style="color: #000000">Commençons par créer un nouveau projet [Exemple-03] [1] toujours à l&#x27;intérieur de la même solution, de type ASP.NET MVC de base :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037500000249126DA7AC.png" style="display:inline-block; margin:4px;width:11.709cm;height:7.74cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037500000249126DA7AC.png" style="display:inline-block; margin:4px;width:11.709cm;height:7.74cm;" class="odt-zoomable" data-zoom-src="images/100000000000037500000249126DA7AC.png" /></td></tr></table>
 
 <p><span style="color: #000000">Créons un contrôleur nommé [First] [2]. Le code généré pour ce contrôleur est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1101,7 +1101,7 @@
 <li><span style="color: #000000">lignes 7-10 : une action [Index] a été créée. Le type du résultat de la méthode [Index] est celui de la classe [ActionResult] dont dérivent la plupart des résultats possibles d&#x27;une action ;</span></li>
 <li><span style="color: #000000">ligne 9 : la méthode [View] de la classe [Controller] (ligne 5) rend un type [ViewResult] qui dérive de [ActionResult]. Cette méthode admet de nombreuses surcharges. Nous en verrons quelques unes. La principale est la suivante :</span></li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014100000198578C0EAD.png" style="display:inline-block; margin:4px;width:5.941cm;height:7.549cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014100000198578C0EAD.png" style="display:inline-block; margin:4px;width:5.941cm;height:7.549cm;" class="odt-zoomable" data-zoom-src="images/100000000000014100000198578C0EAD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li><span style="color: #000000">le premier paramètre est le nom de la vue. S&#x27;il est absent, la vue utilisée est celle qui porte le même nom que l&#x27;action qui produit le [ViewResult] et qui sera cherchée dans le dossier [/Views/{controller}] où {controller} est le nom du contrôleur ;</span></li>
@@ -1116,12 +1116,12 @@
 </code></pre></div>
 
 <p><span style="color: #000000">demande à la vue [<a id="creer-vue"></a>/Views/First/Index.cshtml] de s&#x27;afficher. Elle ne lui transmet aucun modèle. Créons [1] le dossier [/Views/First] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005240000018071429209.png" style="display:inline-block; margin:4px;width:17.41cm;height:5.08cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005240000018071429209.png" style="display:inline-block; margin:4px;width:17.41cm;height:5.08cm;" class="odt-zoomable" data-zoom-src="images/10000000000005240000018071429209.png" /></td></tr></table>
 
 <p><span style="color: #000000">puis créons dedans la vue [Index] [2] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052E000001085737C031.png" style="display:inline-block; margin:4px;width:17.542cm;height:3.493cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052E000001085737C031.png" style="display:inline-block; margin:4px;width:17.542cm;height:3.493cm;" class="odt-zoomable" data-zoom-src="images/100000000000052E000001085737C031.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C70000021AB600817C.png" style="display:inline-block; margin:4px;width:16.18cm;height:7.117cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C70000021AB600817C.png" style="display:inline-block; margin:4px;width:16.18cm;height:7.117cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C70000021AB600817C.png" /></td></tr></table>
 
 <p><span style="color: #000000">On indique le nom de la vue en [3]. Celle-ci est créée en [4]. Le code généré est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1177,7 +1177,7 @@
 <li><span style="color: #000000">ligne 15 : affiche la valeur de cette variable.</span></li>
 </ul>
 <p><span style="color: #000000">Demandons maintenant l&#x27;URL [/First/Index] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EF00000083291114D0.png" style="display:inline-block; margin:4px;width:4.431cm;height:2.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EF00000083291114D0.png" style="display:inline-block; margin:4px;width:4.431cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EF00000083291114D0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Le code HTML reçu est le suivant :</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -1210,7 +1210,7 @@
 <p><a id="refheading58078676630786"></a></p>
 <h2 id="52-utiliser-le-viewbag-pour-passer-des-informations-a-la-vue">5.2. Utiliser le [ViewBag] pour passer des informations à la vue</h2>
 <p><span style="color: #000000">Nous créons une nouvelle action appelée [Action01] associée à la vue [Action01.cshtml] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015B000000D9744D6584.png" style="display:inline-block; margin:4px;width:4.591cm;height:2.872cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015B000000D9744D6584.png" style="display:inline-block; margin:4px;width:4.591cm;height:2.872cm;" class="odt-zoomable" data-zoom-src="images/100000000000015B000000D9744D6584.png" /></td></tr></table>
 
 <p><span style="color: #000000">L&#x27;action [Action01] est la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1251,7 +1251,7 @@
 <li><span style="color: #000000">ligne 14 : la propriété [ViewBag.info] est affichée.</span></li>
 </ul>
 <p><span style="color: #000000">Testons. Nous demandons l&#x27;URL [/First/Action01] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016C00000087152A427E.png" style="display:inline-block; margin:4px;width:6.74cm;height:2.499cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016C00000087152A427E.png" style="display:inline-block; margin:4px;width:6.74cm;height:2.499cm;" class="odt-zoomable" data-zoom-src="images/100000000000016C00000087152A427E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58080676630786"></a></p>
 <h2 id="53-utiliser-un-modele-fortement-type-pour-passer-des-informations-a-la-vue">5.3. Utiliser un modèle fortement typé pour passer des informations à la vue</h2>
@@ -1275,7 +1275,7 @@
 
 <p><span style="color: #000000">L&#x27;action [Action10] transmettait à son client six informations (Email, Jour, Info1, Info2, Info3, erreurs) sous la forme d&#x27;une chaîne de caractères. Nous allons transmettre ces informations dans un modèle de vue [ViewModel01]. Comme ce modèle reprend des informations de [ActionModel03] nous allons le faire dériver de cette classe.</span></p>
 <p><span style="color: #000000">Nous commençons par recopier [ActionModel03] du projet [Exemple-02] dans le projet [Exemple-03] actuel :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001610000016AF4718EA5.png" style="display:inline-block; margin:4px;width:4.671cm;height:4.789cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001610000016AF4718EA5.png" style="display:inline-block; margin:4px;width:4.671cm;height:4.789cm;" class="odt-zoomable" data-zoom-src="images/10000000000001610000016AF4718EA5.png" /></td></tr></table>
 
 <p><span style="color: #000000">et nous changeons son espace de noms pour reprendre celui du projet [Exemple-03] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1312,7 +1312,7 @@
 <li><span style="color: #000000">ligne 2 : le nouvel espace de noms ;</span></li>
 </ul>
 <p><span style="color: #000000">Puis nous créons la classe [ViewModel01] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000009B8D5690F5.png" style="display:inline-block; margin:4px;width:4.142cm;height:2.051cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000009B8D5690F5.png" style="display:inline-block; margin:4px;width:4.142cm;height:2.051cm;" class="odt-zoomable" data-zoom-src="images/10000000000001390000009B8D5690F5.png" /></td></tr></table>
 
 <p><span style="color: #000000">Le code de [ViewModel01] est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1350,7 +1350,7 @@
 <li><span style="color: #000000">ligne 5 : la méthode [View] est appelée avec un paramètre. Celui est le modèle de la vue. Cette dernière n&#x27;est pas précisée. Ce sera donc la vue par défaut [/Views/First/Action02] qui sera utilisée. Le modèle de vue [ViewModel01] est instancié et initialisé avec les cinq informations du modèle d&#x27;action [ActionModel03] et l&#x27;information [erreurs] construite ligne 4.</span></li>
 </ul>
 <p><span style="color: #000000">Nous construisons maintenant la vue [/First/Action02.cshtml] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000159000000BD3656509C.png" style="display:inline-block; margin:4px;width:4.565cm;height:2.501cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000159000000BD3656509C.png" style="display:inline-block; margin:4px;width:4.565cm;height:2.501cm;" class="odt-zoomable" data-zoom-src="images/1000000000000159000000BD3656509C.png" /></td></tr></table>
 
 <p><span style="color: #000000">Son code est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1386,16 +1386,16 @@
 </ul>
 <p><span style="color: #000000">Voyons quelques exemples d&#x27;exécution de l&#x27;action [Action02].</span></p>
 <p><span style="color: #000000">D&#x27;abord sans paramètres :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002A7000001331E1A1F90.png" style="display:inline-block; margin:4px;width:12.569cm;height:5.68cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002A7000001331E1A1F90.png" style="display:inline-block; margin:4px;width:12.569cm;height:5.68cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A7000001331E1A1F90.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">puis avec des paramètres incorrects :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003A30000012AC47EAFF5.png" style="display:inline-block; margin:4px;width:17.24cm;height:5.519cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003A30000012AC47EAFF5.png" style="display:inline-block; margin:4px;width:17.24cm;height:5.519cm;" class="odt-zoomable" data-zoom-src="images/10000000000003A30000012AC47EAFF5.png" /></td></tr></table>
 
 <p><span style="color: #000000">puis avec des paramètres corrects :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000031000000110BBEF64B7.png" style="display:inline-block; margin:4px;width:14.52cm;height:5.039cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000031000000110BBEF64B7.png" style="display:inline-block; margin:4px;width:14.52cm;height:5.039cm;" class="odt-zoomable" data-zoom-src="images/100000000000031000000110BBEF64B7.png" /></td></tr></table>
 
 <p><span style="color: #000000">Dans cet exemple, le modèle de la vue [ViewModel01] reprend les informations du modèle d&#x27;action [ActionModel03]. C&#x27;est souvent le cas. On peut alors utiliser un unique modèle qui servira à la fois de modèle d&#x27;action et de vue. Nous créons un nouveau modèle [ActionModel04] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B50000006F14CF0A96.png" style="display:inline-block; margin:4px;width:3.35cm;height:2.05cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B50000006F14CF0A96.png" style="display:inline-block; margin:4px;width:3.35cm;height:2.05cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B50000006F14CF0A96.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">qui sera le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1454,7 +1454,7 @@
 <li><span style="color: #000000">ligne 4 : complété par l&#x27;information [Erreurs] ;</span></li>
 </ul>
 <p><span style="color: #000000">Il ne nous reste qu&#x27;à créer la vue [/First/Action03.cshtml] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F8000001A96723777C.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.006cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F8000001A96723777C.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.006cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F8000001A96723777C.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1] : clic droit dans le code de [Action03] puis [Ajouter une vue] ;</span></li>
@@ -1492,14 +1492,14 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Maintenant demandons l&#x27;action [Action03] sans paramètres :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000026C0000012DFDF5602E.png" style="display:inline-block; margin:4px;width:11.479cm;height:5.57cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000026C0000012DFDF5602E.png" style="display:inline-block; margin:4px;width:11.479cm;height:5.57cm;" class="odt-zoomable" data-zoom-src="images/100000000000026C0000012DFDF5602E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Les résultats sont les mêmes qu&#x27;auparavant. Il est fréquent d&#x27;utiliser le même modèle pour l&#x27;action et la vue car le modèle de la vue reprend souvent des informations du modèle de l&#x27;action. On utilise alors un modèle plus large, utilisable à la fois par l&#x27;action et la vue que celle-ci génère. On prendra soin d&#x27;exclure de la liaison de données, les informations qui n&#x27;appartiennent pas au modèle de l&#x27;action. Sinon, un utilisateur bien renseigné pourrait initialiser des parties du modèle de la vue à notre insu.</span></p>
 <p><a id="refheading58082676630786"></a></p>
 <h2 id="54-razor-premiers-pas">5.4. [Razor] – premiers pas</h2>
 <p><span style="color: #000000">Nous allons maintenant présenter quelques éléments des vues [Razor], principalement les instructions <em>foreach</em> et <em>if</em>.</span></p>
 <p><span style="color: #000000">Supposons qu&#x27;on veuille présenter une liste de personnes dans un tableau HTML. Le modèle de la vue pourrait être le suivant [ViewModel02] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000B3B8AC0137.png" style="display:inline-block; margin:4px;width:4.142cm;height:2.369cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000B3B8AC0137.png" style="display:inline-block; margin:4px;width:4.142cm;height:2.369cm;" class="odt-zoomable" data-zoom-src="images/1000000000000139000000B3B8AC0137.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Exemple_03.Models</span>
@@ -1540,7 +1540,7 @@
 <li>ligne 4 : elle passe à sa vue par défaut, une instance du modèle [ViewModel02] que nous venons de définir.</li>
 </ul>
 <p>La vue [Action04.cshtml] va afficher le modèle [ViewModel02] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014F000000E4BC34567B.png" style="display:inline-block; margin:4px;width:4.433cm;height:3.016cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014F000000E4BC34567B.png" style="display:inline-block; margin:4px;width:4.433cm;height:3.016cm;" class="odt-zoomable" data-zoom-src="images/100000000000014F000000E4BC34567B.png" /></td></tr></table>
 
 <p>Le code de la vue [Action04.cshtml] est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1589,11 +1589,11 @@
 <li>ligne 28 : on écrit l&#x27;âge de la personne.</li>
 </ul>
 <p>L&#x27;exécution de l&#x27;action [Action04] donne le résultat suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000176000000C7EA61089B.png" style="display:inline-block; margin:4px;width:6.93cm;height:3.679cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000176000000C7EA61089B.png" style="display:inline-block; margin:4px;width:6.93cm;height:3.679cm;" class="odt-zoomable" data-zoom-src="images/1000000000000176000000C7EA61089B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>D&#x27;autres éléments d&#x27;une vue peuvent être alimentés par une collection : les listes, déroulantes ou non, les boutons radio, les cases à cocher. Considérons le nouvel exemple suivant qui affiche une liste déroulante.</p>
 <p>Le modèle [ViewModel05] sera le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013C000000D023504E45.png" style="display:inline-block; margin:4px;width:4.18cm;height:2.752cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013C000000D023504E45.png" style="display:inline-block; margin:4px;width:4.18cm;height:2.752cm;" class="odt-zoomable" data-zoom-src="images/100000000000013C000000D023504E45.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_03.Models</span></span>
@@ -1630,7 +1630,7 @@
 <li><span style="color: #000000">lignes 8-16 : le constructeur qui crée un tableau de trois personnes (lignes 10-13) et fixe l&#x27;[Id] de la personne qui doit apparaître sélectionnée.</span></li>
 </ul>
 <p><span style="color: #000000">La vue [Action05.cshtml] va afficher ce modèle :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013E00000101460D0754.png" style="display:inline-block; margin:4px;width:4.207cm;height:3.401cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013E00000101460D0754.png" style="display:inline-block; margin:4px;width:4.207cm;height:3.401cm;" class="odt-zoomable" data-zoom-src="images/100000000000013E00000101460D0754.png" /></td></tr></table>
 
 <p><span style="color: #000000">Son code est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1667,7 +1667,7 @@
 <p><span style="color: #000000">Les caractéristiques de la liste déroulante HTML ont été présentées au paragraphe </span><span style="color: #000000"><a href="les-bases-de-la-programmation-web.html#liste-deroulante">2.5.2.6</a></span><span style="color: #000000">. Rappelons-les :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Combo</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><span style="color: #0000ff">&lt;</span><span style="color: #800000">select</span><span style="color: #000000"> </span><span style="color: #ff0000">size</span><span style="color: #0000ff">=&quot;1&quot;</span><span style="color: #000000"> </span><span style="color: #ff0000">name</span><span style="color: #0000ff">=&quot;cmbValeurs&quot;&gt;</span></p><p style="margin:0;"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option</span><span style="color: #000000"> </span><span style="color: #ff0000">value</span><span style="color: #0000ff">=&quot;1&quot;&gt;</span><span style="color: #000000">choix1</span><span style="color: #0000ff">&lt;/</span><span style="color: #800000">option</span><span style="color: #0000ff">&gt;</span></p><p style="margin:0;"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option</span><span style="color: #000000"> </span><span style="color: #ff0000">selected</span><span style="color: #0000ff">=&quot;selected&quot;</span><span style="color: #000000"> </span><span style="color: #ff0000">value</span><span style="color: #0000ff">=&quot;2&quot;&gt;</span><span style="color: #000000">choix2</span><span style="color: #0000ff">&lt;/</span><span style="color: #800000">option</span><span style="color: #0000ff">&gt;</span></p><p style="margin:0;"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option</span><span style="color: #000000"> </span><span style="color: #ff0000">value</span><span style="color: #0000ff">=&quot;3&quot;&gt;</span><span style="color: #000000">choix3</span><span style="color: #0000ff">&lt;/</span><span style="color: #800000">option</span><span style="color: #0000ff">&gt;</span></p><p style="margin:0;"><span style="color: #0000ff">&lt;/</span><span style="color: #800000">select</span><span style="color: #0000ff">&gt;</span></p></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F30000002B9EB33B41.png" style="display:inline-block; margin:4px;width:4.5cm;height:0.801cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F30000002B9EB33B41.png" style="display:inline-block; margin:4px;width:4.5cm;height:0.801cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F30000002B9EB33B41.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>balise HTML</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>&lt;select size=&quot;..&quot; name=&quot;..&quot;&gt;</b></p><p style="margin:0;"><b>    &lt;option [selected=&quot;selected&quot;] value=”v”&gt;...&lt;/option&gt;</b></p><p style="margin:0;"><b>    ...</b></p><p style="margin:0;"><b>&lt;/select&gt;</b></p><p style="margin:0;">affiche dans une liste les textes compris entre les balises &lt;option&gt;...&lt;/option&gt;</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>attributs</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>name=&quot;cmbValeurs&quot;</b> : nom du contrôle.</p><p style="margin:0;"><b>size=&quot;1&quot;</b> : nombre d&#x27;éléments de liste visibles. <i>size=&quot;1&quot;</i> fait de la liste l&#x27;équivalent d&#x27;un combobox.</p><p style="margin:0;"><b>selected=&quot;selected&quot;</b> : si ce mot clé est présent pour un élément de liste, ce dernier apparaît sélectionné dans la liste. Dans notre exemple ci-dessus, l&#x27;élément de liste <i>choix2</i> apparaît comme l&#x27;élément sélectionné du combo lorsque celui-ci est affiché pour la première fois.</p><p style="margin:0;"><b>value=”v” : si l&#x27;élément est sélectionné par l&#x27;utilisateur, c&#x27;est cette valeur [v] qui est postée au serveur. En l&#x27;absence de cet attribut, c&#x27;est le texte affiché et sélectionné qui est posté au serveur.</b></p></td></tr></table>
 
@@ -1678,7 +1678,7 @@
 <li><span style="color: #000000">ligne 24 : la balise &lt;option&gt; est écrite.</span></li>
 </ul>
 <p><span style="color: #000000">Demandons l&#x27;action [Action05] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005BC00000144D3D65047.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.972cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005BC00000144D3D65047.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.972cm;" class="odt-zoomable" data-zoom-src="images/10000000000005BC00000144D3D65047.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1,2], les personnes sont affichées sous la forme [Prénom Nom] ;</span></li>
@@ -1713,7 +1713,7 @@
 <p><a id="refheading58084676630786"></a></p>
 <h2 id="55-formulaire-premiers-pas">5.5. <span style="color: #000000">Formulaire – premiers pas</span></h2>
 <p><span style="color: #000000">Le formulaire présenté à l&#x27;internaute sera le suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016E000000EE31AC94B4.png" style="display:inline-block; margin:4px;width:6.78cm;height:4.41cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016E000000EE31AC94B4.png" style="display:inline-block; margin:4px;width:6.78cm;height:4.41cm;" class="odt-zoomable" data-zoom-src="images/100000000000016E000000EE31AC94B4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Le modèle de la vue sera le modèle [ViewModel05] déjà utilisé précédemment. L&#x27;action qui affichera cette vue sera la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1730,7 +1730,7 @@
 <li><span style="color: #000000">ligne 5 : la vue [/First/Action06Get.cshtml] sera affichée avec pour modèle une instance de type [ViewModel05].</span></li>
 </ul>
 <p><span style="color: #000000">La vue [/First/Action06Get.cshtml] sera la suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001650000012AD07432B6.png" style="display:inline-block; margin:4px;width:4.724cm;height:3.942cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001650000012AD07432B6.png" style="display:inline-block; margin:4px;width:4.724cm;height:3.942cm;" class="odt-zoomable" data-zoom-src="images/10000000000001650000012AD07432B6.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">@model Exemple_03.Models.</span><span style="color:#2b91af">ViewModel05</span></span>
@@ -1790,7 +1790,7 @@
 <p style="margin:0;"><b>visuel</b></p><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 </td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p style="margin:0;"><b>valeur(s) renvoyée(s)</b></p><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">value=&quot;Oui&quot;</mark> <mark style="background-color: #c0c0c0">name=&quot;R1&quot;/</mark>&gt;Oui</p><p style="margin:0;">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">name=&quot;R1&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;non&quot;</mark> checked=&quot;checked&quot;/&gt;Non</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001550000004582A42497.png" style="display:inline-block; margin:4px;width:4.51cm;height:0.91cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><mark style="background-color: #c0c0c0">R1=Oui</mark></p><p style="margin:0;">- la valeur de l&#x27;attribut <i>value</i> du bouton radio coché par l&#x27;utilisateur.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C1&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;un&quot;/</mark>&gt;1</p><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C2&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;deux&quot;</mark> checked=&quot;checked&quot;/&gt;2</p><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C3&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;trois&quot;/</mark>&gt;3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015E0000003FB4AEBD22.png" style="display:inline-block; margin:4px;width:4.63cm;height:0.831cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">C1=un</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">C2=deux</mark></b></p><p style="margin:0;">- valeurs des attributs <i>value</i> des cases cochées par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;text&quot; <mark style="background-color: #c0c0c0">name=&quot;txtSaisie&quot;</mark> size=&quot;20&quot; value=&quot;qqs mots&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A40000003B384FFC1D.png" style="display:inline-block; margin:4px;width:5.56cm;height:0.78cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">txtSaisie=programmation+Web</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie. Les espaces ont été remplacés par le signe +</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;password&quot; <mark style="background-color: #c0c0c0">name=&quot;txtMdp&quot;</mark> size=&quot;20&quot; value=&quot;unMotDePasse&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F0000003C4952F90F.png" style="display:inline-block; margin:4px;width:5.489cm;height:0.79cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">txtMdp=ceciestsecret</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;textarea rows=&quot;2&quot; <mark style="background-color: #c0c0c0">name=&quot;areaSaisie&quot;</mark> cols=&quot;20&quot;&gt;</p><p style="margin:0;">ligne1</p><p style="margin:0;">ligne2</p><p style="margin:0;">ligne3</p><p style="margin:0;">&lt;/textarea&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A900000046BF562070.png" style="display:inline-block; margin:4px;width:5.62cm;height:0.93cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">areaSaisie=les+bases+de+la%0D%0A</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">programmation+Web</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie. %OD%OA est la marque de fin de ligne. Les espaces ont été remplacés par le signe +</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;1&quot; <mark style="background-color: #c0c0c0">name=&quot;cmbValeurs&quot;</mark>&gt;</p><p style="margin:0;">&lt;option value=&#x27;1&#x27;&gt;choix1&lt;/option&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;2&#x27;&gt;choix2&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;3&#x27;&gt;choix3&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000404C9A3AF2.png" style="display:inline-block; margin:4px;width:3.941cm;height:0.85cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">cmbValeurs=3</mark></b></p><p style="margin:0;">- attribut [value] de l&#x27;élément sélectionné par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst1&quot;</mark>&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;liste1&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;2&#x27;&gt;liste2&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;3&#x27;&gt;liste3&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;4&#x27;&gt;liste4&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;5&#x27;&gt;liste5&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B00000067A3FFA096.png" style="display:inline-block; margin:4px;width:4.17cm;height:1.36cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst1=3</mark></b></p><p style="margin:0;">- attribut [value] de l&#x27;élément sélectionné par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst2&quot;</mark> multiple=&quot;multiple&quot;&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;liste1&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;2&#x27;&gt;liste2&lt;/option&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;3&#x27;&gt;liste3&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;4&#x27;&gt;liste4&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;5&#x27;&gt;liste5&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000609BBC7B2D.png" style="display:inline-block; margin:4px;width:3.851cm;height:1.27cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst2=1</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst2=3</mark></b></p><p style="margin:0;">- attributs [value] des éléments sélectionnés par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;submit&quot; <mark style="background-color: #c0c0c0">value=&quot;Envoyer&quot;</mark> <mark style="background-color: #c0c0c0">name=&quot;cmdRenvoyer&quot;/</mark>&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">cmdRenvoyer=Envoyer</mark></b></p><p style="margin:0;">- nom et attribut <i>value</i> du bouton qui a servi à envoyer les données du formulaire au serveur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;hidden&quot; <mark style="background-color: #c0c0c0">name=&quot;secret&quot;</mark> value=&quot;uneValeur&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">secret=uneValeur</mark></b></p><p style="margin:0;">- attribut <i>value</i> du champ caché</p></td></tr></table>
+</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">value=&quot;Oui&quot;</mark> <mark style="background-color: #c0c0c0">name=&quot;R1&quot;/</mark>&gt;Oui</p><p style="margin:0;">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">name=&quot;R1&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;non&quot;</mark> checked=&quot;checked&quot;/&gt;Non</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001550000004582A42497.png" style="display:inline-block; margin:4px;width:4.51cm;height:0.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001550000004582A42497.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><mark style="background-color: #c0c0c0">R1=Oui</mark></p><p style="margin:0;">- la valeur de l&#x27;attribut <i>value</i> du bouton radio coché par l&#x27;utilisateur.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C1&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;un&quot;/</mark>&gt;1</p><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C2&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;deux&quot;</mark> checked=&quot;checked&quot;/&gt;2</p><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C3&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;trois&quot;/</mark>&gt;3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015E0000003FB4AEBD22.png" style="display:inline-block; margin:4px;width:4.63cm;height:0.831cm;" class="odt-zoomable" data-zoom-src="images/100000000000015E0000003FB4AEBD22.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">C1=un</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">C2=deux</mark></b></p><p style="margin:0;">- valeurs des attributs <i>value</i> des cases cochées par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;text&quot; <mark style="background-color: #c0c0c0">name=&quot;txtSaisie&quot;</mark> size=&quot;20&quot; value=&quot;qqs mots&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A40000003B384FFC1D.png" style="display:inline-block; margin:4px;width:5.56cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A40000003B384FFC1D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">txtSaisie=programmation+Web</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie. Les espaces ont été remplacés par le signe +</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;password&quot; <mark style="background-color: #c0c0c0">name=&quot;txtMdp&quot;</mark> size=&quot;20&quot; value=&quot;unMotDePasse&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F0000003C4952F90F.png" style="display:inline-block; margin:4px;width:5.489cm;height:0.79cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F0000003C4952F90F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">txtMdp=ceciestsecret</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;textarea rows=&quot;2&quot; <mark style="background-color: #c0c0c0">name=&quot;areaSaisie&quot;</mark> cols=&quot;20&quot;&gt;</p><p style="margin:0;">ligne1</p><p style="margin:0;">ligne2</p><p style="margin:0;">ligne3</p><p style="margin:0;">&lt;/textarea&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A900000046BF562070.png" style="display:inline-block; margin:4px;width:5.62cm;height:0.93cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A900000046BF562070.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">areaSaisie=les+bases+de+la%0D%0A</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">programmation+Web</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie. %OD%OA est la marque de fin de ligne. Les espaces ont été remplacés par le signe +</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;1&quot; <mark style="background-color: #c0c0c0">name=&quot;cmbValeurs&quot;</mark>&gt;</p><p style="margin:0;">&lt;option value=&#x27;1&#x27;&gt;choix1&lt;/option&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;2&#x27;&gt;choix2&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;3&#x27;&gt;choix3&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000404C9A3AF2.png" style="display:inline-block; margin:4px;width:3.941cm;height:0.85cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000404C9A3AF2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">cmbValeurs=3</mark></b></p><p style="margin:0;">- attribut [value] de l&#x27;élément sélectionné par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst1&quot;</mark>&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;liste1&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;2&#x27;&gt;liste2&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;3&#x27;&gt;liste3&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;4&#x27;&gt;liste4&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;5&#x27;&gt;liste5&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B00000067A3FFA096.png" style="display:inline-block; margin:4px;width:4.17cm;height:1.36cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B00000067A3FFA096.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst1=3</mark></b></p><p style="margin:0;">- attribut [value] de l&#x27;élément sélectionné par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst2&quot;</mark> multiple=&quot;multiple&quot;&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;liste1&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;2&#x27;&gt;liste2&lt;/option&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;3&#x27;&gt;liste3&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;4&#x27;&gt;liste4&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;5&#x27;&gt;liste5&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000609BBC7B2D.png" style="display:inline-block; margin:4px;width:3.851cm;height:1.27cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000609BBC7B2D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst2=1</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst2=3</mark></b></p><p style="margin:0;">- attributs [value] des éléments sélectionnés par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;submit&quot; <mark style="background-color: #c0c0c0">value=&quot;Envoyer&quot;</mark> <mark style="background-color: #c0c0c0">name=&quot;cmdRenvoyer&quot;/</mark>&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">cmdRenvoyer=Envoyer</mark></b></p><p style="margin:0;">- nom et attribut <i>value</i> du bouton qui a servi à envoyer les données du formulaire au serveur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;hidden&quot; <mark style="background-color: #c0c0c0">name=&quot;secret&quot;</mark> value=&quot;uneValeur&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">secret=uneValeur</mark></b></p><p style="margin:0;">- attribut <i>value</i> du champ caché</p></td></tr></table>
 
 <p><span style="color: #000000">Dans notre formulaire, nous avons deux balises susceptibles d&#x27;envoyer une valeur :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1850,7 +1850,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>personneId=2&amp;valider=Valider
 </code></pre></div>
 <p><span style="color: #000000">Il nous faut un modèle d&#x27;action pour encapsuler ces valeurs. Ce sera le modèle [ActionModel06] suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001340000010180098C47.png" style="display:inline-block; margin:4px;width:4.075cm;height:3.401cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001340000010180098C47.png" style="display:inline-block; margin:4px;width:4.075cm;height:3.401cm;" class="odt-zoomable" data-zoom-src="images/10000000000001340000010180098C47.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.ComponentModel.DataAnnotations;</span></span>
@@ -1868,7 +1868,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">L&#x27;action [Action06] reçoit ce modèle et le transmet tel quel à la vue [Action06Post] (ligne 5 de l&#x27;action) suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C0000014A35CAE784.png" style="display:inline-block; margin:4px;width:5.239cm;height:4.366cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C0000014A35CAE784.png" style="display:inline-block; margin:4px;width:5.239cm;height:4.366cm;" class="odt-zoomable" data-zoom-src="images/100000000000018C0000014A35CAE784.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">@model Exemple_03.Models.</span><span style="color:#2b91af">ActionModel06</span></span>
@@ -1897,13 +1897,13 @@
 
 <p><span style="color: #000000">Le modèle est affiché aux lignes 18 et 19.</span></p>
 <p><span style="color: #000000">Voyons un exemple :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F5000001BA8F3A9C4C.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.216cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F5000001BA8F3A9C4C.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.216cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F5000001BA8F3A9C4C.png" /></td></tr></table>
 
 <p>En [1] on sélectionne la troisième personne d&#x27;[Id] égal à 3. En [2] on poste le formulaire. En [3], les valeurs reçues. En [4,5], on voit que la même URL a été appelée, l&#x27;une par un GET [4], l&#x27;autre par un POST [5]. Ceci ne se voit pas dans l&#x27;URL.</p>
 <p>Dans la vue affichée à la suite du POST, on pourrait vouloir les <em>nom</em> et <em>prénom</em> de la personne sélectionnée plutôt que son numéro. Il faut alors faire évoluer la vue du POST et son modèle.</p>
 <p>Nous créons une action [Action07] pour traiter ce cas. Cette action va devoir utiliser la session de l&#x27;utilisateur pour y stocker la liste des personnes. Nous allons suivre le modèle étudié au paragraphe <a href="le-modele-dune-action.html#refheading2400667523874">4.10</a>, qui permet d&#x27;inclure les données de portée [Application] et [Session] dans le modèle de l&#x27;action.</p>
 <p>Le modèle de la session sera la classe [SessionModel] suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001310000012352EF06B8.png" style="display:inline-block; margin:4px;width:4.036cm;height:3.851cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001310000012352EF06B8.png" style="display:inline-block; margin:4px;width:4.036cm;height:3.851cm;" class="odt-zoomable" data-zoom-src="images/10000000000001310000012352EF06B8.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_03.Models</span></span>
@@ -1919,7 +1919,7 @@
 <li>ligne 2 : la session mémorisera la liste des personnes affichées dans la liste déroulante ;</li>
 </ul>
 <p>Il nous faut lier le type précédent [SessionModel] à un binder que nous appellerons [SessionModelBinder]. Celui-ci sera le même que celui décrit page <a href="le-modele-dune-action.html#sessionmodelbinder">81</a> :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C200000049C2A2BB22.png" style="display:inline-block; margin:4px;width:3.59cm;height:1.349cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C200000049C2A2BB22.png" style="display:inline-block; margin:4px;width:3.59cm;height:1.349cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C200000049C2A2BB22.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Web.Mvc;</span></span>
@@ -2055,12 +2055,12 @@
 <li><span style="color: #000000">ligne 16 : la chaîne de caractères est affichée.</span></li>
 </ul>
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000174000000EC0C7C7687.png" style="display:inline-block; margin:4px;width:6.89cm;height:4.369cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000176000000C346B64C88.png" style="display:inline-block; margin:4px;width:6.93cm;height:3.611cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000174000000EC0C7C7687.png" style="display:inline-block; margin:4px;width:6.89cm;height:4.369cm;" class="odt-zoomable" data-zoom-src="images/1000000000000174000000EC0C7C7687.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000176000000C346B64C88.png" style="display:inline-block; margin:4px;width:6.93cm;height:3.611cm;" class="odt-zoomable" data-zoom-src="images/1000000000000176000000C346B64C88.png" /></td></tr></table>
 
 <p><a id="refheading58086676630786"></a></p>
 <h2 id="56-formulaire-un-exemple-complet">5.6. Formulaire – un exemple complet</h2>
 <p><span style="color: #000000">Nous avons étudié au paragraphe <a href="les-bases-de-la-programmation-web.html#refheading2410167523874">2.5.2.1</a>, le formulaire HTML suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b></p><img src="images/10000000000001A5000002663CB3D5D8.png" style="display:inline-block; margin:4px;width:8.641cm;height:12.603cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b></p><img src="images/10000000000001A5000002663CB3D5D8.png" style="display:inline-block; margin:4px;width:8.641cm;height:12.603cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A5000002663CB3D5D8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Nous allons étudier une action [Action08Get] qui affiche (GET) ce formulaire et une action [Action08Post] qui traite (POST) les valeurs saisies par l&#x27;utilisateur. Un schéma classique.</span></p>
 <p><span style="color: #000000">Le modèle de la vue [1] ci-dessus sera une instance de la classe [ViewModel08]. Cette classe sera à la fois :</span></p>
@@ -2068,9 +2068,9 @@
 <li><span style="color: #000000">le modèle de la vue produite par un GET sur l&#x27;action [Action08Get] ;</span></li>
 <li><span style="color: #000000">le modèle de l&#x27;action [Action08Post] pour une requête POST.</span></li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F1000000A468159F83.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.94cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F1000000A468159F83.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.94cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F1000000A468159F83.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000607000000C91FF47779.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.344cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000607000000C91FF47779.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.344cm;" class="odt-zoomable" data-zoom-src="images/1000000000000607000000C91FF47779.png" /></td></tr></table>
 
 <p><a id="refheading58088676630786"></a></p>
 <h3 id="561-le-modele-de-portee-application">5.6.1. Le modèle de portée [Application]</h3>
@@ -2094,7 +2094,7 @@
 <li><span style="color: #000000">ligne 10 : une instance de type [ApplicationModel] est enregistrée dans le dictionnaire de l&#x27;application, associée à la clé [data].</span></li>
 </ul>
 <p><span style="color: #000000">La classe [ApplicationModel] sert à encapsuler toutes les données de portée [Application]. Ici elle encapsulera les données que doit afficher le formulaire :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001610000016B717C9AB7.png" style="display:inline-block; margin:4px;width:4.671cm;height:4.803cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001610000016B717C9AB7.png" style="display:inline-block; margin:4px;width:4.671cm;height:4.803cm;" class="odt-zoomable" data-zoom-src="images/10000000000001610000016B717C9AB7.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_03.Models</span></span>
@@ -2161,7 +2161,7 @@
 <li><span style="color: #000000">lignes 13-43 : ces collections sont intialisées par le constructeur sans paramètres de la classe.</span></li>
 </ul>
 <p><span style="color: #000000">Le différentes collections vont alimenter le formulaire suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003410000032901B57A69.png" style="display:inline-block; margin:4px;width:11.021cm;height:10.703cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003410000032901B57A69.png" style="display:inline-block; margin:4px;width:11.021cm;height:10.703cm;" class="odt-zoomable" data-zoom-src="images/10000000000003410000032901B57A69.png" /></td></tr></table>
 
 <p><a id="refheading58090676630786"></a></p>
 <h3 id="562-le-modele-de-laction-action08get">5.6.2. Le modèle de l&#x27;action [Action08Get]</h3>
@@ -2438,7 +2438,7 @@
 <p><a id="refheading58094676630786"></a></p>
 <h3 id="564-la-vue-formulaire">5.6.4. La vue [Formulaire]</h3>
 <p>La vue [/First/Formulaire.cshtml] affiche le formulaire :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000182000001ADC572DCBA.png" style="display:inline-block; margin:4px;width:5.106cm;height:5.676cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000182000001ADC572DCBA.png" style="display:inline-block; margin:4px;width:5.106cm;height:5.676cm;" class="odt-zoomable" data-zoom-src="images/1000000000000182000001ADC572DCBA.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">@model Exemple_03.Models.</span><span style="color:#2b91af">ViewModel08</span></span>
@@ -2485,7 +2485,7 @@
 <li>ligne 33 : le bouton de type [submit] qui sert à poster le formulaire ;</li>
 <li>lignes 22-27 : affichent les boutons radio :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D80000001F9C9AC302.png" style="display:inline-block; margin:4px;width:4.001cm;height:0.57cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D80000001F9C9AC302.png" style="display:inline-block; margin:4px;width:4.001cm;height:0.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D80000001F9C9AC302.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li>ligne 22 : on parcourt la collection affichée par le bouton radio ;</li>
@@ -2642,14 +2642,14 @@
 <li>ligne 8 : on affiche de nouveau le formulaire. L&#x27;utilisateur va le retrouver tel qu&#x27;il a été saisi.</li>
 </ul>
 <p>Voyons un exemple :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000643000004022911C022.png" style="display:inline-block; margin:4px;width:17.999cm;height:11.518cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000643000004022911C022.png" style="display:inline-block; margin:4px;width:17.999cm;height:11.518cm;" class="odt-zoomable" data-zoom-src="images/1000000000000643000004022911C022.png" /></td></tr></table>
 
 <p>En [2], le résultat du [POST] reflète bien ce qui a été saisi en [1].</p>
 <p><a id="refheading58098676630786"></a></p>
 <h3 id="566-traitement-des-anomalies-du-post">5.6.6. Traitement des anomalies du POST</h3>
 <p>Nous avons dit que si aucune valeur n&#x27;était cochée ou sélectionnée pour les champs [CheckBoxesField, SimpleChoiceListField, MultipleChoiceListField] alors les paramètres correspondant ne faisaient pas partie de la chaîne postée et que donc les propriétés de mêmes noms du modèle n&#x27;étaient pas initialisées.</p>
 <p>Voyons l&#x27;exemple suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000627000001BB1D0EACEF.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.062cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000627000001BB1D0EACEF.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.062cm;" class="odt-zoomable" data-zoom-src="images/1000000000000627000001BB1D0EACEF.png" /></td></tr></table>
 
 <ul>
 <li>en [1], aucune case à cocher ne l&#x27;a été ;</li>
@@ -2711,7 +2711,7 @@
 <p><a id="refheading58102676630786"></a></p>
 <h3 id="571-le-nouveau-formulaire">5.7.1. Le nouveau formulaire</h3>
 <p>Nous créons un nouveau formulaire [Formulaire2.cshtml] qui délivrera un formulaire identique au précédent :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F000001A65D54B10A.png" style="display:inline-block; margin:4px;width:5.491cm;height:5.583cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F000001A65D54B10A.png" style="display:inline-block; margin:4px;width:5.491cm;height:5.583cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F000001A65D54B10A.png" /></td></tr></table>
 
 <p>Revenons sur le code utilisé pour générer la liste déroulante du formulaire :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3122,7 +3122,7 @@
 <h2 id="58-generation-dun-formulaire-a-partir-des-metadonnees-du-modele">5.8. Génération d&#x27;un formulaire à partir des métadonnées du modèle</h2>
 <p>Il existe d&#x27;autres méthodes que les précédentes pour générer un formulaire. L&#x27;une d&#x27;elles consiste à associer des informations à une rubrique du modèle qui vont permettre au framework MVC de savoir quelle balise de saisie il doit générer. On appelle ces informations des métadonnées.</p>
 <p>Considérons le modèle de vue [ViewModel10] suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000141000001804DB14B3A.png" style="display:inline-block; margin:4px;width:4.247cm;height:5.08cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000141000001804DB14B3A.png" style="display:inline-block; margin:4px;width:4.247cm;height:5.08cm;" class="odt-zoomable" data-zoom-src="images/1000000000000141000001804DB14B3A.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System;</span></span>
@@ -3222,7 +3222,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Ci-dessus ligne 5, on demande à la vue par défaut de l&#x27;action [/First/Action10Get.cshtml ] d&#x27;afficher le modèle de vue de type [ViewModel10]. Cette vue est la suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000168000001D9260E76B0.png" style="display:inline-block; margin:4px;width:4.763cm;height:6.258cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000168000001D9260E76B0.png" style="display:inline-block; margin:4px;width:4.763cm;height:6.258cm;" class="odt-zoomable" data-zoom-src="images/1000000000000168000001D9260E76B0.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">@model Exemple_03.Models.<span style="color:#2b91af">ViewModel10</span></span>
@@ -3336,7 +3336,7 @@
 <li><strong><span style="color: #000000">Html.DisplayFor</span></strong><span style="color: #000000"> pour afficher la valeur de la propriété selon le format indiqué par la métadonnée [DataType].</span></li>
 </ul>
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution avec le navigateur Chrome :</span></p>
-<p><img src="images/10000000000001B30000028D6245A650.png" style="width:8.05cm;height:12.09cm;" alt="Image" /></p>
+<p><img src="images/10000000000001B30000028D6245A650.png" style="width:8.05cm;height:12.09cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B30000028D6245A650.png" /></p>
 <p><span style="color: #000000">Selon le navigateur utilisé, on peut avoir des pages différentes. En effet, la vue générée utilise les nouvelles balises amenées par la version 5 de HTML appelée HTML5. Tous les navigateurs ne supportent pas encore cette version. Ci-dessus, le navigateur Chrome la supporte en partie.</span></p>
 <p><a id="refheading58108676630786"></a></p>
 <h3 id="581-le-post-du-formulaire">5.8.1. Le [POST] du formulaire</h3>
@@ -3380,7 +3380,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018A000000471BEDCDDA.png" style="display:inline-block; margin:4px;width:7.301cm;height:1.311cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018A000000471BEDCDDA.png" style="display:inline-block; margin:4px;width:7.301cm;height:1.311cm;" class="odt-zoomable" data-zoom-src="images/100000000000018A000000471BEDCDDA.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3439,7 +3439,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001920000003397BA85AF.png" style="display:inline-block; margin:4px;width:7.44cm;height:0.94cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001920000003397BA85AF.png" style="display:inline-block; margin:4px;width:7.44cm;height:0.94cm;" class="odt-zoomable" data-zoom-src="images/10000000000001920000003397BA85AF.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -3483,7 +3483,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012500000027C5407CA3.png" style="display:inline-block; margin:4px;width:5.42cm;height:0.72cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012500000027C5407CA3.png" style="display:inline-block; margin:4px;width:5.42cm;height:0.72cm;" class="odt-zoomable" data-zoom-src="images/100000000000012500000027C5407CA3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3502,11 +3502,11 @@
 <p><u><strong><span style="color: #000000">Validation</span></strong></u></p>
 <p><span style="color: #000000">Les attributs [data-x] influencent la validation des données côté client. Voici deux exemples :</span></p>
 <p><span style="color: #000000">On saisit un nombre erroné et on valide :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016D0000005EA30A0B8D.png" style="display:inline-block; margin:4px;width:6.759cm;height:1.739cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016D0000005EA30A0B8D.png" style="display:inline-block; margin:4px;width:6.759cm;height:1.739cm;" class="odt-zoomable" data-zoom-src="images/100000000000016D0000005EA30A0B8D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Ci-dessus, la validation a eu lieu côté client. Le formulaire ne sera pas posté tant que l&#x27;erreur n&#x27;aura pas été corrigée.</span></p>
 <p><span style="color: #000000">Autre exemple, on ne saisit rien :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005860000013554A20B97.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.933cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005860000013554A20B97.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.933cm;" class="odt-zoomable" data-zoom-src="images/10000000000005860000013554A20B97.png" /></td></tr></table>
 
 <p><span style="color: #000000">En [1] ci-dessus, [Action10Post] signale une erreur. On se souvient peut-être qu&#x27;on avait déjà obtenu ce comportement en utilisant l&#x27;attribut [Required] sur la propriété à contrôler (cf page <a href="le-modele-dune-action.html#contrainte-required">68</a>), ici la propriété [Number]. Ici, on n&#x27;a pas eu à le faire.</span></p>
 <p><a id="refheading58116676630786"></a></p>
@@ -3528,7 +3528,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013C00000020257BC498.png" style="display:inline-block; margin:4px;width:5.851cm;height:0.589cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013C00000020257BC498.png" style="display:inline-block; margin:4px;width:5.851cm;height:0.589cm;" class="odt-zoomable" data-zoom-src="images/100000000000013C00000020257BC498.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3569,7 +3569,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016600000022544A1188.png" style="display:inline-block; margin:4px;width:6.63cm;height:0.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016600000022544A1188.png" style="display:inline-block; margin:4px;width:6.63cm;height:0.63cm;" class="odt-zoomable" data-zoom-src="images/100000000000016600000022544A1188.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3610,7 +3610,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017B000000EA415810EB.png" style="display:inline-block; margin:4px;width:7.02cm;height:4.33cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017B000000EA415810EB.png" style="display:inline-block; margin:4px;width:7.02cm;height:4.33cm;" class="odt-zoomable" data-zoom-src="images/100000000000017B000000EA415810EB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3635,7 +3635,7 @@
 </ul>
 <p><u><strong><span style="color: #000000">Validation</span></strong></u></p>
 <p><span style="color: #000000">Une date invalide est signalée côté client [1] empêchant le POST du formulaire au serveur.</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F400000102E772925E.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.046cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F400000102E772925E.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.046cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F400000102E772925E.png" /></td></tr></table>
 
 <p><span style="color: #000000">L&#x27;absence de date n&#x27;est pas signalée côté client mais elle l&#x27;est côté serveur [2].</span></p>
 <p><a id="refheading58122676630786"></a></p>
@@ -3657,7 +3657,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000002406269BAA.png" style="display:inline-block; margin:4px;width:5.791cm;height:0.67cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000002406269BAA.png" style="display:inline-block; margin:4px;width:5.791cm;height:0.67cm;" class="odt-zoomable" data-zoom-src="images/10000000000001390000002406269BAA.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3682,7 +3682,7 @@
 </ul>
 <p><u><strong><span style="color: #000000">Validation</span></strong></u></p>
 <p><span style="color: #000000">Il n&#x27;est techniquement pas possible de saisir une heure invalide. L&#x27;absence d&#x27;heure est signalée côté serveur :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000194000000924A09FEBA.png" style="display:inline-block; margin:4px;width:7.481cm;height:2.701cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000194000000924A09FEBA.png" style="display:inline-block; margin:4px;width:7.481cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/1000000000000194000000924A09FEBA.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58124676630786"></a></p>
 <h3 id="589-propriete-hiddeninput">5.8.9. Propriété [HiddenInput]</h3>
@@ -3703,7 +3703,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001430000001C8F5F3E09.png" style="display:inline-block; margin:4px;width:5.98cm;height:0.52cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001430000001C8F5F3E09.png" style="display:inline-block; margin:4px;width:5.98cm;height:0.52cm;" class="odt-zoomable" data-zoom-src="images/10000000000001430000001C8F5F3E09.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3743,7 +3743,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012F0000001BF8B9C912.png" style="display:inline-block; margin:4px;width:5.609cm;height:0.499cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012F0000001BF8B9C912.png" style="display:inline-block; margin:4px;width:5.609cm;height:0.499cm;" class="odt-zoomable" data-zoom-src="images/100000000000012F0000001BF8B9C912.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3784,7 +3784,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000141000000214701AFBE.png" style="display:inline-block; margin:4px;width:5.941cm;height:0.61cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000141000000214701AFBE.png" style="display:inline-block; margin:4px;width:5.941cm;height:0.61cm;" class="odt-zoomable" data-zoom-src="images/1000000000000141000000214701AFBE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3809,7 +3809,7 @@
 </ul>
 <p><u><strong><span style="color: #000000">Validation</span></strong></u></p>
 <p><span style="color: #000000">Une adresse invalide est signalée côté client [1] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000030A000000C5072BB998.png" style="display:inline-block; margin:4px;width:10.292cm;height:2.607cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000030A000000C5072BB998.png" style="display:inline-block; margin:4px;width:10.292cm;height:2.607cm;" class="odt-zoomable" data-zoom-src="images/100000000000030A000000C5072BB998.png" /></td></tr></table>
 
 <p><span style="color: #000000">L&#x27;absence de saisie ne provoque aucune erreur.</span></p>
 <p><a id="refheading58130676630786"></a></p>
@@ -3831,7 +3831,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AB00000021C0EB6522.png" style="display:inline-block; margin:4px;width:7.909cm;height:0.61cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AB00000021C0EB6522.png" style="display:inline-block; margin:4px;width:7.909cm;height:0.61cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AB00000021C0EB6522.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3856,7 +3856,7 @@
 </ul>
 <p><u><strong><span style="color: #000000">Validation</span></strong></u></p>
 <p><span style="color: #000000">Une URL invalide est signalée côté client [1] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000029F000000DBB4D46D37.png" style="display:inline-block; margin:4px;width:8.878cm;height:2.898cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000029F000000DBB4D46D37.png" style="display:inline-block; margin:4px;width:8.878cm;height:2.898cm;" class="odt-zoomable" data-zoom-src="images/100000000000029F000000DBB4D46D37.png" /></td></tr></table>
 
 <p><span style="color: #000000">L&#x27;absence de saisie ne provoque aucune erreur.</span></p>
 <p><a id="refheading58132676630786"></a></p>
@@ -3878,7 +3878,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000135000000251F7FB988.png" style="display:inline-block; margin:4px;width:5.72cm;height:0.681cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000135000000251F7FB988.png" style="display:inline-block; margin:4px;width:5.72cm;height:0.681cm;" class="odt-zoomable" data-zoom-src="images/1000000000000135000000251F7FB988.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3919,7 +3919,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001450000001F5DB24BBD.png" style="display:inline-block; margin:4px;width:6.02cm;height:0.57cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001450000001F5DB24BBD.png" style="display:inline-block; margin:4px;width:6.02cm;height:0.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000001450000001F5DB24BBD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3945,7 +3945,7 @@
 
 <p><u><strong><span style="color: #000000">Validation</span></strong></u></p>
 <p><span style="color: #000000">Une valeur invalide [1] ou une absence de valeur [2] est signalée côté serveur :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005DB000001190079852F.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.374cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005DB000001190079852F.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.374cm;" class="odt-zoomable" data-zoom-src="images/10000000000005DB000001190079852F.png" /></td></tr></table>
 
 <p><a id="refheading58136676630786"></a></p>
 <h3 id="5815-propriete-creditcard">5.8.15. Propriété [CreditCard]</h3>
@@ -3966,7 +3966,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Visuel</span></strong></u></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001970000001DB68860E7.png" style="display:inline-block; margin:4px;width:7.541cm;height:0.54cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001970000001DB68860E7.png" style="display:inline-block; margin:4px;width:7.541cm;height:0.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000001970000001DB68860E7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -4081,7 +4081,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Ce modèle sera affiché par la vue suivante [Action11Get.cshtml] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000196000001FBB6BBA3E0.png" style="display:inline-block; margin:4px;width:5.371cm;height:6.708cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000196000001FBB6BBA3E0.png" style="display:inline-block; margin:4px;width:5.371cm;height:6.708cm;" class="odt-zoomable" data-zoom-src="images/1000000000000196000001FBB6BBA3E0.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">@model Exemple_03.Models.<span style="color:#2b91af">ViewModel11</span></span>
@@ -4203,10 +4203,10 @@
 <li><span style="color: #000000">ligne 3 : le modèle [ViewModel11] est créé puis initialisé avec les valeurs postées. Il peut alors se produire des erreurs. A chaque propriété erronée P du modèle est associé un message d&#x27;erreur. C&#x27;est ce message que permet d&#x27;obtenir la méthode [Html.ValidationMessageFor] du formulaire.</span></li>
 </ul>
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002260000020BB3CE3364.png" style="display:inline-block; margin:4px;width:8.44cm;height:8.02cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000239000001F3AD309953.png" style="display:inline-block; margin:4px;width:8.729cm;height:7.661cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002260000020BB3CE3364.png" style="display:inline-block; margin:4px;width:8.44cm;height:8.02cm;" class="odt-zoomable" data-zoom-src="images/10000000000002260000020BB3CE3364.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000239000001F3AD309953.png" style="display:inline-block; margin:4px;width:8.729cm;height:7.661cm;" class="odt-zoomable" data-zoom-src="images/1000000000000239000001F3AD309953.png" /></td></tr></table>
 
 <p><span style="color: #000000">Voici un autre exemple :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E1000001FB4942ABA5.png" style="display:inline-block; margin:4px;width:13.651cm;height:9.389cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E1000001FB4942ABA5.png" style="display:inline-block; margin:4px;width:13.651cm;height:9.389cm;" class="odt-zoomable" data-zoom-src="images/10000000000002E1000001FB4942ABA5.png" /></td></tr></table>
 
 <p><span style="color: #000000">On notera que les deux dates sont erronées (on est le 11/10/2013) mais que les erreurs ne sont pas signalées. Ces erreurs sont détectées par la méthode [Validate] du modèle :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -4244,13 +4244,13 @@
 </code></pre></div>
 
 <p><span style="color: #000000">La méthode [Validate] n&#x27;est exécutée que lorsque toutes les validations par attributs sont passées. C&#x27;est ce que montre un dernier exemple :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023B000001F80EA3CCF5.png" style="display:inline-block; margin:4px;width:10.56cm;height:9.329cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023B000001F80EA3CCF5.png" style="display:inline-block; margin:4px;width:10.56cm;height:9.329cm;" class="odt-zoomable" data-zoom-src="images/100000000000023B000001F80EA3CCF5.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading58142676630786"></a></p>
 <h3 id="592-validation-cote-client">5.9.2. Validation côté client</h3>
 <p><span style="color: #000000">Toutes les validations précédentes se sont faites côté serveur. Il faut donc un aller-retour entre le client et le serveur pour que l&#x27;utilisateur s&#x27;aperçoive de ses erreurs. La validation côté client utilise du code Javascript pour signaler à l&#x27;utilisateur ses erreurs le plus tôt possible et en tout cas avant le POST. Celui-ci ne peut avoir lieu que lorsque toutes les erreurs détectées ont été corrigées.</span></p>
 <p><span style="color: #000000">Nous reprenons le modèle [ViewModel11] précédent mais nous l&#x27;affichons maintenant avec la vue [Action12Get.cshtml] suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001930000020DA68CC75D.png" style="display:inline-block; margin:4px;width:5.332cm;height:6.946cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001930000020DA68CC75D.png" style="display:inline-block; margin:4px;width:5.332cm;height:6.946cm;" class="odt-zoomable" data-zoom-src="images/10000000000001930000020DA68CC75D.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">@model Exemple_03.Models.<span style="color:#2b91af">ViewModel11</span></span>
@@ -4306,7 +4306,7 @@
 <li><span style="color: #000000">lignes 1-4 : la section [appSettings] doit être un enfant direct de la section [configuration] du fichier [Web.config] ;</span></li>
 </ul>
 <p><span style="color: #000000">La vue [Action12Get] est identique à la vue [Action11Get] précédente aux lignes 13-15 près. Celles-ci incluent dans la vue, les scripts Javascript nécessaires pour la validation côté client. Ces scripts sont trouvés dans le dossier [Scripts] du projet :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BE000001EE5E7BFA57.png" style="display:inline-block; margin:4px;width:5.9cm;height:6.535cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BE000001EE5E7BFA57.png" style="display:inline-block; margin:4px;width:5.9cm;height:6.535cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BE000001EE5E7BFA57.png" /></td></tr></table>
 
 <p><span style="color: #000000">Chaque script a une version normale [.js] et une version minifiée [min.js]. Cette dernière version est plus légère mais illisible. On l&#x27;utilise en production. La version lisible est utilisée en développement.</span></p>
 <p><span style="color: #000000">La vue [Action12Get.cshtml] sera affichée par l&#x27;action [Action12Get] suivante :</span></p>
@@ -4330,10 +4330,10 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Voyons ce que ça change sur un exemple :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003FB0000022ABF3DA9DA.png" style="display:inline-block; margin:4px;width:13.481cm;height:7.329cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003FB0000022ABF3DA9DA.png" style="display:inline-block; margin:4px;width:13.481cm;height:7.329cm;" class="odt-zoomable" data-zoom-src="images/10000000000003FB0000022ABF3DA9DA.png" /></td></tr></table>
 
 <p><span style="color: #000000">Dès qu&#x27;on tape un caractère en [1], le message en [2] s&#x27;affiche parce que la valeur attendue doit avoir au moins quatre caractères. Ainsi la validation est-elle faite à chaque nouveau caractère tapé. Le message d&#x27;erreur disparaît au quatrième caractère tapé. Ceci fait, validons le formulaire :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003F0000003597FDAECB4.png" style="display:inline-block; margin:4px;width:13.335cm;height:11.338cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003F0000003597FDAECB4.png" style="display:inline-block; margin:4px;width:13.335cm;height:11.338cm;" class="odt-zoomable" data-zoom-src="images/10000000000003F0000003597FDAECB4.png" /></td></tr></table>
 
 <p><span style="color: #000000">L&#x27;URL [3] nous montre que le [POST] n&#x27;a pas eu lieu. Mais le clic sur le bouton [Valider] a déclenché toutes les validations côté client et de nouveaux messages d&#x27;erreur sont apparus.</span></p>
 <p><span style="color: #000000">Regardons le HTML généré pour la première saisie par exemple :</span></p>
@@ -4358,7 +4358,7 @@
 <p><a id="refheading58158676630786"></a></p>
 <h2 id="510-gestion-des-liens-de-navigation-et-daction">5.10. Gestion des liens de navigation et d&#x27;action</h2>
 <p><span style="color: #000000">Nous allons créer les deux vues suivantes pour illustrer la gestion de liens dans une vue :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000601000001EB7708E770.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.75cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000601000001EB7708E770.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.75cm;" class="odt-zoomable" data-zoom-src="images/1000000000000601000001EB7708E770.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1] et [2], on a deux liens de navigation ;</span></li>
