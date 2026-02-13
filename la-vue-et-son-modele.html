@@ -1108,7 +1108,7 @@
 <li><span style="color: #000000">le second est le modèle de la vue. S&#x27;il est absent, la vue n&#x27;a pas de modèle.</span></li>
 </ul>
 <p><span style="color: #000000">La méthode [Index] ci-dessous :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionResult</span><span style="color:#000000"> Index()</span></span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> View();</span></span>
@@ -1213,7 +1213,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015B000000D9744D6584.png" style="display:inline-block; margin:4px;width:4.591cm;height:2.872cm;" class="odt-zoomable" data-zoom-src="images/100000000000015B000000D9744D6584.png" /></td></tr></table>
 
 <p><span style="color: #000000">L&#x27;action [Action01] est la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action01</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action01()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1256,13 +1256,13 @@
 <p><a id="refheading58080676630786"></a></p>
 <h2 id="53-utiliser-un-modele-fortement-type-pour-passer-des-informations-a-la-vue">5.3. Utiliser un modèle fortement typé pour passer des informations à la vue</h2>
 <p><span style="color: #000000">La méthode précédente a l&#x27;inconvénient de ne pas permettre la détection d&#x27;erreurs avant l&#x27;exécution. Ainsi si la vue [Action01.cshtml] utilise le code </span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@ViewBag.Info</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span>
 </code></pre></div>
 
 <p><span style="color: #000000">on aura une erreur car la propriété [Info] n&#x27;existe pas. Celle créée par l&#x27;action [Action01] s&#x27;appelle [info]. On peut alors utiliser un modèle fortement typé pour éviter ce désagrément.</span></p>
 <p><span style="color: #000000">Dans un des exemples étudiés précédemment, l&#x27;action était la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action10</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action10(</span><span style="color:#2b91af">ActionModel03</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1315,7 +1315,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000009B8D5690F5.png" style="display:inline-block; margin:4px;width:4.142cm;height:2.051cm;" class="odt-zoomable" data-zoom-src="images/10000000000001390000009B8D5690F5.png" /></td></tr></table>
 
 <p><span style="color: #000000">Le code de [ViewModel01] est le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_03.Models</span></span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewModel01</span><span style="color:#000000"> : </span><span style="color:#2b91af">ActionModel03</span></span>
@@ -1335,7 +1335,7 @@
 <li><span style="color: #000000">et délivre en sortie le modèle de vue [ViewModel01].</span></li>
 </ul>
 <p><span style="color: #000000">Son code est le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action02</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action02(</span><span style="color:#2b91af">ActionModel03</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1346,7 +1346,7 @@
 
 <ul>
 <li><span style="color: #000000">ligne 1 : [Action02] reçoit le modèle d&#x27;action [ActionModel03]. Elle rend un résultat de type [ViewResult] ;</span></li>
-<li><span style="color: #000000">ligne 4 : les erreurs liées au modèle d&#x27;action [ActionModel03] sont agrégées dans la chaîne de caractères [erreurs]. La méthode [getErrorMessagesFor] a été décrite page </span><span style="color: #000000"><a href="le-modele-dune-action.html#geterrormessagesfor">64</a></span><span style="color: #000000"> et a été incluse dans le contrôleur [First] du nouveau projet ;</span></li>
+<li><span style="color: #000000">ligne 4 : les erreurs liées au modèle d&#x27;action [ActionModel03] sont agrégées dans la chaîne de caractères [erreurs]. La méthode [getErrorMessagesFor] a été décrite page </span><span style="color: #000000"><a href="le-modele-dune-action.html#geterrormessagesfor">65</a></span><span style="color: #000000"> et a été incluse dans le contrôleur [First] du nouveau projet ;</span></li>
 <li><span style="color: #000000">ligne 5 : la méthode [View] est appelée avec un paramètre. Celui est le modèle de la vue. Cette dernière n&#x27;est pas précisée. Ce sera donc la vue par défaut [/Views/First/Action02] qui sera utilisée. Le modèle de vue [ViewModel01] est instancié et initialisé avec les cinq informations du modèle d&#x27;action [ActionModel03] et l&#x27;information [erreurs] construite ligne 4.</span></li>
 </ul>
 <p><span style="color: #000000">Nous construisons maintenant la vue [/First/Action02.cshtml] :</span></p>
@@ -1439,7 +1439,7 @@
 <li><span style="color: #000000">ligne 31 : une propriété propre au modèle de la vue. Elle a été exclue du modèle de l&#x27;action par l&#x27;annotation de la ligne 5.</span></li>
 </ul>
 <p><span style="color: #000000">Nous créons la nouvelle action [Action03] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action03</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action03(</span><span style="color:#2b91af">ActionModel04</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1501,7 +1501,7 @@
 <p><span style="color: #000000">Supposons qu&#x27;on veuille présenter une liste de personnes dans un tableau HTML. Le modèle de la vue pourrait être le suivant [ViewModel02] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000B3B8AC0137.png" style="display:inline-block; margin:4px;width:4.142cm;height:2.369cm;" class="odt-zoomable" data-zoom-src="images/1000000000000139000000B3B8AC0137.png" /></td></tr></table>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Exemple_03.Models</span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewModel02</span></span>
@@ -1527,7 +1527,7 @@
 <li>lignes 6-10 : le constructeur du modèle initialise la propriété [Personnes] de la ligne 5 avec un tableau de deux personnes.</li>
 </ul>
 <p>L&#x27;action produisant ce modèle en sortie sera la suivante [Action04] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action04</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action04()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1595,7 +1595,7 @@
 <p>Le modèle [ViewModel05] sera le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013C000000D023504E45.png" style="display:inline-block; margin:4px;width:4.18cm;height:2.752cm;" class="odt-zoomable" data-zoom-src="images/100000000000013C000000D023504E45.png" /></td></tr></table>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_03.Models</span></span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewModel05</span></span>
@@ -1716,7 +1716,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016E000000EE31AC94B4.png" style="display:inline-block; margin:4px;width:6.78cm;height:4.41cm;" class="odt-zoomable" data-zoom-src="images/100000000000016E000000EE31AC94B4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Le modèle de la vue sera le modèle [ViewModel05] déjà utilisé précédemment. L&#x27;action qui affichera cette vue sera la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action06-GET</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action06()</span></span>
@@ -1793,7 +1793,7 @@
 </td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">value=&quot;Oui&quot;</mark> <mark style="background-color: #c0c0c0">name=&quot;R1&quot;/</mark>&gt;Oui</p><p style="margin:0;">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">name=&quot;R1&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;non&quot;</mark> checked=&quot;checked&quot;/&gt;Non</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001550000004582A42497.png" style="display:inline-block; margin:4px;width:4.51cm;height:0.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001550000004582A42497.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><mark style="background-color: #c0c0c0">R1=Oui</mark></p><p style="margin:0;">- la valeur de l&#x27;attribut <i>value</i> du bouton radio coché par l&#x27;utilisateur.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C1&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;un&quot;/</mark>&gt;1</p><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C2&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;deux&quot;</mark> checked=&quot;checked&quot;/&gt;2</p><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C3&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;trois&quot;/</mark>&gt;3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015E0000003FB4AEBD22.png" style="display:inline-block; margin:4px;width:4.63cm;height:0.831cm;" class="odt-zoomable" data-zoom-src="images/100000000000015E0000003FB4AEBD22.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">C1=un</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">C2=deux</mark></b></p><p style="margin:0;">- valeurs des attributs <i>value</i> des cases cochées par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;text&quot; <mark style="background-color: #c0c0c0">name=&quot;txtSaisie&quot;</mark> size=&quot;20&quot; value=&quot;qqs mots&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A40000003B384FFC1D.png" style="display:inline-block; margin:4px;width:5.56cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A40000003B384FFC1D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">txtSaisie=programmation+Web</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie. Les espaces ont été remplacés par le signe +</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;password&quot; <mark style="background-color: #c0c0c0">name=&quot;txtMdp&quot;</mark> size=&quot;20&quot; value=&quot;unMotDePasse&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F0000003C4952F90F.png" style="display:inline-block; margin:4px;width:5.489cm;height:0.79cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F0000003C4952F90F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">txtMdp=ceciestsecret</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;textarea rows=&quot;2&quot; <mark style="background-color: #c0c0c0">name=&quot;areaSaisie&quot;</mark> cols=&quot;20&quot;&gt;</p><p style="margin:0;">ligne1</p><p style="margin:0;">ligne2</p><p style="margin:0;">ligne3</p><p style="margin:0;">&lt;/textarea&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A900000046BF562070.png" style="display:inline-block; margin:4px;width:5.62cm;height:0.93cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A900000046BF562070.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">areaSaisie=les+bases+de+la%0D%0A</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">programmation+Web</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie. %OD%OA est la marque de fin de ligne. Les espaces ont été remplacés par le signe +</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;1&quot; <mark style="background-color: #c0c0c0">name=&quot;cmbValeurs&quot;</mark>&gt;</p><p style="margin:0;">&lt;option value=&#x27;1&#x27;&gt;choix1&lt;/option&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;2&#x27;&gt;choix2&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;3&#x27;&gt;choix3&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000404C9A3AF2.png" style="display:inline-block; margin:4px;width:3.941cm;height:0.85cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000404C9A3AF2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">cmbValeurs=3</mark></b></p><p style="margin:0;">- attribut [value] de l&#x27;élément sélectionné par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst1&quot;</mark>&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;liste1&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;2&#x27;&gt;liste2&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;3&#x27;&gt;liste3&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;4&#x27;&gt;liste4&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;5&#x27;&gt;liste5&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B00000067A3FFA096.png" style="display:inline-block; margin:4px;width:4.17cm;height:1.36cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B00000067A3FFA096.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst1=3</mark></b></p><p style="margin:0;">- attribut [value] de l&#x27;élément sélectionné par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst2&quot;</mark> multiple=&quot;multiple&quot;&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;liste1&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;2&#x27;&gt;liste2&lt;/option&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;3&#x27;&gt;liste3&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;4&#x27;&gt;liste4&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;5&#x27;&gt;liste5&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000609BBC7B2D.png" style="display:inline-block; margin:4px;width:3.851cm;height:1.27cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000609BBC7B2D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst2=1</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst2=3</mark></b></p><p style="margin:0;">- attributs [value] des éléments sélectionnés par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;submit&quot; <mark style="background-color: #c0c0c0">value=&quot;Envoyer&quot;</mark> <mark style="background-color: #c0c0c0">name=&quot;cmdRenvoyer&quot;/</mark>&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">cmdRenvoyer=Envoyer</mark></b></p><p style="margin:0;">- nom et attribut <i>value</i> du bouton qui a servi à envoyer les données du formulaire au serveur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;hidden&quot; <mark style="background-color: #c0c0c0">name=&quot;secret&quot;</mark> value=&quot;uneValeur&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">secret=uneValeur</mark></b></p><p style="margin:0;">- attribut <i>value</i> du champ caché</p></td></tr></table>
 
 <p><span style="color: #000000">Dans notre formulaire, nous avons deux balises susceptibles d&#x27;envoyer une valeur :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">select</span><span style="color:#000000"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=&quot;personneId&quot;&gt;</span></span>
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">select</span><span style="color:#0000ff">&gt;</span></span>
@@ -1809,7 +1809,7 @@
 </code></pre></div>
 <p><span style="color: #000000">Les noms des paramètres sont ceux des attributs [name] des balises concernées par le POST. Sans cet attribut, les balises n&#x27;émettent pas de valeur. Ainsi ci-dessus, on pourrait omettre l&#x27;attribut </span><span style="color: #ff0000">name</span><span style="color: #0000ff">=&quot;valider&quot;</span><span style="color: #000000"> du bouton [submit]. La valeur envoyée est l&#x27;attribut [value] du bouton. Ici cette information ne nous intéresse pas. Parfois les formulaires ont plusieurs boutons de type [submit]. Il est alors important de savoir quel bouton a été cliqué. On mettra alors l&#x27;attribut [name] aux différents boutons.</span></p>
 <p><span style="color: #000000">La balise &lt;select&gt; est composée d&#x27;une suite de balises &lt;option&gt; :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">select</span><span style="color:#000000"> </span><span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;personneId&quot;</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">option</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1&quot;</span> <span style="color:#008080">&gt;</span><span style="color:#000000">Pierre Martino</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">option</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">option</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;2&quot;</span> <span style="color:#7f007f">selected</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&amp;quot;selected&amp;quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">Pauline Pereiro</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">option</span><span style="color:#008080">&gt;</span></span>
@@ -1822,7 +1822,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>personneId=2&amp;valider=Valider
 </code></pre></div>
 <p><span style="color: #000000">va être postée à l&#x27;URL [/First/Action06] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action06-POST</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action06(</span><span style="color:#2b91af">ActionModel06</span><span style="color:#000000"> modèle)</span></span>
@@ -1832,7 +1832,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">On se rappelle peut-être que nous avions déjà une action [Action06] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action06-GET</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action06()</span></span>
@@ -1905,7 +1905,7 @@
 <p>Le modèle de la session sera la classe [SessionModel] suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001310000012352EF06B8.png" style="display:inline-block; margin:4px;width:4.036cm;height:3.851cm;" class="odt-zoomable" data-zoom-src="images/10000000000001310000012352EF06B8.png" /></td></tr></table>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_03.Models</span></span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">SessionModel</span></span>
@@ -1918,7 +1918,7 @@
 <ul>
 <li>ligne 2 : la session mémorisera la liste des personnes affichées dans la liste déroulante ;</li>
 </ul>
-<p>Il nous faut lier le type précédent [SessionModel] à un binder que nous appellerons [SessionModelBinder]. Celui-ci sera le même que celui décrit page <a href="le-modele-dune-action.html#sessionmodelbinder">81</a> :</p>
+<p>Il nous faut lier le type précédent [SessionModel] à un binder que nous appellerons [SessionModelBinder]. Celui-ci sera le même que celui décrit page <a href="le-modele-dune-action.html#sessionmodelbinder">82</a> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C200000049C2A2BB22.png" style="display:inline-block; margin:4px;width:3.59cm;height:1.349cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C200000049C2A2BB22.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1938,7 +1938,7 @@
 </code></pre></div>
 
 <p>La liaison entre le modèle [SessionModel] et son <em>binder</em> [SessionModelBinder] se fait dans [Global.asax] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">MvcApplication</span><span style="color:#000000"> : System.Web.</span><span style="color:#2b91af">HttpApplication</span></span>
 <span class="odt-code-line">  {</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span>
@@ -1961,7 +1961,7 @@
 <li>ligne 13 : une instance de type [SessionModel] est mise en session associée à la clé [data].</li>
 </ul>
 <p>Ceci fait, l&#x27;action [Action07] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action07-GET</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action07(</span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> session)</span></span>
@@ -1993,7 +1993,7 @@
 </code></pre></div>
 
 <p>Elle est identique à la vue [Action06Get.cshtml] déjà étudiée. La principale différence est ligne 7 : l&#x27;URL à laquelle seront postées les valeurs du formulaire. Celles-ci seront traitées par l&#x27;action [Action07] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action07-POST</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action07(</span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> session, </span><span style="color:#2b91af">ActionModel06</span><span style="color:#000000"> modèle)</span></span>
@@ -2075,7 +2075,7 @@
 <p><a id="refheading58088676630786"></a></p>
 <h3 id="561-le-modele-de-portee-application">5.6.1. Le modèle de portée [Application]</h3>
 <p><span style="color: #000000">Nous allons supposer que les éléments affichés par les boutons radio, les cases à cocher et les différentes listes sont des données de portée [Application]. Un cas fréquent. Ces informations proviennent d&#x27;un fichier de configuration ou d&#x27;une base de données exploités au démarrage de l&#x27;application dans la méthode [Application_Start] de [Global.asax]. Cette méthode évolue de la façon suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> Application_Start()</span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line">....</span>
@@ -2090,13 +2090,13 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 7 : le type [ApplicationModel] que nous allons décrire bientôt est associé au lieur de données [ApplicationModelBinder] que nous avons déjà présenté page <a href="le-modele-dune-action.html#applicationmodelbinder">81</a> ;</span></li>
+<li><span style="color: #000000">ligne 7 : le type [ApplicationModel] que nous allons décrire bientôt est associé au lieur de données [ApplicationModelBinder] que nous avons déjà présenté page <a href="le-modele-dune-action.html#applicationmodelbinder">82</a> ;</span></li>
 <li><span style="color: #000000">ligne 10 : une instance de type [ApplicationModel] est enregistrée dans le dictionnaire de l&#x27;application, associée à la clé [data].</span></li>
 </ul>
 <p><span style="color: #000000">La classe [ApplicationModel] sert à encapsuler toutes les données de portée [Application]. Ici elle encapsulera les données que doit afficher le formulaire :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001610000016B717C9AB7.png" style="display:inline-block; margin:4px;width:4.671cm;height:4.803cm;" class="odt-zoomable" data-zoom-src="images/10000000000001610000016B717C9AB7.png" /></td></tr></table>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_03.Models</span></span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ApplicationModel</span></span>
@@ -2166,7 +2166,7 @@
 <p><a id="refheading58090676630786"></a></p>
 <h3 id="562-le-modele-de-laction-action08get">5.6.2. Le modèle de l&#x27;action [Action08Get]</h3>
 <p>Le formulaire précédent sera affiché par l&#x27;action [Action08Get] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action08-GET</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action08Get(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application)</span></span>
@@ -2256,7 +2256,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">On notera lignes 5 et 6 que l&#x27;attribut [name] des deux boutons radio est le nom de la propriété qui va être initialisée. Dans les données postées, on trouvera une chaîne de la forme :</span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">param1=val1&amp;</span><span style="color:#0000ff">RadioButtonField=2</span><span style="color:#000000">&amp;param2=val2</span></span>
 </code></pre></div>
 
@@ -2276,7 +2276,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">On notera lignes 5 et 6 que l&#x27;attribut [name] des cases à cocher est le nom de la propriété qui va être initialisée. Dans les données postées, on trouvera une chaîne de la forme :</span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">param1=val1&amp;</span><span style="font-style:italic;color:#2a00ff">CheckBoxesField</span><span style="color:#0000ff">=2&amp;</span><span style="font-style:italic;color:#2a00ff">CheckBoxesField</span><span style="color:#0000ff">=3</span><span style="color:#000000">&amp;param2=val2</span></span>
 </code></pre></div>
 
@@ -2322,7 +2322,7 @@
 <ul>
 <li><span style="color: #000000">ligne 14 : [TextAreaField] récupèrera la valeur postée par les lignes suivantes du formulaire :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- le champ de saisie texte multilignes --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Boîte de saisie</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span></span>
@@ -2342,7 +2342,7 @@
 <ul>
 <li><span style="color: #000000">ligne 15 : [DropDownListField] récupèrera </span><strong><span style="color: #000000">la valeur postée</span></strong><span style="color: #000000"> par les lignes suivantes du formulaire :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- la liste déroulante --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Liste déroulante</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span></span>
@@ -2364,7 +2364,7 @@
 <ul>
 <li><span style="color: #000000">ligne 16 : [SingleChoiceListField] récupèrera </span><strong><span style="color: #000000">la valeur postée</span></strong><span style="color: #000000"> par les lignes suivantes du formulaire :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- la liste à choix unique --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Liste à choix unique</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span></span>
@@ -2389,7 +2389,7 @@
 <ul>
 <li><span style="color: #000000">ligne 17 : [MultipleChoiceListField] récupèrera </span><strong><span style="color: #000000">les valeurs postées</span></strong><span style="color: #000000"> par les lignes suivantes du formulaire :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- la liste à choix multiple --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Liste à choix multiple</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span></span>
@@ -2411,7 +2411,7 @@
 
 <p><span style="color: #000000">si l&#x27;utilisateur a sélectionné les options [liste1] et [liste3]. C&#x27;est l&#x27;attribut [value] des options sélectionnées qui est postée. C&#x27;est parce que plusieurs paramètres de même nom peuvent être postés que [MultipleChoiceListField] est un tableau de valeurs et non une valeur simple. Si aucune case n&#x27;est cochée, le paramètre [MultipleChoiceListField] sera absent de la chaîne postée et la propriété de même nom du modèle ne sera pas initialisée.</span></p>
 <p><span style="color: #000000">Les différents champs de saisie présentés précédemment vont recevoir les valeurs postées par le formulaire. On peut également les initialiser avant d&#x27;envoyer le formulaire. C&#x27;est ce qui a été fait ici :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">   </span><span style="color:#000000">   </span><span style="color:#008000">// initialisation champs</span></span>
 <span class="odt-code-line"><span style="color:#000000">      RadioButtonField = </span><span style="color:#a31515">&quot;2&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#000000">      CheckBoxesField = </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000">[] { </span><span style="color:#a31515">&quot;2&quot;</span><span style="color:#000000"> };</span></span>
@@ -2543,7 +2543,7 @@
 <li>lignes 5, 12 : on donne à l&#x27;attribut [value] de la balise, la valeur du modèle ;</li>
 <li>ligne 19 : idem mais avec une syntaxe différente. </li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000"> </span><span style="color:#000000">       </span><span style="color:#006400">&lt;!-- la liste déroulante --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste déroulante</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2565,7 +2565,7 @@
 <li>ligne 9 : une option qui a comme attribut [value] la valeur de la propriété [DropDownListField] doit alors être sélectionnée. Pour cela, elle doit avoir l&#x27;attribut [selected=&quot;selected&quot;] ;</li>
 <li>ligne 25 : génération de la balise &lt;option value=&quot;<em>valeur</em>&quot;&gt;<em>libellé</em>&lt;/option&gt; avec pour valeur [@item.Value] et pour libellé [@item.Label] ;</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- la liste à choix unique --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste à choix unique</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2583,7 +2583,7 @@
 </code></pre></div>
 
 <p>L&#x27;explication est la même que pour la liste déroulante.</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#000000">      </span><span style="color:#006400">&lt;!-- la liste à choix multiple --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste à choix multiple</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2613,7 +2613,7 @@
 </code></pre></div>
 
 <p>L&#x27;action [Action08Post] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action08-POST</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action08Post(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application, </span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> posted)</span></span>
@@ -2629,7 +2629,7 @@
 <li>ligne 3 : le modèle de l&#x27;application est en paramètre ainsi que les valeurs postées. Celles-ci sont disponibles dans un type [FormCollection]. La valeur du paramètre [RadioButtonField] posté est obtenue par l&#x27;expression <strong>posted[&quot; RadioButtonField&quot;]</strong>. On obtient là une chaîne de caractères ou le pointeur <em>null</em>. Si on écrit  <strong>posted[&quot; CheckBoxesField&quot;]</strong>, on aura un tableau de chaînes de caractères ou le pointeur <em>null</em> ;</li>
 <li>pourquoi ne pas écrire :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action08Post(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application, </span><span style="color:#2b91af">ViewModel08</span><span style="color:#000000"> posted)</span></span>
 </code></pre></div>
 
@@ -2660,7 +2660,7 @@
 <li>parce qu&#x27;il n&#x27;y a aucune case cochée, le paramètre [CheckBoxesField] ne fait pas partie des valeurs postées ;</li>
 <li>l&#x27;action [Action08Post] procède de la façon suivante :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action08Post(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application, </span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> posted)</span></span>
 <span class="odt-code-line">    {</span>
@@ -2676,7 +2676,7 @@
 <li>ligne 6 : les valeurs postées sont enregistrées dans le modèle. Comme  le paramètre [CheckBoxesField] ne fait pas partie des valeurs postées, la propriété de même nom n&#x27;est pas affectée. Elle reste donc avec sa valeur [&quot;2&quot;], ce qui fait qu&#x27;à l&#x27;affichage la case n° 2 est cochée alors qu&#x27;elle ne devrait pas l&#x27;être.</li>
 </ul>
 <p>Ce problème peut se régler de diverses façons. Nous choisissons de le régler dans le code de l&#x27;action [Action08Post] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// Action08-POST</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action08Post(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application, </span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> posted)</span></span>
@@ -2714,7 +2714,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F000001A65D54B10A.png" style="display:inline-block; margin:4px;width:5.491cm;height:5.583cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F000001A65D54B10A.png" /></td></tr></table>
 
 <p>Revenons sur le code utilisé pour générer la liste déroulante du formulaire :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- la liste déroulante --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste déroulante</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2737,7 +2737,7 @@
 <li>ligne 5 : si on se trompe dans le nom de la propriété du modèle à utiliser comme attribut [name], on ne s&#x27;en apercevra qu&#x27;à l&#x27;exécution.</li>
 </ul>
 <p>ASP.NET MVC offre des méthodes spécialisées appelées [HTML Helpers] qui, comme leur nom l&#x27;indique, vise à faciliter la génération du HTML, notamment pour les formulaires. Avec ces classes, la liste <a id="dropdownlistfor"></a>déroulante précédente s&#x27;écrit comme suit :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- la liste déroulante --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste déroulante</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2748,7 +2748,7 @@
 </code></pre></div>
 
 <p>La liste déroulante est générée par les lignes 4-5. Le code est nettement moins complexe. Le code HTML généré pour la liste déroulante est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- la liste déroulante --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Liste déroulante</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span></span>
@@ -2764,7 +2764,7 @@
 <li>lignes 4-6 : les options sont correctement générées et la bonne option a été sélectionnée.</li>
 </ul>
 <p>Revenons au code qui a généré ces lignes HTML :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">@Html.DropDownListFor(m =&gt; m.DropDownListField, </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">SelectList</span><span style="color:#000000">(@Model.DropDownListFieldItems, </span><span style="color:#a31515">&quot;Value&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Label&quot;</span><span style="color:#000000">))</span></span>
 </code></pre></div>
 
@@ -2781,7 +2781,7 @@
 <p>Voyons maintenant les autres méthodes que nous pouvons utiliser :</p>
 <p><u><strong>Boutons radio</strong></u></p>
 <p>Le nouveau code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- les boutons radio --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Etes-vous marié(e)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2810,7 +2810,7 @@
 </code></pre></div>
 
 <p>La méthode utilisée est [Html.RadioButtonFor] :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>@Html.RadioButtonFor(m =&gt; m.RadioButtonField, @item.Value)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">@Html</span><span class="p">.</span><span class="n">RadioButtonFor</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">RadioButtonField</span><span class="p">,</span><span class="w"> </span><span class="n">@item</span><span class="p">.</span><span class="n">Value</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li>le premier paramètre est la propriété du modèle qui va être associée au bouton radio (attribut [name]) ;</li>
@@ -2818,7 +2818,7 @@
 </ul>
 <p><u><strong>Cases à cocher</strong></u></p>
 <p>Le code évolue de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- les cases à cocher --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Cases à cocher</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2848,7 +2848,7 @@
 </ul>
 <p><u><strong>Champ de saisie monoligne</strong></u></p>
 <p>Le nouveau code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#006400">&lt;!-- le champ de saisie texte monoligne --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Champ de saisie</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2870,7 +2870,7 @@
 </code></pre></div>
 
 <p>La méthode utilisée est la suivante :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">@Html.TextBoxFor(m =&gt; m.TextField, </span><span style="color:#0000ff">new</span><span style="color:#000000"> { size = </span><span style="color:#a31515">&quot;30&quot;</span><span style="color:#000000"> })</span></span>
 </code></pre></div>
 
@@ -2880,7 +2880,7 @@
 </ul>
 <p><u><strong>Champ de saisie d&#x27;un mot de passe</strong></u></p>
 <p>Le nouveau code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- le champ de saisie d&#x27;un mot de passe --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Mot de passe</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2902,14 +2902,14 @@
 </code></pre></div>
 
 <p>La méthode utilisée est la suivante :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">@Html.PasswordFor(m =&gt; m.PasswordField, </span><span style="color:#0000ff">new</span><span style="color:#000000"> { size = </span><span style="color:#a31515">&quot;15&quot;</span><span style="color:#000000"> })</span></span>
 </code></pre></div>
 
 <p><span style="color: #000000">Le fonctionnement est analogue à celui de la méthode [Html.TexBoxFor].</span></p>
 <p><u><strong>Champ de saisie multi-lignes</strong></u></p>
 <p>Le nouveau code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- le champ de saisie texte multilignes --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Boîte de saisie</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2920,7 +2920,7 @@
 </code></pre></div>
 
 <p>Le code HTML généré est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- le champ de saisie texte multilignes --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Boîte de saisie</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span></span>
@@ -2933,14 +2933,14 @@
 </code></pre></div>
 
 <p>La méthode utilisée est la suivante :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">@Html.TextAreaFor(m =&gt; m.TextAreaField, </span><span style="color:#0000ff">new</span><span style="color:#000000"> { cols = </span><span style="color:#a31515">&quot;30&quot;</span><span style="color:#000000">, rows = </span><span style="color:#a31515">&quot;5&quot;</span><span style="color:#000000"> })</span></span>
 </code></pre></div>
 
 <p><span style="color: #000000">Le fonctionnement est analogue à celui de la méthode [Html.TexBoxFor].</span></p>
 <p><u><strong><span style="color: #000000">Liste à choix unique</span></strong></u></p>
 <p><span style="color: #000000">Le nouveau code est le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- la liste à choix unique --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste à choix unique</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2950,7 +2950,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">et le code HTML généré le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- la liste à choix unique --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Liste à choix unique</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span></span>
@@ -2968,7 +2968,7 @@
 <p><span style="color: #000000">Nous avons déjà étudié la méthode [Html.DropDownListFor]. La seule différence est ici le troisième paramètre qui sert à préciser un attribut [size] différent de 1. C&#x27;est cette caractéristique qui fait passer d&#x27;une liste déroulante [size=1] à une liste simple.</span></p>
 <p><u><strong><span style="color: #000000">La liste à choix multiples</span></strong></u></p>
 <p><span style="color: #000000">Le nouveau code est le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- la liste à choix multiple --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste à choix multiple</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -2978,7 +2978,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">et le code HTML généré le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- la liste à choix multiple --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span><span style="color:#000000">Liste à choix multiple</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span></span>
@@ -2994,7 +2994,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">La méthode</span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="font-weight:bold;color:#000000">@Html.ListBoxFor</span><span style="color:#000000">(m =&gt; m.MultipleChoiceListField, </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">SelectList</span><span style="color:#000000">(@Model.MultipleChoiceListFieldItems, </span><span style="color:#a31515">&quot;Value&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Label&quot;</span><span style="color:#000000">), </span><span style="color:#0000ff">new</span><span style="color:#000000"> { size = </span><span style="color:#a31515">&quot;5&quot;</span><span style="color:#000000"> })</span></span>
 </code></pre></div>
 
@@ -3008,14 +3008,14 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Le code HTML généré est le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">form</span><span style="color:#000000"> </span><span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/First/Action09Post&quot;</span><span style="color:#000000"> </span><span style="color:#7f007f">method</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;post&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">    </span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">...</span></span>
 <span class="odt-code-line"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">form</span><span style="color:#008080">&gt;</span></span>
 </code></pre></div>
 
 <p><span style="color: #000000">La méthode </span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">Html.BeginForm(</span><span style="color:#a31515">&quot;Action09Post&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;First&quot;</span><span style="color:#000000">)</span></span>
 </code></pre></div>
 
@@ -3023,7 +3023,7 @@
 <p><a id="refheading58104676630786"></a></p>
 <h3 id="572-les-actions-et-le-modele">5.7.2. Les actions et le modèle</h3>
 <p><span style="color: #000000">Le formulaire sera délivré par l&#x27;action [Action09Get] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action09-GET</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action09Get(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application)</span></span>
@@ -3091,7 +3091,7 @@
 
 <p><span style="color: #000000">[ViewModel09] différe de [ViewModel08] par sa gestion des cases à cocher. Plutôt que d&#x27;avoir un tableau de trois cases à cocher, on a utilisé trois cases à cocher séparées (lignes 11-13).</span></p>
 <p><span style="color: #000000">Le formulaire sera traité par l&#x27;action [Action09Post] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action09-POST</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action09Post(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application, </span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> posted)</span></span>
@@ -3212,7 +3212,7 @@
 
 <p><span style="color: #000000">Les métadonnées sont formées des balises [Display, DataType, UIHint].</span></p>
 <p><span style="color: #000000">Ce modèle de vue sera construit par l&#x27;action [Action10Get] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action10-GET</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action10Get()</span></span>
@@ -3341,7 +3341,7 @@
 <p><a id="refheading58108676630786"></a></p>
 <h3 id="581-le-post-du-formulaire">5.8.1. Le [POST] du formulaire</h3>
 <p>Le [POST] du formulaire est traité par l&#x27;action [Action10Post] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action10-POST</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action10Post(</span><span style="color:#2b91af">ViewModel10</span><span style="color:#000000"> modèle)</span></span>
@@ -3362,7 +3362,7 @@
 <p><a id="refheading58110676630786"></a></p>
 <h3 id="582-propriete-text">5.8.2. Propriété [Text]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name=<span style="color:#a31515">&quot;Text&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.Text)]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Text { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
@@ -3371,7 +3371,7 @@
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.Text)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.Text)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3400,7 +3400,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Le texte affiché entre le début et la fin de la balise est le texte de la métadonnée</span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">Display</span>(Name=<span style="color:#a31515">&quot;Text&quot;</span>)]</span>
 </code></pre></div>
 
@@ -3408,14 +3408,14 @@
 <ul>
 <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3. On notera qu&#x27;elle a un attribut [class] qui associe la classe CSS [<em><span style="color: #2a00ff">text-box single-line</span></em>] à la balise. Les attributs [<strong>id</strong>] et [<strong>name</strong>] ont pour valeur le nom [<strong>Text</strong>] de la propriété paramètre de la méthode [Html.EditorFor]. L&#x27;attribut [<strong>type</strong>] a eu la valeur [text] à cause de la métadonnée </span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Text)]</span>
 </code></pre></div>
 
 <ul>
 <li><span style="color: #000000">la méthode [Html.DisplayFor] a généré le texte de la ligne 4. C&#x27;est la valeur de la propriété paramètre de la méthode [Html.DisplayFor ]. Cette méthode est influencée par la métadonnée</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Text)]</span>
 </code></pre></div>
 
@@ -3423,14 +3423,14 @@
 <p><a id="refheading58112676630786"></a></p>
 <h3 id="583-propriete-multilinetext">5.8.3. Propriété [MultiLineText]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;TextArea&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.MultilineText)]</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> MultiLineText { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.MultiLineText)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.MultiLineText)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3442,7 +3442,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001920000003397BA85AF.png" style="display:inline-block; margin:4px;width:7.44cm;height:0.94cm;" class="odt-zoomable" data-zoom-src="images/10000000000001920000003397BA85AF.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><u><strong><span style="color: #000000">HTML généré</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">label</span> <span style="color:#7f007f">for</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;MultiLineText&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">TextArea</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">label</span><span style="color:#008080">&gt;&lt;/</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">td</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">textarea</span> <span style="color:#7f007f">class</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text-box multi-line&quot;</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;MultiLineText&quot;</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;MultiLineText&quot;</span><span style="color:#008080">&gt;</span></span>
@@ -3457,7 +3457,7 @@
 <ul>
 <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>textarea</strong>&gt; de la ligne 3. On notera qu&#x27;elle a un attribut [class] qui associe la classe CSS [<em><span style="color: #2a00ff">text-box multi-line</span></em>] à la balise. Les attributs [<strong>id</strong>] et [<strong>name</strong>] ont pour valeur le nom [<strong>MultiLineText</strong>] de la propriété paramètre de la méthode [Html.EditorFor]. C&#x27;est toujours ainsi. Nous ne le mentionnerons plus. La balise générée est &lt;<strong>textarea</strong>&gt; à cause de la métadonnée </span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.MultilineText)]</span>
 </code></pre></div>
 
@@ -3468,13 +3468,13 @@
 <p><a id="refheading58114676630786"></a></p>
 <h3 id="584-propriete-number">5.8.4. Propriété [Number]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;Number&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">int</span><span style="color:#000000"> Number { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.Number)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.Number)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3508,18 +3508,18 @@
 <p><span style="color: #000000">Autre exemple, on ne saisit rien :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005860000013554A20B97.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.933cm;" class="odt-zoomable" data-zoom-src="images/10000000000005860000013554A20B97.png" /></td></tr></table>
 
-<p><span style="color: #000000">En [1] ci-dessus, [Action10Post] signale une erreur. On se souvient peut-être qu&#x27;on avait déjà obtenu ce comportement en utilisant l&#x27;attribut [Required] sur la propriété à contrôler (cf page <a href="le-modele-dune-action.html#contrainte-required">68</a>), ici la propriété [Number]. Ici, on n&#x27;a pas eu à le faire.</span></p>
+<p><span style="color: #000000">En [1] ci-dessus, [Action10Post] signale une erreur. On se souvient peut-être qu&#x27;on avait déjà obtenu ce comportement en utilisant l&#x27;attribut [Required] sur la propriété à contrôler (cf page <a href="le-modele-dune-action.html#contrainte-required">69</a>), ici la propriété [Number]. Ici, on n&#x27;a pas eu à le faire.</span></p>
 <p><a id="refheading58116676630786"></a></p>
 <h3 id="585-propriete-decimal">5.8.5. Propriété [Decimal]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;Decimal&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">UIHint</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;Decimal&quot;</span><span style="color:#000000">)]</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">double</span><span style="color:#000000"> Decimal { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.Decimal)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.Decimal)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3543,7 +3543,7 @@
 <ul>
 <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [text]. Les autres attributs sont identiques à ceux générés pour la propriété [Number] précédente. La métadonnée :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">UIHint</span>(<span style="color:#a31515">&quot;Decimal&quot;</span>)]</span>
 </code></pre></div>
 
@@ -3553,14 +3553,14 @@
 <p><a id="refheading58118676630786"></a></p>
 <h3 id="586-propriete-tel">5.8.6. Propriété [Tel]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;Tel&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.PhoneNumber)]</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Tel { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.Tel)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.Tel)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3584,7 +3584,7 @@
 <ul>
 <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>tel</strong>]. Cette valeur a été générée à cause de la métadonnée :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.PhoneNumber)]</span>
 </code></pre></div>
 
@@ -3594,14 +3594,14 @@
 <p><a id="refheading58120676630786"></a></p>
 <h3 id="587-propriete-date">5.8.7. Propriété [Date]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;Date&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.Date)]</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">DateTime</span><span style="color:#000000"> Date { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.Date)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.Date)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3625,7 +3625,7 @@
 <ul>
 <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>date</strong>]. Cette valeur a été générée à cause de la métadonnée :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Date)]</span>
 </code></pre></div>
 
@@ -3641,14 +3641,14 @@
 <p><a id="refheading58122676630786"></a></p>
 <h3 id="588-propriete-time">5.8.8. Propriété [Time]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;Time&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.Time)]</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">DateTime</span><span style="color:#000000"> Time { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.Time)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.Time)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3672,7 +3672,7 @@
 <ul>
 <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>time</strong>]. Cette valeur a été générée à cause de la métadonnée :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Time)]</span>
 </code></pre></div>
 
@@ -3687,14 +3687,14 @@
 <p><a id="refheading58124676630786"></a></p>
 <h3 id="589-propriete-hiddeninput">5.8.9. Propriété [HiddenInput]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;HiddenInput&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">UIHint</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;HiddenInput&quot;</span><span style="color:#000000">)]</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> HiddenInput { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.HiddenInput)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.HiddenInput)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3718,7 +3718,7 @@
 <ul>
 <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>hidden</strong>], ç-à-d un champ caché (mais néanmoins posté). Cette valeur a été générée à cause de la métadonnée :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">UIHint</span>(<span style="color:#a31515">&quot;HiddenInput&quot;</span>)]</span>
 </code></pre></div>
 
@@ -3728,13 +3728,13 @@
 <p><a id="refheading58126676630786"></a></p>
 <h3 id="5810-propriete-boolean">5.8.10. Propriété [Boolean]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;Boolean&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">bool</span><span style="color:#000000"> Boolean { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.Boolean)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.Boolean)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3768,14 +3768,14 @@
 <p><a id="refheading58128676630786"></a></p>
 <h3 id="5811-propriete-email">5.8.11. Propriété [Email]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;Email&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.EmailAddress)]</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Email{ </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.Email)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.Email)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3799,7 +3799,7 @@
 <ul>
 <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>email</strong>]. Ce type est nouveau dans HTML5. Ce type a été généré à cause de la métadonnée :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.EmailAddress)]</span>
 </code></pre></div>
 
@@ -3815,14 +3815,14 @@
 <p><a id="refheading58130676630786"></a></p>
 <h3 id="5812-propriete-url">5.8.12. Propriété [Url]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;Url&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.Url)]</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Url { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.Url)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.Url)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3846,7 +3846,7 @@
 <ul>
 <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>url</strong>]. Ce type est nouveau dans HTML5. Il a été généré à cause de la métadonnée :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Url)]</span>
 </code></pre></div>
 
@@ -3862,14 +3862,14 @@
 <p><a id="refheading58132676630786"></a></p>
 <h3 id="5813-propriete-password">5.8.13. Propriété [Password]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;Password&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.Password)]</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Password { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.Password)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.Password)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3893,7 +3893,7 @@
 <ul>
 <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>password</strong>]. Ce type a été généré à cause de la métadonnée :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Password)]</span>
 </code></pre></div>
 
@@ -3903,14 +3903,14 @@
 <p><a id="refheading58134676630786"></a></p>
 <h3 id="5814-propriete-currency">5.8.14. Propriété [Currency]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;Currency&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.Currency)]</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">double</span><span style="color:#000000"> Currency { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.Currency)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.Currency)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3939,7 +3939,7 @@
 <p><span style="color: #000000">la méthode [Html.DisplayFor] a généré la ligne 4, un nombre à deux décimales avec un symbole monétaire. Ce format a été utilisé à cause de la métadonnée :</span></p>
 </li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">[</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.Currency)]</span></span>
 </code></pre></div>
 
@@ -3950,14 +3950,14 @@
 <p><a id="refheading58136676630786"></a></p>
 <h3 id="5815-propriete-creditcard">5.8.15. Propriété [CreditCard]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">Display</span>(Name = <span style="color:#a31515">&quot;CreditCard&quot;</span>)]</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.CreditCard)]</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> CreditCard { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><u><strong><span style="color: #000000">Vue</span></strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">      <span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.LabelFor(m =&gt; m.CreditCard)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">@Html.EditorFor(m =&gt; m.CreditCard)</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3981,7 +3981,7 @@
 <ul>
 <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>text</strong>]. La méthode [Html.DisplayFor] a généré la ligne 4. On ne voit pas ici ce qu&#x27;apporte la métadonnée :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.<span style="color:#000000">CreditCard</span>)]</span>
 </code></pre></div>
 
@@ -4180,7 +4180,7 @@
 </li>
 </ul>
 <p><span style="color: #000000">L&#x27;action [Action11Get] sert à afficher le formulaire :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action11-GET</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action11Get()</span></span>
@@ -4190,7 +4190,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">L&#x27;action [Action11Post] sert à réafficher le formulaire avec les éventuelles erreurs de saisie :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action11-POST</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action11Post(</span><span style="color:#2b91af">ViewModel11</span><span style="color:#000000"> modèle)</span></span>
@@ -4209,7 +4209,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E1000001FB4942ABA5.png" style="display:inline-block; margin:4px;width:13.651cm;height:9.389cm;" class="odt-zoomable" data-zoom-src="images/10000000000002E1000001FB4942ABA5.png" /></td></tr></table>
 
 <p><span style="color: #000000">On notera que les deux dates sont erronées (on est le 11/10/2013) mais que les erreurs ne sont pas signalées. Ces erreurs sont détectées par la méthode [Validate] du modèle :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// validation</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">IEnumerable</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">ValidationResult</span><span style="color:#000000">&gt; Validate(</span><span style="color:#2b91af">ValidationContext</span><span style="color:#000000"> validationContext)</span></span>
 <span class="odt-code-line">    {</span>
@@ -4295,7 +4295,7 @@
 
 <p><span style="color: #000000"><strong>Note</strong> : ligne 13, adaptez la version de jQuery à celle que vous avez avec votre version de Visual Studio (voir ci-après).</span></p>
 <p><span style="color: #000000">La validation côté client nécessite la présence de la ligne 3 ci-dessous dans le fichier [Web.config] de l&#x27;application.</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">appSettings</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line">    ...</span>
 <span class="odt-code-line"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">add</span><span style="color:#0000ff"> </span><span style="color:#ff0000">key</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">ClientValidationEnabled</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">value</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">true</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span>
@@ -4310,7 +4310,7 @@
 
 <p><span style="color: #000000">Chaque script a une version normale [.js] et une version minifiée [min.js]. Cette dernière version est plus légère mais illisible. On l&#x27;utilise en production. La version lisible est utilisée en développement.</span></p>
 <p><span style="color: #000000">La vue [Action12Get.cshtml] sera affichée par l&#x27;action [Action12Get] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action12-GET</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action12Get()</span></span>
@@ -4320,7 +4320,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Le formulaire saisi sera traité par l&#x27;action [Action12Post] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action12-POST</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action12Post(</span><span style="color:#2b91af">ViewModel11</span><span style="color:#000000"> modèle)</span></span>
@@ -4440,7 +4440,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Les actions qui génèrent ces vues sont les suivantes :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">      <span style="color:#008000">// Action16-GET</span></span>
 <span class="odt-code-line"><span style="color:#000000">      [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action16Get()</span></span>

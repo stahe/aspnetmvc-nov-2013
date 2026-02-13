@@ -1006,7 +1006,7 @@
 <p><a id="refheading58164676630786"></a></p>
 <h2 id="72-rudiments-de-jquery-et-de-javascript">7.2. Rudiments de JQuery et de Javascript</h2>
 <p><span style="color: #000000">Nous avons souvent associé la bibliothèque Javascript JQuery à nos pages. On y trouve ainsi la ligne :</span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">  <span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span> <span style="color:#ff0000">type</span><span style="color:#0000ff">=&quot;text/javascript&quot;</span> <span style="color:#ff0000">src</span><span style="color:#0000ff">=&quot;~/Scripts/jquery-1.8.2.min.js&quot;&gt;&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span>
 </code></pre></div>
 
@@ -1016,7 +1016,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006210000026FAA6138D8.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.146cm;" class="odt-zoomable" data-zoom-src="images/10000000000006210000026FAA6138D8.png" /></td></tr></table>
 
 <p><span style="color: #000000">Pour utiliser Ajax avec ASP.NET MVC, une ligne doit être présente dans le fichier de configuration [Web.config] [1] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">appSettings</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">add</span><span style="color:#0000ff"> </span><span style="color:#ff0000">key</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">UnobtrusiveJavaScriptEnabled</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">value</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">true</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span>
@@ -1122,7 +1122,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001690000010444621A3A.png" style="display:inline-block; margin:4px;width:4.777cm;height:3.44cm;" class="odt-zoomable" data-zoom-src="images/10000000000001690000010444621A3A.png" /></td></tr></table>
 
 <p><span style="color: #000000">Pour afficher la vue initiale, nous créons l&#x27;action [Action01Get] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpGet</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action01Get()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1272,7 +1272,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001F200000168C747BA74.png" style="display:inline-block; margin:4px;width:8.55cm;height:6.189cm;" class="odt-zoomable" data-zoom-src="images/10000000000001F200000168C747BA74.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Examinons maintenant le code qui ajaxifie le formulaire :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">...</span>
 <span class="odt-code-line">@{</span>
 <span class="odt-code-line"><span style="color:#000000">  Layout = </span><span style="color:#0000ff">null</span><span style="color:#000000">;</span></span>
@@ -1350,7 +1350,7 @@
 <p><a id="refheading58172676630786"></a></p>
 <h3 id="733-laction-action01post">7.3.3. L&#x27;action [Action01Post]</h3>
 <p><span style="color: #000000">L&#x27;action [Action01Post] qui traite la requête HTTP Ajax est la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpPost</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> Action01Post(</span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> postedData, </span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> session)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1419,7 +1419,7 @@
 </code></pre></div>
 
 <p>On rappelle que ce flux HTML partiel va être envoyé en réponse à la requête HTTP Ajax de type POST et être placé dans la page dans la région d&#x27;id [résultats]. Tous ces renseignements viennent de la configuration Ajax utilisée dans la page principale [Action01Get.cshtml] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">@model Exemple_04.Models.</span><span style="color:#2b91af">ViewModel01</span></span>
 <span class="odt-code-line">@{</span>
 <span class="odt-code-line"><span style="color:#000000">  Layout = </span><span style="color:#0000ff">null</span><span style="color:#000000">;</span></span>
@@ -1469,7 +1469,7 @@
 </code></pre></div>
 
 <p>La session est initialisée dans [Global.asax] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Session</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Session_Start()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1480,7 +1480,7 @@
 </code></pre></div>
 
 <p>L&#x27;association de la session à un modèle est faite dans [Application_Start] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line">...</span>
@@ -1696,7 +1696,7 @@
 <p><a id="refheading58188676630786"></a></p>
 <h3 id="742-laction-action02post">7.4.2. L&#x27;action [Action02Post]</h3>
 <p>La requête Ajax est traitée par l&#x27;action [Action02Post] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">[</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">JsonResult</span><span style="color:#000000"> Action02Post(</span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> postedData, </span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> session)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1921,7 +1921,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">La fonction JS [postForm] est trouvé dans le fichier importé [myScripts-02.js] :</span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">  <span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span> <span style="color:#ff0000">type</span><span style="color:#0000ff">=&quot;text/javascript&quot;</span> <span style="color:#ff0000">src</span><span style="color:#0000ff">=&quot;~/Scripts/myScripts-02.js&quot;&gt;&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span>
 </code></pre></div>
 
@@ -1986,7 +1986,7 @@
 <li><span style="color: #000000">ligne 5 : on affiche la région d&#x27;<strong>id</strong> [erreur].</span></li>
 </ul>
 <p><span style="color: #000000">Pour tester cette fonction d&#x27;erreur, nous allons créer artificiellement une exception dans l&#x27;action [Action02Post] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpPost</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">JsonResult</span><span style="color:#000000"> Action02Post(</span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> postedData, </span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> session)</span></span>
 <span class="odt-code-line">    {</span>
@@ -2025,7 +2025,7 @@
 <li><span style="color: #000000">en [5], l&#x27;URL n&#x27;a pas changé. La page présentée est la <strong>page 1</strong>.</span></li>
 </ul>
 <p><span style="color: #000000">Le code de l&#x27;action [Action03Get] est le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpGet</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action03Get()</span></span>
 <span class="odt-code-line">    {</span>
@@ -2067,7 +2067,7 @@
 <li><span style="color: #000000">ligne 17 : par défaut c&#x27;est la page [Page1.cshtml] qui va d&#x27;abord s&#x27;afficher.</span></li>
 </ul>
 <p><span style="color: #000000">La page [Page1.cshtml] est la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span>Page 1<span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">p</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">    @Ajax.ActionLink(</span><span style="color:#a31515">&quot;Page 2&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Action04&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">new</span><span style="color:#000000"> { Page = 2 }, </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">AjaxOptions</span><span style="color:#000000">() { UpdateTargetId = </span><span style="color:#a31515">&quot;content&quot;</span><span style="color:#000000"> })</span></span>
@@ -2085,7 +2085,7 @@
 <li><span style="color: #000000">les options de l&#x27;appel Ajax. Ici, seulement l&#x27;<strong>id</strong> de la région à mettre à jour avec la réponse du serveur. Pour les autres options, des valeurs par défaut sont alors utilisées lorsqu&#x27;elles existent. La méthode HTTP par défaut est GET.</span></li>
 </ul>
 <p><span style="color: #000000">Voyons ce qui se passe lorsque le lien est cliqué. L&#x27;URL [/Premier/Action04?Page=2] est demandée avec un GET. L&#x27;action [Action04] est alors exécutée :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpGet</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> Action04(</span><span style="color:#0000ff">string</span><span style="color:#000000"> page = </span><span style="color:#a31515">&quot;1&quot;</span><span style="color:#000000">)</span></span>
 <span class="odt-code-line">    {</span>
@@ -2105,7 +2105,7 @@
 <li><span style="color: #000000">ligne 9 : la vue partielle [Page2.cshtml] est rendue.</span></li>
 </ul>
 <p><span style="color: #000000">La vue partielle [Page2.cshtml] est la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span>Page 2<span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">p</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">    @Ajax.ActionLink(</span><span style="color:#a31515">&quot;Page 1&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Action04&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">new</span><span style="color:#000000"> { Page = 1 }, </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">AjaxOptions</span><span style="color:#000000">() { UpdateTargetId = </span><span style="color:#a31515">&quot;content&quot;</span><span style="color:#000000"> })</span></span>
@@ -2113,7 +2113,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Le serveur renvoie donc le flux HTML ci-dessus comme réponse à l&#x27;appel Ajax GET [/Premier/Action04?Page=2]. On se rappelle que cet appel Ajax utilise cette réponse pour mettre à jour la région d&#x27;id [content] (ligne 3 ci-dessous) :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span>Page 1<span style="color:#0000ff">&lt;/</span><span style="color:#800000">h4</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">p</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">    @Ajax.ActionLink(</span><span style="color:#a31515">&quot;Page 2&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Action04&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">new</span><span style="color:#000000"> { Page = 2 }, </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">AjaxOptions</span><span style="color:#000000">() { UpdateTargetId = </span><span style="color:#a31515">&quot;content&quot;</span><span style="color:#000000"> })</span></span>
@@ -2411,7 +2411,7 @@
 <p><a id="refheading1240892030931382"></a></p>
 <h3 id="764-laction-serveur-action05get">7.6.4. L&#x27;action serveur [Action05Get]</h3>
 <p>L&#x27;action [Action05Get] est l&#x27;action qui fait afficher la page unique initiale. Son code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action05Get()</span></span>
 <span class="odt-code-line">    {</span>
@@ -2435,7 +2435,7 @@
 </code></pre></div>
 
 <p>La fonction Javascript [calculer] est trouvée dans le fichier [myScripts-05.js] :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#000000"> </span><span style="color:#ff0000">type</span><span style="color:#0000ff">=&quot;text/javascript&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">src</span><span style="color:#0000ff">=&quot;~/Scripts/myScripts-05.js&quot;&gt;&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span>
 </code></pre></div>
 
@@ -2501,9 +2501,9 @@
 <li>lignes 2-3 : les variables des lignes 46-47 sont déclarées <strong>globales</strong> afin que les autres fonctions y aient accès. Il y a un coût à rechercher des éléments dans une page (lignes 46-47). Il n&#x27;y a pas lieu de répéter cette recherche si on peut l&#x27;éviter ;</li>
 <li>ligne 5 : la fonction [calculer] ;</li>
 <li>ligne 7 : on récupère une référence sur le formulaire. La vue partielle [Formulaire05] lui a donné l&#x27;<strong>id</strong> [formulaire] ;</li>
-<li>ligne 9 : cette instruction exécute les validateurs du formulaire côté client. C&#x27;est ce qui manquait dans l&#x27;anomalie constatée page <a href="#anomalie-validation-client">182</a>. Cette méthode est fournie par la bibliothèque [jquery.unobstrusive-ajax] utilisée par la page unique :</li>
+<li>ligne 9 : cette instruction exécute les validateurs du formulaire côté client. C&#x27;est ce qui manquait dans l&#x27;anomalie constatée page <a href="#anomalie-validation-client">183</a>. Cette méthode est fournie par la bibliothèque [jquery.unobstrusive-ajax] utilisée par la page unique :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">script</span><span style="color:#000000"> </span><span style="color:#ff0000">type</span><span style="color:#0000ff">=&quot;text/javascript&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">src</span><span style="color:#0000ff">=&quot;~/Scripts/jquery.unobtrusive-ajax.js&quot;&gt;&lt;/</span><span style="color:#800000">script</span><span style="color:#0000ff">&gt;</span></span>
 </code></pre></div>
 
@@ -2517,7 +2517,7 @@
 <li>lignes 22-24 : en cas de succès de l&#x27;appel Ajax, la fonction [calculer] met à jour la région d&#x27;<strong>id</strong> [content] avec le flux HTML envoyé par le serveur.</li>
 </ul>
 <p>Ce flux HTML est celui envoyé par l&#x27;action [Action05FaireCalcul] ciblée par l&#x27;appel Ajax. Le code de cette action côté serveur est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> Action05FaireCalcul(</span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> postedData, </span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> session)</span></span>
 <span class="odt-code-line">    {</span>
@@ -2545,7 +2545,7 @@
 <li>ligne 7 : il est mis à jour avec l&#x27;heure de calcul ;</li>
 <li>ligne 9 : on essaie d&#x27;appliquer les valeurs postées au modèle. Les validateurs de celui-ci vont alors être exécutés. On peut se demander pourquoi on prend cette peine alors que les validateurs côté client empêchent le POST si les données saisies sont invalides. En fait, on n&#x27;est pas sûr de la provenance du POST. Il a peut être été fait par un code qui n&#x27;est pas le nôtre. Aussi doit-on toujours faire les vérifications côté serveur ;</li>
 <li>ligne 10 : on teste si les validateurs ont réussi ;</li>
-<li>ligne 13 : si le modèle est invalide, on le met à jour avec une liste d&#x27;erreurs. On ne détaillera pas la méthode interne [getListOfMessagesFor] analogue à la méthode [GetErrorMessagesFor] décrite page <a href="le-modele-dune-action.html#geterrormessagesfor">64</a> ;</li>
+<li>ligne 13 : si le modèle est invalide, on le met à jour avec une liste d&#x27;erreurs. On ne détaillera pas la méthode interne [getListOfMessagesFor] analogue à la méthode [GetErrorMessagesFor] décrite page <a href="le-modele-dune-action.html#geterrormessagesfor">65</a> ;</li>
 <li>ligne 14 : la vue partielle [Failure05] est affichée avec son modèle. On rappelle le code de cette vue ;</li>
 </ul>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2573,7 +2573,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000301000002740C7EB267.png" style="display:inline-block; margin:4px;width:10.174cm;height:8.308cm;" class="odt-zoomable" data-zoom-src="images/1000000000000301000002740C7EB267.png" /></td></tr></table>
 
 <p>Continuons l&#x27;étude du code de l&#x27;action [Action05FaireCalcul] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> Action05FaireCalcul(</span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> postedData, </span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> session)</span></span>
 <span class="odt-code-line">    {</span>
@@ -2760,7 +2760,7 @@
 <li>lignes 18-20 : ce flux HTML servira à mettre à jour la région d&#x27;<strong>id</strong> [content] ;</li>
 </ul>
 <p>L&#x27;action serveur [Action05RetourSaisies] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> Action05RetourSaisies(</span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> session)</span></span>
 <span class="odt-code-line">    {</span>

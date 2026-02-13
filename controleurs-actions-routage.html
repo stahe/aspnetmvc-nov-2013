@@ -860,7 +860,7 @@
 <li>en [3], on trouve trois vues particulières : <strong>_ViewStart, _Layout, Error</strong>.</li>
 </ul>
 <p>Le fichier [_ViewStart] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">@{</span>
 <span class="odt-code-line"><span style="color:#000000">    Layout = </span><span style="color:#a31515">&quot;~/Views/Shared/_Layout.cshtml&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
@@ -971,7 +971,7 @@
 <li><span style="color: #000000">ligne 11 : la méthode [Application_Start] est la méthode exécutée au démarrage de l&#x27;application Web. Elle n&#x27;est exécutée qu&#x27;une fois. C&#x27;est là qu&#x27;on initialise l&#x27;application.</span></li>
 </ul>
 <p><span style="color: #000000">Le code de [Application_Start] est actuellement le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">AreaRegistration</span><span style="color:#000000">.RegisterAllAreas();</span></span>
@@ -1088,7 +1088,7 @@
 <li>en [4], une fois validé, l&#x27;assistant crée la vue dans un sous-dossier du dossier [Views] portant le nom du contrôleur (First).</li>
 </ul>
 <p>Le code généré pour la vue [Index] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">@{</span>
 <span class="odt-code-line"><span style="color:#000000">    ViewBag.Title = </span><span style="color:#a31515">&quot;Index&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
@@ -1101,7 +1101,7 @@
 <li>ligne 5 : une balise HTML.</li>
 </ul>
 <p>On remplace tout le code précédent par celui-ci :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Vue [Index]...</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span></span>
 </code></pre></div>
 
@@ -1123,7 +1123,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028400000136A17562B6.png" style="display:inline-block; margin:4px;width:8.52cm;height:4.101cm;" class="odt-zoomable" data-zoom-src="images/100000000000028400000136A17562B6.png" /></td></tr></table>
 
 <p>La page ci-dessus a été générée par l&#x27;action [Index] du contrôleur [First]. La page générée par cette action est la vue [Index] dont le code était le suivant :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Vue [Index]...</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">strong</span><span style="color:#0000ff">&gt;</span></span>
 </code></pre></div>
 
@@ -1209,7 +1209,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001680000007B99162A37.png" style="display:inline-block; margin:4px;width:6.669cm;height:2.281cm;" class="odt-zoomable" data-zoom-src="images/10000000000001680000007B99162A37.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Regardons le code source de la page reçue :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&lt;h1&gt;Action [Action01]&lt;/h1&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Action [Action01]<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p>Le navigateur n&#x27;a reçu que le texte envoyé par l&#x27;action et rien d&#x27;autre. Ce mode est intéressant lorsqu&#x27;on veut demander au serveur Web des données pures sans l&#x27;habillage HTML autour. On notera ci-dessus, que le navigateur n&#x27;a pas interprété la balise HTML &lt;h1&gt;. Pour comprendre pourquoi, regardons dans Chrome, les échanges HTTP :</p>
 <p>Le navigateur a envoyé les entêtes HTTP suivants :</p>
@@ -1241,18 +1241,18 @@
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-3-10">10</a></span>
 <span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>HTTP/1.1 200 OK
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Cache-Control: private
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>Content-Type: text/plain; charset=utf-8
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>Content-Encoding: gzip
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>Vary: Accept-Encoding
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>Server: Microsoft-IIS/8.0
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>X-AspNetMvc-Version: 4.0
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>X-AspNet-Version: 4.0.30319
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>X-SourceFiles: =?UTF-8?B?RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wMQ==?=
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>X-Powered-By: ASP.NET
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>Date: Mon, 23 Sep 2013 15:22:33 GMT
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a>Content-Length: 141
+<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span><span class="w"> </span><span class="k">private</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="w"> </span><span class="n">text</span><span class="o">/</span><span class="n">plain</span><span class="p">;</span><span class="w"> </span><span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">Content</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span><span class="w"> </span><span class="n">gzip</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">Vary</span><span class="p">:</span><span class="w"> </span><span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">Server</span><span class="p">:</span><span class="w"> </span><span class="n">Microsoft</span><span class="o">-</span><span class="n">IIS</span><span class="o">/</span><span class="mf">8.0</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNetMvc</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNet</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0.30319</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">X</span><span class="o">-</span><span class="n">SourceFiles</span><span class="p">:</span><span class="w"> </span><span class="o">=?</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">?</span><span class="n">B</span><span class="o">?</span><span class="n">RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wMQ</span><span class="o">==?=</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n">X</span><span class="o">-</span><span class="n">Powered</span><span class="o">-</span><span class="n">By</span><span class="p">:</span><span class="w"> </span><span class="n">ASP</span><span class="p">.</span><span class="n">NET</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">Date</span><span class="p">:</span><span class="w"> </span><span class="n">Mon</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="n">Sep</span><span class="w"> </span><span class="mi">2013</span><span class="w"> </span><span class="mi">15</span><span class="p">:</span><span class="mi">22</span><span class="p">:</span><span class="mi">33</span><span class="w"> </span><span class="n">GMT</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">141</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 3 : fixe la nature du document. On retrouve les attributs fixés dans la méthode [Action01]. C&#x27;est parce qu&#x27;on lui a dit que le document était de type &quot;text/plain&quot; et non &quot;text/html&quot; que le navigateur n&#x27;a pas interprété la balise &lt;h1&gt; qui était dans le document reçu.</li>
@@ -1298,18 +1298,18 @@
 <span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-4-10">10</a></span>
 <span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>HTTP/1.1 200 OK
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>Cache-Control: private
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>Content-Type: text/xml; charset=utf-8
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>Content-Encoding: gzip
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>Vary: Accept-Encoding
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>Server: Microsoft-IIS/8.0
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>X-AspNetMvc-Version: 4.0
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>X-AspNet-Version: 4.0.30319
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>X-SourceFiles: =?UTF-8?B?RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wMg==?=
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>X-Powered-By: ASP.NET
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a>Date: Mon, 23 Sep 2013 15:29:34 GMT
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a>Content-Length: 176
+<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span><span class="w"> </span><span class="k">private</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="w"> </span><span class="n">text</span><span class="o">/</span><span class="n">xml</span><span class="p">;</span><span class="w"> </span><span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">Content</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span><span class="w"> </span><span class="n">gzip</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">Vary</span><span class="p">:</span><span class="w"> </span><span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">Server</span><span class="p">:</span><span class="w"> </span><span class="n">Microsoft</span><span class="o">-</span><span class="n">IIS</span><span class="o">/</span><span class="mf">8.0</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNetMvc</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNet</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0.30319</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">X</span><span class="o">-</span><span class="n">SourceFiles</span><span class="p">:</span><span class="w"> </span><span class="o">=?</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">?</span><span class="n">B</span><span class="o">?</span><span class="n">RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wMg</span><span class="o">==?=</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="n">X</span><span class="o">-</span><span class="n">Powered</span><span class="o">-</span><span class="n">By</span><span class="p">:</span><span class="w"> </span><span class="n">ASP</span><span class="p">.</span><span class="n">NET</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="n">Date</span><span class="p">:</span><span class="w"> </span><span class="n">Mon</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="n">Sep</span><span class="w"> </span><span class="mi">2013</span><span class="w"> </span><span class="mi">15</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">34</span><span class="w"> </span><span class="n">GMT</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">176</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 3 : fixe la nature du document. On retrouve les attributs fixés dans la méthode [Action02] ;</li>
@@ -1321,7 +1321,7 @@
 <p><a id="refheading58032676630786"></a></p>
 <h2 id="36-action-avec-un-resultat-de-type-jsonresult">3.6. Action avec un résultat de type [JsonResult]</h2>
 <p>Ajoutons l&#x27;action suivante au contrôleur [First] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action03</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">JsonResult</span><span style="color:#000000"> Action03()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1351,16 +1351,16 @@
 <span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>HTTP/1.1 200 OK
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Cache-Control: private
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>Content-Type: application/json; charset=utf-8
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>Server: Microsoft-IIS/8.0
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>X-AspNetMvc-Version: 4.0
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>X-AspNet-Version: 4.0.30319
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a>X-SourceFiles: =?UTF-8?B?RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wMw==?=
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a>X-Powered-By: ASP.NET
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a>Date: Mon, 23 Sep 2013 15:48:53 GMT
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a>Content-Length: 58
+<span class="normal"><a href="#__codelineno-5-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span><span class="w"> </span><span class="k">private</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="w"> </span><span class="n">application</span><span class="o">/</span><span class="n">json</span><span class="p">;</span><span class="w"> </span><span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">Server</span><span class="p">:</span><span class="w"> </span><span class="n">Microsoft</span><span class="o">-</span><span class="n">IIS</span><span class="o">/</span><span class="mf">8.0</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNetMvc</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNet</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0.30319</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="n">X</span><span class="o">-</span><span class="n">SourceFiles</span><span class="p">:</span><span class="w"> </span><span class="o">=?</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">?</span><span class="n">B</span><span class="o">?</span><span class="n">RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wMw</span><span class="o">==?=</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="n">X</span><span class="o">-</span><span class="n">Powered</span><span class="o">-</span><span class="n">By</span><span class="p">:</span><span class="w"> </span><span class="n">ASP</span><span class="p">.</span><span class="n">NET</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="n">Date</span><span class="p">:</span><span class="w"> </span><span class="n">Mon</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="w"> </span><span class="n">Sep</span><span class="w"> </span><span class="mi">2013</span><span class="w"> </span><span class="mi">15</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">53</span><span class="w"> </span><span class="n">GMT</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">58</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 3 : précise que le document envoyé est du JSON ;</li>
@@ -1376,7 +1376,7 @@
 <p><a id="refheading58034676630786"></a></p>
 <h2 id="37-action-avec-un-resultat-de-type-string">3.7. Action avec un résultat de type [string]</h2>
 <p>Ajoutons l&#x27;action suivante au contrôleur [First] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action04</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> Action04()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1399,27 +1399,27 @@
 <span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-7-10">10</a></span>
 <span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>HTTP/1.1 200 OK
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Cache-Control: private
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>Content-Type: text/html; charset=utf-8
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>Content-Encoding: gzip
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>Vary: Accept-Encoding
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a>Server: Microsoft-IIS/8.0
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a>X-AspNetMvc-Version: 4.0
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a>X-AspNet-Version: 4.0.30319
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a>X-SourceFiles: =?UTF-8?B?RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wNA==?=
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a>X-Powered-By: ASP.NET
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a>Date: Tue, 24 Sep 2013 07:49:00 GMT
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a>Content-Length: 156
+<span class="normal"><a href="#__codelineno-7-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span><span class="w"> </span><span class="k">private</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="w"> </span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span><span class="w"> </span><span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">Content</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span><span class="w"> </span><span class="n">gzip</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">Vary</span><span class="p">:</span><span class="w"> </span><span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="n">Server</span><span class="p">:</span><span class="w"> </span><span class="n">Microsoft</span><span class="o">-</span><span class="n">IIS</span><span class="o">/</span><span class="mf">8.0</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNetMvc</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNet</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0.30319</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="n">X</span><span class="o">-</span><span class="n">SourceFiles</span><span class="p">:</span><span class="w"> </span><span class="o">=?</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">?</span><span class="n">B</span><span class="o">?</span><span class="n">RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wNA</span><span class="o">==?=</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="n">X</span><span class="o">-</span><span class="n">Powered</span><span class="o">-</span><span class="n">By</span><span class="p">:</span><span class="w"> </span><span class="n">ASP</span><span class="p">.</span><span class="n">NET</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="n">Date</span><span class="p">:</span><span class="w"> </span><span class="n">Tue</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="n">Sep</span><span class="w"> </span><span class="mi">2013</span><span class="w"> </span><span class="mi">07</span><span class="p">:</span><span class="mi">49</span><span class="p">:</span><span class="mi">00</span><span class="w"> </span><span class="n">GMT</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">156</span>
 </code></pre></div></td></tr></table></div>
 <p>et le document suivant :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&lt;h3&gt;Contrôleur=First, Action=Action04&lt;/h3&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="o">&lt;</span><span class="n">h3</span><span class="o">&gt;</span><span class="n">Contrôleur</span><span class="o">=</span><span class="n">First</span><span class="p">,</span><span class="w"> </span><span class="n">Action</span><span class="o">=</span><span class="n">Action04</span><span class="o">&lt;/</span><span class="n">h3</span><span class="o">&gt;</span>
 </code></pre></div>
 <p>On voit ligne 3, que le serveur a indiqué envoyer du texte au format HTML. C&#x27;est pourquoi le navigateur a interprété la balise &lt;h3&gt;. Lorsqu&#x27;on veut envoyer du texte pur, il est donc préférable de rendre un [ContentResult] plutôt qu&#x27;un [string]. Le [ContentResult] nous permet en effet de préciser un type MIME &quot;text/plain&quot; pour indiquer qu&#x27;on envoie du texte non formaté, donc non susceptible d&#x27;interprétation de la part du navigateur.</p>
 <p><a id="refheading58036676630786"></a></p>
 <h2 id="38-action-avec-un-resultat-de-type-emptyresult">3.8. Action avec un résultat de type [EmptyResult]</h2>
 <p>Soit la nouvelle action suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action05</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">EmptyResult</span><span style="color:#000000"> Action05()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1436,15 +1436,15 @@
 <span class="normal"><a href="#__codelineno-9-6">6</a></span>
 <span class="normal"><a href="#__codelineno-9-7">7</a></span>
 <span class="normal"><a href="#__codelineno-9-8">8</a></span>
-<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>HTTP/1.1 200 OK
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>Cache-Control: private
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>Server: Microsoft-IIS/8.0
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>X-AspNetMvc-Version: 4.0
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>X-AspNet-Version: 4.0.30319
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a>X-SourceFiles: =?UTF-8?B?RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wNQ==?=
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a>X-Powered-By: ASP.NET
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a>Date: Tue, 24 Sep 2013 08:11:12 GMT
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a>Content-Length: 0
+<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span><span class="w"> </span><span class="k">private</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="n">Server</span><span class="p">:</span><span class="w"> </span><span class="n">Microsoft</span><span class="o">-</span><span class="n">IIS</span><span class="o">/</span><span class="mf">8.0</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNetMvc</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNet</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0.30319</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="n">X</span><span class="o">-</span><span class="n">SourceFiles</span><span class="p">:</span><span class="w"> </span><span class="o">=?</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">?</span><span class="n">B</span><span class="o">?</span><span class="n">RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wNQ</span><span class="o">==?=</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="n">X</span><span class="o">-</span><span class="n">Powered</span><span class="o">-</span><span class="n">By</span><span class="p">:</span><span class="w"> </span><span class="n">ASP</span><span class="p">.</span><span class="n">NET</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="n">Date</span><span class="p">:</span><span class="w"> </span><span class="n">Tue</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="n">Sep</span><span class="w"> </span><span class="mi">2013</span><span class="w"> </span><span class="mi">08</span><span class="p">:</span><span class="mi">11</span><span class="p">:</span><span class="mi">12</span><span class="w"> </span><span class="n">GMT</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 9 : le serveur indique à son client qu&#x27;il lui envoie un document vide.</li>
@@ -1452,7 +1452,7 @@
 <p><a id="refheading58038676630786"></a></p>
 <h2 id="39-action-avec-un-resultat-de-type-redirectresult-1">3.9. Action avec un résultat de type [RedirectResult] - 1</h2>
 <p>Soit la nouvelle action suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action06</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectResult</span><span style="color:#000000"> Action06()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1478,17 +1478,17 @@
 <span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-10-10">10</a></span>
-<span class="normal"><a href="#__codelineno-10-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>HTTP/1.1 302 Found
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a>Cache-Control: private
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a>Content-Type: text/html; charset=utf-8
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a>Location: /First/Action05
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a>Server: Microsoft-IIS/8.0
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a>X-AspNetMvc-Version: 4.0
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a>X-AspNet-Version: 4.0.30319
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a>X-SourceFiles: =?UTF-8?B?RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wNg==?=
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a>X-Powered-By: ASP.NET
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a>Date: Tue, 24 Sep 2013 08:16:59 GMT
-<a id="__codelineno-10-11" name="__codelineno-10-11"></a>Content-Length: 132
+<span class="normal"><a href="#__codelineno-10-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">302</span><span class="w"> </span><span class="n">Found</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span><span class="w"> </span><span class="k">private</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="w"> </span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span><span class="w"> </span><span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="n">Location</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">First</span><span class="o">/</span><span class="n">Action05</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="n">Server</span><span class="p">:</span><span class="w"> </span><span class="n">Microsoft</span><span class="o">-</span><span class="n">IIS</span><span class="o">/</span><span class="mf">8.0</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNetMvc</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNet</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0.30319</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="n">X</span><span class="o">-</span><span class="n">SourceFiles</span><span class="p">:</span><span class="w"> </span><span class="o">=?</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">?</span><span class="n">B</span><span class="o">?</span><span class="n">RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wNg</span><span class="o">==?=</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="n">X</span><span class="o">-</span><span class="n">Powered</span><span class="o">-</span><span class="n">By</span><span class="p">:</span><span class="w"> </span><span class="n">ASP</span><span class="p">.</span><span class="n">NET</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="n">Date</span><span class="p">:</span><span class="w"> </span><span class="n">Tue</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="n">Sep</span><span class="w"> </span><span class="mi">2013</span><span class="w"> </span><span class="mi">08</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">59</span><span class="w"> </span><span class="n">GMT</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">132</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : le serveur a répondu avec un code 302 Found. Pour l&#x27;instant, c&#x27;était 200 OK qui veut dire que le document demandé a été trouvé. Le code 302 indique qu&#x27;une redirection est demandée. L&#x27;adresse de redirection est donnée par la ligne 4. On retrouve là l&#x27;adresse de redirection que nous avions donnée dans le code de l&#x27;action ;</li>
@@ -1512,7 +1512,7 @@
 <p><a id="refheading58040676630786"></a></p>
 <h2 id="310-action-avec-un-resultat-de-type-redirectresult-2">3.10. Action avec un résultat de type [RedirectResult] - 2</h2>
 <p>Soit la nouvelle action suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action07</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectResult</span><span style="color:#000000"> Action07()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1527,7 +1527,7 @@
 <p><a id="refheading58042676630786"></a></p>
 <h2 id="311-action-avec-un-resultat-de-type-redirecttorouteresult">3.11. Action avec un résultat de type [RedirectToRouteResult]</h2>
 <p>Soit la nouvelle action suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action08</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">RedirectToRouteResult</span><span style="color:#000000"> Action08()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1560,17 +1560,17 @@
 <span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-13-10">10</a></span>
-<span class="normal"><a href="#__codelineno-13-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>HTTP/1.1 302 Found
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a>Cache-Control: private
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a>Content-Type: text/html; charset=utf-8
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a>Location: /First/Action05
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a>Server: Microsoft-IIS/8.0
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a>X-AspNetMvc-Version: 4.0
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a>X-AspNet-Version: 4.0.30319
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a>X-SourceFiles: =?UTF-8?B?RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wOA==?=
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a>X-Powered-By: ASP.NET
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a>Date: Tue, 24 Sep 2013 08:58:19 GMT
-<a id="__codelineno-13-11" name="__codelineno-13-11"></a>Content-Length: 132
+<span class="normal"><a href="#__codelineno-13-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">302</span><span class="w"> </span><span class="n">Found</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span><span class="w"> </span><span class="k">private</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="w"> </span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span><span class="w"> </span><span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="n">Location</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">First</span><span class="o">/</span><span class="n">Action05</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="n">Server</span><span class="p">:</span><span class="w"> </span><span class="n">Microsoft</span><span class="o">-</span><span class="n">IIS</span><span class="o">/</span><span class="mf">8.0</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNetMvc</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNet</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0.30319</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="n">X</span><span class="o">-</span><span class="n">SourceFiles</span><span class="p">:</span><span class="w"> </span><span class="o">=?</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">?</span><span class="n">B</span><span class="o">?</span><span class="n">RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxGaXJzdFxBY3Rpb24wOA</span><span class="o">==?=</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="n">X</span><span class="o">-</span><span class="n">Powered</span><span class="o">-</span><span class="n">By</span><span class="p">:</span><span class="w"> </span><span class="n">ASP</span><span class="p">.</span><span class="n">NET</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="n">Date</span><span class="p">:</span><span class="w"> </span><span class="n">Tue</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="n">Sep</span><span class="w"> </span><span class="mi">2013</span><span class="w"> </span><span class="mi">08</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="mi">19</span><span class="w"> </span><span class="n">GMT</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">132</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : la redirection ;</li>
@@ -1579,7 +1579,7 @@
 <p><a id="refheading58044676630786"></a></p>
 <h2 id="312-action-avec-un-resultat-de-type-void">3.12. Action avec un résultat de type [void]</h2>
 <p>Soit la nouvelle action suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action09</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Action09()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1593,10 +1593,10 @@
 <li>ligne 2 : l&#x27;action ne rend aucun résultat. Elle écrit elle-même dans le flux de la réponse envoyée au client ;</li>
 <li>ligne 4 : on récupère un éventuel paramètre nommé [nom] dans la requête. Celle-ci est accessible via la propriété [<strong>Request</strong>] du contrôleur [Controller] dont hérite le contrôleur [First]. Le paramètre [nom] passé sous la forme [/First/Action09?nom=quelquechose], est disponible dans <strong>Request.QueryString[&quot;nom&quot;]</strong>. La syntaxe de la ligne 4 est équivalente à :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>string nom=Request.QueryString[&quot;nom&quot;];
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>if(nom==null){
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    nom=&quot;inconnu&quot;;
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">nom</span><span class="o">=</span><span class="n">Request</span><span class="p">.</span><span class="n">QueryString</span><span class="p">[</span><span class="s">&quot;nom&quot;</span><span class="p">];</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">if</span><span class="p">(</span><span class="n">nom</span><span class="o">==</span><span class="k">null</span><span class="p">){</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="n">nom</span><span class="o">=</span><span class="s">&quot;inconnu&quot;</span><span class="p">;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">}</span>
 </code></pre></div>
 <ul>
 <li>ligne 5 : la réponse envoyée au client est accessible via la propriété [<strong>Response</strong>] du contrôleur [Controller] dont hérite le contrôleur [First] ;</li>
@@ -1611,22 +1611,22 @@
 <span class="normal"><a href="#__codelineno-15-2">2</a></span>
 <span class="normal"><a href="#__codelineno-15-3">3</a></span>
 <span class="normal"><a href="#__codelineno-15-4">4</a></span>
-<span class="normal"><a href="#__codelineno-15-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>HTTP/1.1 200 OK
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a>Cache-Control: private
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a>Content-Type: text/plain; charset=utf-8
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a>...
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a>Content-Length: 144
+<span class="normal"><a href="#__codelineno-15-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span><span class="w"> </span><span class="k">private</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="w"> </span><span class="n">text</span><span class="o">/</span><span class="n">plain</span><span class="p">;</span><span class="w"> </span><span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="p">...</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">144</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 3 : on retrouve l&#x27;entête HTTP que nous avions nous-même fixé dans le code de l&#x27;action.</li>
 </ul>
 <p><a id="refheading58046676630786"></a></p>
 <h2 id="313-un-second-controleur">3.13. Un second contrôleur</h2>
-<p>Créons dans le projet un second contrôleur. On suivra la méthode décrite au paragraphe <a href="#refheading10128914791633">3.1</a>, page <a href="#refheading10128914791633">39</a>. On l&#x27;appellera [Second].</p>
+<p>Créons dans le projet un second contrôleur. On suivra la méthode décrite au paragraphe <a href="#refheading10128914791633">3.1</a>, page <a href="#refheading10128914791633">40</a>. On l&#x27;appellera [Second].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C50000006F78BB882F.png" style="display:inline-block; margin:4px;width:3.649cm;height:2.05cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C50000006F78BB882F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Son code généré est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_01.Controllers</span></span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">SecondController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span>
@@ -1688,16 +1688,16 @@
 <span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-17-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">POST</span> <span class="o">/</span><span class="n">Second</span><span class="o">/</span><span class="n">Action01</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="n">Host</span><span class="p">:</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">49302</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="n">Connection</span><span class="p">:</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span> <span class="mi">0</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="n">Origin</span><span class="p">:</span> <span class="n">chrome</span><span class="o">-</span><span class="n">extension</span><span class="p">:</span><span class="o">//</span><span class="n">hgmloofddffdnphfgcellkdfbfbjeloo</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="n">User</span><span class="o">-</span><span class="n">Agent</span><span class="p">:</span> <span class="n">Mozilla</span><span class="o">/</span><span class="mf">5.0</span> <span class="p">(</span><span class="n">Windows</span> <span class="n">NT</span> <span class="mf">6.2</span><span class="p">;</span> <span class="n">WOW64</span><span class="p">)</span> <span class="n">AppleWebKit</span><span class="o">/</span><span class="mf">537.36</span> <span class="p">(</span><span class="n">KHTML</span><span class="p">,</span> <span class="n">like</span> <span class="n">Gecko</span><span class="p">)</span> <span class="n">Chrome</span><span class="o">/</span><span class="mf">29.0.1547.76</span> <span class="n">Safari</span><span class="o">/</span><span class="mf">537.36</span>
-<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">www</span><span class="o">-</span><span class="n">form</span><span class="o">-</span><span class="n">urlencoded</span>
-<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="n">Accept</span><span class="p">:</span> <span class="o">*/*</span>
-<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span> <span class="n">gzip</span><span class="p">,</span><span class="n">deflate</span><span class="p">,</span><span class="n">sdch</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">fr</span><span class="o">-</span><span class="n">FR</span><span class="p">,</span><span class="n">fr</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">en</span><span class="o">-</span><span class="n">US</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">en</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.4</span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">POST</span><span class="w"> </span><span class="o">/</span><span class="n">Second</span><span class="o">/</span><span class="n">Action01</span><span class="w"> </span><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="n">Host</span><span class="p">:</span><span class="w"> </span><span class="n">localhost</span><span class="p">:</span><span class="mi">49302</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="n">Connection</span><span class="p">:</span><span class="w"> </span><span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="n">Origin</span><span class="p">:</span><span class="w"> </span><span class="n">chrome</span><span class="o">-</span><span class="n">extension</span><span class="p">:</span><span class="c1">//hgmloofddffdnphfgcellkdfbfbjeloo</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="n">User</span><span class="o">-</span><span class="n">Agent</span><span class="p">:</span><span class="w"> </span><span class="n">Mozilla</span><span class="o">/</span><span class="mf">5.0</span><span class="w"> </span><span class="p">(</span><span class="n">Windows</span><span class="w"> </span><span class="n">NT</span><span class="w"> </span><span class="mf">6.2</span><span class="p">;</span><span class="w"> </span><span class="n">WOW64</span><span class="p">)</span><span class="w"> </span><span class="n">AppleWebKit</span><span class="o">/</span><span class="mf">537.36</span><span class="w"> </span><span class="p">(</span><span class="n">KHTML</span><span class="p">,</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="n">Gecko</span><span class="p">)</span><span class="w"> </span><span class="n">Chrome</span><span class="o">/</span><span class="mf">29.0.1547.76</span><span class="w"> </span><span class="n">Safari</span><span class="o">/</span><span class="mf">537.36</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="w"> </span><span class="n">application</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">www</span><span class="o">-</span><span class="n">form</span><span class="o">-</span><span class="n">urlencoded</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="n">Accept</span><span class="p">:</span><span class="w"> </span><span class="o">*/*</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span><span class="w"> </span><span class="n">gzip</span><span class="p">,</span><span class="n">deflate</span><span class="p">,</span><span class="n">sdch</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span><span class="w"> </span><span class="n">fr</span><span class="o">-</span><span class="n">FR</span><span class="p">,</span><span class="n">fr</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span><span class="n">en</span><span class="o">-</span><span class="n">US</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span><span class="n">en</span><span class="p">;</span><span class="n">q</span><span class="o">=</span><span class="mf">0.4</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : l&#x27;URL est bien demandée avec un POST ;</li>
@@ -1715,18 +1715,18 @@
 <span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-18-10">10</a></span>
 <span class="normal"><a href="#__codelineno-18-11">11</a></span>
-<span class="normal"><a href="#__codelineno-18-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>HTTP/1.1 200 OK
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a>Cache-Control: private
-<a id="__codelineno-18-3" name="__codelineno-18-3"></a>Content-Type: text/plain; charset=utf-8
-<a id="__codelineno-18-4" name="__codelineno-18-4"></a>Content-Encoding: gzip
-<a id="__codelineno-18-5" name="__codelineno-18-5"></a>Vary: Accept-Encoding
-<a id="__codelineno-18-6" name="__codelineno-18-6"></a>Server: Microsoft-IIS/8.0
-<a id="__codelineno-18-7" name="__codelineno-18-7"></a>X-AspNetMvc-Version: 4.0
-<a id="__codelineno-18-8" name="__codelineno-18-8"></a>X-AspNet-Version: 4.0.30319
-<a id="__codelineno-18-9" name="__codelineno-18-9"></a>X-SourceFiles: =?UTF-8?B?RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxTZWNvbmRcQWN0aW9uMDE=?=
-<a id="__codelineno-18-10" name="__codelineno-18-10"></a>X-Powered-By: ASP.NET
-<a id="__codelineno-18-11" name="__codelineno-18-11"></a>Date: Tue, 24 Sep 2013 10:47:59 GMT
-<a id="__codelineno-18-12" name="__codelineno-18-12"></a>Content-Length: 148
+<span class="normal"><a href="#__codelineno-18-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span><span class="w"> </span><span class="k">private</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="w"> </span><span class="n">text</span><span class="o">/</span><span class="n">plain</span><span class="p">;</span><span class="w"> </span><span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="n">Content</span><span class="o">-</span><span class="n">Encoding</span><span class="p">:</span><span class="w"> </span><span class="n">gzip</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="n">Vary</span><span class="p">:</span><span class="w"> </span><span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="n">Server</span><span class="p">:</span><span class="w"> </span><span class="n">Microsoft</span><span class="o">-</span><span class="n">IIS</span><span class="o">/</span><span class="mf">8.0</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNetMvc</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="n">X</span><span class="o">-</span><span class="n">AspNet</span><span class="o">-</span><span class="n">Version</span><span class="p">:</span><span class="w"> </span><span class="mf">4.0.30319</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="n">X</span><span class="o">-</span><span class="n">SourceFiles</span><span class="p">:</span><span class="w"> </span><span class="o">=?</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">?</span><span class="n">B</span><span class="o">?</span><span class="n">RDpcZGF0YVxpc3RpYS0xMzE0XGFzcG5ldFxkdnBcRXhlbXBsZXNcRXhlbXBsZS0wMVxTZWNvbmRcQWN0aW9uMDE</span><span class="o">=?=</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="n">X</span><span class="o">-</span><span class="n">Powered</span><span class="o">-</span><span class="n">By</span><span class="p">:</span><span class="w"> </span><span class="n">ASP</span><span class="p">.</span><span class="n">NET</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="n">Date</span><span class="p">:</span><span class="w"> </span><span class="n">Tue</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="n">Sep</span><span class="w"> </span><span class="mi">2013</span><span class="w"> </span><span class="mi">10</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">59</span><span class="w"> </span><span class="n">GMT</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">148</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 3 : le serveur envoie un document texte non formaté (plain) ;</li>
@@ -1739,7 +1739,7 @@
 <p><a id="refheading58048676630786"></a></p>
 <h2 id="314-action-filtree-par-un-attribut">3.14. Action filtrée par un attribut</h2>
 <p>Créons la nouvelle action suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// /Second/Action02</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action02()</span></span>
@@ -1757,9 +1757,9 @@
 <p>La réponse HTTP du serveur a été la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
 <span class="normal"><a href="#__codelineno-19-2">2</a></span>
-<span class="normal"><a href="#__codelineno-19-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>HTTP/1.1 404 Not Found
-<a id="__codelineno-19-2" name="__codelineno-19-2"></a>...
-<a id="__codelineno-19-3" name="__codelineno-19-3"></a>Content-Length: 3807
+<span class="normal"><a href="#__codelineno-19-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">404</span><span class="w"> </span><span class="n">Not</span><span class="w"> </span><span class="n">Found</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="p">...</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">3807</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : le code HTTP <strong>404 Not Found</strong> indique que le serveur n&#x27;a pas trouvé le document demandé. Ici, l&#x27;action [Action02] n&#x27;a pu servir la requête GET car elle ne sert que les commandes POST ;</li>
@@ -1770,7 +1770,7 @@
 <p><a id="refheading58050676630786"></a></p>
 <h2 id="315-recuperer-les-elements-dune-route">3.15. Récupérer les éléments d&#x27;une route</h2>
 <p>Dans les deux actions décrites précédemment, on écrivait quelque chose du genre :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action02()</span></span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#a31515">&quot;Contrôleur=Second, Action=Action02&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
@@ -1778,7 +1778,7 @@
 </code></pre></div>
 
 <p>Les noms du contrôleur et de l&#x27;action étaient écrits en dur dans le code. Si on change ces noms, le code n&#x27;est plus correct. On peut avoir accès au contrôleur et à l&#x27;action de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// /Second/Action03</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action03()</span></span>
 <span class="odt-code-line">    {</span>

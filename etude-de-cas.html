@@ -1922,8 +1922,8 @@
 <p><a id="refheading1240952030931382"></a></p>
 <h2 id="91-introduction">9.1. Introduction</h2>
 <p>Nous allons présenter une étude de cas déjà publiée dans un article disponible à l&#x27;URL [<a href="http://tahe.developpez.com/dotnet/pam-aspnet/">http://tahe.developpez.com/dotnet/pam-aspnet/</a>]. Dans cet article, l&#x27;étude de cas est réalisée avec <strong>ASP.NET classique</strong> et l&#x27;ORM <strong>NHibernate</strong>. Nous allons ici, la réaliser avec <strong>ASP.NET MVC</strong> et l&#x27;ORM <strong>Entity Framework</strong>. Comme dans l&#x27;article existant, l&#x27;étude de cas est présentée comme un TD d&#x27;université. Elle est donc destinée à des étudiants. Pour toutes les questions, des renvois aux chapitres que nous venons de détailler sont faits pour indiquer les lectures utiles.</p>
-<p><a id="refheading1882881168461456"></a>
-<a id="etude-de-cas"></a></p>
+<p><a id="etude-de-cas"></a>
+<a id="refheading1882881168461456"></a></p>
 <h2 id="92-le-probleme-a-resoudre">9.2. Le problème à résoudre</h2>
 <p>Nous souhaitons écrire une application web permettant à un utilisateur de faire des simulations de calcul de la paie des assistantes maternelles de l&#x27;association &quot; Maison de la petite enfance &quot; d&#x27;une commune. Nous nous intéresserons autant à l&#x27;organisation du code DotNet de l&#x27;application qu&#x27;au code lui-même.</p>
 <p>L&#x27;application sera de type APU [Application à Page Unique] et utilisera exclusivement des appels Ajax pour communiquer avec le serveur. Elle présentera à l&#x27;utilisateur les vues suivantes :</p>
@@ -1980,8 +1980,8 @@
 
 <p>Son contenu pourrait être le suivant :</p>
 <p><img src="images/10000000000002940000004057F6E7D9.png" style="width:12.22cm;height:1.191cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002940000004057F6E7D9.png" /></p>
-<p><a id="refheading1235932030931382"></a>
-<a id="reglesmetier"></a>
+<p><a id="reglesmetier"></a>
+<a id="refheading1235932030931382"></a>
 <a id="calculsalaire"></a></p>
 <h2 id="95-mode-de-calcul-du-salaire-dune-assistante-maternelle">9.5. Mode de calcul du salaire d&#x27;une assistante maternelle</h2>
 <p>Nous présentons maintenant le mode de calcul du salaire mensuel d&#x27;une assistante maternelle. Nous prenons pour exemple, le salaire de Mme Marie Jouveinal qui a travaillé 150 h sur 20 jours pendant le mois à payer.</p>
@@ -2060,8 +2060,8 @@
 <li>en [5], donner un nom à la couche [métier] ;</li>
 <li>en [6], la solution générée.</li>
 </ul>
-<p><a id="refheading1235882030931382"></a>
-<a id="metier-interface"></a></p>
+<p><a id="metier-interface"></a>
+<a id="refheading1235882030931382"></a></p>
 <h3 id="972-linterface-de-la-couche-metier">9.7.2. L&#x27;interface de la couche [métier]</h3>
 <p>Dans une architecture en couches, il est de bonne pratique que la communication entre couches se fasse via des interfaces :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B2000001B213CE948B.png" style="display:inline-block; margin:4px;width:15.901cm;height:5.741cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B2000001B213CE948B.png" /></td></tr></table>
@@ -2186,7 +2186,7 @@
 
 <p>On notera que les classes ne reprennent pas les colonnes [ID] et [VERSIONING] des tables. Ces colonnes, utiles lorsqu&#x27;on utilisera l&#x27;ORM EF5, ne le sont pas dans le contexte de la couche [métier] simulée.</p>
 <p>La classe [FeuilleS<a id="feuillesalaire"></a>alaire] encapsule les informations 6 à 24 du formulaire déjà présenté : </p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Pam.Metier.Entites</span></span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">FeuilleSalaire</span></span>
@@ -2213,7 +2213,7 @@
 <li>lignes 12-14 : la méthode [ToString].</li>
 </ul>
 <p>La classe [Elements<a id="elementssalaire"></a>Salaire] encapsule les informations 20 à 24 du formulaire :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Pam.Metier.Entites</span></span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ElementsSalaire</span></span>
@@ -2292,7 +2292,7 @@
 <ul>
 <li>celui des lignes 23-27 qu&#x27;on peut utiliser comme montré ci-dessous :</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>throw new PamException(&quot;Problème d&#39;accès aux données&quot;,5);
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">PamException</span><span class="p">(</span><span class="s">&quot;Problème d&#39;accès aux données&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
 </code></pre></div>
 </li>
 <li>
@@ -2302,12 +2302,12 @@
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>try{
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>....
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>}catch (IOException ex){
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    // on encapsule l&#39;exception ex    
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    throw new PamException(&quot;Problème d&#39;accès aux données&quot;,ex,10);
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">try</span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">....</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="c1">// on encapsule l&#39;exception ex    </span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">PamException</span><span class="p">(</span><span class="s">&quot;Problème d&#39;accès aux données&quot;</span><span class="p">,</span><span class="n">ex</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
 </code></pre></div>
 <p>Cette seconde méthode a l&#x27;avantage de ne pas perdre l&#x27;information que peut contenir la première exception.</p>
 <p><a id="refheading1884001168461456"></a></p>
@@ -2409,7 +2409,7 @@
 <li>lignes 32-42 : le troisième employé. Celui-ci n&#x27;est pas mis dans le dictionnaire pour une raison qu&#x27;on va expliquer.</li>
 </ul>
 <p>La méthode [GetSalaire] sera la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// calcul salaire</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">FeuilleSalaire</span><span style="color:#000000"> GetSalaire(</span><span style="color:#0000ff">string</span><span style="color:#000000"> ss, </span><span style="color:#0000ff">double</span><span style="color:#000000"> heuresTravaillées, </span><span style="color:#0000ff">int</span><span style="color:#000000"> joursTravaillés)</span></span>
 <span class="odt-code-line">    {</span>
@@ -2494,16 +2494,16 @@
 <span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Liste des employés--------------------
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Employé[254104940426058,Jouveinal,Marie,5 rue des oiseaux,St Corentin,49203]
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>Employé[260124402111742,Laverti,Justine,La brûlerie,St Marcel,49014]
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>Employé[XX,X,X,X,X,X]
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>Calculs de feuilles de salaire-----------------
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>[Employé[254104940426058,Jouveinal,Marie,5 rue des oiseaux,St Corentin,49203],Co
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>tisations[3,49,6,15,9,38,7,88],[100 : 100 : 100 : 100 : 100]]
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>[Employé[260124402111742,Laverti,Justine,La brûlerie,St Marcel,49014],Cotisation
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>s[3,49,6,15,9,38,7,88],[100 : 100 : 100 : 100 : 100]]
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>PamException : L&#39;employé de n° SS [XX] n&#39;existe pas
+<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">Liste</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">employés</span><span class="o">--------------------</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">Employé</span><span class="p">[</span><span class="mi">254104940426058</span><span class="p">,</span><span class="n">Jouveinal</span><span class="p">,</span><span class="n">Marie</span><span class="p">,</span><span class="mi">5</span><span class="w"> </span><span class="n">rue</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">oiseaux</span><span class="p">,</span><span class="n">St</span><span class="w"> </span><span class="n">Corentin</span><span class="p">,</span><span class="mi">49203</span><span class="p">]</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">Employé</span><span class="p">[</span><span class="mi">260124402111742</span><span class="p">,</span><span class="n">Laverti</span><span class="p">,</span><span class="n">Justine</span><span class="p">,</span><span class="n">La</span><span class="w"> </span><span class="n">brûlerie</span><span class="p">,</span><span class="n">St</span><span class="w"> </span><span class="n">Marcel</span><span class="p">,</span><span class="mi">49014</span><span class="p">]</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">Employé</span><span class="p">[</span><span class="n">XX</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">X</span><span class="p">]</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">Calculs</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">feuilles</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">salaire</span><span class="o">-----------------</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="na">[Employé[254104940426058,Jouveinal,Marie,5 rue des oiseaux,St Corentin,49203]</span><span class="p">,</span><span class="n">Co</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">tisations</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">88</span><span class="p">],[</span><span class="mi">100</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">]]</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="na">[Employé[260124402111742,Laverti,Justine,La brûlerie,St Marcel,49014]</span><span class="p">,</span><span class="n">Cotisation</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">38</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">88</span><span class="p">],[</span><span class="mi">100</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">]]</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">PamException</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">L</span><span class="err">&#39;</span><span class="n">employé</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">n</span><span class="err">°</span><span class="w"> </span><span class="n">SS</span><span class="w"> </span><span class="p">[</span><span class="n">XX</span><span class="p">]</span><span class="w"> </span><span class="n">n</span><span class="err">&#39;</span><span class="n">existe</span><span class="w"> </span><span class="n">pas</span>
 </code></pre></div></td></tr></table></div>
 <p>Le lecteur est invité à faire le lien entre ces résultats et le code exécuté.</p>
 <p>Afin de pouvoir utiliser ce projet dans le projet web que nous allons construire, nous en faisons une bibliothèque de classes :</p>
@@ -2694,7 +2694,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001640000011C0B3FCF7D.png" style="display:inline-block; margin:4px;width:4.71cm;height:3.757cm;" class="odt-zoomable" data-zoom-src="images/10000000000001640000011C0B3FCF7D.png" /></td></tr></table>
 
 <p><span style="color: #000000">Modifiez [Index.cshtml] de la façon suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">@{</span>
 <span class="odt-code-line"><span style="color:#000000">  ViewBag.Title = </span><span style="color:#a31515">&quot;Pam&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
@@ -2708,12 +2708,12 @@
 <p><strong><span style="color: #000000">Travail</span></strong><span style="color: #000000"> : Expliquez ce qui s&#x27;est passé.</span></p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><span style="color: #000000">L&#x27;application utilise une feuille de style référencée dans la page maître [_Layout.cshtml] :</span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">  <span style="color:#0000ff">&lt;</span><span style="color:#800000">link</span> <span style="color:#ff0000">rel</span><span style="color:#0000ff">=&quot;stylesheet&quot;</span> <span style="color:#ff0000">href</span><span style="color:#0000ff">=&quot;~/Content/Site.css&quot;</span> <span style="color:#0000ff">/&gt;</span></span>
 </code></pre></div>
 
 <p><span style="color: #000000">La feuille de style [/Content/Site.css] définit une image de fond pour les pages de l&#x27;application :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#800000">body</span> {</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#ff0000">background-image</span><span style="color:#000000">: </span><span style="color:#0000ff">url(&quot;/Content/Images/standard.jpg&quot;)</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
@@ -2767,7 +2767,7 @@
 <p><a id="refheading1241052030931382"></a></p>
 <h3 id="992-utilisation-dune-vue-partielle-pour-afficher-le-formulaire">9.9.2. <span style="color: #000000">Utilisation d&#x27;une vue partielle pour afficher le formulaire</span></h3>
 <p><span style="color: #000000">Le formulaire de saisie est l&#x27;un des fragments affichés par l&#x27;application. Pour l&#x27;instant ce formulaire est affiché par la vue [Index.cshtml] qui est une vue complète :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">@{</span>
 <span class="odt-code-line"><span style="color:#000000">  ViewBag.Title = </span><span style="color:#a31515">&quot;Pam&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
@@ -2775,7 +2775,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Cette vue est affichée par l&#x27;action [Index] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpGet</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Index()</span></span>
 <span class="odt-code-line">    {</span>
@@ -2784,7 +2784,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Ligne 4 ci-dessus, c&#x27;est bien une vue [View] et non une vue partielle [PartialView] qui est affichée. Nous avons besoin d&#x27;une vue partielle pour le formulaire qui sera un fragment de page. Nous faisons évoluer la vue [Index.cshtml] de la façon suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">@{</span>
 <span class="odt-code-line"><span style="color:#000000">  ViewBag.Title = </span><span style="color:#a31515">&quot;Pam&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
@@ -3113,7 +3113,7 @@
 <li><span style="color: #000000">la liste des employés vient de la couche [métier] que nous avons construite précédemment.</span></li>
 </ul>
 <p><span style="color: #000000">Rappelons le code actuel de l&#x27;action [Index] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpGet</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Index()</span></span>
 <span class="odt-code-line">    {</span>
@@ -3122,7 +3122,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">celui de la vue [Index.cshtml] que cette action affiche :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">@{</span>
 <span class="odt-code-line"><span style="color:#000000">  ViewBag.Title = </span><span style="color:#a31515">&quot;Pam&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
@@ -3147,7 +3147,7 @@
 <li>la vue V [6] va utiliser son modèle M [5] pour générer la réponse HTTP destinée au client.</li>
 </ul>
 <p><span style="color: #000000">L&#x27;action à laquelle nous nous intéressons est l&#x27;action [Index] qui pour l&#x27;instant est la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpGet</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Index()</span></span>
 <span class="odt-code-line">    {</span>
@@ -3165,7 +3165,7 @@
 </ul>
 <p><a id="refheading74566371951724"></a></p>
 <h3 id="9102-le-modele-de-lapplication">9.10.2. <span style="color: #000000">Le modèle de l&#x27;application</span></h3>
-<p><span style="color: #000000">Nous avons introduit les notions importantes de </span><strong><span style="color: #000000">modèle d&#x27;application</span></strong><span style="color: #000000"> et de </span><strong><span style="color: #000000">modèle de session</span></strong><span style="color: #000000"> au paragraphe </span><span style="color: #000000"><a href="le-modele-dune-action.html#refheading2400667523874">4.10</a></span><span style="color: #000000">, page </span><span style="color: #000000"><a href="le-modele-dune-action.html#refheading2400667523874">77</a></span><span style="color: #000000">. Nous allons les utiliser maintenant. On rappelle qu&#x27;on met dans le modèle :</span></p>
+<p><span style="color: #000000">Nous avons introduit les notions importantes de </span><strong><span style="color: #000000">modèle d&#x27;application</span></strong><span style="color: #000000"> et de </span><strong><span style="color: #000000">modèle de session</span></strong><span style="color: #000000"> au paragraphe </span><span style="color: #000000"><a href="le-modele-dune-action.html#refheading2400667523874">4.10</a></span><span style="color: #000000">, page </span><span style="color: #000000"><a href="le-modele-dune-action.html#refheading2400667523874">78</a></span><span style="color: #000000">. Nous allons les utiliser maintenant. On rappelle qu&#x27;on met dans le modèle :</span></p>
 <ul>
 <li><strong><span style="color: #000000">d&#x27;application</span></strong><span style="color: #000000"> des données en lecture seule pour tous les utilisateurs. Ce modèle constitue une mémoire partagée par toutes les requêtes de tous les utilisateurs ;</span></li>
 <li><strong><span style="color: #000000">de session</span></strong><span style="color: #000000"> des données en lecture et écriture pour un utilisateur donné. Ce modèle constitue une mémoire partagée par toutes les requêtes de cet utilisateur.</span></li>
@@ -3192,7 +3192,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Pour afficher une liste déroulante dans une vue, on écrit quelque chose comme suit :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- la liste déroulante --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span><span style="color:#000000">Liste déroulante</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
@@ -3293,25 +3293,25 @@
 <p><strong><span style="color: #000000">Travail</span></strong><span style="color: #000000"> : compléter le code de la méthode [Application_Start]. Tout ce dont vous avez besoin se trouve au paragraphe </span><span style="color: #000000"><a href="le-modele-dune-action.html#refheading2400667523874">4.10</a></span><span style="color: #000000">. Prenez le temps de relire ce paragraphe long mais important.</span></p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><span style="color: #000000">La ligne 33 comporte en fait plusieurs lignes. Pour construire un objet de type [SelectListItem] vous pouvez utiliser la méthode suivante :</span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">SelectListItem</span><span style="color:#000000">() { Text = unTexte, Value = uneValeur };</span></span>
 </code></pre></div>
 
 <p><span style="color: #000000">Ce </span><span style="color: #000000">[SelectListItem] servira à générer la balise HTML &lt;option&gt; suivante :</span></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;option value=&#39;uneValeur&#39;&gt;unTexte&lt;/option&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#39;uneValeur&#39;</span><span class="p">&gt;</span>unTexte<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 </code></pre></div>
 <p><span style="color: #000000">de la liste déroulante. On fera en sorte que :</span></p>
 <ul>
 <li><strong><span style="color: #000000">unTexte</span></strong><span style="color: #000000"> soit le </span><strong><span style="color: #000000">prénom</span></strong><span style="color: #000000"> suivi du </span><strong><span style="color: #000000">nom</span></strong><span style="color: #000000"> de l&#x27;employé ;</span></li>
 <li><strong><span style="color: #000000">uneValeur</span></strong><span style="color: #000000"> soit le n° </span><strong><span style="color: #000000">SS</span></strong><span style="color: #000000"> de l&#x27;employé.</span></li>
 </ul>
-<p><span style="color: #000000">Ligne 35, ci-dessus, vous aurez besoin de la classe [ApplicationModelBinder] décrite au paragraphe </span><span style="color: #000000"><a href="le-modele-dune-action.html#applicationmodelbinder">4.10</a></span><span style="color: #000000">, page </span><span style="color: #000000"><a href="le-modele-dune-action.html#applicationmodelbinder">81</a></span><span style="color: #000000"> :</span></p>
+<p><span style="color: #000000">Ligne 35, ci-dessus, vous aurez besoin de la classe [ApplicationModelBinder] décrite au paragraphe </span><span style="color: #000000"><a href="le-modele-dune-action.html#applicationmodelbinder">4.10</a></span><span style="color: #000000">, page </span><span style="color: #000000"><a href="le-modele-dune-action.html#applicationmodelbinder">82</a></span><span style="color: #000000"> :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018B000000BBE406E9A7.png" style="display:inline-block; margin:4px;width:5.226cm;height:2.475cm;" class="odt-zoomable" data-zoom-src="images/100000000000018B000000BBE406E9A7.png" /></td></tr></table>
 
 <p><a id="refheading1241212030931382"></a></p>
 <h3 id="9103-le-code-de-laction-index">9.10.3. Le code de l&#x27;action [Index]</h3>
 <p><span style="color: #000000">Maintenant que nous avons défini un modèle pour l&#x27;application, nous pouvons faire évoluer le code de l&#x27;action [Index] de la façon suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpGet</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Index(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application)</span></span>
 <span class="odt-code-line">    {</span>
@@ -3327,7 +3327,7 @@
 <p><span style="color: #000000">Maintenant, l&#x27;action [Index] a accès aux employés qui sont enregistrés dans le modèle de l&#x27;application. Il faut maintenant qu&#x27;elle les passe à la vue [Index.cshtml] qu&#x27;elle va afficher. On pourrait passer un type [ApplicationModel] comme modèle de la vue [Index.cshtml] mais nous verrons rapidement que cette vue a besoin d&#x27;autres informations qui ne sont pas dans [ApplicationModel]. Nous allons utiliser le modèle de vue [IndexModel] suivant :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015800000096F92C7202.png" style="display:inline-block; margin:4px;width:4.551cm;height:1.984cm;" class="odt-zoomable" data-zoom-src="images/100000000000015800000096F92C7202.png" /></td></tr></table>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Pam.Web.Models</span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">IndexModel</span></span>
@@ -3342,7 +3342,7 @@
 <li><span style="color: #000000">ligne 6 : [IndexModel] embarque le modèle de l&#x27;application.</span></li>
 </ul>
 <p><span style="color: #000000">L&#x27;action [Index] devient la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpGet</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Index(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application)</span></span>
 <span class="odt-code-line">    {</span>
@@ -3408,7 +3408,7 @@
 <p><a id="refheading1241252030931382"></a></p>
 <h3 id="9105-les-vues-indexcshtml-et-formulairecshtml">9.10.5. Les vues [Index.cshtml] et [Formulaire.cshtml]</h3>
 <p><span style="color: #000000">La vue [Index.cshtml] est affichée par l&#x27;action [Index] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpGet</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Index(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application)</span></span>
 <span class="odt-code-line">    {</span>
@@ -3417,7 +3417,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">De façon intéressante, la vue [Index.cshtml] reste inchangée :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">@{</span>
 <span class="odt-code-line"><span style="color:#000000">  ViewBag.Title = </span><span style="color:#a31515">&quot;Pam&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
@@ -3428,7 +3428,7 @@
 <li><span style="color: #000000">la vue ne déclare aucun modèle ;</span></li>
 <li><span style="color: #000000">ligne 4 : elle intègre la vue partielle [Formulaire.cshtml], là encore sans passer à celle-ci de modèle. Au cours des tests, il a été constaté que le modèle [IndexModel] passé à la vue [Index.cshtml] se propageait implicitement à la vue partielle [Formulaire.cshtml]. Cette dernière vue pourrait maintenant avoir la forme suivante :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">@model Pam.Web.Models.<span style="color:#2b91af">IndexModel</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">@</span><span style="color:#0000ff">using</span><span style="color:#000000"> (Html.BeginForm(</span><span style="color:#a31515">&quot;FaireSimulation&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Pam&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">FormMethod</span><span style="color:#000000">.Post, </span><span style="color:#0000ff">new</span><span style="color:#000000"> { id = </span><span style="color:#a31515">&quot;formulaire&quot;</span><span style="color:#000000"> }))</span></span>
@@ -3481,7 +3481,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025A000001108D54CE19.png" style="display:inline-block; margin:4px;width:11.15cm;height:5.039cm;" class="odt-zoomable" data-zoom-src="images/100000000000025A000001108D54CE19.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La validation côté client est à l&#x27;oeuvre par défaut à cause de la ligne 3 ci-dessous<span style="color: #000000"> dans le fichier [Web.config] de l&#x27;application.</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">appSettings</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line">    ...</span>
 <span class="odt-code-line"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">add</span><span style="color:#0000ff"> </span><span style="color:#ff0000">key</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">ClientValidationEnabled</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">value</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">true</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span>
@@ -3650,7 +3650,7 @@
 <li><span style="color: #000000">ligne 1 : la vue [Simulation.cshtml] a pour modèle le type [FeuilleSalaire] défini au paragraphe <a href="#refheading1883981168461456">9.7.3</a> ;</span></li>
 <li><span style="color: #000000">la vue utilise les classes [libellé, info, valeur] définies dans la feuille de style de l&#x27;application [Content / Site.css] :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-css">
 <span class="odt-code-line"><span style="color:#800000">.libellé</span> {</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#ff0000">background-color</span><span style="color:#000000">: </span><span style="color:#0000ff">azure</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#ff0000">margin</span><span style="color:#000000">: </span><span style="color:#0000ff">5px</span><span style="color:#000000">;</span></span>
@@ -3671,7 +3671,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Par ailleurs, toujours dans [Site.css], on fixe la hauteur des lignes des différentes tables HTML de la région d&#x27;<strong>id</strong> [simulation], précisément là où est affichée la feuille de salaire :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-css">
 <span class="odt-code-line"><span style="color:#800000">#simulation</span> <span style="color:#800000">table</span> <span style="color:#800000">tr</span> {</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#ff0000">height</span><span style="color:#000000">: </span><span style="color:#0000ff">30px</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
@@ -3681,11 +3681,11 @@
 <p><span style="color: #000000"><strong>Travail</strong> : complétez la vue [Simulation.cshtml].</span></p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><span style="color: #000000">Pour afficher les euros d&#x27;une somme d&#x27;argent, on utilisera la méthode [string.Format] :</span></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>string.Format(&quot;{0:C2}&quot;,somme)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{0:C2}&quot;</span><span class="p">,</span><span class="n">somme</span><span class="p">)</span>
 </code></pre></div>
 <p><span style="color: #000000">L&#x27;instruction ci-dessus affiche [somme] en valeur monétaire [C] (Currency) avec deux décimales [C2].</span></p>
 <p><span style="color: #000000">Pour tester cette vue, on doit lui fournir une feuille de salaire. Celle-ci doit lui être fournie par l&#x27;action [/Pam/FaireSimulation] qui est la cible de l&#x27;appel Ajax du lien [Faire la simulation]. Actuellement, cette action est la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpGet</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Index(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application)</span></span>
 <span class="odt-code-line">    {</span>
@@ -3701,7 +3701,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Ci-dessus, l&#x27;action [FaireSimulation] ne passe aucun modèle à la vue [Simulation.cshtml]. Il faut qu&#x27;elle lui passe une feuille de salaire. On sait que c&#x27;est la couche [métier] qui fait le calcul des feuilles de salaire. Cette couche [métier] est accessible via le modèle de l&#x27;application [ApplicationModel] que nous avons défini au paragraphe <a href="#refheading74566371951724">9.10.2</a> :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">  <span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">ApplicationModel</span></span>
 <span class="odt-code-line">  {</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// --- données de portée application ---</span></span>
@@ -3712,7 +3712,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">La couche [métier] est accessible via la propriété de la ligne 5 ci-dessus. Pour que l&#x27;action [FaireSimulation] ait accès à la couche [métier], nous allons lui passer le modèle de l&#x27;application comme nous l&#x27;avons fait pour l&#x27;action [Index]. Le code évolue alors comme suit :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// faire une simulation</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> FaireSimulation(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application)</span></span>
@@ -3722,7 +3722,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Maintenant, nous sommes capables, à l&#x27;intérieur de l&#x27;action, de calculer une feuille de salaire fictive. Le code évolue comme suit :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// faire une simulation</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> FaireSimulation(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application)</span></span>
@@ -3745,7 +3745,7 @@
 <p><a id="refheading1241412030931382"></a></p>
 <h3 id="9123-calcul-du-salaire-reel">9.12.3. Calcul du salaire réel</h3>
 <p><span style="color: #000000">Notre action [FaireSimulation] actuelle calcule toujours la même feuille de salaire :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// faire une simulation</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> FaireSimulation(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application)</span></span>
@@ -3776,7 +3776,7 @@
 <p><span style="color: #000000"><strong>Travail</strong> : complétez la méthode serveur [FaireSimulation] afin qu&#x27;elle calcule le salaire avec les valeurs postées par la fonction JS [faireSimulation]. On pourra s&#x27;aider de nouveau de l&#x27;exemple du paragraphe <a href="ajaxification-dune-application-aspnet-mvc.html#refheading71430674196242">7.6.5</a> où ce problème a été traité. Pour le moment, on supposera que le modèle issu des valeurs postées est toujours valide.</span></p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><span style="color: #000000"><strong>Hint</strong> : l&#x27;action serveur [FaireSimulation] évolue comme suit :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// faire une simulation</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> FaireSimulation(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application, </span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> data)</span></span>
@@ -3847,7 +3847,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000165000000F3B43948CE.png" style="display:inline-block; margin:4px;width:4.724cm;height:3.216cm;" class="odt-zoomable" data-zoom-src="images/1000000000000165000000F3B43948CE.png" /></td></tr></table>
 
 <p><span style="color: #000000">Le code de la vue partielle [Erreurs.chtml] est le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">@model <span style="color:#2b91af">IEnumerable</span>&lt;<span style="color:#0000ff">string</span>&gt;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">hr</span><span style="color:#000000"> </span><span style="color:#0000ff">/&gt;</span></span>
@@ -3865,7 +3865,7 @@
 <li><span style="color: #000000">lignes 5-10 : qui sont affichés dans une liste HTML ;</span></li>
 </ul>
 <p><span style="color: #000000">Maintenant, modifions le code de l&#x27;action serveur [FaireSimulation] de la façon suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// faire une simulation</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> FaireSimulation(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application, </span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> data)</span></span>
@@ -3977,7 +3977,7 @@
 <li><span style="color: #000000">en [3], on récupère la nouvelle page d&#x27;erreurs.</span></li>
 </ul>
 <p><span style="color: #000000">Revenons à l&#x27;action serveur [FaireSimulation] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// faire une simulation</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> FaireSimulation(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application, </span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> data)</span></span>
@@ -4064,7 +4064,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">L&#x27;action serveur [FaireSimulation] doit, outre calculer une feuille de salaire, créer une simulation et la mettre dans la session. Pour cela, elle va recevoir en paramètre le modèle de la session :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// faire une simulation</span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> FaireSimulation(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application, </span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> session, </span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> data)</span></span>
@@ -4125,7 +4125,7 @@
 <p><a id="refheading1241492030931382"></a></p>
 <h3 id="9142-ecriture-de-laction-serveur-enregistrersimulation">9.14.2. Écriture de l&#x27;action serveur [EnregistrerSimulation]</h3>
 <p><span style="color: #000000">Le lien Ajax [Enregistrer la simulation] appelle l&#x27;action serveur [EnregistrerSimulation] dont le code était jusqu&#x27;à maintenant le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpPost</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> EnregistrerSimulation()</span></span>
 <span class="odt-code-line">    {</span>
@@ -4134,7 +4134,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Il évolue comme suit :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// enregistrer une simulation</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> EnregistrerSimulation(</span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> session)</span></span>
@@ -4189,7 +4189,7 @@
 
 <p><img src="images/100000000000033A00000169C5846764.png" style="width:15.289cm;height:6.68cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000033A00000169C5846764.png" /></p>
 <p><span style="color: #000000">On donnera de façon alternée aux lignes <strong>&lt;tr&gt;</strong> de la table HTML, les classes CSS [pair] et [impair] définies dans la feuille de style [/Content/Site.css] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-css">
 <span class="odt-code-line"><span style="color:#800000">.impair</span> {</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#ff0000">background-color</span><span style="color:#000000">: </span><span style="color:#0000ff">beige</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">}</span>
@@ -4209,7 +4209,7 @@
 <p><a id="refheading1241572030931382"></a></p>
 <h3 id="9152-ecriture-de-laction-serveur-formulaire">9.15.2. Écriture de l&#x27;action serveur [Formulaire]</h3>
 <p><span style="color: #000000">Le lien Ajax [Retour au formulaire de simulation] appelle l&#x27;action serveur [Formulaire] dont le code était jusqu&#x27;à maintenant le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    [<span style="color:#2b91af">HttpPost</span>]</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> Formulaire()</span></span>
 <span class="odt-code-line">    {</span>
@@ -4255,7 +4255,7 @@
 <p><a id="refheading1241632030931382"></a></p>
 <h3 id="9162-ecriture-de-laction-serveur-voirsimulations">9.16.2. Écriture de l&#x27;action serveur [VoirSimulations]</h3>
 <p><span style="color: #000000">Le lien Ajax [Voir les simulations] appelle l&#x27;action serveur [VoirSimulations] dont le code était jusqu&#x27;à maintenant le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// voir les simulations</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> VoirSimulations()</span></span>
@@ -4302,7 +4302,7 @@
 <p><a id="refheading1241692030931382"></a></p>
 <h3 id="9172-ecriture-de-laction-serveur-terminersession">9.17.2. Écriture de l&#x27;action serveur [TerminerSession]</h3>
 <p><span style="color: #000000">Le lien Ajax [Terminer la session] appelle l&#x27;action serveur [TerminerSession] dont le code était jusqu&#x27;à maintenant le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// terminer la session</span></span>
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">PartialViewResult</span><span style="color:#000000"> TerminerSession()</span></span>
@@ -4416,7 +4416,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015D000002627B795C0B.png" style="display:inline-block; margin:4px;width:4.618cm;height:8.07cm;" class="odt-zoomable" data-zoom-src="images/100000000000015D000002627B795C0B.png" /></td></tr></table>
 
 <p>La méthode [Application_Start] dans [Global.asax] est exécutée une unique fois au démarrage de l&#x27;application. C&#x27;est là que le fichier de configuration [Web.config] peut être exploité. Pour l&#x27;instant, notre méthode [Application_Start] ressemble à ceci :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// application</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span>
 <span class="odt-code-line">    {</span>
@@ -4441,7 +4441,7 @@
 </code></pre></div>
 
 <p>En ligne 17, la couche métier est instanciée par un opérateur <strong>new</strong>. Par ailleurs, le modèle de l&#x27;application est défini comme suit :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ApplicationModel</span></span>
 <span class="odt-code-line">  {</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// --- données de portée application ---</span></span>
@@ -4502,7 +4502,7 @@
 <li>lignes 14-16 : la balise [<span style="color: #a31515">objects</span>] introduit les objets Spring ;</li>
 <li>ligne 15 : définit un objet identifié par [<span style="color: #ff0000">id</span><span style="color: #0000ff">=</span><span style="color: #000000">&quot;</span><span style="color: #0000ff">pammetier</span><span style="color: #000000">&quot;</span>] qui est une instance de la classe [<span style="color: #0000ff">Pam.Metier.Service.PamMetier</span>] située dans la DLL [<span style="color: #0000ff">pam-metier-simule</span>]. Là, il ne faut pas se tromper. Pour l&#x27;attribut [id], vous pouvez mettre ce que vous voulez. Vous allez utiliser cet identifiant dans [Global.asax]. La classe [<span style="color: #0000ff">Pam.Metier.Service.PamMetier</span>] est celle de notre couche [métier] simulée. Il faut revenir à sa définition pour connaître son nom complet :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Pam.Metier.Service</span></span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">PamMetier</span><span style="color:#000000"> : </span><span style="color:#2b91af">IPamMetier</span></span>
@@ -4550,7 +4550,7 @@
 <p><a id="refheading1241932030931382"></a></p>
 <h3 id="9204-gerer-une-erreur-dinitialisation-de-lapplication">9.20.4. Gérer une erreur d&#x27;initialisation de l&#x27;application</h3>
 <p>Dans la méthode [Application_Start] nous avons écrit :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">application.PamMetier = </span><span style="color:#2b91af">ContextRegistry</span><span style="color:#000000">.GetContext().GetObject(</span><span style="color:#a31515">&quot;pammetier&quot;</span><span style="color:#000000">) </span><span style="color:#0000ff">as</span><span style="color:#000000"> </span><span style="color:#2b91af">IPamMetier</span><span style="color:#000000">;</span></span>
 </code></pre></div>
 
@@ -4560,7 +4560,7 @@
 <li>l&#x27;autre est que l&#x27;instanciation de la couche [métier] se passe mal. Ce ne peut être le cas pour notre couche [métier] simulée mais ça pourra l&#x27;être pour notre couche [métier] réelle qui sera connectée à une base de données. Le SGBD peut ne pas être lancé, les informations sur la base à gérer peuvent être incorrectes, etc...</li>
 </ul>
 <p>Nous allons gérer une éventuelle exception dans un try / catch. Le code évolue comme suit :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// application</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span>
 <span class="odt-code-line">    {</span>
@@ -4595,7 +4595,7 @@
 <ul>
 <li>ligne 12, nous introduisons une nouvelle propriété nommée [InitException] dans le modèle de l&#x27;application :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ApplicationModel</span></span>
 <span class="odt-code-line">  {</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// --- données de portée application ---</span></span>
@@ -4614,7 +4614,7 @@
 <li>ligne 28 : les [ModelBinders] sont créés qu&#x27;il y ait eu erreur ou non. C&#x27;est important. On veut s&#x27;assurer que le modèle de l&#x27;application [ApplicationModel] va bien être lié par le framework.</li>
 </ul>
 <p>On sait qu&#x27;au démarrage de l&#x27;application, l&#x27;action serveur [Index] est exécutée. Pour l&#x27;instant c&#x27;est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Index(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application)</span></span>
 <span class="odt-code-line">    {</span>
@@ -4623,7 +4623,7 @@
 </code></pre></div>
 
 <p>Ligne 2, l&#x27;action [Index] reçoit le modèle de l&#x27;application. Elle peut donc savoir si l&#x27;initialisation s&#x27;est bien passée ou non et afficher une page d&#x27;erreurs si l&#x27;initialisation a échoué d&#x27;une façon ou d&#x27;une autre. Nous faisons évoluer le code de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpGet</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Index(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application)</span></span>
 <span class="odt-code-line">    {</span>
@@ -4681,7 +4681,7 @@
 <li>ligne 3 : cette vue n&#x27;utilise pas la page maître [_Layout.cshtml]. En effet, on ne veut pas du menu amené par ce document. On construit donc une page HTML complète (lignes 5-23).</li>
 </ul>
 <p>Pour tester, il suffit de modifier dans [Application_Start], l&#x27;instanciation de la couche [métier] comme suit :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">try</span></span>
 <span class="odt-code-line">      {</span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000">// instanciation couche [métier]</span></span>
@@ -4998,7 +4998,7 @@
 <h3 id="9224-les-entites-entity-framework">9.22.4. Les entités Entity Framework</h3>
 <p>Les entités Entity framework sont des classes dans lesquelles on encapsule les lignes des différentes tables de la base de données. Rappelons celles-ci :</p>
 <p><img src="images/10000000000002D5000002420B5D899B.png" style="width:11.509cm;height:9.17cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D5000002420B5D899B.png" /></p>
-<p>Dans la couche [web], nous avions utilisé les entités [Employe, Cotisations, Indemnités] (voir paragraphe <a href="#refheading1883981168461456">9.7.3</a>, page <a href="#refheading1883981168461456">218</a>). Elles n&#x27;étaient pas des images fidèles des tables. Ainsi les colonnes [ID, VERSIONING] avaient été ignorées. Ici, ce ne va pas être le cas car elles sont utilisées par l&#x27;ORM EF5. Nous allons donc leur ajouter les propriétés manquantes. Nous créons ces entités dans un dossier [Models] du projet :</p>
+<p>Dans la couche [web], nous avions utilisé les entités [Employe, Cotisations, Indemnités] (voir paragraphe <a href="#refheading1883981168461456">9.7.3</a>, page <a href="#refheading1883981168461456">219</a>). Elles n&#x27;étaient pas des images fidèles des tables. Ainsi les colonnes [ID, VERSIONING] avaient été ignorées. Ici, ce ne va pas être le cas car elles sont utilisées par l&#x27;ORM EF5. Nous allons donc leur ajouter les propriétés manquantes. Nous créons ces entités dans un dossier [Models] du projet :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015A0000014BD7117F6C.png" style="display:inline-block; margin:4px;width:4.577cm;height:4.38cm;" class="odt-zoomable" data-zoom-src="images/100000000000015A0000014BD7117F6C.png" /></td></tr></table>
 
 <p>Leur nouveau code est désormais le suivant :</p>
@@ -5184,7 +5184,7 @@
 <li>lignes 9-11 :  définissent la chaîne de connexion à la base de données MySQL [dbpam_ef5] ;</li>
 <li>ligne 9 : le nom de la chaîne de connexion. <strong>Ici, on ne peut pas mettre n&#x27;importe quoi</strong>. Par défaut, il faut mettre le nom de la classe implémentant le contexte de la base de données :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">DbPamContext</span><span style="color:#000000"> : </span><span style="color:#2b91af">DbContext</span></span>
 <span class="odt-code-line">  {</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">DbSet</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">Employe</span><span style="color:#000000">&gt; Employes { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
@@ -5265,7 +5265,7 @@
 <li>lignes 13, 31 : les opérations sur le contexte de persistance se font dans une clause [using]. Le contexte de persistance est ouvert au début de la clause [using] et automatiquement fermé à la sortie de cette clause. Cela implique que toute modification faite sur le contexte de persistance dans la clause [using] sera répercutée sur la base de données à la sortie de la clause. Une série d&#x27;ordres SQL est alors envoyée à la BD à l&#x27;intérieur d&#x27;une transaction. Ce qui veut dire que si un ordre SQL échoue, tous les ordres SQL émis précédemment sont annulés. Une exception est alors lancée par EF5 ;</li>
 <li>ligne 17 : l&#x27;expression [context.Employes] désigne l&#x27;image objet de la table [employes]. On rappelle que [Employes] est une propriété du contexte de persistance [DbPamContext] :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">DbPamContext</span><span style="color:#000000"> : </span><span style="color:#2b91af">DbContext</span></span>
 <span class="odt-code-line">  {</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">DbSet</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">Employe</span><span style="color:#000000">&gt; Employes { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
@@ -5313,7 +5313,7 @@
 </ul>
 <p>Lorsqu&#x27;on ramène un employé dans le contexte de persistance, ramène-t-on son indemnité avec ? La réponse est <strong>non par défaut</strong>. C&#x27;est la notion de [<strong>Lazy Loading</strong>]. Les entités référencées au sein d&#x27;une autre entité ne sont pas amenées dans le contexte de persistance avec cette autre entité. Elles ne le sont que lorsqu&#x27;elles sont <strong>demandées</strong> par le code au sein d&#x27;un contexte de persistance <strong>ouvert</strong>. Si le contexte de persistance est fermé, une exception est alors lancée.</p>
 <p>Ainsi, si la méthode [ToString] avait référencé la propriété [Indemnites] comme ci-après :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// signature</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">override</span><span style="color:#000000"> </span><span style="color:#0000ff">string</span><span style="color:#000000"> ToString()</span></span>
 <span class="odt-code-line">    {</span>
@@ -5366,7 +5366,7 @@
 
 <p>Comme nous l&#x27;avions fait pour la couche [métier] simulée, la couche [DAO] sera accessible via une interface. Quelle sera-t-elle ?</p>
 <p>Regardons l&#x27;interface [IPamMetier] de la couche [métier] simulée que nous avons construite :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">interface</span><span style="color:#000000"> </span><span style="color:#2b91af">IPamMetier</span><span style="color:#000000"> {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000">// liste de toutes les identités des employés </span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#2b91af">Employe</span><span style="color:#000000">[] GetAllIdentitesEmployes();</span></span>
@@ -5381,7 +5381,7 @@
 
 <p><span style="color: #000000">Ces employés devront être cherchés dans la base de données.</span></p>
 <p><span style="color: #000000">Ligne 6, la méthode [GetSalaire] permet de calculer la feuille de salaire d&#x27;un employé dont on a le n° SS. Rappelons la définition du type [FeuilleSalaire] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">  <span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">FeuilleSalaire</span></span>
 <span class="odt-code-line">  {</span>
 <span class="odt-code-line"></span>
@@ -5394,7 +5394,7 @@
 
 <p><span style="color: #000000">Les informations des lignes 5 et 6 viendront de la base de données. Rappelons qu&#x27;un employé a une propriété [Indemnites]. Cette information devra être ramenée également.</span></p>
 <p><span style="color: #000000">On pourrait donc partir avec l&#x27;interface suivante pour la couche [DAO] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#0000ff">public</span> <span style="color:#0000ff">interface</span> <span style="color:#2b91af">IPamDao</span> {</span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000">// liste de toutes les identités des employés </span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#2b91af">Employe</span><span style="color:#000000">[] GetAllIdentitesEmployes();</span></span>
@@ -5433,7 +5433,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015B000001A3E3D568C5.png" style="display:inline-block; margin:4px;width:4.591cm;height:5.544cm;" class="odt-zoomable" data-zoom-src="images/100000000000015B000001A3E3D568C5.png" /></td></tr></table>
 
 <p><span style="color: #000000">Ci-dessus, la classe [PamException] est celle qui a été définie au paragraphe <a href="#refheading1883741168461456">9.7.4</a>. On change simplement son espace de noms (ligne 1 ci-dessous) :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Pam.Dao.Entites</span></span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// classe d&#x27;exception</span></span>
@@ -5630,7 +5630,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005D50000013A1C516D39.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.784cm;" class="odt-zoomable" data-zoom-src="images/10000000000005D50000013A1C516D39.png" /></td></tr></table>
 
 <p>L&#x27;interface de la couche [métier] sera l&#x27;interface [IPamMetier] de la couche [métier] simulée que nous avons construite au paragraphe <a href="#refheading1235882030931382">9.7.2</a>.</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">interface</span><span style="color:#000000"> </span><span style="color:#2b91af">IPamMetier</span><span style="color:#000000"> {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000">// liste de toutes les identités des employés </span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#2b91af">Employe</span><span style="color:#000000">[] GetAllIdentitesEmployes();</span></span>
@@ -5730,13 +5730,13 @@
 <p><span style="color: #000000"><strong>Travail 2</strong> : en vous aidant de ce que vous avez fait précédemment au paragraphe <a href="#refheading1235952030931382">9.23.5</a>, modifiez le fichier de configuration [app.config] du projet [pam-metier] afin qu&#x27;il définisse un objet Spring appelé [pammetier] associé à la classe [PamMetier] que nous venons de construire. Le plus simple est de recopier le fichier [app.config] du projet [pam-dao] et d&#x27;ajouter ce qui manque.</span></p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><span style="color: #000000">Il y a une difficulté ici. Non seulement, il faut instancier la couche [métier] avec la classe [PamMetier] mais il faut également initialiser sa propriété [PamDao] :</span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// référence sur la couche [DAO] initialisée par Spring</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">IPamDao</span><span style="color:#000000"> PamDao { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span>
 </code></pre></div>
 
 <p><span style="color: #000000">La configuration de Spring dans [app.config] est alors la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">spring</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">context</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">      &lt;</span><span style="color:#a31515">resource</span><span style="color:#0000ff"> </span><span style="color:#ff0000">uri</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">config://spring/objects</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span>
@@ -5819,13 +5819,13 @@
 <span class="normal"><a href="#__codelineno-11-4">4</a></span>
 <span class="normal"><a href="#__codelineno-11-5">5</a></span>
 <span class="normal"><a href="#__codelineno-11-6">6</a></span>
-<span class="normal"><a href="#__codelineno-11-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>Employés -----------------------------
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>Employé[24,1,254104940426058,Jouveinal,Marie,5 rue des oiseaux,St Corentin,49203]
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>Employé[25,1,260124402111742,Laverti,Justine,La Brûlerie,St Marcel,49014]
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a>salaires -----------------------------
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a>[Employé[25,1,260124402111742,Laverti,Justine,La Brûlerie,St Marcel,49014],Cotisations[11,1,3,49,6,15,9,39,7,88],[64,85 : 17,45 : 10 : 15 : 72,4]]
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a>[Employé[24,1,254104940426058,Jouveinal,Marie,5 rue des oiseaux,St Corentin,49203],Cotisations[11,1,3,49,6,15,9,39,7,88],[362,25 : 97,48 : 42 : 62 : 368,77]]
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a>PamException : L&#39;employé de n° [xx] n&#39;existe pas
+<span class="normal"><a href="#__codelineno-11-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">Employés</span><span class="w"> </span><span class="o">-----------------------------</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">Employé</span><span class="p">[</span><span class="mi">24</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">254104940426058</span><span class="p">,</span><span class="n">Jouveinal</span><span class="p">,</span><span class="n">Marie</span><span class="p">,</span><span class="mi">5</span><span class="w"> </span><span class="n">rue</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">oiseaux</span><span class="p">,</span><span class="n">St</span><span class="w"> </span><span class="n">Corentin</span><span class="p">,</span><span class="mi">49203</span><span class="p">]</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">Employé</span><span class="p">[</span><span class="mi">25</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">260124402111742</span><span class="p">,</span><span class="n">Laverti</span><span class="p">,</span><span class="n">Justine</span><span class="p">,</span><span class="n">La</span><span class="w"> </span><span class="n">Brûlerie</span><span class="p">,</span><span class="n">St</span><span class="w"> </span><span class="n">Marcel</span><span class="p">,</span><span class="mi">49014</span><span class="p">]</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="n">salaires</span><span class="w"> </span><span class="o">-----------------------------</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="na">[Employé[25,1,260124402111742,Laverti,Justine,La Brûlerie,St Marcel,49014]</span><span class="p">,</span><span class="n">Cotisations</span><span class="p">[</span><span class="mi">11</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">88</span><span class="p">],[</span><span class="mi">64</span><span class="p">,</span><span class="mi">85</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="mi">45</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="na">[Employé[24,1,254104940426058,Jouveinal,Marie,5 rue des oiseaux,St Corentin,49203]</span><span class="p">,</span><span class="n">Cotisations</span><span class="p">[</span><span class="mi">11</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">88</span><span class="p">],[</span><span class="mi">362</span><span class="p">,</span><span class="mi">25</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">97</span><span class="p">,</span><span class="mi">48</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">62</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">368</span><span class="p">,</span><span class="mi">77</span><span class="p">]]</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="n">PamException</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">L</span><span class="err">&#39;</span><span class="n">employé</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">n</span><span class="err">°</span><span class="w"> </span><span class="p">[</span><span class="n">xx</span><span class="p">]</span><span class="w"> </span><span class="n">n</span><span class="err">&#39;</span><span class="n">existe</span><span class="w"> </span><span class="n">pas</span>
 </code></pre></div></td></tr></table></div>
 <p><a id="refheading1242272030931382"></a></p>
 <h3 id="9247-dll-de-la-couche-metier">9.24.7. DLL de la couche [métier]</h3>
@@ -5890,7 +5890,7 @@
 <p><strong>Travail 1</strong> : remplacez tout le contenu actuel de [web.config] par celui du fichier [app.config] du projet [pam-metier].</p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p>Le fichier [Global.asax] de notre application web utilise [Spring.net] pour récupérer une référence sur la couche [métier] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">try</span></span>
 <span class="odt-code-line">      {</span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008000">// instanciation couche [métier]</span></span>

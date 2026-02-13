@@ -858,12 +858,12 @@
 <ul>
 <li>ligne 1 : la requête est un GET. L&#x27;URL demandée embarque le paramètre [nom]. Côté serveur, la requête arrive à l&#x27;action [Action01] qui a la signature suivante :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action01(</span><span style="color:#0000ff">string</span><span style="color:#000000"> nom)</span></span>
 </code></pre></div>
 
 <p>Pour donner une valeur au paramètre nom, ASP.NET MVC essaie successivement et dans l&#x27;ordre les valeurs <em>Request.Form[&quot;nom&quot;], RouteData.Values[&quot;nom&quot;], </em><em><span style="color: #2323dc">Request.QueryString[&quot;nom&quot;]</span></em><em>, Request.Files[&quot;nom&quot;]</em>. Il s&#x27;arrête dès qu&#x27;il a trouvé une valeur. Le paramètre [nom] embarqué dans l&#x27;URL du GET a été placé par le framework dans <em>Request.QueryString[&quot;nom&quot;].</em> C&#x27;est avec cette valeur [someone] que va être initialisé le paramètre [nom] de [Action01]. Ensuite le code de [Action01] s&#x27;exécute :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur=First, Action=Action01, nom={0}&quot;</span><span style="color:#000000">, nom), </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 </code></pre></div>
 
@@ -871,7 +871,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016800000059F2477EEE.png" style="display:inline-block; margin:4px;width:6.669cm;height:1.649cm;" class="odt-zoomable" data-zoom-src="images/100000000000016800000059F2477EEE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><strong>Note</strong> : le mécanisme de liaison des paramètres est <strong>insensible à la casse</strong>. Ainsi si notre action est définie comme :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action01(</span><span style="color:#0000ff">string</span><span style="color:#000000"> NOM)</span></span>
 </code></pre></div>
 
@@ -931,7 +931,7 @@
 <h2 id="42-verifier-la-validite-des-parametres-de-laction">4.2. <span style="color: #000000">Vérifier la validité des paramètres de l&#x27;action</span></h2>
 <p><span style="color: #000000">Si une action a un paramètre nommé [p], ASP.NET MVC va essayer de lui affecter l&#x27;une des valeurs </span><em><span style="color: #000000">Request.Form[&quot;p&quot;], </span></em><em>RouteData.Values[&quot;p&quot;]</em><em><span style="color: #000000">, Request.QueryString[&quot;p&quot;], Request.Files[&quot;p&quot;]</span></em><span style="color: #000000">. Les trois premières valeurs sont des chaînes de caractères. Si le paramètre [p] n&#x27;est pas de type [string], des problèmes peuvent survenir.</span></p>
 <p><span style="color: #000000">Créons la nouvelle action suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action02</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action02(</span><span style="color:#0000ff">int</span><span style="color:#000000"> age)</span></span>
 <span class="odt-code-line">    {</span>
@@ -954,17 +954,17 @@
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>HTTP/1.1 500 Internal Server Error
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>...
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>Content-Type: text/html; charset=utf-8
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>...
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>Content-Length: 12438
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="w"> </span><span class="mi">500</span><span class="w"> </span><span class="n">Internal</span><span class="w"> </span><span class="n">Server</span><span class="w"> </span><span class="n">Error</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">...</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span><span class="w"> </span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span><span class="w"> </span><span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">...</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">12438</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><span style="color: #000000">ligne 1 : le serveur a répondu avec un code [500 Internal Server Error] et a envoyé une page HTML (ligne 3) de 12438 octets (ligne 5) pour expliquer les raisons possibles de cette erreur.</span></li>
 </ul>
 <p><span style="color: #000000">Créons maintenant l&#x27;action [Action03] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action03</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action03(</span><span style="color:#0000ff">int</span><span style="color:#000000">? age)</span></span>
 <span class="odt-code-line">    {</span>
@@ -978,7 +978,7 @@
 
 <p><span style="color: #000000">ASP.NET MVC n&#x27;a pas réussi à convertir [21x] en type </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000">. Il a alors affecté la valeur </span><strong><span style="color: #000000">null</span></strong><span style="color: #000000"> au paramètre [age] comme l&#x27;autorise son type </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000">. Il est cependant possible de savoir si le paramètre a pu recevoir une valeur de la requête ou non.</span></p>
 <p><span style="color: #000000">Nous construisons la nouvelle action [Action04] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action04</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action04(</span><span style="color:#0000ff">int</span><span style="color:#000000">? age)</span></span>
 <span class="odt-code-line">    {</span>
@@ -998,7 +998,7 @@
 
 <p><span style="color: #000000">ASP.NET MVC n&#x27;a pas réussi à convertir [21x] en type </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000">. Il a alors affecté la valeur </span><strong><span style="color: #000000">null</span></strong><span style="color: #000000"> au paramètre [age] comme l&#x27;autorise son type </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000">. Mais il y a eu des erreurs de conversion comme le montre la valeur de [valide].</span></p>
 <p><span style="color: #000000">Il est possible d&#x27;avoir le message d&#x27;erreur associé à une conversion ratée. Examinons la nouvelle action suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action05</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action05(</span><span style="color:#0000ff">int</span><span style="color:#000000">? age)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1009,7 +1009,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">La nouveauté est ligne 4. On y appelle une méthode privée [getErrorMessagesFor] à laquelle on passe l&#x27;état du modèle de l&#x27;action. Elle rend une chaîne de caractères rassemblant les messages de toutes les erreurs qui se sont produites. Cette méthode est la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">private</span> <span style="color:#0000ff">string</span> <a id="geterrormessagesfor"></a>getErrorMessagesFor(<span style="color:#2b91af">ModelStateDictionary</span> état)</span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">List</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">String</span><span style="color:#000000">&gt; erreurs = </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">List</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">String</span><span style="color:#000000">&gt;();</span></span>
@@ -1052,7 +1052,7 @@
 </li>
 </ul>
 <p><span style="color: #000000">La méthode [getErrorMessageFor] de la ligne 11 est la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#0000ff">private</span> <span style="color:#0000ff">string</span> getErrorMessageFor(<span style="color:#2b91af">ModelError</span> error)</span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error.ErrorMessage != </span><span style="color:#0000ff">null</span><span style="color:#000000"> &amp;&amp; error.ErrorMessage.Trim() != </span><span style="color:#0000ff">string</span><span style="color:#000000">.Empty)</span></span>
@@ -1088,7 +1088,7 @@
 <p><a id="refheading58058676630786"></a></p>
 <h2 id="43-une-action-a-plusieurs-parametres">4.3. Une action à plusieurs paramètres</h2>
 <p><span style="color: #000000">Considérons la nouvelle action suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action06</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action06(</span><span style="color:#0000ff">double</span><span style="color:#000000">? poids, </span><span style="color:#0000ff">int</span><span style="color:#000000">? age)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1112,7 +1112,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000160000000B7E5E62470.png" style="display:inline-block; margin:4px;width:4.657cm;height:2.422cm;" class="odt-zoomable" data-zoom-src="images/1000000000000160000000B7E5E62470.png" /></td></tr></table>
 
 <p><span style="color: #000000">Son code sera le suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Exemple_02.Models</span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel01</span></span>
@@ -1124,7 +1124,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Notre classe a comme propriétés automatiques, les deux paramètres [Poids] et [Age] étudiés précédemment. Cette classe sera le paramètre d&#x27;entrée de l&#x27;action [Action07] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action07</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action07(</span><span style="color:#2b91af">ActionModel01</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1156,7 +1156,7 @@
 <p><a id="refheading258461901815618"></a></p>
 <h2 id="45-modele-de-laction-avec-contraintes-de-validite-1">4.5. Modèle de l&#x27;action avec contraintes de validité - 1</h2>
 <p><span style="color: #000000">Avec le modèle précédent :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Exemple_02.Models</span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel01</span></span>
@@ -1168,7 +1168,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">les paramètres [poids] et [age] peuvent être absents de la requête. Dans ce cas, les propriétés [Poids] et [Age] reçoivent la valeur [null] et aucune erreur n&#x27;est signalée. On pourrait vouloir transformer le modèle comme suit :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span> Exemple_02.Models</span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionModel01</span></span>
@@ -1214,7 +1214,7 @@
 <li><span style="color: #000000">ligne 7 : indique que le champ [Age] doit être dans l&#x27;intervalle [1,150] ;</span></li>
 </ul>
 <p><span style="color: #000000">L&#x27;action utilisant ce modèle sera l&#x27;action [Action08] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action08</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action08(</span><span style="color:#2b91af">ActionModel02</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1258,7 +1258,7 @@
 
 <p><span style="color: #000000">L&#x27;absence de paramètres a fait que les propriétés [Poids] et [Age] ont gardé leur valeur acquise lors de l&#x27;instanciation du modèle : 0. La validation intervient </span><strong><span style="color: #000000">ensuite</span></strong><span style="color: #000000">. L&#x27;attribut [Required] est alors satisfait. On voit que le message d&#x27;erreur ci-dessus est celui de l&#x27;attribut [Range]. Donc pour vérifier la présence d&#x27;un paramètre, il faut que la propriété associée soit </span><em><span style="color: #000000">nullable</span></em><span style="color: #000000">, ç-à-d puisse recevoir la valeur </span><em><span style="color: #000000">null</span></em><span style="color: #000000">.</span></p>
 <p><span style="color: #000000">Revenons au modèle [ActionModel02] initial et considérons une action dont le modèle est constitué d&#x27;une instance [ActionModel02] et d&#x27;un type [DateTime] </span><em><span style="color: #000000">nullable</span></em><span style="color: #000000"> :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action09</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action09(</span><span style="color:#2b91af">ActionModel02</span><span style="color:#000000"> modèle, </span><span style="color:#2b91af">DateTime</span><span style="color:#000000">? date)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1320,7 +1320,7 @@
 <li><span style="color: #000000">lignes 23-24 : les attributs [MaxLength] et [MinLength] combinés demandent à ce que le champ [Info3] ait exactement 4 caractères ;</span></li>
 </ul>
 <p><span style="color: #000000">L&#x27;action [Action10] utilisera ce modèle :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// Action10</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action10(</span><span style="color:#2b91af">ActionModel03</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1374,7 +1374,7 @@
 <li>ligne 16 : demande à ce que le champ annoté soit un n° de carte de crédit valide.</li>
 </ul>
 <p>L&#x27;action utilisant ce modèle sera la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action11</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action11(</span><span style="color:#2b91af">ActionModel04</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1446,7 +1446,7 @@
 <li><span style="color: #000000">lignes 14-17 : si la propriété [Taux] est invalide, alors on ajoute un élément de type [ValidationResult] dans la liste des résultats. Le premier paramètre est un message d&#x27;erreur. Le second paramètre, facultatif, est une collection des propriétés concernées par cette erreur.</span></li>
 </ul>
 <p><span style="color: #000000">L&#x27;action utilisant ce modèle sera la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action12</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action12(</span><span style="color:#2b91af">ActionModel05</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1462,7 +1462,7 @@
 <p><a id="refheading58066676630786"></a></p>
 <h2 id="48-modele-daction-de-type-tableau-ou-liste">4.8. Modèle d&#x27;action de type Tableau ou Liste</h2>
 <p><span style="color: #000000">Considérons l&#x27;action [Action13] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// Action13</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action13(</span><span style="color:#0000ff">string</span><span style="color:#000000">[] data)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1483,7 +1483,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002830000007DBA96483F.png" style="display:inline-block; margin:4px;width:11.91cm;height:2.311cm;" class="odt-zoomable" data-zoom-src="images/10000000000002830000007DBA96483F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Le modèle peut être également une liste :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action14</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action14(</span><span style="color:#2b91af">List</span><span style="color:#000000">&lt;</span><span style="color:#0000ff">int</span><span style="color:#000000">&gt; data)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1529,7 +1529,7 @@
 <li>ligne 6 : le paramètre [info2] de la ligne 12 est exclu de la liaison de la requête HTTP à son modèle.</li>
 </ul>
 <p>L&#x27;action sera la suivante [Action15] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action15</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action15(</span><span style="color:#2b91af">ActionModel06</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1573,7 +1573,7 @@
 </ul>
 <p><span style="color: #000000">Regardons un premier exemple mettant en lumière ces différentes mémoires :</span></p>
 <p><span style="color: #000000">Tout d&#x27;abord, nous modifions le fichier [Web.config] du projet [Exemple-02] de la façon suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">appSettings</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">add</span><span style="color:#0000ff"> </span><span style="color:#ff0000">key</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">webpages:Version</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">value</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">2.0.0.0</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">    </span><span style="color:#000000">...</span></span>
@@ -1583,7 +1583,7 @@
 
 <p><span style="color: #000000">Nous rajoutons la ligne 4 qui à la clé [infoAppli1] associe la valeur [infoAppli1]. Ce sera notre donnée de portée [Application] : elle sera accessible à toutes les requêtes de tous les utilisateurs.</span></p>
 <p><span style="color: #000000">Ensuite nous modifions la méthode [Application_Start] du fichier [Global.asax]. Cette méthode s&#x27;exécute une unique fois au démarrage de l&#x27;application. C&#x27;est là qu&#x27;il faut exploiter le fichier [Web.config] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> Application_Start()</span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#2b91af">AreaRegistration</span><span style="color:#000000">.RegisterAllAreas();</span></span>
@@ -1603,7 +1603,7 @@
 <li><span style="color: #000000">elle l&#x27;enregistre dans le dictionnaire [HttpApplication.Application], associée à la clé [infoAppli1]. Toutes les actions ont accès à ce dictionnaire.</span></li>
 </ul>
 <p><span style="color: #000000">Dans le même fichier [Gloabal.asax], on ajoute la méthode [Session_Start] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> Session_Start()</span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008000">// initialisation compteur</span></span>
@@ -1619,7 +1619,7 @@
 <p><span style="color: #000000">Le serveur web reconnaît qu&#x27;il a affaire à un nouvel utilisateur lorsque celui-ci ne lui envoie pas de jeton de session. Le serveur lui en crée alors un.</span></p>
 <p><span style="color: #000000">Ligne 4 ci-dessus, on met dans la session de l&#x27;utilisateur un compteur qui sera incrémenté à chaque requête de cet utilisateur. Cela illustrera la mémoire associée à un utilisateur. La classe [Session] s&#x27;utilise comme un dictionnaire (ligne 4).</span></p>
 <p><span style="color: #000000">Ceci fait, nous écrivons l&#x27;action [Action16] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// Action16</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action16()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1654,7 +1654,7 @@
 
 <p><span style="color: #000000">En [3], le second utilisateur récupère bien la même information de portée [Application] mais a son propre compteur de portée [Session].</span></p>
 <p><span style="color: #000000">Revenons au code de l&#x27;action [Action16] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// Action16</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action16()</span></span>
 <span class="odt-code-line">    {</span>
@@ -1673,7 +1673,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">L&#x27;un des buts du framework ASP.NET MVC est de rendre les contrôleurs et les actions testables de façon isolée sans serveur web. Or on voit ligne 5,  que le contexte de la requête HTTP est nécessaire pour récupérer les informations de portée [Application] et de portée [Session]. On se propose de créer une nouvelle action [Action17] qui recevrait les données de portée [Application] et [Session] en paramètres :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action17</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action17(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> applicationData, </span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> sessionData)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1691,7 +1691,7 @@
 <p><span style="color: #000000">Voyons comment y arriver. Tout d&#x27;abord, il nous faut créer les classes [ApplicationModel] et [SessionModel] qui vont encapsuler respectivement les données de portée [Application] et [Session]. Ce sont les suivantes :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001410000013948D0013A.png" style="display:inline-block; margin:4px;width:4.247cm;height:4.142cm;" class="odt-zoomable" data-zoom-src="images/10000000000001410000013948D0013A.png" /></td></tr></table>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><a id="applicationmodel"></a><span style="color:#2b91af">ApplicationModel</span></span>
@@ -1701,7 +1701,7 @@
 <span class="odt-code-line">}</span>
 </code></pre></div>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_02.Models</span></span>
 <span class="odt-code-line">{</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><a id="sessionmodel"></a><span style="color:#2b91af">SessionModel</span></span>
@@ -1716,7 +1716,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Ensuite, il nous faut modifier les méthodes [Application_Start] et [Session_Start] du fichier [Global.asax] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">MvcApplication</span> : System.Web.<span style="color:#2b91af">HttpApplication</span></span>
 <span class="odt-code-line">  {</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">protected</span><span style="color:#000000"> </span><span style="color:#0000ff">void</span><span style="color:#000000"> Application_Start()</span></span>
@@ -1752,7 +1752,7 @@
 <li><span style="color: #000000">ligne 24 :  une instance de [SessionModel] est créée et placée dans le dictionnaire de [Session], asssociée à la clé [data]. [Session] est une propriété de la classe [HttpApplication] de la ligne 1 ;</span></li>
 </ul>
 <p><span style="color: #000000">Si on s&#x27;en tient à ce que nous avons vu jusqu&#x27;à maintenant, la signature </span></p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#0000ff">public</span> <span style="color:#2b91af">ContentResult</span> Action17(<span style="color:#2b91af">ApplicationModel</span> applicationData, <span style="color:#2b91af">SessionModel</span> sessionData)</span>
 </code></pre></div>
 
@@ -1808,7 +1808,7 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Il ne nous reste plus qu&#x27;à associer chacun des modèles [XModel] à son <em>binder</em> [XModelBinder]. Ceci est fait dans la méthode [Application_Start] de [Global.asax] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> Application_Start()</span>
 <span class="odt-code-line">    {</span>
 <span class="odt-code-line">....</span>
@@ -1827,7 +1827,7 @@
 <li><span style="color: #000000">ligne 10 : idem pour le type [SessionModel].</span></li>
 </ul>
 <p><span style="color: #000000">Revenons à notre action [Action17] :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action17</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action17(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> applicationData, </span><span style="color:#2b91af">SessionModel</span><span style="color:#000000"> sessionData)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1856,7 +1856,7 @@
 <p><a id="refheading58070676630786"></a></p>
 <h2 id="411-liaison-tardive-du-modele-de-laction">4.11. Liaison tardive du modèle de l&#x27;action</h2>
 <p><span style="color: #000000">Nous avons écrit l&#x27;action [Action12] suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// Action12</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action12(</span><span style="color:#2b91af">ActionModel05</span><span style="color:#000000"> modèle)</span></span>
 <span class="odt-code-line">    {</span>
@@ -1872,7 +1872,7 @@
 <li><span style="color: #000000">l&#x27;initialise avec les informations de la requête qui ont le même nom (indifférent à la casse) que l&#x27;une des propriétés de [ActionModel05].</span></li>
 </ul>
 <p><span style="color: #000000">Parfois ce comportement ne nous convient pas. C&#x27;est notamment le cas lorsqu&#x27;on veut utiliser un constructeur particulier du modèle de l&#x27;action. On peut alors procéder de la façon suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action18</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action18()</span></span>
 <span class="odt-code-line">    {</span>
