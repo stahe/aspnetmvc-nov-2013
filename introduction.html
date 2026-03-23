@@ -713,8 +713,8 @@
 <p>Les divers exemples de ce document sont disponibles à l&#x27;URL [<a href="http://tahe.developpez.com/dotnet/aspnet-mvc">http://tahe.developpez.com/dotnet/aspnetmvc</a>] sous la forme d&#x27;un fichier <em>zip</em> à télécharger.</p>
 <p>Ce document est incomplet à bien des égards. Pour approfondir ASP.NET MVC, on pourra utiliser les références suivantes :</p>
 <ul>
-<li><strong>[ref1] </strong>: le livre &quot; <strong>Pro </strong><strong><span style="color: #000000">ASP.NET MVC 4</span></strong> &quot; écrit par <strong>Adam Freeman</strong> aux éditions <strong>Apress</strong>. C&#x27;est un excellent livre. Il serait disponible en ligne gratuitement et en français que le présent document n&#x27;aurait pas lieu d&#x27;être. Je recommande à tous ceux qui le peuvent de s&#x27;initier à ASP.NET MVC à l&#x27;aide de ce livre. Les codes source des exemples du livre sont disponibles gratuitement à l&#x27;URL [<a href="http://www.apress.com/9781430242369">http://www.apress.com/9781430242369</a>] ;</li>
-<li><strong>[ref2] </strong>: le site du framework [<a href="http://www.asp.net/mvc">http://www.asp.net/mvc</a>]. On y trouvera tout le matériel nécessaire pour une auto-formation. Une version française est disponible à l&#x27;URL [<a href="http://dotnet.developpez.com/mvc/">http://dotnet.developpez.com/mvc/</a> ] ;</li>
+<li><strong>[ref1]</strong> : le livre &quot; <strong>Pro</strong> <strong><span style="color: #000000">ASP.NET MVC 4</span></strong> &quot; écrit par <strong>Adam Freeman</strong> aux éditions <strong>Apress</strong>. C&#x27;est un excellent livre. Il serait disponible en ligne gratuitement et en français que le présent document n&#x27;aurait pas lieu d&#x27;être. Je recommande à tous ceux qui le peuvent de s&#x27;initier à ASP.NET MVC à l&#x27;aide de ce livre. Les codes source des exemples du livre sont disponibles gratuitement à l&#x27;URL [<a href="http://www.apress.com/9781430242369">http://www.apress.com/9781430242369</a>] ;</li>
+<li><strong>[ref2]</strong> : le site du framework [<a href="http://www.asp.net/mvc">http://www.asp.net/mvc</a>]. On y trouvera tout le matériel nécessaire pour une auto-formation. Une version française est disponible à l&#x27;URL [<a href="http://dotnet.developpez.com/mvc/">http://dotnet.developpez.com/mvc/</a> ] ;</li>
 <li>le site de [developpez.com] consacré à ASP.NET [<a href="http://dotnet.developpez.com/aspnet/">http://dotnet.developpez.com/aspnet/</a> ].</li>
 </ul>
 <p>Le document a été écrit de telle façon qu&#x27;il puisse être lu sans ordinateur sous la main. Aussi, donne-t-on beaucoup de copies d&#x27;écran.</p>
@@ -742,18 +742,35 @@
 
 <p>Le traitement d&#x27;une demande d&#x27;un client se déroule de la façon suivante :</p>
 <ol>
-<li><strong>demande</strong> - les URL demandées sont de la forme <em>http://machine:port/contexte/Controlleur/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;... </em>Le [Front Controller] utilise un fichier de configuration pour &quot; router &quot; la demande vers le bon contrôleur et la bonne action au sein de ce contrôleur. Pour cela, il utilise le chemin [<em>Controlleur/Action</em>] de l&#x27;URL. Le reste de l&#x27;URL [<em>/param1/param2/...</em>] sont des paramètres facultatifs qui seront transmis à l&#x27;action. Le <strong>C</strong> de MVC est ici la chaîne [Front Controller, Contrôleur, Action]. Si le chemin [<em>Controlleur/Action</em>] n&#x27;aboutit pas à un contrôleur existant ou une action existante, le serveur Web répondra que l&#x27;URL demandée n&#x27;a pas été trouvée.</li>
-<li><strong>traitement</strong> </li>
-<li>l&#x27;action choisie peut exploiter les paramètres <em>parami</em> que le [Front Controller] lui a transmis. Ceux-ci peuvent provenir de plusieurs sources :</li>
-<li>du chemin [<em>/param1/param2/...</em>] de l&#x27;URL,</li>
-<li>des paramètres [<em>p1=v1&amp;p2=v2</em>] de l&#x27;URL<em>,</em></li>
-<li>de paramètres postés par le navigateur avec sa demande ;</li>
-<li>dans le traitement de la demande de l&#x27;utilisateur, l&#x27;action peut avoir besoin de la couche [métier] [2b]. Une fois la demande du client traitée, celle-ci peut appeler diverses réponses. Un exemple classique est :</li>
-<li>une page d&#x27;erreur si la demande n&#x27;a pu être traitée correctement</li>
-<li>une page de confirmation sinon</li>
-<li>l&#x27;action demande à une certaine vue de s&#x27;afficher [3]. Cette vue va afficher des données qu&#x27;on appelle le <strong>modèle de la vue</strong>. C&#x27;est le <strong>M</strong> de MVC. L&#x27;action va créer ce modèle M [2c] et demander à une vue <strong>V</strong> de s&#x27;afficher [3] ;</li>
-<li><strong>réponse</strong> - la vue <strong>V</strong> choisie utilise le modèle <strong>M</strong> construit par l&#x27;action pour initialiser les parties dynamiques de la réponse HTML qu&#x27;elle doit envoyer au client puis envoie cette réponse.</li>
+<li><strong>demande</strong> - les URL demandées sont de la forme <em>http://machine:port/contexte/Controlleur/Action/param1/param2/....?p1=v1&amp;p2=v2&amp;...</em> Le [Front Controller] utilise un fichier de configuration pour &quot; router &quot; la demande vers le bon contrôleur et la bonne action au sein de ce contrôleur. Pour cela, il utilise le chemin [<em>Controlleur/Action</em>] de l&#x27;URL. Le reste de l&#x27;URL [<em>/param1/param2/...</em>] sont des paramètres facultatifs qui seront transmis à l&#x27;action. Le <strong>C</strong> de MVC est ici la chaîne [Front Controller, Contrôleur, Action]. Si le chemin [<em>Controlleur/Action</em>] n&#x27;aboutit pas à un contrôleur existant ou une action existante, le serveur Web répondra que l&#x27;URL demandée n&#x27;a pas été trouvée.</li>
 </ol>
+<ol start="2">
+  <li><b>traitement</b> 
+  </li>
+</ol>
+<ul>
+  <li>l&#x27;action choisie peut exploiter les paramètres <i>parami</i> que le [Front Controller] lui a transmis. Ceux-ci peuvent provenir de plusieurs sources :
+  </li>
+  <li>du chemin [<i>/param1/param2/...</i>] de l&#x27;URL,
+  </li>
+  <li>des paramètres [<i>p1=v1&amp;p2=v2</i>] de l&#x27;URL<i>,</i>
+  </li>
+  <li>de paramètres postés par le navigateur avec sa demande ;
+  </li>
+  <li>dans le traitement de la demande de l&#x27;utilisateur, l&#x27;action peut avoir besoin de la couche [métier] [2b]. Une fois la demande du client traitée, celle-ci peut appeler diverses réponses. Un exemple classique est :
+  </li>
+  <li>une page d&#x27;erreur si la demande n&#x27;a pu être traitée correctement
+  </li>
+  <li>une page de confirmation sinon
+  </li>
+  <li>l&#x27;action demande à une certaine vue de s&#x27;afficher [3]. Cette vue va afficher des données qu&#x27;on appelle le <b>modèle de la vue</b>. C&#x27;est le <b>M</b> de MVC. L&#x27;action va créer ce modèle M [2c] et demander à une vue <b>V</b> de s&#x27;afficher [3] ;
+  </li>
+</ul>
+<ol>
+  <li><b>réponse</b> - la vue <b>V</b> choisie utilise le modèle <b>M</b> construit par l&#x27;action pour initialiser les parties dynamiques de la réponse HTML qu&#x27;elle doit envoyer au client puis envoie cette réponse.
+  </li>
+</ol>
+
 <p>Maintenant, précisons le lien entre architecture Web MVC et architecture en couches. Selon la définition qu&#x27;on donne au <strong>modèle</strong>, ces deux concepts sont liés ou non. Prenons une application Web ASP.NET MVC à une couche :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062E00000242EE335F0F.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.576cm;" class="odt-zoomable" data-zoom-src="images/100000000000062E00000242EE335F0F.png" /></td></tr></table>
 
@@ -768,38 +785,53 @@
 
 <p>Beaucoup d&#x27;auteurs considèrent que ce qui est à droite de la couche [Web] forme le modèle M du MVC. Pour éviter les ambigüités on peut parler :</p>
 <ul>
-<li>du <strong>modèle du domaine</strong> lorsqu&#x27;on désigne tout ce qui est à droite de la couche [Web]</li>
-<li>du <strong>modèle de la vue</strong> lorsqu&#x27;on désigne les données affichées par une vue V</li>
+  <li>du <b>modèle du domaine</b> lorsqu&#x27;on désigne tout ce qui est à droite de la couche [Web]
+  </li>
+  <li>du <b>modèle de la vue</b> lorsqu&#x27;on désigne les données affichées par une vue V
+  </li>
 </ul>
+
 <p>Dans la suite, le terme &quot; modèle M &quot; désignera exclusivement le <strong>modèle d&#x27;une vue</strong> V.</p>
 <p><a id="refheading99551454977699"></a></p>
 <h2 id="13-les-outils-utilises">1.3. Les outils utilisés</h2>
 <p>Dans la suite, nous utilisons (septembre 2013) les versions Express de Visual Studio 2012 :</p>
 <ul>
-<li>[<a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop">http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop</a>  ] pour les applications de bureau ;</li>
-<li>[<a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-web">http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-Web</a> ] pour les applications Web.</li>
+  <li>[<a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop">http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-windows-desktop</a>  ] pour les applications de bureau ;
+  </li>
+  <li>[<a href="http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-web">http://www.microsoft.com/visualstudio/fra/products/visual-studio-express-for-Web</a> ] pour les applications Web.
+  </li>
 </ul>
+
 <p>Pour installer les dernières versions de ces produits, on pourra utiliser le produit [Web Platform Installer] de Microsoft (<a href="http://www.microsoft.com/web/downloads/platform.aspx">http://www.microsoft.com/Web/downloads/platform.aspx</a> ).</p>
 <p>Par ailleurs, on utilisera le navigateur <strong>Chrome</strong> de Google (<a href="http://www.google.fr/intl/fr/chrome/browser/">http://www.google.fr/intl/fr/chrome/browser/</a> ). On lui ajoutera l&#x27;extension [<a id="advanced-rest-client"></a>Advanced Rest Client]. On pourra procéder ainsi :</p>
 <ul>
-<li>aller sur le site de [Google Web store] (<a href="https://chrome.google.com/webstore">https://chrome.google.com/webstore</a>) avec le navigateur Chrome ;</li>
-<li>chercher l&#x27;application [Advanced Rest Client] :</li>
+  <li>aller sur le site de [Google Web store] (<a href="https://chrome.google.com/webstore">https://chrome.google.com/webstore</a>) avec le navigateur Chrome ;
+  </li>
+  <li>chercher l&#x27;application [Advanced Rest Client] :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B0000000D21DA44C58.png" style="display:inline-block; margin:4px;width:7.999cm;height:3.889cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B0000000D21DA44C58.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>l&#x27;application est alors disponible au téléchargement :</li>
+  <li>l&#x27;application est alors disponible au téléchargement :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003BB000000AE1112526C.png" style="display:inline-block; margin:4px;width:17.48cm;height:3.184cm;" class="odt-zoomable" data-zoom-src="images/10000000000003BB000000AE1112526C.png" /></td></tr></table>
 
 <ul>
-<li>pour l&#x27;obtenir, il vous faudra créer un compte Google. [Google Web Store] demande ensuite confirmation [1] :</li>
+  <li>pour l&#x27;obtenir, il vous faudra créer un compte Google. [Google Web Store] demande ensuite confirmation [1] :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000083800000381099DA849.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.673cm;" class="odt-zoomable" data-zoom-src="images/100000000000083800000381099DA849.png" /></td></tr></table>
 
 <ul>
-<li>en [2], l&#x27;extension ajoutée est disponible dans l&#x27;option [Applications] [3]. Cette option est affichée sur chaque nouvel onglet que vous créez (CTRL-T) dans le navigateur.</li>
+  <li>en [2], l&#x27;extension ajoutée est disponible dans l&#x27;option [Applications] [3]. Cette option est affichée sur chaque nouvel onglet que vous créez (CTRL-T) dans le navigateur.
+  </li>
 </ul>
+
 <p><a id="refheading99631454977699"></a></p>
 <h2 id="14-les-exemples">1.4. Les exemples</h2>
 <p>La plupart des exemples d&#x27;apprentissage seront réduits à la seule couche Web :</p>

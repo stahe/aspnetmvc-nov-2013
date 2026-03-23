@@ -801,11 +801,16 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000061C00000091EF5447AE.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.669cm;" class="odt-zoomable" data-zoom-src="images/100000000000061C00000091EF5447AE.png" /></td></tr></table>
 
 <ul>
-<li>la requête HTTP du client arrive en [1] ;</li>
-<li>en [2], les informations contenues dans la requête vont être transformées en modèle d&#x27;action [3], une classe souvent mais pas forcément, qui servira d&#x27;entrée à l&#x27;action [4] ;</li>
-<li>en [4], l&#x27;action, à partir de ce modèle, va générer une réponse. Celle-ci aura deux composantes : une vue V [6] et le modèle M de cette vue [5] ;</li>
-<li>la vue V [6] va utiliser son modèle M [5] pour générer la réponse HTTP destinée au client.</li>
+  <li>la requête HTTP du client arrive en [1] ;
+  </li>
+  <li>en [2], les informations contenues dans la requête vont être transformées en modèle d&#x27;action [3], une classe souvent mais pas forcément, qui servira d&#x27;entrée à l&#x27;action [4] ;
+  </li>
+  <li>en [4], l&#x27;action, à partir de ce modèle, va générer une réponse. Celle-ci aura deux composantes : une vue V [6] et le modèle M de cette vue [5] ;
+  </li>
+  <li>la vue V [6] va utiliser son modèle M [5] pour générer la réponse HTTP destinée au client.
+  </li>
 </ul>
+
 <p>Dans le modèle <strong>MVC</strong>, l&#x27;action [4] fait partie du <strong>C</strong> (contrôleur), le modèle de la vue [5] est le <strong>M</strong> et la vue [6] est le <strong>V</strong>.</p>
 <p>Ce chapitre étudie les mécanismes de liaison entre les informations transportées par la requête, qui sont par nature des chaînes de caractères et le modèle de l&#x27;action qui peut être une classe avec des propriétés de divers types.</p>
 <p><a id="refheading58054676630786"></a></p>
@@ -816,10 +821,14 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052E0000031BFB58988F.png" style="display:inline-block; margin:4px;width:17.542cm;height:10.518cm;" class="odt-zoomable" data-zoom-src="images/100000000000052E0000031BFB58988F.png" /></td></tr></table>
 
 <ul>
-<li>en [2], le nom du nouveau projet ;</li>
-<li>en [3, 4], nous choisissons un projet ASP.NET MVC de base ;</li>
-<li>en [5], le nouveau projet.</li>
+  <li>en [2], le nom du nouveau projet ;
+  </li>
+  <li>en [3, 4], nous choisissons un projet ASP.NET MVC de base ;
+  </li>
+  <li>en [5], le nouveau projet.
+  </li>
 </ul>
+
 <p>On fera du nouveau projet, le projet de démarrage de la solution.</p>
 <p>Comme il a été fait au paragraphe <a href="controleurs-actions-routage.html#refheading10128914791633">3.1</a>, nous créons un contrôleur nommé [First] [1] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000AF000000900D740575.png" style="display:inline-block; margin:4px;width:3.24cm;height:2.671cm;" class="odt-zoomable" data-zoom-src="images/10000000000000AF000000900D740575.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -843,7 +852,7 @@
 </code></pre></div>
 
 <p>La nouveauté réside à la ligne 8 : la méthode [Action01] a un paramètre. On s&#x27;intéresse dans ce chapitre aux différentes façons d&#x27;initialiser les paramètres d&#x27;une action. Le paramètre [nom] ci-dessus est initialisé dans l&#x27;ordre avec les valeurs suivantes :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Request.Form[&quot;nom&quot;]</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">un paramètre nommé [nom] envoyé par une commande POST</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>RouteData.Values[&quot;nom&quot;]</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">un élément d&#x27;URL nommé [nom]</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Request.QueryString[&quot;nom&quot;]</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">un paramètre nommé [nom] envoyé par une commande GET</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Request.Files[&quot;nom&quot;]</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">un fichier uploadé nommé [nom]</p></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Request.Form[&quot;nom&quot;]</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">un paramètre nommé [nom] envoyé par une commande POST</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>RouteData.Values[&quot;nom&quot;]</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">un élément d&#x27;URL nommé [nom]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Request.QueryString[&quot;nom&quot;]</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">un paramètre nommé [nom] envoyé par une commande GET</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Request.Files[&quot;nom&quot;]</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">un fichier uploadé nommé [nom]</div></td></tr></table>
 
 <p>Examinons ces différents cas. Demandons directement dans le navigateur l&#x27;URL [/First/Action01?nom=someone]. On obtient la réponse suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E30000007C82924AE4.png" style="display:inline-block; margin:4px;width:8.939cm;height:2.3cm;" class="odt-zoomable" data-zoom-src="images/10000000000001E30000007C82924AE4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -856,13 +865,15 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>...
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : la requête est un GET. L&#x27;URL demandée embarque le paramètre [nom]. Côté serveur, la requête arrive à l&#x27;action [Action01] qui a la signature suivante :</li>
+  <li>ligne 1 : la requête est un GET. L&#x27;URL demandée embarque le paramètre [nom]. Côté serveur, la requête arrive à l&#x27;action [Action01] qui a la signature suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ContentResult</span><span style="color:#000000"> Action01(</span><span style="color:#0000ff">string</span><span style="color:#000000"> nom)</span></span>
 </code></pre></div>
 
-<p>Pour donner une valeur au paramètre nom, ASP.NET MVC essaie successivement et dans l&#x27;ordre les valeurs <em>Request.Form[&quot;nom&quot;], RouteData.Values[&quot;nom&quot;], </em><em><span style="color: #2323dc">Request.QueryString[&quot;nom&quot;]</span></em><em>, Request.Files[&quot;nom&quot;]</em>. Il s&#x27;arrête dès qu&#x27;il a trouvé une valeur. Le paramètre [nom] embarqué dans l&#x27;URL du GET a été placé par le framework dans <em>Request.QueryString[&quot;nom&quot;].</em> C&#x27;est avec cette valeur [someone] que va être initialisé le paramètre [nom] de [Action01]. Ensuite le code de [Action01] s&#x27;exécute :</p>
+<p>Pour donner une valeur au paramètre nom, ASP.NET MVC essaie successivement et dans l&#x27;ordre les valeurs <em>Request.Form[&quot;nom&quot;], RouteData.Values[&quot;nom&quot;],</em> <em><span style="color: #2323dc">Request.QueryString[&quot;nom&quot;]</span></em><em>, Request.Files[&quot;nom&quot;]</em>. Il s&#x27;arrête dès qu&#x27;il a trouvé une valeur. Le paramètre [nom] embarqué dans l&#x27;URL du GET a été placé par le framework dans <em>Request.QueryString[&quot;nom&quot;].</em> C&#x27;est avec cette valeur [someone] que va être initialisé le paramètre [nom] de [Action01]. Ensuite le code de [Action01] s&#x27;exécute :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">return</span><span style="color:#000000"> Content(</span><span style="color:#0000ff">string</span><span style="color:#000000">.Format(</span><span style="color:#a31515">&quot;Contrôleur=First, Action=Action01, nom={0}&quot;</span><span style="color:#000000">, nom), </span><span style="color:#a31515">&quot;text/plain&quot;</span><span style="color:#000000">, </span><span style="color:#2b91af">Encoding</span><span style="color:#000000">.UTF8);</span></span>
 </code></pre></div>
@@ -880,18 +891,26 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FA0000021A09A529B6.png" style="display:inline-block; margin:4px;width:6.694cm;height:7.117cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FA0000021A09A529B6.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], l&#x27;URL demandée ;</span></li>
-<li><span style="color: #000000">en [2], la commande POST sera utilisée ;</span></li>
-<li><span style="color: #000000">en [3], les paramètres du POST.</span></li>
+  <li><span style="color: #000000">en [1], l&#x27;URL demandée ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], la commande POST sera utilisée ;</span>
+  </li>
+  <li><span style="color: #000000">en [3], les paramètres du POST.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Envoyons cette requête et regardons les logs HTTP. La requête HTTP est la suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005490000020F18457CB3.png" style="display:inline-block; margin:4px;width:17.9cm;height:6.973cm;" class="odt-zoomable" data-zoom-src="images/10000000000005490000020F18457CB3.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], le POST ;</span></li>
-<li><span style="color: #000000">en [2], les paramètres du POST. Techniquement, ils ont été envoyés derrière les entêtes HTTP après la ligne vide signalant la fin de ces entêtes ;</span></li>
-<li><span style="color: #000000">en [3], la réponse obtenue. On récupère bien le paramètre [nom] du POST. Dans les valeurs essayées pour le paramètre nom </span><em><span style="color: #2323dc">Request.Form[&quot;nom&quot;]</span></em><em><span style="color: #000000">, RouteData.Values[&quot;nom&quot;], Request.QueryString[&quot;nom&quot;], Request.Files[&quot;nom&quot;]</span></em><span style="color: #000000">, c&#x27;est la première qui a marché.</span></li>
+  <li><span style="color: #000000">en [1], le POST ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], les paramètres du POST. Techniquement, ils ont été envoyés derrière les entêtes HTTP après la ligne vide signalant la fin de ces entêtes ;</span>
+  </li>
+  <li><span style="color: #000000">en [3], la réponse obtenue. On récupère bien le paramètre [nom] du POST. Dans les valeurs essayées pour le paramètre nom </span><i><span style="color: #2323dc">Request.Form[&quot;nom&quot;]</span></i><i><span style="color: #000000">, RouteData.Values[&quot;nom&quot;], Request.QueryString[&quot;nom&quot;], Request.Files[&quot;nom&quot;]</span></i><span style="color: #000000">, c&#x27;est la première qui a marché.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Maintenant, modifions la route par défaut dans [App_Start/RouteConfig]. Actuellement, cette route est la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">      routes.MapRoute(</span>
@@ -911,9 +930,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 3, nous avons nommé [nom] le troisième élément d&#x27;une route ;</span></li>
-<li><span style="color: #000000">ligne 4, cet élément est déclaré optionnel.</span></li>
+  <li><span style="color: #000000">ligne 3, nous avons nommé [nom] le troisième élément d&#x27;une route ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 4, cet élément est déclaré optionnel.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Maintenant, recompilons l&#x27;application et demandons l&#x27;URL [/First/Action01/zébulon] directement dans le navigateur. Nous obtenons, la réponse suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B300000083D6AE41C1.png" style="display:inline-block; margin:4px;width:8.05cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B300000083D6AE41C1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -922,10 +944,14 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AD00000222A11C4649.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.763cm;" class="odt-zoomable" data-zoom-src="images/10000000000005AD00000222A11C4649.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], nous avons donné une valeur à l&#x27;élément {nom} de la route ;</span></li>
-<li><span style="color: #000000">en [2], on ajoute un paramètre [nom] à la requête postée ;</span></li>
-<li><span style="color: #000000">la réponse obtenue est en [3].</span></li>
+  <li><span style="color: #000000">en [1], nous avons donné une valeur à l&#x27;élément {nom} de la route ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], on ajoute un paramètre [nom] à la requête postée ;</span>
+  </li>
+  <li><span style="color: #000000">la réponse obtenue est en [3].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Dans les valeurs essayées pour le paramètre [nom] </span><em><span style="color: #2323dc">Request.Form[&quot;nom&quot;]</span></em><em><span style="color: #000000">, </span></em><em><span style="color: #2323dc">RouteData.Values[&quot;nom&quot;]</span></em><em><span style="color: #000000">, Request.QueryString[&quot;nom&quot;], Request.Files[&quot;nom&quot;]</span></em><span style="color: #000000">, deux convenaient, les deux premières. C&#x27;est la première qui a été utilisée.</span></p>
 <p><a id="refheading58056676630786"></a></p>
 <h2 id="42-verifier-la-validite-des-parametres-de-laction">4.2. <span style="color: #000000">Vérifier la validité des paramètres de l&#x27;action</span></h2>
@@ -941,8 +967,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2, l&#x27;action [Action02] admet un paramètre nommé [age] de type </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000">. Il faudra que la chaîne de caractères récupérée soit convertible en </span><strong><span style="color: #000000">int</span></strong><span style="color: #000000">.</span></li>
+  <li><span style="color: #000000">ligne 2, l&#x27;action [Action02] admet un paramètre nommé [age] de type </span><b><span style="color: #000000">int</span></b><span style="color: #000000">. Il faudra que la chaîne de caractères récupérée soit convertible en </span><b><span style="color: #000000">int</span></b><span style="color: #000000">.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Demandons l&#x27;URL [</span><span style="color: #000000">http://localhost:55483/First/Action02?age=</span><strong><span style="color: #000000">21</span></strong><span style="color: #000000">]. On obtient la page suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B80000007669369E94.png" style="display:inline-block; margin:4px;width:8.149cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B80000007669369E94.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -961,8 +989,10 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span><span class="w"> </span><span class="mi">12438</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span style="color: #000000">ligne 1 : le serveur a répondu avec un code [500 Internal Server Error] et a envoyé une page HTML (ligne 3) de 12438 octets (ligne 5) pour expliquer les raisons possibles de cette erreur.</span></li>
+  <li><span style="color: #000000">ligne 1 : le serveur a répondu avec un code [500 Internal Server Error] et a envoyé une page HTML (ligne 3) de 12438 octets (ligne 5) pour expliquer les raisons possibles de cette erreur.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Créons maintenant l&#x27;action [Action03] suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action03</span></span>
@@ -989,10 +1019,14 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : on a gardé le type [int?]. Cela permet en particulier à la requête de ne pas fournir le paramètre [age] qui reçoit alors la valeur </span><strong><span style="color: #000000">null</span></strong><span style="color: #000000"> ;</span></li>
-<li><span style="color: #000000">ligne 4 : on teste si le modèle de l&#x27;action est valide. Le modèle de l&#x27;action est formé de l&#x27;ensemble de ses paramètres, ici [age]. Le modèle est valide si tous les paramètres ont pu obtenir une valeur de la requête ou bien la valeur </span><strong><span style="color: #000000">null</span></strong><span style="color: #000000"> si le type du paramètre le permet ;</span></li>
-<li><span style="color: #000000">ligne 5 : on ajoute la valeur de la variable [valide] dans le text envoyé au client.</span></li>
+  <li><span style="color: #000000">ligne 2 : on a gardé le type [int?]. Cela permet en particulier à la requête de ne pas fournir le paramètre [age] qui reçoit alors la valeur </span><b><span style="color: #000000">null</span></b><span style="color: #000000"> ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 4 : on teste si le modèle de l&#x27;action est valide. Le modèle de l&#x27;action est formé de l&#x27;ensemble de ses paramètres, ici [age]. Le modèle est valide si tous les paramètres ont pu obtenir une valeur de la requête ou bien la valeur </span><b><span style="color: #000000">null</span></b><span style="color: #000000"> si le type du paramètre le permet ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : on ajoute la valeur de la variable [valide] dans le text envoyé au client.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Demandons l&#x27;URL [http://localhost:55483/First/Action04?age=</span><strong><span style="color: #000000">21x</span></strong><span style="color: #000000">]. On obtient la page suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BD00000076AF114E5F.png" style="display:inline-block; margin:4px;width:8.241cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BD00000076AF114E5F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1033,24 +1067,41 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 1 : le paramètre effectif [ModelState] passé à la méthode est de type [ModelStateDictionary] ;</span></li>
-<li><span style="color: #000000">ligne 3 : une liste de messages d&#x27;erreurs, vide au départ ;</span></li>
-<li><span style="color: #000000">ligne 5 : on teste si l&#x27;état passé en paramètre est valide ou non. Si non, alors on va agréger tous les messages d&#x27;erreur en une unique chaîne de caractères ;</span></li>
-<li>
-<p><span style="color: #000000">ligne 7 : le type [ModelStateDictionary] a une propriété [Values] qui est une collection de types [ModelState]. Il y a un [ModelState] par élément du modèle. Par exemple :</span></p>
+  <li><span style="color: #000000">ligne 1 : le paramètre effectif [ModelState] passé à la méthode est de type [ModelStateDictionary] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 3 : une liste de messages d&#x27;erreurs, vide au départ ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : on teste si l&#x27;état passé en paramètre est valide ou non. Si non, alors on va agréger tous les messages d&#x27;erreur en une unique chaîne de caractères ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : le type [ModelStateDictionary] a une propriété [Values] qui est une collection de types [ModelState]. Il y a un [ModelState] par élément du modèle. Par exemple :</span>
+  </li>
+</ul>
+
+<ol>
+    <ul>
+      <li><b><span style="color: #000000">ModelState[&quot;age&quot;]</span></b><span style="color: #000000"> : l&#x27;état du modèle de l&#x27;action pour le paramètre [age],</span>
+      </li>
+      <li><b><span style="color: #000000">ModelState[&quot;age&quot;].Errors</span></b><span style="color: #000000"> : la collection d&#x27;erreurs pour ce paramètre. Les erreurs sont de type [ModelError],</span>
+      </li>
+      <li><b><span style="color: #000000">ModelState[&quot;age&quot;].Errors[i].ErrorMessage </span></b><span style="color: #000000">: l&#x27;éventuel message d&#x27;erreur n° i pour le paramètre [age] du modèle</span>
+      </li>
+      <li><b><span style="color: #000000">ModelState[&quot;age&quot;].Errors[i].Exception</span></b><span style="color: #000000"> : l&#x27;exception de l&#x27;erreur n° i de la collection des erreurs sur le paramètre [age],</span>
+      </li>
+      <li><b><span style="color: #000000">ModelState[&quot;age&quot;].Errors[i].Exception.InnerException</span></b><span style="color: #000000"> : la cause de cette exception,</span>
+      </li>
+      <li><b><span style="color: #000000">ModelState[&quot;age&quot;].Errors[i].Exception.InnerException.Message</span></b><span style="color: #000000"> : le message de la cause de l&#x27;exception ;</span>
+      </li>
+    </ul>
+</ol>
 <ul>
-<li><strong><span style="color: #000000">ModelState[&quot;age&quot;]</span></strong><span style="color: #000000"> : l&#x27;état du modèle de l&#x27;action pour le paramètre [age],</span></li>
-<li><strong><span style="color: #000000">ModelState[&quot;age&quot;].Errors</span></strong><span style="color: #000000"> : la collection d&#x27;erreurs pour ce paramètre. Les erreurs sont de type [ModelError],</span></li>
-<li><strong><span style="color: #000000">ModelState[&quot;age&quot;].Errors[i].ErrorMessage </span></strong><span style="color: #000000">: l&#x27;éventuel message d&#x27;erreur n° i pour le paramètre [age] du modèle</span></li>
-<li><strong><span style="color: #000000">ModelState[&quot;age&quot;].Errors[i].Exception</span></strong><span style="color: #000000"> : l&#x27;exception de l&#x27;erreur n° i de la collection des erreurs sur le paramètre [age],</span></li>
-<li><strong><span style="color: #000000">ModelState[&quot;age&quot;].Errors[i].Exception.InnerException</span></strong><span style="color: #000000"> : la cause de cette exception,</span></li>
-<li><strong><span style="color: #000000">ModelState[&quot;age&quot;].Errors[i].Exception.InnerException.Message</span></strong><span style="color: #000000"> : le message de la cause de l&#x27;exception ;</span></li>
-<li><span style="color: #000000">ligne 9 : on parcourt la collection [Errors] d&#x27;un [ModelState] particulier ;</span></li>
-<li><span style="color: #000000">ligne 11 : on récupère le message d&#x27;erreur d&#x27;un [ModelError] particulier et on l&#x27;ajoute à la liste des messages d&#x27;erreurs de la ligne 3 ;</span></li>
-<li><span style="color: #000000">lignes 14-17 : on agrège les éléments de la liste des messages d&#x27;erreurs en une unique chaîne de caractères.</span></li>
+  <li><span style="color: #000000">ligne 9 : on parcourt la collection [Errors] d&#x27;un [ModelState] particulier ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : on récupère le message d&#x27;erreur d&#x27;un [ModelError] particulier et on l&#x27;ajoute à la liste des messages d&#x27;erreurs de la ligne 3 ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 14-17 : on agrège les éléments de la liste des messages d&#x27;erreurs en une unique chaîne de caractères.</span>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><span style="color: #000000">La méthode [getErrorMessageFor] de la ligne 11 est la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#0000ff">private</span> <span style="color:#0000ff">string</span> getErrorMessageFor(<span style="color:#2b91af">ModelError</span> error)</span>
@@ -1072,15 +1123,21 @@
 </code></pre></div>
 
 <ul>
-<li>
-<p><span style="color: #000000">ligne 1 : on reçoit un type [ModelError] qui encapsule une erreur sur l&#x27;un des éléments du modèle de l&#x27;action. On va chercher le message d&#x27;erreur dans trois endroits différents :</span></p>
-<ul>
-<li><span style="color: #000000">dans [ModelError].ErrorMessage, lignes 3-6 ;</span></li>
-<li><span style="color: #000000">dans [ModelError].Exception.Message, lignes 7-10 ;</span></li>
-<li><span style="color: #000000">dans [ModelError].Exception.InnerException.Message, lignes 11-14 ;</span></li>
+  <li><span style="color: #000000">ligne 1 : on reçoit un type [ModelError] qui encapsule une erreur sur l&#x27;un des éléments du modèle de l&#x27;action. On va chercher le message d&#x27;erreur dans trois endroits différents :</span>
+  </li>
 </ul>
-</li>
-</ul>
+
+<ol>
+    <ul>
+      <li><span style="color: #000000">dans [ModelError].ErrorMessage, lignes 3-6 ;</span>
+      </li>
+      <li><span style="color: #000000">dans [ModelError].Exception.Message, lignes 7-10 ;</span>
+      </li>
+      <li><span style="color: #000000">dans [ModelError].Exception.InnerException.Message, lignes 11-14 ;</span>
+      </li>
+    </ul>
+</ol>
+
 <p><span style="color: #000000">Durant les tests, on remarque que le message d&#x27;erreur est trouvé dans ces trois endroits selon la nature de l&#x27;élément du modèle. Il doit y avoir une règle qui permette d&#x27;obtenir à coup sûr le message d&#x27;erreur associé à un élément du modèle, mais je ne la connais pas. Je le cherche donc aux différents endroits où je peux le trouver et ce dans un certain ordre. Dès qu&#x27;un message non vide a été trouvé, il est retourné.</span></p>
 <p><span style="color: #000000">Demandons l&#x27;URL [http://localhost:55483/First/Action05?age=</span><strong><span style="color: #000000">21x</span></strong><span style="color: #000000">]. On obtient la page suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002DD0000008E8489DDD0.png" style="display:inline-block; margin:4px;width:13.57cm;height:2.63cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DD0000008E8489DDD0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1099,8 +1156,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : nous avons deux paramètres [poids] et [age].</span></li>
+  <li><span style="color: #000000">ligne 2 : nous avons deux paramètres [poids] et [age].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Les règles décrites précédemment s&#x27;appliquent maintenant aux deux paramètres. Voici quelques exemples d&#x27;exécution :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D0000000919132A93E.png" style="display:inline-block; margin:4px;width:13.33cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D0000000919132A93E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1135,8 +1194,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : le modèle de l&#x27;action est une instance de type [ActionModel01].</span></li>
+  <li><span style="color: #000000">ligne 2 : le modèle de l&#x27;action est une instance de type [ActionModel01].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Reprenons les mêmes deux exemples que précédemment :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D400000092CCDC4975.png" style="display:inline-block; margin:4px;width:13.33cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D400000092CCDC4975.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1147,10 +1208,14 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D700000229F6675F40.png" style="display:inline-block; margin:4px;width:6.232cm;height:7.317cm;" class="odt-zoomable" data-zoom-src="images/10000000000001D700000229F6675F40.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], l&#x27;URL demandée ;</span></li>
-<li><span style="color: #000000">en [2], elle le sera par une commande POST ;</span></li>
-<li><span style="color: #000000">en [3], les paramètres du POST.</span></li>
+  <li><span style="color: #000000">en [1], l&#x27;URL demandée ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], elle le sera par une commande POST ;</span>
+  </li>
+  <li><span style="color: #000000">en [3], les paramètres du POST.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">On obtient la même réponse qu&#x27;avec le GET :</span></p>
 <p><img src="images/100000000000049300000055ECCB8246.png" style="width:17.729cm;height:1.286cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000049300000055ECCB8246.png" /></p>
 <p><a id="refheading258461901815618"></a></p>
@@ -1184,9 +1249,12 @@
 
 <p><span style="color: #000000">Il n&#x27;y a pas eu d&#x27;erreurs et les propriétés [Poids] et [Age] ont gardé leur valeur d&#x27;initialisation : 0. ASP.NET MVC : </span></p>
 <ul>
-<li><span style="color: #000000">a créé une instance du modèle par un </span><em><span style="color: #000000">new ActionModel01</span></em><span style="color: #000000">. C&#x27;est là que les propriétés [Poids] et [Age] ont reçu leur valeur 0 ;</span></li>
-<li><span style="color: #000000">n&#x27;a affecté aucune valeur à ces deux propriétés car il n&#x27;y avait aucun paramètre portant leur nom.</span></li>
+  <li><span style="color: #000000">a créé une instance du modèle par un </span><i><span style="color: #000000">new ActionModel01</span></i><span style="color: #000000">. C&#x27;est là que les propriétés [Poids] et [Age] ont reçu leur valeur 0 ;</span>
+  </li>
+  <li><span style="color: #000000">n&#x27;a affecté aucune valeur à ces deux propriétés car il n&#x27;y avait aucun paramètre portant leur nom.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le premier modèle nous permet de vérifier l&#x27;absence d&#x27;un paramètre : la propriété correspondante a alors la valeur [null]. Le second ne nous le permet pas. Il est possible d&#x27;ajouter d&#x27;autres contraintes de validation que le simple type des paramètres. Nous allons maintenant les présenter.</span></p>
 <p><span style="color: #000000">Considérons le nouveau modèle d&#x27;action suivant :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B90000006B7CED3721.png" style="display:inline-block; margin:4px;width:3.431cm;height:1.981cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B90000006B7CED3721.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1208,11 +1276,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 6 : indique que le champ [Poids] est requis ;</span></li>
-<li><span style="color: #000000">ligne 7 : indique que le champ [Poids] doit être dans l&#x27;intervalle [1,200] ;</span></li>
-<li><span style="color: #000000">ligne 9 : indique que le champ [Age] est requis ;</span></li>
-<li><span style="color: #000000">ligne 7 : indique que le champ [Age] doit être dans l&#x27;intervalle [1,150] ;</span></li>
+  <li><span style="color: #000000">ligne 6 : indique que le champ [Poids] est requis ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : indique que le champ [Poids] doit être dans l&#x27;intervalle [1,200] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 : indique que le champ [Age] est requis ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : indique que le champ [Age] doit être dans l&#x27;intervalle [1,150] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">L&#x27;action utilisant ce modèle sera l&#x27;action [Action08] suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action08</span></span>
@@ -1225,8 +1298,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : l&#x27;action reçoit une instance du modèle [ActionModel02] ;</span></li>
+  <li><span style="color: #000000">ligne 2 : l&#x27;action reçoit une instance du modèle [ActionModel02] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Faisons quelques tests :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002DF0000008B2A9D7224.png" style="display:inline-block; margin:4px;width:13.61cm;height:2.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DF0000008B2A9D7224.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1312,13 +1387,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 6 : l&#x27;attribut [Required] avec cette fois, un message d&#x27;erreur que nous fixons nous mêmes ;</span></li>
-<li><span style="color: #000000">ligne 7 :  l&#x27;attribut [EMailAddress] demande à ce que le champ [Email] contienne une adresse électronique de format valide ;</span></li>
-<li><span style="color: #000000">ligne 11 : l&#x27;attribut [RegularExpression] demande à ce que le champ [Jour] contienne une chaîne d&#x27;un ou deux chiffres. Le premier paramètre est l&#x27;expression régulière que doit vérifier le champ ;</span></li>
-<li><span style="color: #000000">ligne 15 : l&#x27;attribut [MaxLength] demande à ce que le champ [Info1] ait au plus 4 caractères ;</span></li>
-<li><span style="color: #000000">ligne 19 : l&#x27;attribut [MinLength] demande à ce que le champ [Info2] ait au moins 2 caractères ;</span></li>
-<li><span style="color: #000000">lignes 23-24 : les attributs [MaxLength] et [MinLength] combinés demandent à ce que le champ [Info3] ait exactement 4 caractères ;</span></li>
+  <li><span style="color: #000000">ligne 6 : l&#x27;attribut [Required] avec cette fois, un message d&#x27;erreur que nous fixons nous mêmes ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 :  l&#x27;attribut [EMailAddress] demande à ce que le champ [Email] contienne une adresse électronique de format valide ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : l&#x27;attribut [RegularExpression] demande à ce que le champ [Jour] contienne une chaîne d&#x27;un ou deux chiffres. Le premier paramètre est l&#x27;expression régulière que doit vérifier le champ ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 15 : l&#x27;attribut [MaxLength] demande à ce que le champ [Info1] ait au plus 4 caractères ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 19 : l&#x27;attribut [MinLength] demande à ce que le champ [Info2] ait au moins 2 caractères ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 23-24 : les attributs [MaxLength] et [MinLength] combinés demandent à ce que le champ [Info3] ait exactement 4 caractères ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">L&#x27;action [Action10] utilisera ce modèle :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// Action10</span>
@@ -1369,10 +1451,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : demande à ce que le champ annoté soit une URL valide ;</li>
-<li>ligne 13 : demande à ce que les propriétés [Info1] et [Info2] aient la même valeur ;</li>
-<li>ligne 16 : demande à ce que le champ annoté soit un n° de carte de crédit valide.</li>
+  <li>ligne 8 : demande à ce que le champ annoté soit une URL valide ;
+  </li>
+  <li>ligne 13 : demande à ce que les propriétés [Info1] et [Info2] aient la même valeur ;
+  </li>
+  <li>ligne 16 : demande à ce que le champ annoté soit un n° de carte de crédit valide.
+  </li>
 </ul>
+
 <p>L&#x27;action utilisant ce modèle sera la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action11</span></span>
@@ -1389,16 +1475,23 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002ED0000036355D360A3.png" style="display:inline-block; margin:4px;width:9.91cm;height:11.471cm;" class="odt-zoomable" data-zoom-src="images/10000000000002ED0000036355D360A3.png" /></td></tr></table>
 
 <ul>
-<li>en [1], l&#x27;URL de l&#x27;action [Action11] ;</li>
-<li>en [2], cette URL sera demandée avec un POST ;</li>
-<li>en [3], on sélectionne l&#x27;onglet [Form] ;</li>
-<li>en [4], les valeurs des quatre paramètres attendus. Cette initialisation est une facilité offerte par [ARC]. Les paramètres réellement envoyés peuvent être vus dans l&#x27;onglet [Raw] [5] ;</li>
+  <li>en [1], l&#x27;URL de l&#x27;action [Action11] ;
+  </li>
+  <li>en [2], cette URL sera demandée avec un POST ;
+  </li>
+  <li>en [3], on sélectionne l&#x27;onglet [Form] ;
+  </li>
+  <li>en [4], les valeurs des quatre paramètres attendus. Cette initialisation est une facilité offerte par [ARC]. Les paramètres réellement envoyés peuvent être vus dans l&#x27;onglet [Raw] [5] ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AA000000C6C52B9039.png" style="display:inline-block; margin:4px;width:15.796cm;height:2.619cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AA000000C6C52B9039.png" /></td></tr></table>
 
 <ul>
-<li>en [6], les paramètres du POST.</li>
+  <li>en [6], les paramètres du POST.
+  </li>
 </ul>
+
 <p>Pour cette requête, on reçoit la réponse suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004120000005C525584F9.png" style="display:inline-block; margin:4px;width:16.54cm;height:1.461cm;" class="odt-zoomable" data-zoom-src="images/10000000000004120000005C525584F9.png" /></td></tr></table>
 
@@ -1438,13 +1531,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 6 : le modèle implémente l&#x27;interface [IValidatableObject] ;</span></li>
-<li><span style="color: #000000">ligne 10 : la méthode [Validate] de cette interface. Elle rend une collection d&#x27;éléments de type [ValidationResult]. Ce type encapsule les erreurs que l&#x27;on veut signaler ;</span></li>
-<li><span style="color: #000000">ligne 9 : un taux valide est un taux &lt;4.2 ou &gt; 6.7 ;</span></li>
-<li><span style="color: #000000">ligne 12 : on crée une liste vide d&#x27;éléments de type [ValidationResult] ;</span></li>
-<li><span style="color: #000000">ligne 13 : on vérifie la validité de la propriété [Taux] ;</span></li>
-<li><span style="color: #000000">lignes 14-17 : si la propriété [Taux] est invalide, alors on ajoute un élément de type [ValidationResult] dans la liste des résultats. Le premier paramètre est un message d&#x27;erreur. Le second paramètre, facultatif, est une collection des propriétés concernées par cette erreur.</span></li>
+  <li><span style="color: #000000">ligne 6 : le modèle implémente l&#x27;interface [IValidatableObject] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : la méthode [Validate] de cette interface. Elle rend une collection d&#x27;éléments de type [ValidationResult]. Ce type encapsule les erreurs que l&#x27;on veut signaler ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 : un taux valide est un taux &lt;4.2 ou &gt; 6.7 ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 12 : on crée une liste vide d&#x27;éléments de type [ValidationResult] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 13 : on vérifie la validité de la propriété [Taux] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 14-17 : si la propriété [Taux] est invalide, alors on ajoute un élément de type [ValidationResult] dans la liste des résultats. Le premier paramètre est un message d&#x27;erreur. Le second paramètre, facultatif, est une collection des propriétés concernées par cette erreur.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">L&#x27;action utilisant ce modèle sera la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action12</span></span>
@@ -1477,8 +1577,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : le modèle de l&#x27;action est constitué d&#x27;un tableau de [string]. Il nous permet de récupérer un paramètre nommé [data] qui peut être présent plusieurs fois dans les paramètres de la requête comme dans [?data=data1&amp;data=data2&amp;data=data3]. Les différents paramètres [data] de la requête vont alimenter le tableau [data] du modèle de l&#x27;action. Ce cas se rencontre avec les listes à choix multiple. Le navigateur envoie alors les différentes valeurs sélectionnées par l&#x27;utilisateur, avec le même nom de paramètre.</span></li>
+  <li><span style="color: #000000">ligne 2 : le modèle de l&#x27;action est constitué d&#x27;un tableau de [string]. Il nous permet de récupérer un paramètre nommé [data] qui peut être présent plusieurs fois dans les paramètres de la requête comme dans [?data=data1&amp;data=data2&amp;data=data3]. Les différents paramètres [data] de la requête vont alimenter le tableau [data] du modèle de l&#x27;action. Ce cas se rencontre avec les listes à choix multiple. Le navigateur envoie alors les différentes valeurs sélectionnées par l&#x27;utilisateur, avec le même nom de paramètre.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voici un exemple :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002830000007DBA96483F.png" style="display:inline-block; margin:4px;width:11.91cm;height:2.311cm;" class="odt-zoomable" data-zoom-src="images/10000000000002830000007DBA96483F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1525,9 +1627,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 9-10 : le paramètre [info1] est obligatoire ;</li>
-<li>ligne 6 : le paramètre [info2] de la ligne 12 est exclu de la liaison de la requête HTTP à son modèle.</li>
+  <li>lignes 9-10 : le paramètre [info1] est obligatoire ;
+  </li>
+  <li>ligne 6 : le paramètre [info2] de la ligne 12 est exclu de la liaison de la requête HTTP à son modèle.
+  </li>
 </ul>
+
 <p>L&#x27;action sera la suivante [Action15] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action15</span></span>
@@ -1543,9 +1648,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004180000011A7343A515.png" style="display:inline-block; margin:4px;width:13.864cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004180000011A7343A515.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on passe le paramètre [info2] dans l&#x27;URL ;</li>
-<li>en [2] : la propriété [Info2] du modèle de l&#x27;action est restée vide.</li>
+  <li>en [1] : on passe le paramètre [info2] dans l&#x27;URL ;
+  </li>
+  <li>en [2] : la propriété [Info2] du modèle de l&#x27;action est restée vide.
+  </li>
 </ul>
+
 <p><a id="refheading2400667523874"></a></p>
 <h2 id="410-etendre-le-modele-de-liaison-des-donnees">4.10. Étendre le modèle de liaison des données</h2>
 <p>Revenons sur l&#x27;architecture d&#x27;exécution d&#x27;une action :</p>
@@ -1553,24 +1661,34 @@
 
 <p>La classe de l&#x27;action est instanciée au début de la requête du client et détruite à la la fin de celle-ci. Aussi ne peut-elle servir à mémoriser des données entre deux requêtes même si elle est appelée de façon répétée. On peut vouloir mémoriser deux types de données :</p>
 <ul>
-<li>des données <strong>partagées par tous les utilisateurs</strong> de l&#x27;application web. Ce sont en général des données en lecture seule. Trois fichiers sont utilisés pour mettre en oeuvre ce partage de données : <ul>
-<li>[Web.Config] : le fichier de configuration de l&#x27;application</li>
-<li>[Global.asax, Global.asax.cs] : permettent de définir une classe, appelée classe globale d&#x27;application, dont la durée de vie est celle de l&#x27;application, ainsi que des gestionnaires pour certains événements de cette même application.</li>
+  <li>des données <b>partagées par tous les utilisateurs</b> de l&#x27;application web. Ce sont en général des données en lecture seule. Trois fichiers sont utilisés pour mettre en oeuvre ce partage de données : 
+    <ul>
+      <li>[Web.Config] : le fichier de configuration de l&#x27;application
+      </li>
+      <li>[Global.asax, Global.asax.cs] : permettent de définir une classe, appelée classe globale d&#x27;application, dont la durée de vie est celle de l&#x27;application, ainsi que des gestionnaires pour certains événements de cette même application.
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>La classe globale d&#x27;application permet de définir des données qui seront disponibles pour toutes les requêtes de tous les utilisateurs.</p>
 <ul>
-<li>des données partagées par les requêtes d&#x27;<strong>un même client</strong>. Ces données sont mémorisées dans un objet appelé <strong>Session</strong>. On parle alors de <strong>session client</strong> pour désigner la mémoire du client. Toutes les requêtes d&#x27;un client ont accès à cette session. Elles peuvent y stocker et y lire des informations.</li>
+  <li>des données partagées par les requêtes d&#x27;<b>un même client</b>. Ces données sont mémorisées dans un objet appelé <b>Session</b>. On parle alors de <b>session client</b> pour désigner la mémoire du client. Toutes les requêtes d&#x27;un client ont accès à cette session. Elles peuvent y stocker et y lire des informations.
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005930000011EB8C6AD74.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.605cm;" class="odt-zoomable" data-zoom-src="images/10000000000005930000011EB8C6AD74.png" /></td></tr></table>
 
 <p>Ci-dessus, nous montrons les types de mémoire auxquels a accès une action :</p>
 <ul>
-<li>la mémoire de l&#x27;application qui contient la plupart du temps des données en lecture seule et qui est accessible à tous les utilisateurs ;</li>
-<li>la mémoire d&#x27;un utilisateur particulier, ou session, qui contient des données en lecture / écriture et qui est accessible aux requêtes successives d&#x27;<strong>un même utilisateur</strong> ;</li>
-<li>non représentée ci-dessus, il existe une mémoire de requête, ou contexte de requête. La requête d&#x27;un utilisateur peut être traitée par plusieurs actions successives. Le contexte de la requête permet à une action 1 de transmettre de l&#x27;information à une action 2.</li>
+  <li>la mémoire de l&#x27;application qui contient la plupart du temps des données en lecture seule et qui est accessible à tous les utilisateurs ;
+  </li>
+  <li>la mémoire d&#x27;un utilisateur particulier, ou session, qui contient des données en lecture / écriture et qui est accessible aux requêtes successives d&#x27;<b>un même utilisateur</b> ;
+  </li>
+  <li>non représentée ci-dessus, il existe une mémoire de requête, ou contexte de requête. La requête d&#x27;un utilisateur peut être traitée par plusieurs actions successives. Le contexte de la requête permet à une action 1 de transmettre de l&#x27;information à une action 2.
+  </li>
 </ul>
+
 <p><span style="color: #000000">Regardons un premier exemple mettant en lumière ces différentes mémoires :</span></p>
 <p><span style="color: #000000">Tout d&#x27;abord, nous modifions le fichier [Web.config] du projet [Exemple-02] de la façon suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -1599,9 +1717,12 @@
 
 <p><span style="color: #000000">Nous rajoutons la ligne 10. Elle fait deux choses :</span></p>
 <ul>
-<li><span style="color: #000000">elle récupère la valeur de la clé [infoAppli1] dans le fichier [Web.config] au moyen de la classe [System.Configuration.ConfigurationManager] ;</span></li>
-<li><span style="color: #000000">elle l&#x27;enregistre dans le dictionnaire [HttpApplication.Application], associée à la clé [infoAppli1]. Toutes les actions ont accès à ce dictionnaire.</span></li>
+  <li><span style="color: #000000">elle récupère la valeur de la clé [infoAppli1] dans le fichier [Web.config] au moyen de la classe [System.Configuration.ConfigurationManager] ;</span>
+  </li>
+  <li><span style="color: #000000">elle l&#x27;enregistre dans le dictionnaire [HttpApplication.Application], associée à la clé [infoAppli1]. Toutes les actions ont accès à ce dictionnaire.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Dans le même fichier [Gloabal.asax], on ajoute la méthode [Session_Start] suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#0000ff">protected</span> <span style="color:#0000ff">void</span> Session_Start()</span>
@@ -1613,9 +1734,12 @@
 
 <p><span style="color: #000000">La méthode [Session_Start] est exécutée pour tout nouvel utilisateur. Qu&#x27;est-ce qu&#x27;un nouvel utilisateur ? Un utilisateur est &quot; suivi &quot; par un jeton de session. Ce jeton est :</span></p>
 <ul>
-<li><span style="color: #000000">créé par le serveur web et envoyé au nouvel utilisateur dans les entêtes HTTP de la première réponse qui lui est faite ;</span></li>
-<li><span style="color: #000000">renvoyé par le navigateur de l&#x27;utilisateur à chaque nouvelle requête qu&#x27;il fait. Cela permet au serveur de reconnaître l&#x27;utilisateur et de gérer une mémoire pour lui qu&#x27;on appelle la session de l&#x27;utilisateur.</span></li>
+  <li><span style="color: #000000">créé par le serveur web et envoyé au nouvel utilisateur dans les entêtes HTTP de la première réponse qui lui est faite ;</span>
+  </li>
+  <li><span style="color: #000000">renvoyé par le navigateur de l&#x27;utilisateur à chaque nouvelle requête qu&#x27;il fait. Cela permet au serveur de reconnaître l&#x27;utilisateur et de gérer une mémoire pour lui qu&#x27;on appelle la session de l&#x27;utilisateur.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le serveur web reconnaît qu&#x27;il a affaire à un nouvel utilisateur lorsque celui-ci ne lui envoie pas de jeton de session. Le serveur lui en crée alors un.</span></p>
 <p><span style="color: #000000">Ligne 4 ci-dessus, on met dans la session de l&#x27;utilisateur un compteur qui sera incrémenté à chaque requête de cet utilisateur. Cela illustrera la mémoire associée à un utilisateur. La classe [Session] s&#x27;utilise comme un dictionnaire (ligne 4).</span></p>
 <p><span style="color: #000000">Ceci fait, nous écrivons l&#x27;action [Action16] suivante :</span></p>
@@ -1638,12 +1762,18 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 5 : on récupère le contexte de la requête HTTP en cours de traitement. Ce contexte va nous donner accès aux données de portée [Application] et [Session] ;</span></li>
-<li><span style="color: #000000">ligne 7 : on récupère l&#x27;information de portée [Application] ;</span></li>
-<li><span style="color: #000000">ligne 9 :  on récupère le compteur dans la session ;</span></li>
-<li><span style="color: #000000">lignes 10-11 : il est incrémenté puis remis dans la session ;</span></li>
-<li><span style="color: #000000">lignes 13-14 : les deux informations sont envoyées au client.</span></li>
+  <li><span style="color: #000000">ligne 5 : on récupère le contexte de la requête HTTP en cours de traitement. Ce contexte va nous donner accès aux données de portée [Application] et [Session] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : on récupère l&#x27;information de portée [Application] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 :  on récupère le compteur dans la session ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 10-11 : il est incrémenté puis remis dans la session ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 13-14 : les deux informations sont envoyées au client.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voici des exemples d&#x27;exécution :</span></p>
 <p><span style="color: #000000">[Action16] est demandée une première fois [1] puis la page est rafraîchie [F5] deux fois [2] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C4000000F6927C44F8.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.999cm;" class="odt-zoomable" data-zoom-src="images/10000000000005C4000000F6927C44F8.png" /></td></tr></table>
@@ -1746,11 +1876,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 14 : une instance de [ApplicationModel] est créée ;</span></li>
-<li><span style="color: #000000">ligne 15 : elle est initialisée ;</span></li>
-<li><span style="color: #000000">ligne 16 : et placée dans le dictionnaire de [Application], asssociée à la clé [data]. [Application] est une propriété de la classe [HttpApplication] de la ligne 1 ;</span></li>
-<li><span style="color: #000000">ligne 24 :  une instance de [SessionModel] est créée et placée dans le dictionnaire de [Session], asssociée à la clé [data]. [Session] est une propriété de la classe [HttpApplication] de la ligne 1 ;</span></li>
+  <li><span style="color: #000000">ligne 14 : une instance de [ApplicationModel] est créée ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 15 : elle est initialisée ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 16 : et placée dans le dictionnaire de [Application], asssociée à la clé [data]. [Application] est une propriété de la classe [HttpApplication] de la ligne 1 ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 24 :  une instance de [SessionModel] est créée et placée dans le dictionnaire de [Session], asssociée à la clé [data]. [Session] est une propriété de la classe [HttpApplication] de la ligne 1 ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Si on s&#x27;en tient à ce que nous avons vu jusqu&#x27;à maintenant, la signature </span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#0000ff">public</span> <span style="color:#2b91af">ContentResult</span> Action17(<span style="color:#2b91af">ApplicationModel</span> applicationData, <span style="color:#2b91af">SessionModel</span> sessionData)</span>
@@ -1758,9 +1893,12 @@
 
 <p><span style="color: #000000">signifie que la requête HTTP traitée par l&#x27;action devra comporter des paramètres nommés [applicationData] et [sessionData]. Ce ne sera pas le cas. Nous devons créer un nouveau modèle de liaison de données pour que lorsqu&#x27;une action reçoit en paramètre un type :</span></p>
 <ul>
-<li><span style="color: #000000">[ApplicationModel], la donnée de portée [Application] et de clé [data] lui soit fournie ;</span></li>
-<li><span style="color: #000000">[SessionModel], la donnée de portée [Session] et de clé [data] lui soit fournie.</span></li>
+  <li><span style="color: #000000">[ApplicationModel], la donnée de portée [Application] et de clé [data] lui soit fournie ;</span>
+  </li>
+  <li><span style="color: #000000">[SessionModel], la donnée de portée [Session] et de clé [data] lui soit fournie.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Il faut pour cela créer des classes implémentant l&#x27;interface [IModelBinder].</span></p>
 <p><span style="color: #000000">Nous commençons par créer un dossier [Infrastructure] dans le projet [Exemple-02] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E40000005E1D40097B.png" style="display:inline-block; margin:4px;width:4.219cm;height:1.739cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E40000005E1D40097B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1783,13 +1921,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 5 : la classe implémente l&#x27;interface [IModelBinder]. Pour comprendre son code, il faut savoir qu&#x27;elle sera appelée à chaque fois qu&#x27;une action aura un paramètre de type [ApplicationModel]. Cette liaison [ApplicationModel] --&gt; [ApplicationModelBinder] sera faite au démarrage de l&#x27;application, dans la méthode [Application_Start] de [Global.asax] ;</span></li>
-<li><span style="color: #000000">ligne 7 : l&#x27;unique méthode de l&#x27;interface [IModelBinder] ;</span></li>
-<li><span style="color: #000000">ligne 7 : le paramètre de type [ControllerContext] nous donne accès à la requête HTTP en cours de traitement ;</span></li>
-<li><span style="color: #000000">ligne 7 :  le paramètre de type [ModelBindingContext] nous donne accès à des informations sur le modèle à construire, ici le type [ApplicationModel] ;</span></li>
-<li><span style="color: #000000">ligne 7 : le résultat de [BindModel] est l&#x27;objet qui va être affecté au paramètre lié, ici un paramètre de type [ApplicationModel] ;</span></li>
-<li><span style="color: #000000">ligne 10 : nous nous contentons de rendre l&#x27;objet de portée [Application] et de clé [data].</span></li>
+  <li><span style="color: #000000">ligne 5 : la classe implémente l&#x27;interface [IModelBinder]. Pour comprendre son code, il faut savoir qu&#x27;elle sera appelée à chaque fois qu&#x27;une action aura un paramètre de type [ApplicationModel]. Cette liaison [ApplicationModel] --&gt; [ApplicationModelBinder] sera faite au démarrage de l&#x27;application, dans la méthode [Application_Start] de [Global.asax] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : l&#x27;unique méthode de l&#x27;interface [IModelBinder] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : le paramètre de type [ControllerContext] nous donne accès à la requête HTTP en cours de traitement ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 :  le paramètre de type [ModelBindingContext] nous donne accès à des informations sur le modèle à construire, ici le type [ApplicationModel] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : le résultat de [BindModel] est l&#x27;objet qui va être affecté au paramètre lié, ici un paramètre de type [ApplicationModel] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : nous nous contentons de rendre l&#x27;objet de portée [Application] et de clé [data].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La classe [<a id="sessionmodelbinder"></a>SessionModelBinder] suit le même schéma :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span> System.Web.Mvc;</span>
@@ -1823,9 +1968,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 9 : lorsqu&#x27;une action aura un paramètre de type [ApplicationModel], la méthode [ApplicationModelBinder.Bind] sera appelée. On sait qu&#x27;elle rend la donnée de portée [Application] associée à la clé [data] ;</span></li>
-<li><span style="color: #000000">ligne 10 : idem pour le type [SessionModel].</span></li>
+  <li><span style="color: #000000">ligne 9 : lorsqu&#x27;une action aura un paramètre de type [ApplicationModel], la méthode [ApplicationModelBinder.Bind] sera appelée. On sait qu&#x27;elle rend la donnée de portée [Application] associée à la clé [data] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : idem pour le type [SessionModel].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Revenons à notre action [Action17] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action17</span></span>
@@ -1843,12 +1991,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : lorsque [Action17] sera appelée, elle recevra pour </span><ul>
-<li><span style="color: #000000">premier paramètre : la donnée de portée [Application] associée à la clé [data],</span></li>
-<li><span style="color: #000000">second paramètre : la donnée de portée [Session] associée à la clé [data] ;</span></li>
+  <li><span style="color: #000000">ligne 2 : lorsque [Action17] sera appelée, elle recevra pour </span>
+    <ul>
+      <li><span style="color: #000000">premier paramètre : la donnée de portée [Application] associée à la clé [data],</span>
+      </li>
+      <li><span style="color: #000000">second paramètre : la donnée de portée [Session] associée à la clé [data] ;</span>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><span style="color: #000000">Ces deux données peuvent être aussi complexes que l&#x27;on veut et regrouper pour l&#x27;une toutes les données de portée [Application] et pour l&#x27;autre toutes les données de portée [Session].</span></p>
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution de l&#x27;action [Action17] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000017F0000008B307028DC.png" style="display:inline-block; margin:4px;width:7.091cm;height:2.57cm;" class="odt-zoomable" data-zoom-src="images/100000000000017F0000008B307028DC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1868,9 +2020,12 @@
 
 <p><span style="color: #000000">De façon cachée, ASP.NET MVC :</span></p>
 <ul>
-<li><span style="color: #000000">crée une instance de type [ActionModel05] en utilisant son constructeur sans paramètres ;</span></li>
-<li><span style="color: #000000">l&#x27;initialise avec les informations de la requête qui ont le même nom (indifférent à la casse) que l&#x27;une des propriétés de [ActionModel05].</span></li>
+  <li><span style="color: #000000">crée une instance de type [ActionModel05] en utilisant son constructeur sans paramètres ;</span>
+  </li>
+  <li><span style="color: #000000">l&#x27;initialise avec les informations de la requête qui ont le même nom (indifférent à la casse) que l&#x27;une des propriétés de [ActionModel05].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Parfois ce comportement ne nous convient pas. C&#x27;est notamment le cas lorsqu&#x27;on veut utiliser un constructeur particulier du modèle de l&#x27;action. On peut alors procéder de la façon suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action18</span></span>
@@ -1885,11 +2040,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : l&#x27;action ne reçoit plus de paramètres. Il n&#x27;y a donc plus de liaison automatique de données ;</span></li>
-<li><span style="color: #000000">ligne 4 : nous créons nous-mêmes une instance du modèle de l&#x27;action. C&#x27;est là qu&#x27;on pourrait utiliser un constructeur différent ;</span></li>
-<li><span style="color: #000000">ligne 5 : on initialise le modèle avec les informations de la requête. C&#x27;est ASP.NET MVC qui fait ce travail. Il le fait de la même façon qu&#x27;il l&#x27;aurait fait si le modèle avait été en paramètre ;</span></li>
-<li><span style="color: #000000">ligne 6 : on est désormais dans la même situation que dans l&#x27;action [Action12].</span></li>
+  <li><span style="color: #000000">ligne 2 : l&#x27;action ne reçoit plus de paramètres. Il n&#x27;y a donc plus de liaison automatique de données ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 4 : nous créons nous-mêmes une instance du modèle de l&#x27;action. C&#x27;est là qu&#x27;on pourrait utiliser un constructeur différent ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : on initialise le modèle avec les informations de la requête. C&#x27;est ASP.NET MVC qui fait ce travail. Il le fait de la même façon qu&#x27;il l&#x27;aurait fait si le modèle avait été en paramètre ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 6 : on est désormais dans la même situation que dans l&#x27;action [Action12].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001C4000000880BFA7F6D.png" style="display:inline-block; margin:4px;width:8.37cm;height:2.521cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C4000000880BFA7F6D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1902,11 +2062,16 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006000000008ED32B6F3B.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.663cm;" class="odt-zoomable" data-zoom-src="images/10000000000006000000008ED32B6F3B.png" /></td></tr></table>
 
 <ul>
-<li>la requête HTTP du client arrive en [1] ;</li>
-<li>en [2], les informations contenues dans la requête sont transformées en modèle d&#x27;action [3] ;</li>
-<li>en [4], l&#x27;action, à partir de ce modèle, va générer une réponse. Celle-ci aura deux composantes : une vue V [6] et le modèle M de cette vue [5] ;</li>
-<li>la vue V [6] va utiliser son modèle M [5] pour générer la réponse HTTP destinée au client.</li>
+  <li>la requête HTTP du client arrive en [1] ;
+  </li>
+  <li>en [2], les informations contenues dans la requête sont transformées en modèle d&#x27;action [3] ;
+  </li>
+  <li>en [4], l&#x27;action, à partir de ce modèle, va générer une réponse. Celle-ci aura deux composantes : une vue V [6] et le modèle M de cette vue [5] ;
+  </li>
+  <li>la vue V [6] va utiliser son modèle M [5] pour générer la réponse HTTP destinée au client.
+  </li>
 </ul>
+
 <p>Dans le modèle MVC, l&#x27;action [4] fait partie du C (contrôleur), le modèle de la vue [5] est le M et la vue [6] est le V.</p>
 <p><span style="color: #000000">Ce chapitre a étudié les mécanismes de liaison entre les informations transportées par la requête, qui sont par nature des chaînes de caractères et le modèle de l&#x27;action qui peut être une classe avec des propriétés de divers types. Nous avons vu également qu&#x27;il était possible de vérifier la validité du modèle présenté à l&#x27;action. Enfin, nous avons vu comment élargir ce modèle aux données de portée [Session] et [Application].</span></p>
 <p><span style="color: #000000">Nous allons nous intéresser maintenant à la fin de la chaîne de traitement de la requête [1] : la création de la vue [6] et de son modèle [5]. Ces deux éléments sont produits par l&#x27;action [4].</span></p>

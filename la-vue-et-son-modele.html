@@ -1098,15 +1098,21 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 7-10 : une action [Index] a été créée. Le type du résultat de la méthode [Index] est celui de la classe [ActionResult] dont dérivent la plupart des résultats possibles d&#x27;une action ;</span></li>
-<li><span style="color: #000000">ligne 9 : la méthode [View] de la classe [Controller] (ligne 5) rend un type [ViewResult] qui dérive de [ActionResult]. Cette méthode admet de nombreuses surcharges. Nous en verrons quelques unes. La principale est la suivante :</span></li>
+  <li><span style="color: #000000">lignes 7-10 : une action [Index] a été créée. Le type du résultat de la méthode [Index] est celui de la classe [ActionResult] dont dérivent la plupart des résultats possibles d&#x27;une action ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 : la méthode [View] de la classe [Controller] (ligne 5) rend un type [ViewResult] qui dérive de [ActionResult]. Cette méthode admet de nombreuses surcharges. Nous en verrons quelques unes. La principale est la suivante :</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014100000198578C0EAD.png" style="display:inline-block; margin:4px;width:5.941cm;height:7.549cm;" class="odt-zoomable" data-zoom-src="images/100000000000014100000198578C0EAD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li><span style="color: #000000">le premier paramètre est le nom de la vue. S&#x27;il est absent, la vue utilisée est celle qui porte le même nom que l&#x27;action qui produit le [ViewResult] et qui sera cherchée dans le dossier [/Views/{controller}] où {controller} est le nom du contrôleur ;</span></li>
-<li><span style="color: #000000">le second est le modèle de la vue. S&#x27;il est absent, la vue n&#x27;a pas de modèle.</span></li>
+  <li><span style="color: #000000">le premier paramètre est le nom de la vue. S&#x27;il est absent, la vue utilisée est celle qui porte le même nom que l&#x27;action qui produit le [ViewResult] et qui sera cherchée dans le dossier [/Views/{controller}] où {controller} est le nom du contrôleur ;</span>
+  </li>
+  <li><span style="color: #000000">le second est le modèle de la vue. S&#x27;il est absent, la vue n&#x27;a pas de modèle.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La méthode [Index] ci-dessous :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ActionResult</span><span style="color:#000000"> Index()</span></span>
@@ -1146,9 +1152,12 @@
 
 <p><span style="color: #000000">On a là du HTML classique sauf pour les lignes 1-3 qui sont du code C#. Le programme qui gère les vues est appelé un moteur de vues. Il s&#x27;occupe de gérer tout ce qui n&#x27;est pas du HTML pour en faire du HTML. Au final en effet, c&#x27;est ce qui va être envoyé au client. Le moteur de vue s&#x27;appelle ici [</span><strong><span style="color: #000000">Razor</span></strong><span style="color: #000000">]. Il permet d&#x27;inclure du code C# dans une vue. [Razor] va interpréter ce code C# et produire à partir de lui du code HTML. Voici quelques règle de base pour l&#x27;inclusion de code C# dans une vue :</span></p>
 <ul>
-<li><span style="color: #000000">le basculement du HTML vers le C# se fait à la rencontre du caractère </span><strong><span style="color: #000000">@</span></strong><span style="color: #000000"> (ligne 1). Si ce caractère introduit un bloc de code, on mettra les accolades (lignes 1 et 3). S&#x27;il introduit une variable dont on veut récupérer la valeur, on écrira simplement </span><strong><span style="color: #000000">@variable ;</span></strong></li>
-<li><span style="color: #000000">le basculement du C# vers le HTML se fait à la rencontre du caractère </span><strong><span style="color: #000000">&lt;</span></strong><span style="color: #000000"> (ligne 5). Parfois, on est amené à forcer ce basculement notamment lorsqu&#x27;on inclut dans la page du texte brut sans balise HTML. On utilisera alors la balise </span><strong><span style="color: #000000">&lt;text&gt;</span></strong><span style="color: #000000"> pour introduire le texte : </span><strong><span style="color: #000000">&lt;text&gt;</span></strong><span style="color: #000000">ici du texte brut</span><strong><span style="color: #000000">&lt;/text&gt;</span></strong><span style="color: #000000">.</span></li>
+  <li><span style="color: #000000">le basculement du HTML vers le C# se fait à la rencontre du caractère </span><b><span style="color: #000000">@</span></b><span style="color: #000000"> (ligne 1). Si ce caractère introduit un bloc de code, on mettra les accolades (lignes 1 et 3). S&#x27;il introduit une variable dont on veut récupérer la valeur, on écrira simplement </span><b><span style="color: #000000">@variable ;</span></b>
+  </li>
+  <li><span style="color: #000000">le basculement du C# vers le HTML se fait à la rencontre du caractère </span><b><span style="color: #000000">&lt;</span></b><span style="color: #000000"> (ligne 5). Parfois, on est amené à forcer ce basculement notamment lorsqu&#x27;on inclut dans la page du texte brut sans balise HTML. On utilisera alors la balise </span><b><span style="color: #000000">&lt;text&gt;</span></b><span style="color: #000000"> pour introduire le texte : </span><b><span style="color: #000000">&lt;text&gt;</span></b><span style="color: #000000">ici du texte brut</span><b><span style="color: #000000">&lt;/text&gt;</span></b><span style="color: #000000">.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La ligne 2 ci-dessus indique que la vue [Index] n&#x27;a pas de page maître.</span></p>
 <p><span style="color: #000000">Modifions la vue de la façon suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1173,9 +1182,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 3 : définit une variable C# ;</span></li>
-<li><span style="color: #000000">ligne 15 : affiche la valeur de cette variable.</span></li>
+  <li><span style="color: #000000">ligne 3 : définit une variable C# ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 15 : affiche la valeur de cette variable.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Demandons maintenant l&#x27;URL [/First/Index] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EF00000083291114D0.png" style="display:inline-block; margin:4px;width:4.431cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EF00000083291114D0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1223,9 +1235,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 4 : on utilise la propriété [ViewBag] du contrôleur. C&#x27;est un objet dynamique auquel on peut ajouter des propriétés comme il est fait ligne 4. Cet objet a la particularité d&#x27;être également accessible à la vue. C&#x27;est donc une façon de lui transmettre de l&#x27;information ;</span></li>
-<li><span style="color: #000000">ligne 5 : la vue par défaut de l&#x27;action est demandée. C&#x27;est la vue [/First/Action01.cshtml]. Aucun modèle ne lui est transmis.</span></li>
+  <li><span style="color: #000000">ligne 4 : on utilise la propriété [ViewBag] du contrôleur. C&#x27;est un objet dynamique auquel on peut ajouter des propriétés comme il est fait ligne 4. Cet objet a la particularité d&#x27;être également accessible à la vue. C&#x27;est donc une façon de lui transmettre de l&#x27;information ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : la vue par défaut de l&#x27;action est demandée. C&#x27;est la vue [/First/Action01.cshtml]. Aucun modèle ne lui est transmis.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La vue [Action01.cshtml] est la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">@{</span>
@@ -1248,8 +1263,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 14 : la propriété [ViewBag.info] est affichée.</span></li>
+  <li><span style="color: #000000">ligne 14 : la propriété [ViewBag.info] est affichée.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Testons. Nous demandons l&#x27;URL [/First/Action01] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016C00000087152A427E.png" style="display:inline-block; margin:4px;width:6.74cm;height:2.499cm;" class="odt-zoomable" data-zoom-src="images/100000000000016C00000087152A427E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1309,8 +1326,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : le nouvel espace de noms ;</span></li>
+  <li><span style="color: #000000">ligne 2 : le nouvel espace de noms ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Puis nous créons la classe [ViewModel01] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000009B8D5690F5.png" style="display:inline-block; margin:4px;width:4.142cm;height:2.051cm;" class="odt-zoomable" data-zoom-src="images/10000000000001390000009B8D5690F5.png" /></td></tr></table>
 
@@ -1326,14 +1345,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 3 : la classe hérite de [ActionModel03] et donc des propriétés [Email, Jour, Info1, Info2, Info3] ;</span></li>
-<li><span style="color: #000000">ligne 5 : on lui rajoute la propriété [Erreurs].</span></li>
+  <li><span style="color: #000000">ligne 3 : la classe hérite de [ActionModel03] et donc des propriétés [Email, Jour, Info1, Info2, Info3] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : on lui rajoute la propriété [Erreurs].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Nous écrivons maintenant l&#x27;action [Action02] qui :</span></p>
 <ul>
-<li><span style="color: #000000">accepte en entrée le modèle d&#x27;action [ActionModel03] ;</span></li>
-<li><span style="color: #000000">et délivre en sortie le modèle de vue [ViewModel01].</span></li>
+  <li><span style="color: #000000">accepte en entrée le modèle d&#x27;action [ActionModel03] ;</span>
+  </li>
+  <li><span style="color: #000000">et délivre en sortie le modèle de vue [ViewModel01].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Son code est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action02</span></span>
@@ -1345,10 +1370,14 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 1 : [Action02] reçoit le modèle d&#x27;action [ActionModel03]. Elle rend un résultat de type [ViewResult] ;</span></li>
-<li><span style="color: #000000">ligne 4 : les erreurs liées au modèle d&#x27;action [ActionModel03] sont agrégées dans la chaîne de caractères [erreurs]. La méthode [getErrorMessagesFor] a été décrite page </span><span style="color: #000000"><a href="le-modele-dune-action.html#geterrormessagesfor">65</a></span><span style="color: #000000"> et a été incluse dans le contrôleur [First] du nouveau projet ;</span></li>
-<li><span style="color: #000000">ligne 5 : la méthode [View] est appelée avec un paramètre. Celui est le modèle de la vue. Cette dernière n&#x27;est pas précisée. Ce sera donc la vue par défaut [/Views/First/Action02] qui sera utilisée. Le modèle de vue [ViewModel01] est instancié et initialisé avec les cinq informations du modèle d&#x27;action [ActionModel03] et l&#x27;information [erreurs] construite ligne 4.</span></li>
+  <li><span style="color: #000000">ligne 1 : [Action02] reçoit le modèle d&#x27;action [ActionModel03]. Elle rend un résultat de type [ViewResult] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 4 : les erreurs liées au modèle d&#x27;action [ActionModel03] sont agrégées dans la chaîne de caractères [erreurs]. La méthode [getErrorMessagesFor] a été décrite page </span><span style="color: #000000"><a href="le-modele-dune-action.html#geterrormessagesfor">65</a></span><span style="color: #000000"> et a été incluse dans le contrôleur [First] du nouveau projet ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : la méthode [View] est appelée avec un paramètre. Celui est le modèle de la vue. Cette dernière n&#x27;est pas précisée. Ce sera donc la vue par défaut [/Views/First/Action02] qui sera utilisée. Le modèle de vue [ViewModel01] est instancié et initialisé avec les cinq informations du modèle d&#x27;action [ActionModel03] et l&#x27;information [erreurs] construite ligne 4.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Nous construisons maintenant la vue [/First/Action02.cshtml] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000159000000BD3656509C.png" style="display:inline-block; margin:4px;width:4.565cm;height:2.501cm;" class="odt-zoomable" data-zoom-src="images/1000000000000159000000BD3656509C.png" /></td></tr></table>
 
@@ -1381,9 +1410,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">la nouveauté réside en ligne 1. La notation [@model] fixe le type du modèle de la vue. Ce modèle est ensuite référencé par la notation [@Model] (lignes 16-21) ;</span></li>
-<li><span style="color: #000000">lignes 15-22 : les informations du modèle sont affichées dans une liste.</span></li>
+  <li><span style="color: #000000">la nouveauté réside en ligne 1. La notation [@model] fixe le type du modèle de la vue. Ce modèle est ensuite référencé par la notation [@Model] (lignes 16-21) ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 15-22 : les informations du modèle sont affichées dans une liste.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voyons quelques exemples d&#x27;exécution de l&#x27;action [Action02].</span></p>
 <p><span style="color: #000000">D&#x27;abord sans paramètres :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002A7000001331E1A1F90.png" style="display:inline-block; margin:4px;width:12.569cm;height:5.68cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A7000001331E1A1F90.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1435,9 +1467,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 8-28 : le modèle de l&#x27;action avec ses contraintes d&#x27;intégrité. Ces champs feront également partie de la vue ;</span></li>
-<li><span style="color: #000000">ligne 31 : une propriété propre au modèle de la vue. Elle a été exclue du modèle de l&#x27;action par l&#x27;annotation de la ligne 5.</span></li>
+  <li><span style="color: #000000">lignes 8-28 : le modèle de l&#x27;action avec ses contraintes d&#x27;intégrité. Ces champs feront également partie de la vue ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 31 : une propriété propre au modèle de la vue. Elle a été exclue du modèle de l&#x27;action par l&#x27;annotation de la ligne 5.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Nous créons la nouvelle action [Action03] suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action03</span></span>
@@ -1449,20 +1484,30 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : [Action03] reçoit le modèle d&#x27;action de type [ActionModel04] ;</span></li>
-<li><span style="color: #000000">ligne 5 : et rend comme modèle de vue, ce même modèle ;</span></li>
-<li><span style="color: #000000">ligne 4 : complété par l&#x27;information [Erreurs] ;</span></li>
+  <li><span style="color: #000000">ligne 2 : [Action03] reçoit le modèle d&#x27;action de type [ActionModel04] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : et rend comme modèle de vue, ce même modèle ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 4 : complété par l&#x27;information [Erreurs] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Il ne nous reste qu&#x27;à créer la vue [/First/Action03.cshtml] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F8000001A96723777C.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.006cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F8000001A96723777C.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1] : clic droit dans le code de [Action03] puis [Ajouter une vue] ;</span></li>
-<li><span style="color: #000000">en [2] : le nom de la vue proposée par défaut ;</span></li>
-<li><span style="color: #000000">en [3] : indiquer qu&#x27;on crée une vue fortement typée ;</span></li>
-<li><span style="color: #000000">en [4] : prendre dans la liste déroulante la bonne classe, ici la classe [ActionModel04] ;</span></li>
-<li><span style="color: #000000">en [5] : la vue créée.</span></li>
+  <li><span style="color: #000000">en [1] : clic droit dans le code de [Action03] puis [Ajouter une vue] ;</span>
+  </li>
+  <li><span style="color: #000000">en [2] : le nom de la vue proposée par défaut ;</span>
+  </li>
+  <li><span style="color: #000000">en [3] : indiquer qu&#x27;on crée une vue fortement typée ;</span>
+  </li>
+  <li><span style="color: #000000">en [4] : prendre dans la liste déroulante la bonne classe, ici la classe [ActionModel04] ;</span>
+  </li>
+  <li><span style="color: #000000">en [5] : la vue créée.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Nous donnons à la vue [Action03] le même code qu&#x27;à la vue [Action02]. Seul le modèle de vue (ligne 1) et le titre de page (ligne 11) changent :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">@model Exemple_03.Models.</span><span style="color:#2b91af">ActionModel04</span></span>
@@ -1522,10 +1567,14 @@
 </code></pre></div>
 
 <ul>
-<li>la vue du modèle est la classe [ViewModel02], lignes 3-10 ;</li>
-<li>ligne 5 : le modèle possède un tableau de personnes de type [Personne] défini lignes 12-16 ;</li>
-<li>lignes 6-10 : le constructeur du modèle initialise la propriété [Personnes] de la ligne 5 avec un tableau de deux personnes.</li>
+  <li>la vue du modèle est la classe [ViewModel02], lignes 3-10 ;
+  </li>
+  <li>ligne 5 : le modèle possède un tableau de personnes de type [Personne] défini lignes 12-16 ;
+  </li>
+  <li>lignes 6-10 : le constructeur du modèle initialise la propriété [Personnes] de la ligne 5 avec un tableau de deux personnes.
+  </li>
 </ul>
+
 <p>L&#x27;action produisant ce modèle en sortie sera la suivante [Action04] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action04</span></span>
@@ -1536,9 +1585,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : l&#x27;action n&#x27;a pas de modèle en entrée ;</li>
-<li>ligne 4 : elle passe à sa vue par défaut, une instance du modèle [ViewModel02] que nous venons de définir.</li>
+  <li>ligne 2 : l&#x27;action n&#x27;a pas de modèle en entrée ;
+  </li>
+  <li>ligne 4 : elle passe à sa vue par défaut, une instance du modèle [ViewModel02] que nous venons de définir.
+  </li>
 </ul>
+
 <p>La vue [Action04.cshtml] va afficher le modèle [ViewModel02] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014F000000E4BC34567B.png" style="display:inline-block; margin:4px;width:4.433cm;height:3.016cm;" class="odt-zoomable" data-zoom-src="images/100000000000014F000000E4BC34567B.png" /></td></tr></table>
 
@@ -1581,13 +1633,20 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : le modèle de la vue ;</li>
-<li>ligne 2 : l&#x27;import de l&#x27;espace de noms de la classe [Personne] utilisée ligne 24 ;</li>
-<li>lignes 16-32 : le tableau HTML qui visualise les personnes du modèle ;</li>
-<li>ligne 24 : le début du code C# est signalé par le caractère @. L&#x27;instruction [foreach] va boucler sur toutes les personnes du modèle ;</li>
-<li>lignes 26-27 : le caractère &lt; arrête le C# et commence le HTML. Puis de nouveau, le caractère @ pour basculer en C# et écrire le nom de la personne. Puis de nouveau le caractère &lt; qui fait basculer en mode HTML ;</li>
-<li>ligne 28 : on écrit l&#x27;âge de la personne.</li>
+  <li>ligne 1 : le modèle de la vue ;
+  </li>
+  <li>ligne 2 : l&#x27;import de l&#x27;espace de noms de la classe [Personne] utilisée ligne 24 ;
+  </li>
+  <li>lignes 16-32 : le tableau HTML qui visualise les personnes du modèle ;
+  </li>
+  <li>ligne 24 : le début du code C# est signalé par le caractère @. L&#x27;instruction [foreach] va boucler sur toutes les personnes du modèle ;
+  </li>
+  <li>lignes 26-27 : le caractère &lt; arrête le C# et commence le HTML. Puis de nouveau, le caractère @ pour basculer en C# et écrire le nom de la personne. Puis de nouveau le caractère &lt; qui fait basculer en mode HTML ;
+  </li>
+  <li>ligne 28 : on écrit l&#x27;âge de la personne.
+  </li>
 </ul>
+
 <p>L&#x27;exécution de l&#x27;action [Action04] donne le résultat suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000176000000C7EA61089B.png" style="display:inline-block; margin:4px;width:6.93cm;height:3.679cm;" class="odt-zoomable" data-zoom-src="images/1000000000000176000000C7EA61089B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1623,12 +1682,18 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 18 : une classe [Personne2] avec trois propriétés ;</span></li>
-<li><span style="color: #000000">ligne 3 : le modèle [ViewModel05] de la vue ;</span></li>
-<li><span style="color: #000000">ligne 5 : la liste des personnes à afficher dans la liste déroulante sous la forme [Prénom Nom] ;</span></li>
-<li><span style="color: #000000">ligne 6 : l&#x27;[Id] de la personne à sélectionner dans la liste déroulante ;</span></li>
-<li><span style="color: #000000">lignes 8-16 : le constructeur qui crée un tableau de trois personnes (lignes 10-13) et fixe l&#x27;[Id] de la personne qui doit apparaître sélectionnée.</span></li>
+  <li><span style="color: #000000">ligne 18 : une classe [Personne2] avec trois propriétés ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 3 : le modèle [ViewModel05] de la vue ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : la liste des personnes à afficher dans la liste déroulante sous la forme [Prénom Nom] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 6 : l&#x27;[Id] de la personne à sélectionner dans la liste déroulante ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 8-16 : le constructeur qui crée un tableau de trois personnes (lignes 10-13) et fixe l&#x27;[Id] de la personne qui doit apparaître sélectionnée.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La vue [Action05.cshtml] va afficher ce modèle :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013E00000101460D0754.png" style="display:inline-block; margin:4px;width:4.207cm;height:3.401cm;" class="odt-zoomable" data-zoom-src="images/100000000000013E00000101460D0754.png" /></td></tr></table>
 
@@ -1665,25 +1730,32 @@
 </code></pre></div>
 
 <p><span style="color: #000000">Les caractéristiques de la liste déroulante HTML ont été présentées au paragraphe </span><span style="color: #000000"><a href="les-bases-de-la-programmation-web.html#liste-deroulante">2.5.2.6</a></span><span style="color: #000000">. Rappelons-les :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Combo</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><span style="color: #0000ff">&lt;</span><span style="color: #800000">select</span><span style="color: #000000"> </span><span style="color: #ff0000">size</span><span style="color: #0000ff">=&quot;1&quot;</span><span style="color: #000000"> </span><span style="color: #ff0000">name</span><span style="color: #0000ff">=&quot;cmbValeurs&quot;&gt;</span></p><p style="margin:0;"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option</span><span style="color: #000000"> </span><span style="color: #ff0000">value</span><span style="color: #0000ff">=&quot;1&quot;&gt;</span><span style="color: #000000">choix1</span><span style="color: #0000ff">&lt;/</span><span style="color: #800000">option</span><span style="color: #0000ff">&gt;</span></p><p style="margin:0;"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option</span><span style="color: #000000"> </span><span style="color: #ff0000">selected</span><span style="color: #0000ff">=&quot;selected&quot;</span><span style="color: #000000"> </span><span style="color: #ff0000">value</span><span style="color: #0000ff">=&quot;2&quot;&gt;</span><span style="color: #000000">choix2</span><span style="color: #0000ff">&lt;/</span><span style="color: #800000">option</span><span style="color: #0000ff">&gt;</span></p><p style="margin:0;"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option</span><span style="color: #000000"> </span><span style="color: #ff0000">value</span><span style="color: #0000ff">=&quot;3&quot;&gt;</span><span style="color: #000000">choix3</span><span style="color: #0000ff">&lt;/</span><span style="color: #800000">option</span><span style="color: #0000ff">&gt;</span></p><p style="margin:0;"><span style="color: #0000ff">&lt;/</span><span style="color: #800000">select</span><span style="color: #0000ff">&gt;</span></p></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Combo</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><span style="color: #0000ff">&lt;</span><span style="color: #800000">select</span><span style="color: #000000"> </span><span style="color: #ff0000">size</span><span style="color: #0000ff">=&quot;1&quot;</span><span style="color: #000000"> </span><span style="color: #ff0000">name</span><span style="color: #0000ff">=&quot;cmbValeurs&quot;&gt;</span></div><div style="margin:0 0 0.5em 0"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option</span><span style="color: #000000"> </span><span style="color: #ff0000">value</span><span style="color: #0000ff">=&quot;1&quot;&gt;</span><span style="color: #000000">choix1</span><span style="color: #0000ff">&lt;/</span><span style="color: #800000">option</span><span style="color: #0000ff">&gt;</span></div><div style="margin:0 0 0.5em 0"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option</span><span style="color: #000000"> </span><span style="color: #ff0000">selected</span><span style="color: #0000ff">=&quot;selected&quot;</span><span style="color: #000000"> </span><span style="color: #ff0000">value</span><span style="color: #0000ff">=&quot;2&quot;&gt;</span><span style="color: #000000">choix2</span><span style="color: #0000ff">&lt;/</span><span style="color: #800000">option</span><span style="color: #0000ff">&gt;</span></div><div style="margin:0 0 0.5em 0"><span style="color: #000000">            </span><span style="color: #0000ff">&lt;</span><span style="color: #800000">option</span><span style="color: #000000"> </span><span style="color: #ff0000">value</span><span style="color: #0000ff">=&quot;3&quot;&gt;</span><span style="color: #000000">choix3</span><span style="color: #0000ff">&lt;/</span><span style="color: #800000">option</span><span style="color: #0000ff">&gt;</span></div><div style="margin:0 0 0.5em 0"><span style="color: #0000ff">&lt;/</span><span style="color: #800000">select</span><span style="color: #0000ff">&gt;</span></div></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F30000002B9EB33B41.png" style="display:inline-block; margin:4px;width:4.5cm;height:0.801cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F30000002B9EB33B41.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>balise HTML</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>&lt;select size=&quot;..&quot; name=&quot;..&quot;&gt;</b></p><p style="margin:0;"><b>    &lt;option [selected=&quot;selected&quot;] value=”v”&gt;...&lt;/option&gt;</b></p><p style="margin:0;"><b>    ...</b></p><p style="margin:0;"><b>&lt;/select&gt;</b></p><p style="margin:0;">affiche dans une liste les textes compris entre les balises &lt;option&gt;...&lt;/option&gt;</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>attributs</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>name=&quot;cmbValeurs&quot;</b> : nom du contrôle.</p><p style="margin:0;"><b>size=&quot;1&quot;</b> : nombre d&#x27;éléments de liste visibles. <i>size=&quot;1&quot;</i> fait de la liste l&#x27;équivalent d&#x27;un combobox.</p><p style="margin:0;"><b>selected=&quot;selected&quot;</b> : si ce mot clé est présent pour un élément de liste, ce dernier apparaît sélectionné dans la liste. Dans notre exemple ci-dessus, l&#x27;élément de liste <i>choix2</i> apparaît comme l&#x27;élément sélectionné du combo lorsque celui-ci est affiché pour la première fois.</p><p style="margin:0;"><b>value=”v” : si l&#x27;élément est sélectionné par l&#x27;utilisateur, c&#x27;est cette valeur [v] qui est postée au serveur. En l&#x27;absence de cet attribut, c&#x27;est le texte affiché et sélectionné qui est posté au serveur.</b></p></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>balise HTML</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>&lt;select size=&quot;..&quot; name=&quot;..&quot;&gt;</b></div><div style="margin:0 0 0.5em 0"><b>    &lt;option [selected=&quot;selected&quot;] value=”v”&gt;...&lt;/option&gt;</b></div><div style="margin:0 0 0.5em 0"><b>    ...</b></div><div style="margin:0 0 0.5em 0"><b>&lt;/select&gt;</b></div><div style="margin:0 0 0.5em 0">affiche dans une liste les textes compris entre les balises &lt;option&gt;...&lt;/option&gt;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>attributs</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>name=&quot;cmbValeurs&quot;</b> : nom du contrôle.</div><div style="margin:0 0 0.5em 0"><b>size=&quot;1&quot;</b> : nombre d&#x27;éléments de liste visibles. <i>size=&quot;1&quot;</i> fait de la liste l&#x27;équivalent d&#x27;un combobox.</div><div style="margin:0 0 0.5em 0"><b>selected=&quot;selected&quot;</b> : si ce mot clé est présent pour un élément de liste, ce dernier apparaît sélectionné dans la liste. Dans notre exemple ci-dessus, l&#x27;élément de liste <i>choix2</i> apparaît comme l&#x27;élément sélectionné du combo lorsque celui-ci est affiché pour la première fois.</div><div style="margin:0 0 0.5em 0"><b>value=”v” : si l&#x27;élément est sélectionné par l&#x27;utilisateur, c&#x27;est cette valeur [v] qui est postée au serveur. En l&#x27;absence de cet attribut, c&#x27;est le texte affiché et sélectionné qui est posté au serveur.</b></div></td></tr></table>
 
 <p><span style="color: #000000">Le code des lignes 17-25 génère les balises &lt;option&gt; qui prennent place dans la balise &lt;select&gt; de la ligne 16.</span></p>
 <ul>
-<li><span style="color: #000000">ligne 17 : on parcourt la liste des personnes du modèle ;</span></li>
-<li><span style="color: #000000">ligne 20 : on regarde si la personne courante est la personne qui doit être sélectionnée. Si oui, on prépare le texte </span><em><span style="color: #000000">selected=&quot;selected&quot;</span></em><span style="color: #000000"> qui doit être inséré dans la balise &lt;option&gt; ;</span></li>
-<li><span style="color: #000000">ligne 24 : la balise &lt;option&gt; est écrite.</span></li>
+  <li><span style="color: #000000">ligne 17 : on parcourt la liste des personnes du modèle ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 20 : on regarde si la personne courante est la personne qui doit être sélectionnée. Si oui, on prépare le texte </span><i><span style="color: #000000">selected=&quot;selected&quot;</span></i><span style="color: #000000"> qui doit être inséré dans la balise &lt;option&gt; ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 24 : la balise &lt;option&gt; est écrite.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Demandons l&#x27;action [Action05] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005BC00000144D3D65047.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.972cm;" class="odt-zoomable" data-zoom-src="images/10000000000005BC00000144D3D65047.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1,2], les personnes sont affichées sous la forme [Prénom Nom] ;</span></li>
-<li><span style="color: #000000">en [1,2], la personne sélectionnée est celle qui à l&#x27;[Id] égal à 2.</span></li>
+  <li><span style="color: #000000">en [1,2], les personnes sont affichées sous la forme [Prénom Nom] ;</span>
+  </li>
+  <li><span style="color: #000000">en [1,2], la personne sélectionnée est celle qui à l&#x27;[Id] égal à 2.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Examinons maintenant le code source HTML de la page ci-dessus :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span><span style="color:#000000"> </span><span style="color:#008080">html&gt;</span></span>
@@ -1704,9 +1776,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 10-12 : les trois balises &lt;option&gt; générées par le code [Razor] ;</span></li>
-<li><span style="color: #000000">ligne 11 : c&#x27;est bien la personne d&#x27;[Id]=2 qui a été sélectionnée.</span></li>
+  <li><span style="color: #000000">lignes 10-12 : les trois balises &lt;option&gt; générées par le code [Razor] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : c&#x27;est bien la personne d&#x27;[Id]=2 qui a été sélectionnée.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Les deux exemples ci-dessus nous suffiront. Lorsqu&#x27;on écrit une vue [Razor], il faut résister à la tentation de mettre de la logique dedans. Le code C# nous le permettrait. Cependant, dans le modèle MVC, la logique doit être dans l&#x27;action ou dans les couches basses [Metier, DAO] mais pas dans la vue. Même en respectant le modèle MVC, on peut se retrouver avec beaucoup de logique dans la vue pour calculer des valeurs intermédiaires. Cela peut vouloir signifier que le modèle utilisé n&#x27;est pas assez détaillé. Celui-ci doit contenir les valeurs finales dont la vue a besoin afin qu&#x27;elle n&#x27;ait pas à les calculer elle-même. Une bonne vue est une vue où il y a un minimum de logique et où la structure HTML de la vue reste claire. Si on insère trop de code C#, la structure HTML peut devenir illisible.</span></p>
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">Dans l&#x27;exemple ci-dessus, la liste déroulante pourrait être utilisée par un internaute et on voudrait alors savoir quelle personne il a sélectionnée. Il nous faut pour cela un formulaire.</span></p>
@@ -1726,9 +1801,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : l&#x27;action ne peut être demandée que par une commande HTTP GET ;</span></li>
-<li><span style="color: #000000">ligne 5 : la vue [/First/Action06Get.cshtml] sera affichée avec pour modèle une instance de type [ViewModel05].</span></li>
+  <li><span style="color: #000000">ligne 2 : l&#x27;action ne peut être demandée que par une commande HTTP GET ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : la vue [/First/Action06Get.cshtml] sera affichée avec pour modèle une instance de type [ViewModel05].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La vue [/First/Action06Get.cshtml] sera la suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001650000012AD07432B6.png" style="display:inline-block; margin:4px;width:4.724cm;height:3.942cm;" class="odt-zoomable" data-zoom-src="images/10000000000001650000012AD07432B6.png" /></td></tr></table>
 
@@ -1770,27 +1848,29 @@
 
 <p><span style="color: #000000">Les principales nouveautés sont les suivantes :</span></p>
 <ul>
-<li><span style="color: #000000">ligne 18 : pour que le navigateur puisse transmettre les informations saisies par un utilisateur, il nous faut un formulaire. C&#x27;est la balise &lt;<strong>form</strong>&gt; des lignes 18 et 31 qui le délimitent.</span></li>
+  <li><span style="color: #000000">ligne 18 : pour que le navigateur puisse transmettre les informations saisies par un utilisateur, il nous faut un formulaire. C&#x27;est la balise &lt;<b>form</b>&gt; des lignes 18 et 31 qui le délimitent.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La balise HTML &lt;form&gt; a été présentée au paragraphe </span><span style="color: #000000"><a href="les-bases-de-la-programmation-web.html#balise-form">2.5.2.1</a></span><span style="color: #000000">. Rappelons ses caractéristiques :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>formulaire</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>formulaire</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">form</span><span style="color:#000000"> </span><span style="color:#ff0000">method</span><span style="color:#0000ff">=&quot;post&quot;</span><span style="color:#000000"> </span><span style="color:#ff0000">action</span><span style="color:#0000ff">=&quot;FormulairePost.aspx&quot;&gt;</span></span>
 </code></pre></div></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>balise HTML</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>&lt;form name=&quot;...&quot; method=&quot;...&quot; action=&quot;...&quot;&gt;...&lt;/form&gt;</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>attributs</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>name=&quot;frmexemple&quot;</b> : nom du formulaire - facultatif</p><p style="margin:0;"><b>method=&quot;...&quot;</b> : méthode utilisée par le navigateur pour envoyer au serveur Web les valeurs récoltées dans le formulaire</p><p style="margin:0;"><b>action=&quot;...&quot;</b> : URL à laquelle seront envoyées les valeurs récoltées dans le formulaire.</p><p style="margin:0;">Un formulaire Web est entouré des balises <i>&lt;form&gt;...&lt;/form&gt;</i>. Le formulaire peut avoir un nom (<i>name=&quot;xx&quot;</i>). C&#x27;est le cas pour tous les contrôles qu&#x27;on peut trouver dans un formulaire. Le but d&#x27;un formulaire est de rassembler des informations données par l&#x27;utilisateur au clavier/souris et d&#x27;envoyer celles-ci à une URL de serveur Web. Laquelle ? Celle référencée dans l&#x27;attribut <i>action=&quot;URL&quot;</i>. Si cet attribut est absent, les informations seront envoyées à l&#x27;URL du document dans lequel se trouve le formulaire. Un client Web peut utiliser deux méthodes différentes appelées POST et GET pour envoyer des données à un serveur web. L&#x27;attribut <i>method=&quot;méthode&quot;</i>, avec <i>method</i> égal à GET ou POST, de la balise <i>&lt;form&gt;</i> indique au navigateur la méthode à utiliser pour envoyer les informations recueillies dans le formulaire à l&#x27;URL précisée par l&#x27;attribut <i>action=&quot;URL&quot;</i>. Lorsque l&#x27;attribut <i>method</i> n&#x27;est pas précisé, c&#x27;est la méthode GET qui est prise par défaut.</p></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>balise HTML</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>&lt;form name=&quot;...&quot; method=&quot;...&quot; action=&quot;...&quot;&gt;...&lt;/form&gt;</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>attributs</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>name=&quot;frmexemple&quot;</b> : nom du formulaire - facultatif</div><div style="margin:0 0 0.5em 0"><b>method=&quot;...&quot;</b> : méthode utilisée par le navigateur pour envoyer au serveur Web les valeurs récoltées dans le formulaire</div><div style="margin:0 0 0.5em 0"><b>action=&quot;...&quot;</b> : URL à laquelle seront envoyées les valeurs récoltées dans le formulaire.</div><div style="margin:0 0 0.5em 0">Un formulaire Web est entouré des balises <i>&lt;form&gt;...&lt;/form&gt;</i>. Le formulaire peut avoir un nom (<i>name=&quot;xx&quot;</i>). C&#x27;est le cas pour tous les contrôles qu&#x27;on peut trouver dans un formulaire. Le but d&#x27;un formulaire est de rassembler des informations données par l&#x27;utilisateur au clavier/souris et d&#x27;envoyer celles-ci à une URL de serveur Web. Laquelle ? Celle référencée dans l&#x27;attribut <i>action=&quot;URL&quot;</i>. Si cet attribut est absent, les informations seront envoyées à l&#x27;URL du document dans lequel se trouve le formulaire. Un client Web peut utiliser deux méthodes différentes appelées POST et GET pour envoyer des données à un serveur web. L&#x27;attribut <i>method=&quot;méthode&quot;</i>, avec <i>method</i> égal à GET ou POST, de la balise <i>&lt;form&gt;</i> indique au navigateur la méthode à utiliser pour envoyer les informations recueillies dans le formulaire à l&#x27;URL précisée par l&#x27;attribut <i>action=&quot;URL&quot;</i>. Lorsque l&#x27;attribut <i>method</i> n&#x27;est pas précisé, c&#x27;est la méthode GET qui est prise par défaut.</div></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">ligne 18 : on voit que les valeurs du formulaire seront envoyées à l&#x27;URL [/First/Action06] par une commande HTTP POST ;</span></li>
-<li><span style="color: #000000">ligne 30 : un formulaire doit avoir un bouton de type [submit]. C&#x27;est lui qui déclenche l&#x27;envoi des valeurs saisies à l&#x27;URL précisée par l&#x27;attribut [action] de la balise &lt;form&gt;.</span></li>
+  <li><span style="color: #000000">ligne 18 : on voit que les valeurs du formulaire seront envoyées à l&#x27;URL [/First/Action06] par une commande HTTP POST ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 30 : un formulaire doit avoir un bouton de type [submit]. C&#x27;est lui qui déclenche l&#x27;envoi des valeurs saisies à l&#x27;URL précisée par l&#x27;attribut [action] de la balise &lt;form&gt;.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Que va au juste transmettre le navigateur lorsque l&#x27;internaute va cliquer sur le bouton [Valider] ? Ceci a été expliqué au paragraphe </span><span style="color: #000000"><a href="les-bases-de-la-programmation-web.html#http-get">2.5.3.1</a></span><span style="color: #000000">. Rappelons ce qui avait été dit :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p style="margin:0;"><b>contrôle HTML</b></p><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p style="margin:0;"><b>visuel</b></p><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p style="margin:0;"><b>valeur(s) renvoyée(s)</b></p><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
-</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">value=&quot;Oui&quot;</mark> <mark style="background-color: #c0c0c0">name=&quot;R1&quot;/</mark>&gt;Oui</p><p style="margin:0;">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">name=&quot;R1&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;non&quot;</mark> checked=&quot;checked&quot;/&gt;Non</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001550000004582A42497.png" style="display:inline-block; margin:4px;width:4.51cm;height:0.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001550000004582A42497.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><mark style="background-color: #c0c0c0">R1=Oui</mark></p><p style="margin:0;">- la valeur de l&#x27;attribut <i>value</i> du bouton radio coché par l&#x27;utilisateur.</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C1&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;un&quot;/</mark>&gt;1</p><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C2&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;deux&quot;</mark> checked=&quot;checked&quot;/&gt;2</p><p style="margin:0;">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C3&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;trois&quot;/</mark>&gt;3</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015E0000003FB4AEBD22.png" style="display:inline-block; margin:4px;width:4.63cm;height:0.831cm;" class="odt-zoomable" data-zoom-src="images/100000000000015E0000003FB4AEBD22.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">C1=un</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">C2=deux</mark></b></p><p style="margin:0;">- valeurs des attributs <i>value</i> des cases cochées par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;text&quot; <mark style="background-color: #c0c0c0">name=&quot;txtSaisie&quot;</mark> size=&quot;20&quot; value=&quot;qqs mots&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A40000003B384FFC1D.png" style="display:inline-block; margin:4px;width:5.56cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A40000003B384FFC1D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">txtSaisie=programmation+Web</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie. Les espaces ont été remplacés par le signe +</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;password&quot; <mark style="background-color: #c0c0c0">name=&quot;txtMdp&quot;</mark> size=&quot;20&quot; value=&quot;unMotDePasse&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F0000003C4952F90F.png" style="display:inline-block; margin:4px;width:5.489cm;height:0.79cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F0000003C4952F90F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">txtMdp=ceciestsecret</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;textarea rows=&quot;2&quot; <mark style="background-color: #c0c0c0">name=&quot;areaSaisie&quot;</mark> cols=&quot;20&quot;&gt;</p><p style="margin:0;">ligne1</p><p style="margin:0;">ligne2</p><p style="margin:0;">ligne3</p><p style="margin:0;">&lt;/textarea&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A900000046BF562070.png" style="display:inline-block; margin:4px;width:5.62cm;height:0.93cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A900000046BF562070.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">areaSaisie=les+bases+de+la%0D%0A</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">programmation+Web</mark></b></p><p style="margin:0;">- texte tapé par l&#x27;utilisateur dans le champ de saisie. %OD%OA est la marque de fin de ligne. Les espaces ont été remplacés par le signe +</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;1&quot; <mark style="background-color: #c0c0c0">name=&quot;cmbValeurs&quot;</mark>&gt;</p><p style="margin:0;">&lt;option value=&#x27;1&#x27;&gt;choix1&lt;/option&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;2&#x27;&gt;choix2&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;3&#x27;&gt;choix3&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000404C9A3AF2.png" style="display:inline-block; margin:4px;width:3.941cm;height:0.85cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000404C9A3AF2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">cmbValeurs=3</mark></b></p><p style="margin:0;">- attribut [value] de l&#x27;élément sélectionné par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst1&quot;</mark>&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;liste1&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;2&#x27;&gt;liste2&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;3&#x27;&gt;liste3&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;4&#x27;&gt;liste4&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;5&#x27;&gt;liste5&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B00000067A3FFA096.png" style="display:inline-block; margin:4px;width:4.17cm;height:1.36cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B00000067A3FFA096.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst1=3</mark></b></p><p style="margin:0;">- attribut [value] de l&#x27;élément sélectionné par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst2&quot;</mark> multiple=&quot;multiple&quot;&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;liste1&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;2&#x27;&gt;liste2&lt;/option&gt;</p><p style="margin:0;">&lt;option selected=&quot;selected&quot; value=&#x27;3&#x27;&gt;liste3&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;4&#x27;&gt;liste4&lt;/option&gt;</p><p style="margin:0;">&lt;option value=&#x27;5&#x27;&gt;liste5&lt;/option&gt;</p><p style="margin:0;">&lt;/select&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000609BBC7B2D.png" style="display:inline-block; margin:4px;width:3.851cm;height:1.27cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000609BBC7B2D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst2=1</mark></b></p><p style="margin:0;"><b><mark style="background-color: #c0c0c0">lst2=3</mark></b></p><p style="margin:0;">- attributs [value] des éléments sélectionnés par l&#x27;utilisateur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;submit&quot; <mark style="background-color: #c0c0c0">value=&quot;Envoyer&quot;</mark> <mark style="background-color: #c0c0c0">name=&quot;cmdRenvoyer&quot;/</mark>&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">cmdRenvoyer=Envoyer</mark></b></p><p style="margin:0;">- nom et attribut <i>value</i> du bouton qui a servi à envoyer les données du formulaire au serveur</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">&lt;input type=&quot;hidden&quot; <mark style="background-color: #c0c0c0">name=&quot;secret&quot;</mark> value=&quot;uneValeur&quot;/&gt;</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b><mark style="background-color: #c0c0c0">secret=uneValeur</mark></b></p><p style="margin:0;">- attribut <i>value</i> du champ caché</p></td></tr></table>
+<div style="margin:0 0 0.5em 0"><b>contrôle HTML</b></div><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
+<div style="margin:0 0 0.5em 0"><b>visuel</b></div><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
+<div style="margin:0 0 0.5em 0"><b>valeur(s) renvoyée(s)</b></div><hr style="border:0; border-top:0.99pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">value=&quot;Oui&quot;</mark> <mark style="background-color: #c0c0c0">name=&quot;R1&quot;/</mark>&gt;Oui</div><div style="margin:0 0 0.5em 0">&lt;input type=&quot;radio&quot; <mark style="background-color: #c0c0c0">name=&quot;R1&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;non&quot;</mark> checked=&quot;checked&quot;/&gt;Non</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001550000004582A42497.png" style="display:inline-block; margin:4px;width:4.51cm;height:0.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001550000004582A42497.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><mark style="background-color: #c0c0c0">R1=Oui</mark></div><div style="margin:0 0 0.5em 0">- la valeur de l&#x27;attribut <i>value</i> du bouton radio coché par l&#x27;utilisateur.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C1&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;un&quot;/</mark>&gt;1</div><div style="margin:0 0 0.5em 0">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C2&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;deux&quot;</mark> checked=&quot;checked&quot;/&gt;2</div><div style="margin:0 0 0.5em 0">&lt;input type=&quot;checkbox&quot; <mark style="background-color: #c0c0c0">name=&quot;C3&quot;</mark> <mark style="background-color: #c0c0c0">value=&quot;trois&quot;/</mark>&gt;3</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015E0000003FB4AEBD22.png" style="display:inline-block; margin:4px;width:4.63cm;height:0.831cm;" class="odt-zoomable" data-zoom-src="images/100000000000015E0000003FB4AEBD22.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">C1=un</mark></b></div><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">C2=deux</mark></b></div><div style="margin:0 0 0.5em 0">- valeurs des attributs <i>value</i> des cases cochées par l&#x27;utilisateur</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;text&quot; <mark style="background-color: #c0c0c0">name=&quot;txtSaisie&quot;</mark> size=&quot;20&quot; value=&quot;qqs mots&quot;/&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A40000003B384FFC1D.png" style="display:inline-block; margin:4px;width:5.56cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A40000003B384FFC1D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">txtSaisie=programmation+Web</mark></b></div><div style="margin:0 0 0.5em 0">- texte tapé par l&#x27;utilisateur dans le champ de saisie. Les espaces ont été remplacés par le signe +</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;password&quot; <mark style="background-color: #c0c0c0">name=&quot;txtMdp&quot;</mark> size=&quot;20&quot; value=&quot;unMotDePasse&quot;/&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F0000003C4952F90F.png" style="display:inline-block; margin:4px;width:5.489cm;height:0.79cm;" class="odt-zoomable" data-zoom-src="images/100000000000019F0000003C4952F90F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">txtMdp=ceciestsecret</mark></b></div><div style="margin:0 0 0.5em 0">- texte tapé par l&#x27;utilisateur dans le champ de saisie</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;textarea rows=&quot;2&quot; <mark style="background-color: #c0c0c0">name=&quot;areaSaisie&quot;</mark> cols=&quot;20&quot;&gt;</div><div style="margin:0 0 0.5em 0">ligne1</div><div style="margin:0 0 0.5em 0">ligne2</div><div style="margin:0 0 0.5em 0">ligne3</div><div style="margin:0 0 0.5em 0">&lt;/textarea&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A900000046BF562070.png" style="display:inline-block; margin:4px;width:5.62cm;height:0.93cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A900000046BF562070.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">areaSaisie=les+bases+de+la%0D%0A</mark></b></div><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">programmation+Web</mark></b></div><div style="margin:0 0 0.5em 0">- texte tapé par l&#x27;utilisateur dans le champ de saisie. %OD%OA est la marque de fin de ligne. Les espaces ont été remplacés par le signe +</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;select size=&quot;1&quot; <mark style="background-color: #c0c0c0">name=&quot;cmbValeurs&quot;</mark>&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;1&#x27;&gt;choix1&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;2&#x27;&gt;choix2&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;3&#x27;&gt;choix3&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;/select&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000404C9A3AF2.png" style="display:inline-block; margin:4px;width:3.941cm;height:0.85cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000404C9A3AF2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">cmbValeurs=3</mark></b></div><div style="margin:0 0 0.5em 0">- attribut [value] de l&#x27;élément sélectionné par l&#x27;utilisateur</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst1&quot;</mark>&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;liste1&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;2&#x27;&gt;liste2&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;3&#x27;&gt;liste3&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;4&#x27;&gt;liste4&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;5&#x27;&gt;liste5&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;/select&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B00000067A3FFA096.png" style="display:inline-block; margin:4px;width:4.17cm;height:1.36cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B00000067A3FFA096.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">lst1=3</mark></b></div><div style="margin:0 0 0.5em 0">- attribut [value] de l&#x27;élément sélectionné par l&#x27;utilisateur</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;select size=&quot;3&quot; <mark style="background-color: #c0c0c0">name=&quot;lst2&quot;</mark> multiple=&quot;multiple&quot;&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;1&#x27;&gt;liste1&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;2&#x27;&gt;liste2&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option selected=&quot;selected&quot; value=&#x27;3&#x27;&gt;liste3&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;4&#x27;&gt;liste4&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;option value=&#x27;5&#x27;&gt;liste5&lt;/option&gt;</div><div style="margin:0 0 0.5em 0">&lt;/select&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000609BBC7B2D.png" style="display:inline-block; margin:4px;width:3.851cm;height:1.27cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000609BBC7B2D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">lst2=1</mark></b></div><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">lst2=3</mark></b></div><div style="margin:0 0 0.5em 0">- attributs [value] des éléments sélectionnés par l&#x27;utilisateur</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;submit&quot; <mark style="background-color: #c0c0c0">value=&quot;Envoyer&quot;</mark> <mark style="background-color: #c0c0c0">name=&quot;cmdRenvoyer&quot;/</mark>&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">cmdRenvoyer=Envoyer</mark></b></div><div style="margin:0 0 0.5em 0">- nom et attribut <i>value</i> du bouton qui a servi à envoyer les données du formulaire au serveur</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&lt;input type=&quot;hidden&quot; <mark style="background-color: #c0c0c0">name=&quot;secret&quot;</mark> value=&quot;uneValeur&quot;/&gt;</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b><mark style="background-color: #c0c0c0">secret=uneValeur</mark></b></div><div style="margin:0 0 0.5em 0">- attribut <i>value</i> du champ caché</div></td></tr></table>
 
 <p><span style="color: #000000">Dans notre formulaire, nous avons deux balises susceptibles d&#x27;envoyer une valeur :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1843,9 +1923,12 @@
 
 <p><span style="color: #000000">Il est possible d&#x27;avoir deux actions de même nom à condition qu&#x27;elle ne traite pas les mêmes commandes HTTP :</span></p>
 <ul>
-<li><span style="color: #000000">[Action06] de la ligne 3 gère un POST (ligne 2) ;</span></li>
-<li><span style="color: #000000">[Action06] de la ligne c gère un GET (ligne b).</span></li>
+  <li><span style="color: #000000">[Action06] de la ligne 3 gère un POST (ligne 2) ;</span>
+  </li>
+  <li><span style="color: #000000">[Action06] de la ligne c gère un GET (ligne b).</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">L&#x27;action [Action06] qui gère le POST va recevoir la chaîne de paramètres suivant :</span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>personneId=2&amp;valider=Valider
 </code></pre></div>
@@ -1916,8 +1999,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : la session mémorisera la liste des personnes affichées dans la liste déroulante ;</li>
+  <li>ligne 2 : la session mémorisera la liste des personnes affichées dans la liste déroulante ;
+  </li>
 </ul>
+
 <p>Il nous faut lier le type précédent [SessionModel] à un binder que nous appellerons [SessionModelBinder]. Celui-ci sera le même que celui décrit page <a href="le-modele-dune-action.html#sessionmodelbinder">82</a> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C200000049C2A2BB22.png" style="display:inline-block; margin:4px;width:3.59cm;height:1.349cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C200000049C2A2BB22.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1957,9 +2042,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : la liaison du modèle à son binder se fait dans [Application_Start] ;</li>
-<li>ligne 13 : une instance de type [SessionModel] est mise en session associée à la clé [data].</li>
+  <li>ligne 8 : la liaison du modèle à son binder se fait dans [Application_Start] ;
+  </li>
+  <li>ligne 13 : une instance de type [SessionModel] est mise en session associée à la clé [data].
+  </li>
 </ul>
+
 <p>Ceci fait, l&#x27;action [Action07] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// Action07-GET</span></span>
@@ -1973,11 +2061,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : l&#x27;action récupère un type [SessionModel], donc la donnée de portée [Session] associée à la clé [data] ;</li>
-<li>ligne 5 : on crée le modèle de la vue ;</li>
-<li>ligne 6 : on met dans la session le tableau des personnes. On en aura besoin dans la requête suivante, celle du POST. Le protocole HTTP est un protocole sans état. Il faut utiliser une <strong>session</strong> pour avoir de la mémoire entre les requêtes. Une session est propre à un utilisateur et est gérée par le serveur web ;</li>
-<li>ligne 7 : la vue [Action07Get.cshtml] est affichée. C&#x27;est la suivante :</li>
+  <li>ligne 3 : l&#x27;action récupère un type [SessionModel], donc la donnée de portée [Session] associée à la clé [data] ;
+  </li>
+  <li>ligne 5 : on crée le modèle de la vue ;
+  </li>
+  <li>ligne 6 : on met dans la session le tableau des personnes. On en aura besoin dans la requête suivante, celle du POST. Le protocole HTTP est un protocole sans état. Il faut utiliser une <b>session</b> pour avoir de la mémoire entre les requêtes. Une session est propre à un utilisateur et est gérée par le serveur web ;
+  </li>
+  <li>ligne 7 : la vue [Action07Get.cshtml] est affichée. C&#x27;est la suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">@model Exemple_03.Models.</span><span style="color:#2b91af">ViewModel05</span></span>
 <span class="odt-code-line"><span style="color:#000000">@</span><span style="color:#0000ff">using</span><span style="color:#000000"> Exemple_03.Models</span></span>
@@ -2005,8 +2098,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : les valeurs postées sont encapsulées dans le modèle d&#x27;action [ActionModel06] déjà utilisé précédemment (ci-dessous) :</li>
+  <li>ligne 3 : les valeurs postées sont encapsulées dans le modèle d&#x27;action [ActionModel06] déjà utilisé précédemment (ci-dessous) :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.ComponentModel.DataAnnotations;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">namespace</span><span style="color:#000000"> Exemple_03.Models</span></span>
@@ -2023,11 +2118,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 3 : le premier paramètre est la donnée de portée [Session] associée à la clé [data] ;</span></li>
-<li><span style="color: #000000">ligne 5 : une requête LINQ récupère la personne ayant l&#x27;[Id] qui a été posté ;</span></li>
-<li><span style="color: #000000">ligne 6 : on construit la chaîne de caractères qui doit être affichée par la vue [Action07Post] (ligne 8) ;</span></li>
-<li><span style="color: #000000">ligne 7 : pour appeler le bon constructeur [View], il faut transtyper le type [string] en [object].</span></li>
+  <li><span style="color: #000000">ligne 3 : le premier paramètre est la donnée de portée [Session] associée à la clé [data] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : une requête LINQ récupère la personne ayant l&#x27;[Id] qui a été posté ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 6 : on construit la chaîne de caractères qui doit être affichée par la vue [Action07Post] (ligne 8) ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : pour appeler le bon constructeur [View], il faut transtyper le type [string] en [object].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La vue [Action07Post.cshtml] est la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">@model </span><span style="color:#0000ff">string</span></span>
@@ -2051,23 +2151,29 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 1 : le modèle est de type [string] ;</span></li>
-<li><span style="color: #000000">ligne 16 : la chaîne de caractères est affichée.</span></li>
+  <li><span style="color: #000000">ligne 1 : le modèle est de type [string] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 16 : la chaîne de caractères est affichée.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000174000000EC0C7C7687.png" style="display:inline-block; margin:4px;width:6.89cm;height:4.369cm;" class="odt-zoomable" data-zoom-src="images/1000000000000174000000EC0C7C7687.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000176000000C346B64C88.png" style="display:inline-block; margin:4px;width:6.93cm;height:3.611cm;" class="odt-zoomable" data-zoom-src="images/1000000000000176000000C346B64C88.png" /></td></tr></table>
 
 <p><a id="refheading58086676630786"></a></p>
 <h2 id="56-formulaire-un-exemple-complet">5.6. Formulaire – un exemple complet</h2>
 <p><span style="color: #000000">Nous avons étudié au paragraphe <a href="les-bases-de-la-programmation-web.html#refheading2410167523874">2.5.2.1</a>, le formulaire HTML suivant :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b></p><img src="images/10000000000001A5000002663CB3D5D8.png" style="display:inline-block; margin:4px;width:8.641cm;height:12.603cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A5000002663CB3D5D8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>1</b></div><img src="images/10000000000001A5000002663CB3D5D8.png" style="display:inline-block; margin:4px;width:8.641cm;height:12.603cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A5000002663CB3D5D8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Nous allons étudier une action [Action08Get] qui affiche (GET) ce formulaire et une action [Action08Post] qui traite (POST) les valeurs saisies par l&#x27;utilisateur. Un schéma classique.</span></p>
 <p><span style="color: #000000">Le modèle de la vue [1] ci-dessus sera une instance de la classe [ViewModel08]. Cette classe sera à la fois :</span></p>
 <ul>
-<li><span style="color: #000000">le modèle de la vue produite par un GET sur l&#x27;action [Action08Get] ;</span></li>
-<li><span style="color: #000000">le modèle de l&#x27;action [Action08Post] pour une requête POST.</span></li>
+  <li><span style="color: #000000">le modèle de la vue produite par un GET sur l&#x27;action [Action08Get] ;</span>
+  </li>
+  <li><span style="color: #000000">le modèle de l&#x27;action [Action08Post] pour une requête POST.</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F1000000A468159F83.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.94cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F1000000A468159F83.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000607000000C91FF47779.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.344cm;" class="odt-zoomable" data-zoom-src="images/1000000000000607000000C91FF47779.png" /></td></tr></table>
@@ -2090,9 +2196,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 7 : le type [ApplicationModel] que nous allons décrire bientôt est associé au lieur de données [ApplicationModelBinder] que nous avons déjà présenté page <a href="le-modele-dune-action.html#applicationmodelbinder">82</a> ;</span></li>
-<li><span style="color: #000000">ligne 10 : une instance de type [ApplicationModel] est enregistrée dans le dictionnaire de l&#x27;application, associée à la clé [data].</span></li>
+  <li><span style="color: #000000">ligne 7 : le type [ApplicationModel] que nous allons décrire bientôt est associé au lieur de données [ApplicationModelBinder] que nous avons déjà présenté page <a href="le-modele-dune-action.html#applicationmodelbinder">82</a> ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : une instance de type [ApplicationModel] est enregistrée dans le dictionnaire de l&#x27;application, associée à la clé [data].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La classe [ApplicationModel] sert à encapsuler toutes les données de portée [Application]. Ici elle encapsulera les données que doit afficher le formulaire :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001610000016B717C9AB7.png" style="display:inline-block; margin:4px;width:4.671cm;height:4.803cm;" class="odt-zoomable" data-zoom-src="images/10000000000001610000016B717C9AB7.png" /></td></tr></table>
 
@@ -2152,14 +2261,22 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 45-49 : l&#x27;élément des différentes collections du formulaire. [Label] est le texte affiché par l&#x27;élément du formulaire, [Value] la valeur postée par cet élément lorsqu&#x27;il est sélectionné ;</span></li>
-<li><span style="color: #000000">ligne 6 : la collection affichée par le bouton radio ;</span></li>
-<li><span style="color: #000000">ligne 7 : la collection affichée par les cases à cocher ;</span></li>
-<li><span style="color: #000000">ligne 8 : la collection affichée par la liste déroulante ;</span></li>
-<li><span style="color: #000000">ligne 9 : la collection affichée par la liste à sélection unique ;</span></li>
-<li><span style="color: #000000">ligne 10 : la collection affichée par la liste à sélection multiple ;</span></li>
-<li><span style="color: #000000">lignes 13-43 : ces collections sont intialisées par le constructeur sans paramètres de la classe.</span></li>
+  <li><span style="color: #000000">lignes 45-49 : l&#x27;élément des différentes collections du formulaire. [Label] est le texte affiché par l&#x27;élément du formulaire, [Value] la valeur postée par cet élément lorsqu&#x27;il est sélectionné ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 6 : la collection affichée par le bouton radio ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : la collection affichée par les cases à cocher ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 8 : la collection affichée par la liste déroulante ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 : la collection affichée par la liste à sélection unique ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : la collection affichée par la liste à sélection multiple ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 13-43 : ces collections sont intialisées par le constructeur sans paramètres de la classe.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le différentes collections vont alimenter le formulaire suivant :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003410000032901B57A69.png" style="display:inline-block; margin:4px;width:11.021cm;height:10.703cm;" class="odt-zoomable" data-zoom-src="images/10000000000003410000032901B57A69.png" /></td></tr></table>
 
@@ -2177,11 +2294,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : [Action08Get] ne répondra qu&#x27;à une commande [GET] ;</li>
-<li>ligne 3 : elle reçoit en paramètre, le modèle de l&#x27;application que nous venons de décrire ;</li>
-<li>ligne 5 : elle initialise une information dans le conteneur dynamique [ViewBag] ;</li>
-<li>ligne 6 : elle affiche la vue [/First/Formulaire.cshtml] avec le modèle [ViewModel08]. Ce modèle sera celui du formulaire présenté précédemment. Pour cela, on passe au constructeur le modèle de l&#x27;application qui définit les éléments à afficher.</li>
+  <li>ligne 2 : [Action08Get] ne répondra qu&#x27;à une commande [GET] ;
+  </li>
+  <li>ligne 3 : elle reçoit en paramètre, le modèle de l&#x27;application que nous venons de décrire ;
+  </li>
+  <li>ligne 5 : elle initialise une information dans le conteneur dynamique [ViewBag] ;
+  </li>
+  <li>ligne 6 : elle affiche la vue [/First/Formulaire.cshtml] avec le modèle [ViewModel08]. Ce modèle sera celui du formulaire présenté précédemment. Pour cela, on passe au constructeur le modèle de l&#x27;application qui définit les éléments à afficher.
+  </li>
 </ul>
+
 <p><a id="refheading58092676630786"></a></p>
 <h3 id="563-le-modele-de-la-vue-formulaire">5.6.3. Le modèle de la vue [Formulaire]</h3>
 <p>La classe [ViewModel08] sera le modèle du formulaire. Cette classe est la suivante :</p>
@@ -2239,11 +2361,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">dans un formulaire, il y a deux types d&#x27;éléments : ceux qu&#x27;on affiche et ceux qui font l&#x27;objet d&#x27;une saisie ;</span></li>
-<li><span style="color: #000000">les lignes 20-24 définissent les éléments à afficher. Ce sont les différentes collections du formulaire. Celles-ci sont trouvées dans le modèle de l&#x27;application (lignes 34-38) ;</span></li>
-<li><span style="color: #000000">lignes 10-17 : définissent les champs de saisie du formulaire ;</span></li>
-<li><span style="color: #000000">ligne 10 : [RadioButtonField] récupèrera </span><strong><span style="color: #000000">la valeur postée</span></strong><span style="color: #000000"> par les lignes suivantes du formulaire :</span></li>
+  <li><span style="color: #000000">dans un formulaire, il y a deux types d&#x27;éléments : ceux qu&#x27;on affiche et ceux qui font l&#x27;objet d&#x27;une saisie ;</span>
+  </li>
+  <li><span style="color: #000000">les lignes 20-24 définissent les éléments à afficher. Ce sont les différentes collections du formulaire. Celles-ci sont trouvées dans le modèle de l&#x27;application (lignes 34-38) ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 10-17 : définissent les champs de saisie du formulaire ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : [RadioButtonField] récupèrera </span><b><span style="color: #000000">la valeur postée</span></b><span style="color: #000000"> par les lignes suivantes du formulaire :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- les boutons radio --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2262,8 +2389,10 @@
 
 <p><span style="color: #000000">si l&#x27;utilisateur a coché l&#x27;option libellée [non]. C&#x27;est en effet l&#x27;attribut [value] de l&#x27;option cochée qui est posté.</span></p>
 <ul>
-<li><span style="color: #000000">ligne 11 : [CheckBoxesField] récupèrera </span><strong><span style="color: #000000">les valeurs postées</span></strong><span style="color: #000000"> par les lignes suivantes du formulaire :</span></li>
+  <li><span style="color: #000000">ligne 11 : [CheckBoxesField] récupèrera </span><b><span style="color: #000000">les valeurs postées</span></b><span style="color: #000000"> par les lignes suivantes du formulaire :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- les cases à cocher --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2282,8 +2411,10 @@
 
 <p><span style="color: #000000">si l&#x27;utilisateur a coché les cases à cocher libellées [2] et [3]. C&#x27;est l&#x27;attribut [value] des options cochées qui est posté. C&#x27;est parce que plusieurs paramètres de même nom peuvent être postés que [CheckBoxesField] est un tableau de valeurs et non une valeur simple. Si aucune case n&#x27;est cochée, le paramètre [CheckBoxesField] sera absent de la chaîne postée et la propriété de même nom du modèle ne sera pas initialisée. Ce peut être gênant comme nous le verrons.</span></p>
 <ul>
-<li><span style="color: #000000">ligne 12 : [TextField] récupèrera </span><strong><span style="color: #000000">la valeur postée</span></strong><span style="color: #000000"> par les lignes suivantes du formulaire :</span></li>
+  <li><span style="color: #000000">ligne 12 : [TextField] récupèrera </span><b><span style="color: #000000">la valeur postée</span></b><span style="color: #000000"> par les lignes suivantes du formulaire :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#3f5fbf">&lt;!-- le champ de saisie texte monoligne --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2301,8 +2432,10 @@
 
 <p><span style="color: #000000">si l&#x27;utilisateur a saisi [abcdef] dans le champ de saisie.</span></p>
 <ul>
-<li><span style="color: #000000">ligne 13 : [PasswordField] récupèrera </span><strong><span style="color: #000000">la valeur postée</span></strong><span style="color: #000000"> par les lignes suivantes du formulaire :</span></li>
+  <li><span style="color: #000000">ligne 13 : [PasswordField] récupèrera </span><b><span style="color: #000000">la valeur postée</span></b><span style="color: #000000"> par les lignes suivantes du formulaire :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- le champ de saisie d&#x27;un mot de passe --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2320,8 +2453,10 @@
 
 <p><span style="color: #000000">si l&#x27;utilisateur a saisi [abcdef] dans le champ de saisie.</span></p>
 <ul>
-<li><span style="color: #000000">ligne 14 : [TextAreaField] récupèrera la valeur postée par les lignes suivantes du formulaire :</span></li>
+  <li><span style="color: #000000">ligne 14 : [TextAreaField] récupèrera la valeur postée par les lignes suivantes du formulaire :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- le champ de saisie texte multilignes --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2340,8 +2475,10 @@
 
 <p><span style="color: #000000">si l&#x27;utilisateur a saisi [abcdef] suivi d&#x27;un saut de ligne et de [ijk] dans le champ de saisie.</span></p>
 <ul>
-<li><span style="color: #000000">ligne 15 : [DropDownListField] récupèrera </span><strong><span style="color: #000000">la valeur postée</span></strong><span style="color: #000000"> par les lignes suivantes du formulaire :</span></li>
+  <li><span style="color: #000000">ligne 15 : [DropDownListField] récupèrera </span><b><span style="color: #000000">la valeur postée</span></b><span style="color: #000000"> par les lignes suivantes du formulaire :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- la liste déroulante --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2362,8 +2499,10 @@
 
 <p><span style="color: #000000">si l&#x27;utilisateur a sélectionné l&#x27;option [choix1]. C&#x27;est l&#x27;attribut [value] de l&#x27;option sélectionnée qui est postée.</span></p>
 <ul>
-<li><span style="color: #000000">ligne 16 : [SingleChoiceListField] récupèrera </span><strong><span style="color: #000000">la valeur postée</span></strong><span style="color: #000000"> par les lignes suivantes du formulaire :</span></li>
+  <li><span style="color: #000000">ligne 16 : [SingleChoiceListField] récupèrera </span><b><span style="color: #000000">la valeur postée</span></b><span style="color: #000000"> par les lignes suivantes du formulaire :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- la liste à choix unique --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2387,8 +2526,10 @@
 
 <p><span style="color: #000000">si l&#x27;utilisateur a sélectionné l&#x27;option [liste3]. C&#x27;est l&#x27;attribut [value] de l&#x27;option sélectionnée qui est postée. Le paramètre [SingleChoiceListField] peut être absent de la chaîne postée si aucun élément n&#x27;a été sélectionné.</span></p>
 <ul>
-<li><span style="color: #000000">ligne 17 : [MultipleChoiceListField] récupèrera </span><strong><span style="color: #000000">les valeurs postées</span></strong><span style="color: #000000"> par les lignes suivantes du formulaire :</span></li>
+  <li><span style="color: #000000">ligne 17 : [MultipleChoiceListField] récupèrera </span><b><span style="color: #000000">les valeurs postées</span></b><span style="color: #000000"> par les lignes suivantes du formulaire :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f5fbf">&lt;!-- la liste à choix multiple --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -2425,15 +2566,24 @@
 
 <p>Si ces valeurs avaient été obtenues après un POST du formulaire, cela signifierait que l&#x27;utilisateur a  :</p>
 <ul>
-<li>ligne 2 : coché l&#x27;option [non] du bouton radio ;</li>
-<li>ligne 3 : coché l&#x27;option [2] des cases à cocher ;</li>
-<li>ligne 4 : tapé [quelques mots] dans le champ de saisie ;</li>
-<li>ligne 5 : tapé [secret] comme mot de passe ;</li>
-<li>ligne 6 : tapé [ligne1\nligne2] dans le champ de saisie multilignes ;</li>
-<li>ligne 7 : sélectionné l&#x27;option [choix2] de la liste déroulante ;</li>
-<li>ligne 8 : sélectionné l&#x27;option [liste3] de la liste à choix unique ;</li>
-<li>ligne 9 : sélectionné les options [liste1] et [liste3] de la liste à choix multiples;</li>
+  <li>ligne 2 : coché l&#x27;option [non] du bouton radio ;
+  </li>
+  <li>ligne 3 : coché l&#x27;option [2] des cases à cocher ;
+  </li>
+  <li>ligne 4 : tapé [quelques mots] dans le champ de saisie ;
+  </li>
+  <li>ligne 5 : tapé [secret] comme mot de passe ;
+  </li>
+  <li>ligne 6 : tapé [ligne1\nligne2] dans le champ de saisie multilignes ;
+  </li>
+  <li>ligne 7 : sélectionné l&#x27;option [choix2] de la liste déroulante ;
+  </li>
+  <li>ligne 8 : sélectionné l&#x27;option [liste3] de la liste à choix unique ;
+  </li>
+  <li>ligne 9 : sélectionné les options [liste1] et [liste3] de la liste à choix multiples;
+  </li>
 </ul>
+
 <p>Nous allons faire comme si un POST avait eu lieu et que l&#x27;on voulait renvoyer le formulaire tel qu&#x27;il a été saisi. C&#x27;est notamment ce qui est fait lorsqu&#x27;on renvoie à l&#x27;utilisateur un formulaire erroné. Celui-ci est renvoyé tel qu&#x27;il a été saisi.</p>
 <p><a id="refheading58094676630786"></a></p>
 <h3 id="564-la-vue-formulaire">5.6.4. La vue [Formulaire]</h3>
@@ -2480,19 +2630,29 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : [ViewModel08] est le modèle du formulaire ;</li>
-<li>ligne 12 : la balise &lt;<strong>form</strong>&gt; du formulaire. Celui-ci sera posté avec la méthode [POST] (attribut <em>method</em>) à l&#x27;URL [/First/Action08Post] (attribut <em>action</em>) ;</li>
-<li>ligne 33 : le bouton de type [submit] qui sert à poster le formulaire ;</li>
-<li>lignes 22-27 : affichent les boutons radio :</li>
+  <li>ligne 1 : [ViewModel08] est le modèle du formulaire ;
+  </li>
+  <li>ligne 12 : la balise &lt;<b>form</b>&gt; du formulaire. Celui-ci sera posté avec la méthode [POST] (attribut <i>method</i>) à l&#x27;URL [/First/Action08Post] (attribut <i>action</i>) ;
+  </li>
+  <li>ligne 33 : le bouton de type [submit] qui sert à poster le formulaire ;
+  </li>
+  <li>lignes 22-27 : affichent les boutons radio :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D80000001F9C9AC302.png" style="display:inline-block; margin:4px;width:4.001cm;height:0.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D80000001F9C9AC302.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>ligne 22 : on parcourt la collection affichée par le bouton radio ;</li>
-<li>ligne 24 : le bouton qui a comme attribut [value] la valeur de la propriété [RadioButtonField] doit être coché. Pour cela, il doit avoir l&#x27;attribut [checked=&quot;checked&quot;] ;</li>
-<li>ligne 25 : génération de la balise &lt;input type=&quot;radio&quot;&gt; avec pour valeur [@item.Value] et pour libellé [@item.Label] ;</li>
-<li>ligne 26 : la balise &lt;text/&gt; n&#x27;est pas une balise HTML reconnue. Elle est là pour [Razor]. A sa rencontre, [Razor] va générer un saut de ligne. Cela n&#x27;a pas d&#x27;incidence sur le formulaire affiché mais cela en a une sur le code HTML généré. Les balises &lt;input type=&quot;radio&quot;&gt; sont alors sur deux lignes différentes au lieu d&#x27;être sur la même ligne. Cela rend plus lisible le code, lorsqu&#x27;avec le navigateur on demande à voir le code source de la page affichée ;</li>
+  <li>ligne 22 : on parcourt la collection affichée par le bouton radio ;
+  </li>
+  <li>ligne 24 : le bouton qui a comme attribut [value] la valeur de la propriété [RadioButtonField] doit être coché. Pour cela, il doit avoir l&#x27;attribut [checked=&quot;checked&quot;] ;
+  </li>
+  <li>ligne 25 : génération de la balise &lt;input type=&quot;radio&quot;&gt; avec pour valeur [@item.Value] et pour libellé [@item.Label] ;
+  </li>
+  <li>ligne 26 : la balise &lt;text/&gt; n&#x27;est pas une balise HTML reconnue. Elle est là pour [Razor]. A sa rencontre, [Razor] va générer un saut de ligne. Cela n&#x27;a pas d&#x27;incidence sur le formulaire affiché mais cela en a une sur le code HTML généré. Les balises &lt;input type=&quot;radio&quot;&gt; sont alors sur deux lignes différentes au lieu d&#x27;être sur la même ligne. Cela rend plus lisible le code, lorsqu&#x27;avec le navigateur on demande à voir le code source de la page affichée ;
+  </li>
 </ul>
+
 <p>Nous passons en revue, les autres éléments de la vue :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- les cases à cocher --&gt;</span></span>
@@ -2511,10 +2671,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : on parcourt la collection affichée par les cases à cocher ;</li>
-<li>ligne 8 : une case qui a comme attribut [value] l&#x27;une des valeurs de la propriété [CheckBoxesField] doit être cochée. Pour cela, il doit avoir l&#x27;attribut [checked=&quot;checked&quot;]. On utilise une expression LINQ qui permet de savoir si une valeur est contenue dans un tableau ;</li>
-<li>ligne 25 : génération de la balise &lt;input type=&quot;checkbox&quot;&gt; avec pour valeur [@item.Value] et pour libellé [@item.Label] ;</li>
+  <li>ligne 6 : on parcourt la collection affichée par les cases à cocher ;
+  </li>
+  <li>ligne 8 : une case qui a comme attribut [value] l&#x27;une des valeurs de la propriété [CheckBoxesField] doit être cochée. Pour cela, il doit avoir l&#x27;attribut [checked=&quot;checked&quot;]. On utilise une expression LINQ qui permet de savoir si une valeur est contenue dans un tableau ;
+  </li>
+  <li>ligne 25 : génération de la balise &lt;input type=&quot;checkbox&quot;&gt; avec pour valeur [@item.Value] et pour libellé [@item.Label] ;
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">&lt;!-- le champ de saisie texte monoligne --&gt;</span>
 <span class="odt-code-line"><span style="color:#000000">          </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
@@ -2540,9 +2704,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 5, 12 : on donne à l&#x27;attribut [value] de la balise, la valeur du modèle ;</li>
-<li>ligne 19 : idem mais avec une syntaxe différente. </li>
+  <li>lignes 5, 12 : on donne à l&#x27;attribut [value] de la balise, la valeur du modèle ;
+  </li>
+  <li>ligne 19 : idem mais avec une syntaxe différente. 
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000"> </span><span style="color:#000000">       </span><span style="color:#006400">&lt;!-- la liste déroulante --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
@@ -2561,10 +2728,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : on parcourt la collection affichée par la liste déroulante ;</li>
-<li>ligne 9 : une option qui a comme attribut [value] la valeur de la propriété [DropDownListField] doit alors être sélectionnée. Pour cela, elle doit avoir l&#x27;attribut [selected=&quot;selected&quot;] ;</li>
-<li>ligne 25 : génération de la balise &lt;option value=&quot;<em>valeur</em>&quot;&gt;<em>libellé</em>&lt;/option&gt; avec pour valeur [@item.Value] et pour libellé [@item.Label] ;</li>
+  <li>ligne 7 : on parcourt la collection affichée par la liste déroulante ;
+  </li>
+  <li>ligne 9 : une option qui a comme attribut [value] la valeur de la propriété [DropDownListField] doit alors être sélectionnée. Pour cela, elle doit avoir l&#x27;attribut [selected=&quot;selected&quot;] ;
+  </li>
+  <li>ligne 25 : génération de la balise &lt;option value=&quot;<i>valeur</i>&quot;&gt;<i>libellé</i>&lt;/option&gt; avec pour valeur [@item.Value] et pour libellé [@item.Label] ;
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- la liste à choix unique --&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">&lt;</span><span style="color:#800000">tr</span><span style="color:#0000ff">&gt;</span></span>
@@ -2601,10 +2772,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : on parcourt la collection affichée par la liste ;</li>
-<li>ligne 9 : une option qui a comme attribut [value] l&#x27;une des valeurs de la propriété [MultipleChoiceListField] doit être sélectionnée. Pour cela, elle doit avoir l&#x27;attribut [selected=&quot;selected&quot;]. On utilise une expression LINQ qui permet de savoir si une valeur est contenue dans un tableau ;</li>
-<li>ligne 10 : génération de la balise &lt;option value=&quot;<em>valeur</em>&quot;&gt;<em>libellé</em>&lt;/option&gt; avec pour valeur [@item.Value] et pour libellé [@item.Label] ;</li>
+  <li>ligne 7 : on parcourt la collection affichée par la liste ;
+  </li>
+  <li>ligne 9 : une option qui a comme attribut [value] l&#x27;une des valeurs de la propriété [MultipleChoiceListField] doit être sélectionnée. Pour cela, elle doit avoir l&#x27;attribut [selected=&quot;selected&quot;]. On utilise une expression LINQ qui permet de savoir si une valeur est contenue dans un tableau ;
+  </li>
+  <li>ligne 10 : génération de la balise &lt;option value=&quot;<i>valeur</i>&quot;&gt;<i>libellé</i>&lt;/option&gt; avec pour valeur [@item.Value] et pour libellé [@item.Label] ;
+  </li>
 </ul>
+
 <p><a id="refheading58096676630786"></a></p>
 <h3 id="565-traitement-du-post-du-formulaire">5.6.5. Traitement du POST du formulaire</h3>
 <p>Nous avons vu que le formulaire allait être posté à l&#x27;action [Action08Post] :</p>
@@ -2626,21 +2801,30 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : le modèle de l&#x27;application est en paramètre ainsi que les valeurs postées. Celles-ci sont disponibles dans un type [FormCollection]. La valeur du paramètre [RadioButtonField] posté est obtenue par l&#x27;expression <strong>posted[&quot; RadioButtonField&quot;]</strong>. On obtient là une chaîne de caractères ou le pointeur <em>null</em>. Si on écrit  <strong>posted[&quot; CheckBoxesField&quot;]</strong>, on aura un tableau de chaînes de caractères ou le pointeur <em>null</em> ;</li>
-<li>pourquoi ne pas écrire :</li>
+  <li>ligne 3 : le modèle de l&#x27;application est en paramètre ainsi que les valeurs postées. Celles-ci sont disponibles dans un type [FormCollection]. La valeur du paramètre [RadioButtonField] posté est obtenue par l&#x27;expression <b>posted[&quot; RadioButtonField&quot;]</b>. On obtient là une chaîne de caractères ou le pointeur <i>null</i>. Si on écrit  <b>posted[&quot; CheckBoxesField&quot;]</b>, on aura un tableau de chaînes de caractères ou le pointeur <i>null</i> ;
+  </li>
+  <li>pourquoi ne pas écrire :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action08Post(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application, </span><span style="color:#2b91af">ViewModel08</span><span style="color:#000000"> posted)</span></span>
 </code></pre></div>
 
 <p>Il y a deux raisons :</p>
 <ul>
-<li>la première est que le framework va instancier le modèle [ViewModel08] avec le constructeur sans paramètres, ce qui aura pour effet de ne pas initialiser les collections du modèle ;</li>
-<li>le seconde est qu&#x27;on veut contrôler ce qui va dans le modèle. On sait qu&#x27;il y a quatre sources possibles pour le modèle, les paramètres d&#x27;un GET, d&#x27;un POST, de la route utilisée et ceux d&#x27;un fichier <em>uploadé</em>. Ici, on veut initialiser le modèle uniquement avec les valeurs postées.</li>
-<li>ligne 6 : on instancie le modèle en utilisant le bon constructeur ;</li>
-<li>ligne 7 : on l&#x27;initialise avec les valeurs postées. Après cette opération, le modèle correspond à la saisie qui a été faite par l&#x27;utilisateur ;</li>
-<li>ligne 8 : on affiche de nouveau le formulaire. L&#x27;utilisateur va le retrouver tel qu&#x27;il a été saisi.</li>
+  <li>la première est que le framework va instancier le modèle [ViewModel08] avec le constructeur sans paramètres, ce qui aura pour effet de ne pas initialiser les collections du modèle ;
+  </li>
+  <li>le seconde est qu&#x27;on veut contrôler ce qui va dans le modèle. On sait qu&#x27;il y a quatre sources possibles pour le modèle, les paramètres d&#x27;un GET, d&#x27;un POST, de la route utilisée et ceux d&#x27;un fichier <i>uploadé</i>. Ici, on veut initialiser le modèle uniquement avec les valeurs postées.
+  </li>
+  <li>ligne 6 : on instancie le modèle en utilisant le bon constructeur ;
+  </li>
+  <li>ligne 7 : on l&#x27;initialise avec les valeurs postées. Après cette opération, le modèle correspond à la saisie qui a été faite par l&#x27;utilisateur ;
+  </li>
+  <li>ligne 8 : on affiche de nouveau le formulaire. L&#x27;utilisateur va le retrouver tel qu&#x27;il a été saisi.
+  </li>
 </ul>
+
 <p>Voyons un exemple :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000643000004022911C022.png" style="display:inline-block; margin:4px;width:17.999cm;height:11.518cm;" class="odt-zoomable" data-zoom-src="images/1000000000000643000004022911C022.png" /></td></tr></table>
 
@@ -2652,14 +2836,20 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000627000001BB1D0EACEF.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.062cm;" class="odt-zoomable" data-zoom-src="images/1000000000000627000001BB1D0EACEF.png" /></td></tr></table>
 
 <ul>
-<li>en [1], aucune case à cocher ne l&#x27;a été ;</li>
-<li>en [2], le [POST] ramène une case cochée.</li>
+  <li>en [1], aucune case à cocher ne l&#x27;a été ;
+  </li>
+  <li>en [2], le [POST] ramène une case cochée.
+  </li>
 </ul>
+
 <p>L&#x27;explication est la suivante :</p>
 <ul>
-<li>parce qu&#x27;il n&#x27;y a aucune case cochée, le paramètre [CheckBoxesField] ne fait pas partie des valeurs postées ;</li>
-<li>l&#x27;action [Action08Post] procède de la façon suivante :</li>
+  <li>parce qu&#x27;il n&#x27;y a aucune case cochée, le paramètre [CheckBoxesField] ne fait pas partie des valeurs postées ;
+  </li>
+  <li>l&#x27;action [Action08Post] procède de la façon suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">    [</span><span style="color:#2b91af">HttpPost</span><span style="color:#000000">]</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">ViewResult</span><span style="color:#000000"> Action08Post(</span><span style="color:#2b91af">ApplicationModel</span><span style="color:#000000"> application, </span><span style="color:#2b91af">FormCollection</span><span style="color:#000000"> posted)</span></span>
@@ -2672,9 +2862,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : le modèle du formulaire est instancié. Or le constructeur utilisé affecte le tableau [&quot;2&quot;] à la propriété [CheckBoxesField] ;</li>
-<li>ligne 6 : les valeurs postées sont enregistrées dans le modèle. Comme  le paramètre [CheckBoxesField] ne fait pas partie des valeurs postées, la propriété de même nom n&#x27;est pas affectée. Elle reste donc avec sa valeur [&quot;2&quot;], ce qui fait qu&#x27;à l&#x27;affichage la case n° 2 est cochée alors qu&#x27;elle ne devrait pas l&#x27;être.</li>
+  <li>ligne 5 : le modèle du formulaire est instancié. Or le constructeur utilisé affecte le tableau [&quot;2&quot;] à la propriété [CheckBoxesField] ;
+  </li>
+  <li>ligne 6 : les valeurs postées sont enregistrées dans le modèle. Comme  le paramètre [CheckBoxesField] ne fait pas partie des valeurs postées, la propriété de même nom n&#x27;est pas affectée. Elle reste donc avec sa valeur [&quot;2&quot;], ce qui fait qu&#x27;à l&#x27;affichage la case n° 2 est cochée alors qu&#x27;elle ne devrait pas l&#x27;être.
+  </li>
 </ul>
+
 <p>Ce problème peut se régler de diverses façons. Nous choisissons de le régler dans le code de l&#x27;action [Action08Post] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">// Action08-POST</span>
@@ -2703,8 +2896,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 9-20 : on vérifie si certains paramètres ont été postés ou non. Si ce n&#x27;est pas le cas, on les initialise avec la valeur qui correspond à l&#x27;absence de saisie faite par l&#x27;utilisateur. Le test n&#x27;a pas été fait pour la liste déroulante qui elle, a toujours un élément sélectionné, ce qui n&#x27;est pas le cas pour les autres listes.</li>
+  <li>lignes 9-20 : on vérifie si certains paramètres ont été postés ou non. Si ce n&#x27;est pas le cas, on les initialise avec la valeur qui correspond à l&#x27;absence de saisie faite par l&#x27;utilisateur. Le test n&#x27;a pas été fait pour la liste déroulante qui elle, a toujours un élément sélectionné, ce qui n&#x27;est pas le cas pour les autres listes.
+  </li>
 </ul>
+
 <p>Le lecteur est invité à tester cette nouvelle version.</p>
 <p><a id="refheading58100676630786"></a></p>
 <h2 id="57-utilisation-de-methodes-specialisees-dans-la-generation-de-formulaire">5.7. Utilisation de méthodes spécialisées dans la génération de formulaire</h2>
@@ -2733,9 +2928,12 @@
 
 <p>Ce code présente deux inconvénients :</p>
 <ul>
-<li>le plus important est qu&#x27;on perd de vue la nature du composant, ici une liste déroulante, à cause de la complexité du code ;</li>
-<li>ligne 5 : si on se trompe dans le nom de la propriété du modèle à utiliser comme attribut [name], on ne s&#x27;en apercevra qu&#x27;à l&#x27;exécution.</li>
+  <li>le plus important est qu&#x27;on perd de vue la nature du composant, ici une liste déroulante, à cause de la complexité du code ;
+  </li>
+  <li>ligne 5 : si on se trompe dans le nom de la propriété du modèle à utiliser comme attribut [name], on ne s&#x27;en apercevra qu&#x27;à l&#x27;exécution.
+  </li>
 </ul>
+
 <p>ASP.NET MVC offre des méthodes spécialisées appelées [HTML Helpers] qui, comme leur nom l&#x27;indique, vise à faciliter la génération du HTML, notamment pour les formulaires. Avec ces classes, la liste <a id="dropdownlistfor"></a>déroulante précédente s&#x27;écrit comme suit :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#006400">&lt;!-- la liste déroulante --&gt;</span></span>
@@ -2760,24 +2958,34 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 4 : l&#x27;attribut [name] est correct ;</li>
-<li>lignes 4-6 : les options sont correctement générées et la bonne option a été sélectionnée.</li>
+  <li>ligne 4 : l&#x27;attribut [name] est correct ;
+  </li>
+  <li>lignes 4-6 : les options sont correctement générées et la bonne option a été sélectionnée.
+  </li>
 </ul>
+
 <p>Revenons au code qui a généré ces lignes HTML :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">@Html.DropDownListFor(m =&gt; m.DropDownListField, </span><span style="color:#0000ff">new</span><span style="color:#000000"> </span><span style="color:#2b91af">SelectList</span><span style="color:#000000">(@Model.DropDownListFieldItems, </span><span style="color:#a31515">&quot;Value&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Label&quot;</span><span style="color:#000000">))</span></span>
 </code></pre></div>
 
 <ul>
-<li>le premier paramètre est une fonction <em>lambda</em> (c&#x27;est son nom) où <strong>m</strong> représente le modèle de la vue et <strong>m.DropDowListField</strong> est une propriété de ce modèle. Le générateur de code HTML va utiliser le nom de cette propriété pour générer les attributs [id] et [name] du [select] qui va être généré. Si on utilise une propriété inexistante, on aura une erreur à la compilation et non plus à l&#x27;exécution. C&#x27;est une amélioration vis à vis de la solution précédente où les erreurs de nommage n&#x27;étaient détectées qu&#x27;à l&#x27;exécution ;</li>
-<li>le second paramètre sert à désigner la collection d&#x27;éléments qui va alimenter la liste déroulante. La classe [SelectList] permet de construire cette collection :<ul>
-<li>son premier paramètre est une collection quelconque d&#x27;éléments. Ici on a une collection de type [Item] ;</li>
-<li>son second paramètre est la propriété des éléments qui fournira la valeur de la balise &lt;option&gt;. Ici, c&#x27;est la propriété [Value] de la classe [Item] ;</li>
-<li>son troisième paramètre est la propriété des éléments qui fournira le libellé de la balise &lt;option&gt;. Ici, c&#x27;est la propriété [Label] de la classe [Item] ;</li>
+  <li>le premier paramètre est une fonction <i>lambda</i> (c&#x27;est son nom) où <b>m</b> représente le modèle de la vue et <b>m.DropDowListField</b> est une propriété de ce modèle. Le générateur de code HTML va utiliser le nom de cette propriété pour générer les attributs [id] et [name] du [select] qui va être généré. Si on utilise une propriété inexistante, on aura une erreur à la compilation et non plus à l&#x27;exécution. C&#x27;est une amélioration vis à vis de la solution précédente où les erreurs de nommage n&#x27;étaient détectées qu&#x27;à l&#x27;exécution ;
+  </li>
+  <li>le second paramètre sert à désigner la collection d&#x27;éléments qui va alimenter la liste déroulante. La classe [SelectList] permet de construire cette collection :
+    <ul>
+      <li>son premier paramètre est une collection quelconque d&#x27;éléments. Ici on a une collection de type [Item] ;
+      </li>
+      <li>son second paramètre est la propriété des éléments qui fournira la valeur de la balise &lt;option&gt;. Ici, c&#x27;est la propriété [Value] de la classe [Item] ;
+      </li>
+      <li>son troisième paramètre est la propriété des éléments qui fournira le libellé de la balise &lt;option&gt;. Ici, c&#x27;est la propriété [Label] de la classe [Item] ;
+      </li>
+    </ul>
+  </li>
+  <li>pour savoir quelle option doit être sélectionnée (attribut <i>selected</i>), le framework fait comme nous : il compare la valeur de l&#x27;option à la valeur actuelle de la propriété [DropDownListField].
+  </li>
 </ul>
-</li>
-<li>pour savoir quelle option doit être sélectionnée (attribut <em>selected</em>), le framework fait comme nous : il compare la valeur de l&#x27;option à la valeur actuelle de la propriété [DropDownListField].</li>
-</ul>
+
 <p>Voyons maintenant les autres méthodes que nous pouvons utiliser :</p>
 <p><u><strong>Boutons radio</strong></u></p>
 <p>Le nouveau code est le suivant :</p>
@@ -2813,9 +3021,12 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">@Html</span><span class="p">.</span><span class="n">RadioButtonFor</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">RadioButtonField</span><span class="p">,</span><span class="w"> </span><span class="n">@item</span><span class="p">.</span><span class="n">Value</span><span class="p">)</span>
 </code></pre></div>
 <ul>
-<li>le premier paramètre est la propriété du modèle qui va être associée au bouton radio (attribut [name]) ;</li>
-<li>le second paramètre est la valeur à attribuer au bouton radio (attribut [value]).</li>
+  <li>le premier paramètre est la propriété du modèle qui va être associée au bouton radio (attribut [name]) ;
+  </li>
+  <li>le second paramètre est la valeur à attribuer au bouton radio (attribut [value]).
+  </li>
 </ul>
+
 <p><u><strong>Cases à cocher</strong></u></p>
 <p>Le code évolue de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2841,11 +3052,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : la case à cocher avec l&#x27;attribut [value=&quot;true&quot;] ;</li>
-<li>ligne 2 : un champ caché (type=<em>hidden</em>) de même nom [Propriété] que la case à cocher avec l&#x27;attribut [value=&quot;false&quot;]. Pourquoi deux balises [input] de même nom ? Il y a deux cas :</li>
-<li>la case de la ligne 1 est cochée. Alors la chaîne de paramètres postée est <strong>Propriété=true&amp;Propriété=false</strong> (lignes 1 et 2). Comme la propriété  [Propriété] n&#x27;attend qu&#x27;une valeur, on peut penser que le framework affecte la valeur [true] à [Propriété]. Il lui suffirait de faire un OU logique entre les valeurs reçues pour y arriver ;</li>
-<li>la case de la ligne 1 n&#x27;est pas cochée. Alors la chaîne de paramètres postée est <strong>Propriété=false</strong> (ligne 2 uniquement) et alors la propriété  [Propriété] reçoit la valeur [false], ce qui est correct (la case n&#x27;a pas été cochée).</li>
+  <li>ligne 1 : la case à cocher avec l&#x27;attribut [value=&quot;true&quot;] ;
+  </li>
+  <li>ligne 2 : un champ caché (type=<i>hidden</i>) de même nom [Propriété] que la case à cocher avec l&#x27;attribut [value=&quot;false&quot;]. Pourquoi deux balises [input] de même nom ? Il y a deux cas :
+  </li>
+  <li>la case de la ligne 1 est cochée. Alors la chaîne de paramètres postée est <b>Propriété=true&amp;Propriété=false</b> (lignes 1 et 2). Comme la propriété  [Propriété] n&#x27;attend qu&#x27;une valeur, on peut penser que le framework affecte la valeur [true] à [Propriété]. Il lui suffirait de faire un OU logique entre les valeurs reçues pour y arriver ;
+  </li>
+  <li>la case de la ligne 1 n&#x27;est pas cochée. Alors la chaîne de paramètres postée est <b>Propriété=false</b> (ligne 2 uniquement) et alors la propriété  [Propriété] reçoit la valeur [false], ce qui est correct (la case n&#x27;a pas été cochée).
+  </li>
 </ul>
+
 <p><u><strong>Champ de saisie monoligne</strong></u></p>
 <p>Le nouveau code est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -2875,9 +3091,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">le premier paramètre précise la propriété du modèle associé au champ de saisie. Le nom de la propriété sera utilisé dans les attributs [name] et [id] de la balise &lt;input&gt; générée et sa valeur sera affectée à l&#x27;attribut [value] ;</span></li>
-<li><span style="color: #000000">le second paramètre est une classe anonyme précisant certains attributs de la balise HTML générée, ici l&#x27;attribut [size].</span></li>
+  <li><span style="color: #000000">le premier paramètre précise la propriété du modèle associé au champ de saisie. Le nom de la propriété sera utilisé dans les attributs [name] et [id] de la balise &lt;input&gt; générée et sa valeur sera affectée à l&#x27;attribut [value] ;</span>
+  </li>
+  <li><span style="color: #000000">le second paramètre est une classe anonyme précisant certains attributs de la balise HTML générée, ici l&#x27;attribut [size].</span>
+  </li>
 </ul>
+
 <p><u><strong>Champ de saisie d&#x27;un mot de passe</strong></u></p>
 <p>Le nouveau code est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3115,9 +3334,12 @@
 
 <p><span style="color: #000000">L&#x27;action [Action09Post] est identique à l&#x27;action [Action08Post] sauf sur deux points :</span></p>
 <ul>
-<li><span style="color: #000000">ligne 18 : la vue [Formulaire2] est utilisée à la place de la vue [Formulaire] ;</span></li>
-<li><span style="color: #000000">on n&#x27;a plus la gestion des cases à cocher qui ont été non cochées. C&#x27;est désormais géré correctement par la méthode [Html.CheckBoxFor].</span></li>
+  <li><span style="color: #000000">ligne 18 : la vue [Formulaire2] est utilisée à la place de la vue [Formulaire] ;</span>
+  </li>
+  <li><span style="color: #000000">on n&#x27;a plus la gestion des cases à cocher qui ont été non cochées. C&#x27;est désormais géré correctement par la méthode [Html.CheckBoxFor].</span>
+  </li>
 </ul>
+
 <p><a id="refheading58106676630786"></a></p>
 <h2 id="58-generation-dun-formulaire-a-partir-des-metadonnees-du-modele">5.8. Génération d&#x27;un formulaire à partir des métadonnées du modèle</h2>
 <p>Il existe d&#x27;autres méthodes que les précédentes pour générer un formulaire. L&#x27;une d&#x27;elles consiste à associer des informations à une rubrique du modèle qui vont permettre au framework MVC de savoir quelle balise de saisie il doit générer. On appelle ces informations des métadonnées.</p>
@@ -3331,10 +3553,14 @@
 
 <p><span style="color: #000000">Pour chacune des propriétés du modèle, nous utilisons la méthode :</span></p>
 <ul>
-<li><strong><span style="color: #000000">Html.LabelFor</span></strong><span style="color: #000000"> pour afficher la valeur de la métadonnée [DisplayName] de la propriété ;</span></li>
-<li><strong><span style="color: #000000">Html.EditorFor</span></strong><span style="color: #000000"> pour générer la balise HTML de saisie de la valeur de la propriété. Cette méthode va utiliser les métadonnées [DataType] et [UIHint] de la propriété ;</span></li>
-<li><strong><span style="color: #000000">Html.DisplayFor</span></strong><span style="color: #000000"> pour afficher la valeur de la propriété selon le format indiqué par la métadonnée [DataType].</span></li>
+  <li><b><span style="color: #000000">Html.LabelFor</span></b><span style="color: #000000"> pour afficher la valeur de la métadonnée [DisplayName] de la propriété ;</span>
+  </li>
+  <li><b><span style="color: #000000">Html.EditorFor</span></b><span style="color: #000000"> pour générer la balise HTML de saisie de la valeur de la propriété. Cette méthode va utiliser les métadonnées [DataType] et [UIHint] de la propriété ;</span>
+  </li>
+  <li><b><span style="color: #000000">Html.DisplayFor</span></b><span style="color: #000000"> pour afficher la valeur de la propriété selon le format indiqué par la métadonnée [DataType].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution avec le navigateur Chrome :</span></p>
 <p><img src="images/10000000000001B30000028D6245A650.png" style="width:8.05cm;height:12.09cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001B30000028D6245A650.png" /></p>
 <p><span style="color: #000000">Selon le navigateur utilisé, on peut avoir des pages différentes. En effet, la vue générée utilise les nouvelles balises amenées par la version 5 de HTML appelée HTML5. Tous les navigateurs ne supportent pas encore cette version. Ci-dessus, le navigateur Chrome la supporte en partie.</span></p>
@@ -3353,11 +3579,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : l&#x27;action [Action10Post] a pour modèle en entrée le formulaire posté ;</li>
-<li>ligne 5 : on récupère les erreurs de validation de ce formulaire ;</li>
-<li>ligne 6 : on prépare la réponse texte au client ;</li>
-<li>ligne 7 : on l&#x27;envoie.</li>
+  <li>ligne 3 : l&#x27;action [Action10Post] a pour modèle en entrée le formulaire posté ;
+  </li>
+  <li>ligne 5 : on récupère les erreurs de validation de ce formulaire ;
+  </li>
+  <li>ligne 6 : on prépare la réponse texte au client ;
+  </li>
+  <li>ligne 7 : on l&#x27;envoie.
+  </li>
 </ul>
+
 <p><span style="color: #000000">Examinons maintenant les propriétés du modèle [ViewModel10] une par une et voyons comment les métadonnées associées  influencent le HTML généré et la validation des champs de saisie.</span></p>
 <p><a id="refheading58110676630786"></a></p>
 <h3 id="582-propriete-text">5.8.2. Propriété [Text]</h3>
@@ -3393,8 +3624,10 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.LabelFor] a généré la balise &lt;<strong>label</strong>&gt; de la ligne 2. La valeur de l&#x27;attribut [for] est le nom de la propriété paramètre de la méthode [Html.LabelFor]</span></li>
+  <li><span style="color: #000000">la méthode [Html.LabelFor] a généré la balise &lt;<b>label</b>&gt; de la ligne 2. La valeur de l&#x27;attribut [for] est le nom de la propriété paramètre de la méthode [Html.LabelFor]</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">public</span> <span style="color:#0000ff">string</span> Text { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
 </code></pre></div>
@@ -3406,15 +3639,19 @@
 
 <p><span style="color: #000000">La méthode [Html.LabelFor] procède toujours ainsi. Nous ne reviendrons pas dessus pour les autres propriétés.</span></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3. On notera qu&#x27;elle a un attribut [class] qui associe la classe CSS [<em><span style="color: #2a00ff">text-box single-line</span></em>] à la balise. Les attributs [<strong>id</strong>] et [<strong>name</strong>] ont pour valeur le nom [<strong>Text</strong>] de la propriété paramètre de la méthode [Html.EditorFor]. L&#x27;attribut [<strong>type</strong>] a eu la valeur [text] à cause de la métadonnée </span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3. On notera qu&#x27;elle a un attribut [class] qui associe la classe CSS [<i><span style="color: #2a00ff">text-box single-line</span></i>] à la balise. Les attributs [<b>id</b>] et [<b>name</b>] ont pour valeur le nom [<b>Text</b>] de la propriété paramètre de la méthode [Html.EditorFor]. L&#x27;attribut [<b>type</b>] a eu la valeur [text] à cause de la métadonnée </span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Text)]</span>
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">la méthode [Html.DisplayFor] a généré le texte de la ligne 4. C&#x27;est la valeur de la propriété paramètre de la méthode [Html.DisplayFor ]. Cette méthode est influencée par la métadonnée</span></li>
+  <li><span style="color: #000000">la méthode [Html.DisplayFor] a généré le texte de la ligne 4. C&#x27;est la valeur de la propriété paramètre de la méthode [Html.DisplayFor ]. Cette méthode est influencée par la métadonnée</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Text)]</span>
 </code></pre></div>
@@ -3455,16 +3692,20 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>textarea</strong>&gt; de la ligne 3. On notera qu&#x27;elle a un attribut [class] qui associe la classe CSS [<em><span style="color: #2a00ff">text-box multi-line</span></em>] à la balise. Les attributs [<strong>id</strong>] et [<strong>name</strong>] ont pour valeur le nom [<strong>MultiLineText</strong>] de la propriété paramètre de la méthode [Html.EditorFor]. C&#x27;est toujours ainsi. Nous ne le mentionnerons plus. La balise générée est &lt;<strong>textarea</strong>&gt; à cause de la métadonnée </span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>textarea</b>&gt; de la ligne 3. On notera qu&#x27;elle a un attribut [class] qui associe la classe CSS [<i><span style="color: #2a00ff">text-box multi-line</span></i>] à la balise. Les attributs [<b>id</b>] et [<b>name</b>] ont pour valeur le nom [<b>MultiLineText</b>] de la propriété paramètre de la méthode [Html.EditorFor]. C&#x27;est toujours ainsi. Nous ne le mentionnerons plus. La balise générée est &lt;<b>textarea</b>&gt; à cause de la métadonnée </span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.MultilineText)]</span>
 </code></pre></div>
 
 <p><span style="color: #000000">qui précisait que la propriété était un texte multi-ligne.</span></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.DisplayFor] a généré le texte des lignes 4-5. C&#x27;est la valeur de la propriété paramètre de la méthode [Html.DisplayFor ].</span></li>
+  <li><span style="color: #000000">la méthode [Html.DisplayFor] a généré le texte des lignes 4-5. C&#x27;est la valeur de la propriété paramètre de la méthode [Html.DisplayFor ].</span>
+  </li>
 </ul>
+
 <p><a id="refheading58114676630786"></a></p>
 <h3 id="584-propriete-number">5.8.4. Propriété [Number]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
@@ -3496,9 +3737,12 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [number]. Apparemment simplement parce que la propriété a le type [int]. Les attributs [data-val], [data-val-number] et [data-val-required] sont des attributs non reconnus par HTML5. Ils sont utilisés par un framework Javascript de validation des données côté client ;</span></li>
-<li><span style="color: #000000">la méthode [Html.DisplayFor] a généré le texte de la ligne 4, la valeur de la propriété.</span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [number]. Apparemment simplement parce que la propriété a le type [int]. Les attributs [data-val], [data-val-number] et [data-val-required] sont des attributs non reconnus par HTML5. Ils sont utilisés par un framework Javascript de validation des données côté client ;</span>
+  </li>
+  <li><span style="color: #000000">la méthode [Html.DisplayFor] a généré le texte de la ligne 4, la valeur de la propriété.</span>
+  </li>
 </ul>
+
 <p><u><strong><span style="color: #000000">Validation</span></strong></u></p>
 <p><span style="color: #000000">Les attributs [data-x] influencent la validation des données côté client. Voici deux exemples :</span></p>
 <p><span style="color: #000000">On saisit un nombre erroné et on valide :</span></p>
@@ -3541,8 +3785,10 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [text]. Les autres attributs sont identiques à ceux générés pour la propriété [Number] précédente. La métadonnée :</span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [text]. Les autres attributs sont identiques à ceux générés pour la propriété [Number] précédente. La métadonnée :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">UIHint</span>(<span style="color:#a31515">&quot;Decimal&quot;</span>)]</span>
 </code></pre></div>
@@ -3582,8 +3828,10 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>tel</strong>]. Cette valeur a été générée à cause de la métadonnée :</span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [<b>tel</b>]. Cette valeur a été générée à cause de la métadonnée :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.PhoneNumber)]</span>
 </code></pre></div>
@@ -3623,16 +3871,20 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>date</strong>]. Cette valeur a été générée à cause de la métadonnée :</span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [<b>date</b>]. Cette valeur a été générée à cause de la métadonnée :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Date)]</span>
 </code></pre></div>
 
 <p><span style="color: #000000">Le type [<strong>date</strong>] pour une balise &lt;input&gt; est une nouveauté HTML5. Le navigateur Chrome la reconnaît et permet de saisir la date avec un calendrier. Par ailleurs, la date saisie est présentée au format [jj/mm/aaaa], ç-à-d que Chrome adapte le format de date à la [locale] du navigateur.</span></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.DisplayFor] a écrit elle aussi la date sous la forme [jj/mm/aaaa] toujours à cause de la présence de la métadonnée [Date].</span></li>
+  <li><span style="color: #000000">la méthode [Html.DisplayFor] a écrit elle aussi la date sous la forme [jj/mm/aaaa] toujours à cause de la présence de la métadonnée [Date].</span>
+  </li>
 </ul>
+
 <p><u><strong><span style="color: #000000">Validation</span></strong></u></p>
 <p><span style="color: #000000">Une date invalide est signalée côté client [1] empêchant le POST du formulaire au serveur.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F400000102E772925E.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.046cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F400000102E772925E.png" /></td></tr></table>
@@ -3670,16 +3922,20 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>time</strong>]. Cette valeur a été générée à cause de la métadonnée :</span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [<b>time</b>]. Cette valeur a été générée à cause de la métadonnée :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Time)]</span>
 </code></pre></div>
 
 <p><span style="color: #000000">Le type [<strong>time</strong>] pour une balise &lt;input&gt; est une nouveauté HTML5. Le navigateur Chrome la reconnaît et permet de saisir une heure sous la forme [hh:mm] ;</span></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.DisplayFor] a écrit elle aussi l&#x27;heure sous la forme [hh:mm] toujours à cause de la présence de la métadonnée [Time].</span></li>
+  <li><span style="color: #000000">la méthode [Html.DisplayFor] a écrit elle aussi l&#x27;heure sous la forme [hh:mm] toujours à cause de la présence de la métadonnée [Time].</span>
+  </li>
 </ul>
+
 <p><u><strong><span style="color: #000000">Validation</span></strong></u></p>
 <p><span style="color: #000000">Il n&#x27;est techniquement pas possible de saisir une heure invalide. L&#x27;absence d&#x27;heure est signalée côté serveur :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000194000000924A09FEBA.png" style="display:inline-block; margin:4px;width:7.481cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/1000000000000194000000924A09FEBA.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -3716,15 +3972,19 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>hidden</strong>], ç-à-d un champ caché (mais néanmoins posté). Cette valeur a été générée à cause de la métadonnée :</span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [<b>hidden</b>], ç-à-d un champ caché (mais néanmoins posté). Cette valeur a été générée à cause de la métadonnée :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">UIHint</span>(<span style="color:#a31515">&quot;HiddenInput&quot;</span>)]</span>
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">la méthode [Html.DisplayFor] a écrit elle la valeur du champ caché.</span></li>
+  <li><span style="color: #000000">la méthode [Html.DisplayFor] a écrit elle la valeur du champ caché.</span>
+  </li>
 </ul>
+
 <p><a id="refheading58126676630786"></a></p>
 <h3 id="5810-propriete-boolean">5.8.10. Propriété [Boolean]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
@@ -3756,15 +4016,19 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>checkbox</strong>], ç-à-d une case à cocher. Cette valeur a été générée parce que la propriété est booléenne :</span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [<b>checkbox</b>], ç-à-d une case à cocher. Cette valeur a été générée parce que la propriété est booléenne :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">public</span> <span style="color:#0000ff">bool</span> Boolean { <span style="color:#0000ff">get</span>; <span style="color:#0000ff">set</span>; }</span>
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">la méthode [Html.DisplayFor] a généré la ligne 4, également une case à cocher (attribut </span><em><span style="color: #000000">type</span></em><span style="color: #000000">) mais désactivée (attribut </span><em><span style="color: #000000">disabled</span></em><span style="color: #000000">).</span></li>
+  <li><span style="color: #000000">la méthode [Html.DisplayFor] a généré la ligne 4, également une case à cocher (attribut </span><i><span style="color: #000000">type</span></i><span style="color: #000000">) mais désactivée (attribut </span><i><span style="color: #000000">disabled</span></i><span style="color: #000000">).</span>
+  </li>
 </ul>
+
 <p><a id="refheading58128676630786"></a></p>
 <h3 id="5811-propriete-email">5.8.11. Propriété [Email]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
@@ -3797,16 +4061,20 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>email</strong>]. Ce type est nouveau dans HTML5. Ce type a été généré à cause de la métadonnée :</span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [<b>email</b>]. Ce type est nouveau dans HTML5. Ce type a été généré à cause de la métadonnée :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.EmailAddress)]</span>
 </code></pre></div>
 
 <p><span style="color: #000000">Chrome semble avoir traité ce type comme un type [text].</span></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.DisplayFor] a généré la ligne 4 : un lien vers l&#x27;adresse mail.</span></li>
+  <li><span style="color: #000000">la méthode [Html.DisplayFor] a généré la ligne 4 : un lien vers l&#x27;adresse mail.</span>
+  </li>
 </ul>
+
 <p><u><strong><span style="color: #000000">Validation</span></strong></u></p>
 <p><span style="color: #000000">Une adresse invalide est signalée côté client [1] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000030A000000C5072BB998.png" style="display:inline-block; margin:4px;width:10.292cm;height:2.607cm;" class="odt-zoomable" data-zoom-src="images/100000000000030A000000C5072BB998.png" /></td></tr></table>
@@ -3844,16 +4112,20 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>url</strong>]. Ce type est nouveau dans HTML5. Il a été généré à cause de la métadonnée :</span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [<b>url</b>]. Ce type est nouveau dans HTML5. Il a été généré à cause de la métadonnée :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Url)]</span>
 </code></pre></div>
 
 <p><span style="color: #000000">Chrome semble traiter ce type comme un type [text].</span></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.DisplayFor] a généré la ligne 4 : un lien vers l&#x27;URL.</span></li>
+  <li><span style="color: #000000">la méthode [Html.DisplayFor] a généré la ligne 4 : un lien vers l&#x27;URL.</span>
+  </li>
 </ul>
+
 <p><u><strong><span style="color: #000000">Validation</span></strong></u></p>
 <p><span style="color: #000000">Une URL invalide est signalée côté client [1] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000029F000000DBB4D46D37.png" style="display:inline-block; margin:4px;width:8.878cm;height:2.898cm;" class="odt-zoomable" data-zoom-src="images/100000000000029F000000DBB4D46D37.png" /></td></tr></table>
@@ -3891,15 +4163,19 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>password</strong>]. Ce type a été généré à cause de la métadonnée :</span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [<b>password</b>]. Ce type a été généré à cause de la métadonnée :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.Password)]</span>
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">la méthode [Html.DisplayFor] a généré la ligne 4.</span></li>
+  <li><span style="color: #000000">la méthode [Html.DisplayFor] a généré la ligne 4.</span>
+  </li>
 </ul>
+
 <p><a id="refheading58134676630786"></a></p>
 <h3 id="5814-propriete-currency">5.8.14. Propriété [Currency]</h3>
 <p><u><strong><span style="color: #000000">Définition</span></strong></u></p>
@@ -3932,13 +4208,15 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li>
-<p><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>text</strong>] ;</span></p>
-</li>
-<li>
-<p><span style="color: #000000">la méthode [Html.DisplayFor] a généré la ligne 4, un nombre à deux décimales avec un symbole monétaire. Ce format a été utilisé à cause de la métadonnée :</span></p>
-</li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [<b>text</b>] ;</span>
+  </li>
 </ul>
+
+<ul>
+  <li><span style="color: #000000">la méthode [Html.DisplayFor] a généré la ligne 4, un nombre à deux décimales avec un symbole monétaire. Ce format a été utilisé à cause de la métadonnée :</span>
+  </li>
+</ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">[</span><span style="color:#2b91af">DataType</span><span style="color:#000000">(</span><span style="color:#2b91af">DataType</span><span style="color:#000000">.Currency)]</span></span>
 </code></pre></div>
@@ -3979,8 +4257,10 @@
 
 <p><u><strong><span style="color: #000000">Commentaires</span></strong></u></p>
 <ul>
-<li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<strong>input</strong>&gt; de la ligne 3 avec un attribut [type] de type [<strong>text</strong>]. La méthode [Html.DisplayFor] a généré la ligne 4. On ne voit pas ici ce qu&#x27;apporte la métadonnée :</span></li>
+  <li><span style="color: #000000">la méthode [Html.EditorFor] a généré la balise &lt;<b>input</b>&gt; de la ligne 3 avec un attribut [type] de type [<b>text</b>]. La méthode [Html.DisplayFor] a généré la ligne 4. On ne voit pas ici ce qu&#x27;apporte la métadonnée :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">[<span style="color:#2b91af">DataType</span>(<span style="color:#2b91af">DataType</span>.<span style="color:#000000">CreditCard</span>)]</span>
 </code></pre></div>
@@ -3991,9 +4271,12 @@
 <h2 id="59-validation-dun-formulaire">5.9. Validation d&#x27;un formulaire</h2>
 <p><span style="color: #000000">Nous avons déjà rencontré le problème de la validation du modèle d&#x27;une action au paragraphe </span><span style="color: #000000"><a href="le-modele-dune-action.html#refheading258461901815618">4.5</a></span><span style="color: #000000"> et les paragraphes </span><span style="color: #000000">qui ont suivi</span><span style="color: #000000">. Nous revenons sur cette problématique dans le cadre d&#x27;un formulaire :</span></p>
 <ul>
-<li><span style="color: #000000">comment signaler les erreurs de saisie à l&#x27;utilisateur ;</span></li>
-<li><span style="color: #000000">faire les validations aussi bien côté client que côté serveur afin de signaler plus rapidement les erreurs à l&#x27;utilisateur.</span></li>
+  <li><span style="color: #000000">comment signaler les erreurs de saisie à l&#x27;utilisateur ;</span>
+  </li>
+  <li><span style="color: #000000">faire les validations aussi bien côté client que côté serveur afin de signaler plus rapidement les erreurs à l&#x27;utilisateur.</span>
+  </li>
 </ul>
+
 <p><a id="refheading58140676630786"></a></p>
 <h3 id="591-validation-cote-serveur">5.9.1. Validation côté serveur</h3>
 <p><span style="color: #000000">Considérons le modèle suivant :</span></p>
@@ -4171,14 +4454,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 12 : on référence la feuille de style [Site.css]. Elle contient par défaut des classes utilisées pour mettre en relief les erreurs de saisie du formulaire ;</span></li>
-<li><span style="color: #000000">lignes 18-25 :  un tableau à trois colonnes :</span><ul>
-<li><span style="color: #000000">la colonne 1 affiche du texte avec la méthode [Html.LabelFor],</span></li>
-<li><span style="color: #000000">la colonne 2 affiche la saisie avec la méthode [Html.EditorFor],</span></li>
-<li><span style="color: #000000">la colonne 3 affiche l&#x27;éventuelle erreur de saisie avec la méthode [Html.ValidationMessageFor] ;</span></li>
+  <li><span style="color: #000000">ligne 12 : on référence la feuille de style [Site.css]. Elle contient par défaut des classes utilisées pour mettre en relief les erreurs de saisie du formulaire ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 18-25 :  un tableau à trois colonnes :</span>
+    <ul>
+      <li><span style="color: #000000">la colonne 1 affiche du texte avec la méthode [Html.LabelFor],</span>
+      </li>
+      <li><span style="color: #000000">la colonne 2 affiche la saisie avec la méthode [Html.EditorFor],</span>
+      </li>
+      <li><span style="color: #000000">la colonne 3 affiche l&#x27;éventuelle erreur de saisie avec la méthode [Html.ValidationMessageFor] ;</span>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><span style="color: #000000">L&#x27;action [Action11Get] sert à afficher le formulaire :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">    <span style="color:#008000">// Action11-GET</span></span>
@@ -4200,8 +4489,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 3 : le modèle [ViewModel11] est créé puis initialisé avec les valeurs postées. Il peut alors se produire des erreurs. A chaque propriété erronée P du modèle est associé un message d&#x27;erreur. C&#x27;est ce message que permet d&#x27;obtenir la méthode [Html.ValidationMessageFor] du formulaire.</span></li>
+  <li><span style="color: #000000">ligne 3 : le modèle [ViewModel11] est créé puis initialisé avec les valeurs postées. Il peut alors se produire des erreurs. A chaque propriété erronée P du modèle est associé un message d&#x27;erreur. C&#x27;est ce message que permet d&#x27;obtenir la méthode [Html.ValidationMessageFor] du formulaire.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Voici un exemple d&#x27;exécution :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002260000020BB3CE3364.png" style="display:inline-block; margin:4px;width:8.44cm;height:8.02cm;" class="odt-zoomable" data-zoom-src="images/10000000000002260000020BB3CE3364.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000239000001F3AD309953.png" style="display:inline-block; margin:4px;width:8.729cm;height:7.661cm;" class="odt-zoomable" data-zoom-src="images/1000000000000239000001F3AD309953.png" /></td></tr></table>
 
@@ -4303,8 +4594,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 1-4 : la section [appSettings] doit être un enfant direct de la section [configuration] du fichier [Web.config] ;</span></li>
+  <li><span style="color: #000000">lignes 1-4 : la section [appSettings] doit être un enfant direct de la section [configuration] du fichier [Web.config] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La vue [Action12Get] est identique à la vue [Action11Get] précédente aux lignes 13-15 près. Celles-ci incluent dans la vue, les scripts Javascript nécessaires pour la validation côté client. Ces scripts sont trouvés dans le dossier [Scripts] du projet :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BE000001EE5E7BFA57.png" style="display:inline-block; margin:4px;width:5.9cm;height:6.535cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BE000001EE5E7BFA57.png" /></td></tr></table>
 
@@ -4346,14 +4639,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 3, on retrouve :</span><ul>
-<li><span style="color: #000000">le message d&#x27;erreur pour le cas où la saisie est manquante [data-val-required],</span></li>
-<li><span style="color: #000000">le message d&#x27;erreur pour le cas où la saisie est erronée [data-val-regex],</span></li>
-<li><span style="color: #000000">l&#x27;expression régulière pour la chaîne saisie [data-val-regex-pattern] ;</span></li>
+  <li><span style="color: #000000">ligne 3, on retrouve :</span>
+    <ul>
+      <li><span style="color: #000000">le message d&#x27;erreur pour le cas où la saisie est manquante [data-val-required],</span>
+      </li>
+      <li><span style="color: #000000">le message d&#x27;erreur pour le cas où la saisie est erronée [data-val-regex],</span>
+      </li>
+      <li><span style="color: #000000">l&#x27;expression régulière pour la chaîne saisie [data-val-regex-pattern] ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">ligne 4, d&#x27;autres attributs [data-x] utilisés pour afficher l&#x27;éventuel message d&#x27;erreur ;</span>
+  </li>
 </ul>
-</li>
-<li><span style="color: #000000">ligne 4, d&#x27;autres attributs [data-x] utilisés pour afficher l&#x27;éventuel message d&#x27;erreur ;</span></li>
-</ul>
+
 <p><span style="color: #000000">Les attributs [data-x] des balises générées sont exploités par le Javascript que nous avons embarqué dans la vue. Si celui-ci est absent, ces attributs sont tout simplement ignorés et on n&#x27;a alors pas de validation côté client. On fonctionne comme dans l&#x27;exemple précédent. D&#x27;où le terme [unobtrusive] pour cette technique.</span></p>
 <p><a id="refheading58158676630786"></a></p>
 <h2 id="510-gestion-des-liens-de-navigation-et-daction">5.10. Gestion des liens de navigation et d&#x27;action</h2>
@@ -4361,9 +4660,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000601000001EB7708E770.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.75cm;" class="odt-zoomable" data-zoom-src="images/1000000000000601000001EB7708E770.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1] et [2], on a deux liens de navigation ;</span></li>
-<li><span style="color: #000000">en [3], on a un lien d&#x27;action qui poste le formulaire. Il ne sert pas à naviguer.</span></li>
+  <li><span style="color: #000000">en [1] et [2], on a deux liens de navigation ;</span>
+  </li>
+  <li><span style="color: #000000">en [3], on a un lien d&#x27;action qui poste le formulaire. Il ne sert pas à naviguer.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La page 1 est générée par la vue [Action16Get.cshtml] suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">@{</span>
@@ -4402,15 +4704,24 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 22 : une information initialisée par l&#x27;action qui va délivrer la vue ;</span></li>
-<li><span style="color: #000000">lignes 23-28 : un formulaire ;</span></li>
-<li><span style="color: #000000">ligne 25 : un libellé pour le champ [data] ;</span></li>
-<li><span style="color: #000000">ligne 26 : une boîte de saisie nommée [data] ;</span></li>
-<li><span style="color: #000000">ligne 27 : un lien de type [submit]. Lors du clic dessus, la fonction Javascript [postForm] est exécutée (attribut <strong>href</strong>). Celle-ci est définie aux lignes 12-17 ;</span></li>
-<li><span style="color: #000000">ligne 14 : on récupère une référence sur le 1er formulaire du document, celui de la ligne 23 ;</span></li>
-<li><span style="color: #000000">ligne 16 : ce formulaire est posté. Au final, tout se passe comme si on avait cliqué sur un bouton de type [submit]. Le formulaire est posté au contrôleur et à l&#x27;action spécifiés ligne 23 ;</span></li>
-<li><span style="color: #000000">ligne 30 : un lien de navigation. Le code HTML généré est le suivant :</span></li>
+  <li><span style="color: #000000">ligne 22 : une information initialisée par l&#x27;action qui va délivrer la vue ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 23-28 : un formulaire ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 25 : un libellé pour le champ [data] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 26 : une boîte de saisie nommée [data] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 27 : un lien de type [submit]. Lors du clic dessus, la fonction Javascript [postForm] est exécutée (attribut <b>href</b>). Celle-ci est définie aux lignes 12-17 ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 14 : on récupère une référence sur le 1er formulaire du document, celui de la ligne 23 ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 16 : ce formulaire est posté. Au final, tout se passe comme si on avait cliqué sur un bouton de type [submit]. Le formulaire est posté au contrôleur et à l&#x27;action spécifiés ligne 23 ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 30 : un lien de navigation. Le code HTML généré est le suivant :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">    <span style="color:#008080">&lt;</span><span style="color:#3f7f7f">a</span> <span style="color:#7f007f">href</span>=<span style="font-style:italic;color:#2a00ff">&quot;/Second/Action17Get&quot;</span><span style="color:#008080">&gt;</span>Page 2<span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">a</span><span style="color:#008080">&gt;</span></span>
 </code></pre></div>
@@ -4467,12 +4778,18 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 6, l&#x27;action [Action16Get] génère la vue [Action16Get.cshtml], ç-à-d la page 1 de l&#x27;exemple. Cette vue a pour modèle le [ViewBag] (ligne 5) ;</span></li>
-<li><span style="color: #000000">ligne 19, l&#x27;action [Action17Get] génère la vue [Action17Get.cshtml], ç-à-d la page 2 de l&#x27;exemple. Cette vue a pour modèle le [ViewBag] (ligne 21) ;</span></li>
-<li><span style="color: #000000">ligne 11 : l&#x27;action [Action16Post] traite le POST du formulaire de la vue [Action16Get.cshtml]. Elle reçoit le paramètre nommé [data]. On se rappelle que c&#x27;est le nom du champ de saisie dans le formulaire ;</span></li>
-<li><span style="color: #000000">ligne 13 : une information est mise dans le [ViewBag] ;</span></li>
-<li><span style="color: #000000">ligne 14 : la vue [Action16Get.cshtml] est affichée.</span></li>
+  <li><span style="color: #000000">ligne 6, l&#x27;action [Action16Get] génère la vue [Action16Get.cshtml], ç-à-d la page 1 de l&#x27;exemple. Cette vue a pour modèle le [ViewBag] (ligne 5) ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 19, l&#x27;action [Action17Get] génère la vue [Action17Get.cshtml], ç-à-d la page 2 de l&#x27;exemple. Cette vue a pour modèle le [ViewBag] (ligne 21) ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : l&#x27;action [Action16Post] traite le POST du formulaire de la vue [Action16Get.cshtml]. Elle reçoit le paramètre nommé [data]. On se rappelle que c&#x27;est le nom du champ de saisie dans le formulaire ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 13 : une information est mise dans le [ViewBag] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 14 : la vue [Action16Get.cshtml] est affichée.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le lecteur est invité à tester cet exemple.</span></p>
 
 

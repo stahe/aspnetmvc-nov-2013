@@ -742,7 +742,7 @@
 <p><span style="color: #000000">Nous allons aborder ici le problème de l&#x27;internationalisation des vues. C&#x27;est un problème complexe dont on trouvera une bonne description dans l&#x27;article suivant de Scott Hanselman :</span></p>
 <p><span style="color: #000000">[</span><a href="http://www.hanselman.com/blog/GlobalizationInternationalizationAndLocalizationInASPNETMVC3JavaScriptAndJQueryPart1.aspx">http://www.hanselman.com/blog/GlobalizationInternationalizationAndLocalizationInASPNETMVC3JavaScriptAndJQueryPart1.aspx</a>]</p>
 <p><span style="color: #000000">Reprenons tout d&#x27;abord sa définition des différents termes liés à l&#x27;internationalisation des vues :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Internationalisation (i18n)</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">faire que l&#x27;application supporte différentes langues et locales</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Localisation (l10n)</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">faire que l&#x27;application supporte un couple langue / locale spécifique</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Globalisation</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">la combinaison de <i>Internationalisation</i> et <i>Localisation</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Langue</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">langue parlée – désignée par un code ISO (fr : français, es : espagnol, en : anglais, ...)</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Locale</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">une variante de la langue – désignée également par un code ISO (en_GB : anglais de Grande-Bretagne, en_US : anglais des Etats-Unis, ...)</p></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Internationalisation (i18n)</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">faire que l&#x27;application supporte différentes langues et locales</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Localisation (l10n)</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">faire que l&#x27;application supporte un couple langue / locale spécifique</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Globalisation</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">la combinaison de <i>Internationalisation</i> et <i>Localisation</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Langue</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">langue parlée – désignée par un code ISO (fr : français, es : espagnol, en : anglais, ...)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Locale</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">une variante de la langue – désignée également par un code ISO (en_GB : anglais de Grande-Bretagne, en_US : anglais des Etats-Unis, ...)</div></td></tr></table>
 
 <p><span style="color: #000000">Abordons le problème par un premier exemple.</span></p>
 <p><a id="refheading543032071525573"></a></p>
@@ -790,8 +790,10 @@
 
 <p><strong>Note</strong> : ligne 5, adaptez la version de jQuery à celle de votre version de Visual Studio.</p>
 <ul>
-<li>ligne 9, nous avons ajouté un script [<a id="myscripts-js"></a>myscripts.js]. Celui-ci est le suivant :</li>
+  <li>ligne 9, nous avons ajouté un script [<a id="myscripts-js"></a>myscripts.js]. Celui-ci est le suivant :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001CD00000248A32E1E58.png" style="display:inline-block; margin:4px;width:6.1cm;height:7.726cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CD00000248A32E1E58.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
@@ -828,19 +830,28 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059D0000013BBF15C1D3.png" style="display:inline-block; margin:4px;width:17.999cm;height:3.946cm;" class="odt-zoomable" data-zoom-src="images/100000000000059D0000013BBF15C1D3.png" /></td></tr></table>
 
 <ul>
-<li>en [1], gérez les paquetages [NuGet] du projet [Exemple-03] ;</li>
-<li>en [2], consultez les paquetages en ligne ;</li>
-<li>en [3], tapez le terme [globalization] ;</li>
-<li>en [4], installez le paquetage [Globalize] du projet JQuery.</li>
+  <li>en [1], gérez les paquetages [NuGet] du projet [Exemple-03] ;
+  </li>
+  <li>en [2], consultez les paquetages en ligne ;
+  </li>
+  <li>en [3], tapez le terme [globalization] ;
+  </li>
+  <li>en [4], installez le paquetage [Globalize] du projet JQuery.
+  </li>
 </ul>
+
 <p>Une fois le paquetage [Globalize] installé, une nouvelle branche apparaît dans le dossier [Scripts] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000584000001C13A93CAC2.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.724cm;" class="odt-zoomable" data-zoom-src="images/1000000000000584000001C13A93CAC2.png" /></td></tr></table>
 
 <ul>
-<li>en [1], un dossier [globalize] a été créé avec le script principal [globalize.js] ;</li>
-<li>en [2], le script principal [globalize.js] est complété par des scripts spécifiques à une langue et une locale ;</li>
-<li>en [3], les scripts spécifiques à la langue française avec les locales (variantes) belges (BE), canadiennes (CA), françaises (FR), suisses (CH), luxembourgeoises (LU), Monégasque (MC).</li>
+  <li>en [1], un dossier [globalize] a été créé avec le script principal [globalize.js] ;
+  </li>
+  <li>en [2], le script principal [globalize.js] est complété par des scripts spécifiques à une langue et une locale ;
+  </li>
+  <li>en [3], les scripts spécifiques à la langue française avec les locales (variantes) belges (BE), canadiennes (CA), françaises (FR), suisses (CH), luxembourgeoises (LU), Monégasque (MC).
+  </li>
 </ul>
+
 <p>Le script [globalize.js] et le script de notre culture [globalize.culture.fr-FR.js] doivent faire partie de la liste des scripts inclus dans notre page [Action13Get.cshtml] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">head</span><span style="color:#0000ff">&gt;</span></span>
@@ -854,10 +865,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : le script [globalize] ;</li>
-<li>ligne 6 : le script [globalize.culture.fr-FR.js] ;</li>
-<li>ligne 7 : le script [myscripts.js] ;</li>
+  <li>ligne 5 : le script [globalize] ;
+  </li>
+  <li>ligne 6 : le script [globalize.culture.fr-FR.js] ;
+  </li>
+  <li>ligne 7 : le script [myscripts.js] ;
+  </li>
 </ul>
+
 <p>Revenons sur ce dernier script :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
 <span class="odt-code-line">// http://blog.instance-factory.com/?p=268</span>
@@ -877,9 +892,12 @@
 
 <p>Les lignes 10-13 fixent la culture côté client à [fr-FR] :</p>
 <ul>
-<li>ligne 10 : la fonction JQuery [ready] est exécutée lorsque le document dans lequel se trouve le script a été entièrement chargé par le navigateur ;</li>
-<li>lignes 11-12 : on fixe la culture côté client à [fr-FR]. Pour cela, il faut que le fichier [globalize.culture.fr-FR.js] soit inclus dans la liste des scripts Javascript associés au document.</li>
+  <li>ligne 10 : la fonction JQuery [ready] est exécutée lorsque le document dans lequel se trouve le script a été entièrement chargé par le navigateur ;
+  </li>
+  <li>lignes 11-12 : on fixe la culture côté client à [fr-FR]. Pour cela, il faut que le fichier [globalize.culture.fr-FR.js] soit inclus dans la liste des scripts Javascript associés au document.
+  </li>
 </ul>
+
 <p>Maintenant, nous pouvons tester la nouvelle application :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A70000005CF277001E.png" style="display:inline-block; margin:4px;width:7.83cm;height:1.7cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A70000005CF277001E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -904,9 +922,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C20000004D3A845F11.png" style="display:inline-block; margin:4px;width:3.59cm;height:1.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C20000004D3A845F11.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li><span style="color: #000000">[I18NController] sera la classe mère de tous les contrôleurs utilisant l&#x27;internationalisation ;</span></li>
-<li><span style="color: #000000">[SecondController] est un contrôleur exemple dérivé de [I18NController].</span></li>
+  <li><span style="color: #000000">[I18NController] sera la classe mère de tous les contrôleurs utilisant l&#x27;internationalisation ;</span>
+  </li>
+  <li><span style="color: #000000">[SecondController] est un contrôleur exemple dérivé de [I18NController].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le code du contrôleur [I18NController] est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Threading;</span></span>
@@ -955,21 +976,34 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 7 : [I18NController] dérive de la classe [Controller] ;</span></li>
-<li><span style="color: #000000">ligne 7 : la classe est déclarée [abstract] pour empêcher son intanciation directe : elle ne peut qu&#x27;être dérivée pour être utilisée ;</span></li>
-<li><span style="color: #000000">ligne 9 : le constructeur de la classe – sera exécuté à chaque instanciation d&#x27;un contrôleur dérivé de [I18NController] ;</span></li>
-<li><span style="color: #000000">ligne 12 : on récupère le contexte de la requête HTTP en cours de traitement par le contrôleur ;</span></li>
-<li><span style="color: #000000">ligne 15 : on fait l&#x27;hypothèse que la langue est fixée par un paramètre [lang] qu&#x27;on peut trouver à différents endroits. On cherche dans l&#x27;ordre :</span><ul>
-<li><span style="color: #000000">ligne 15 : dans les paramètres de l&#x27;URL [?lang=en-US],</span></li>
-<li><span style="color: #000000">ligne 19 : dans les paramètres postés [lang=de],</span></li>
-<li><span style="color: #000000">ligne 24 : dans la session de l&#x27;utilisateur,</span></li>
-<li><span style="color: #000000">ligne 29 : dans les préférences de langue envoyées par le client HTTP,</span></li>
-<li><span style="color: #000000">ligne 26 : si on n&#x27;a rien trouvé, on fixe la culture à [fr-FR] ;</span></li>
+  <li><span style="color: #000000">ligne 7 : [I18NController] dérive de la classe [Controller] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : la classe est déclarée [abstract] pour empêcher son intanciation directe : elle ne peut qu&#x27;être dérivée pour être utilisée ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 : le constructeur de la classe – sera exécuté à chaque instanciation d&#x27;un contrôleur dérivé de [I18NController] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 12 : on récupère le contexte de la requête HTTP en cours de traitement par le contrôleur ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 15 : on fait l&#x27;hypothèse que la langue est fixée par un paramètre [lang] qu&#x27;on peut trouver à différents endroits. On cherche dans l&#x27;ordre :</span>
+    <ul>
+      <li><span style="color: #000000">ligne 15 : dans les paramètres de l&#x27;URL [?lang=en-US],</span>
+      </li>
+      <li><span style="color: #000000">ligne 19 : dans les paramètres postés [lang=de],</span>
+      </li>
+      <li><span style="color: #000000">ligne 24 : dans la session de l&#x27;utilisateur,</span>
+      </li>
+      <li><span style="color: #000000">ligne 29 : dans les préférences de langue envoyées par le client HTTP,</span>
+      </li>
+      <li><span style="color: #000000">ligne 26 : si on n&#x27;a rien trouvé, on fixe la culture à [fr-FR] ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">ligne 37 : on mémorise la culture dans la session. C&#x27;est là qu&#x27;elle sera retrouvée lors des requêtes suivantes. L&#x27;utilisateur pourra la modifier en la mettant dans les paramètres d&#x27;une commande GET ou POST ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 39-40 : on fixe la culture de la vue qui sera affichée à l&#x27;issue du traitement de la requête courante.</span>
+  </li>
 </ul>
-</li>
-<li><span style="color: #000000">ligne 37 : on mémorise la culture dans la session. C&#x27;est là qu&#x27;elle sera retrouvée lors des requêtes suivantes. L&#x27;utilisateur pourra la modifier en la mettant dans les paramètres d&#x27;une commande GET ou POST ;</span></li>
-<li><span style="color: #000000">lignes 39-40 : on fixe la culture de la vue qui sera affichée à l&#x27;issue du traitement de la requête courante.</span></li>
-</ul>
+
 <p><span style="color: #000000">Le contrôleur [SecondController] sera le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#0000ff">using</span><span style="color:#000000"> Exemple_03.Models;</span></span>
@@ -998,10 +1032,14 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 7 : [SecondController] dérive de [I18NController]. Ainsi est-on assuré que la culture de la vue à afficher aura été initialisée ;</span></li>
-<li><span style="color: #000000">ligne 13 : on utilise le modèle de vue [ViewModel14] que nous allons présenter ;</span></li>
-<li><span style="color: #000000">lignes 13 et 20 : la vue [Action14Get.cshtml] assure l&#x27;affichage du formulaire.</span></li>
+  <li><span style="color: #000000">ligne 7 : [SecondController] dérive de [I18NController]. Ainsi est-on assuré que la culture de la vue à afficher aura été initialisée ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 13 : on utilise le modèle de vue [ViewModel14] que nous allons présenter ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 13 et 20 : la vue [Action14Get.cshtml] assure l&#x27;affichage du formulaire.</span>
+  </li>
 </ul>
+
 <p><a id="refheading58148676630786"></a></p>
 <h2 id="63-internationaliser-le-modele-de-vue-viewmodel14">6.3. Internationaliser le modèle de vue [ViewModel14]</h2>
 <p><span style="color: #000000">Le modèle de vue [ViewModel14] est le suivant :</span></p>
@@ -1125,10 +1163,14 @@
 
 <p><span style="color: #000000">Nous avons créé ici trois fichiers de ressources :</span></p>
 <ul>
-<li><span style="color: #000000">[MyResources] : ressource par défaut lorsqu&#x27;il n&#x27;y a pas de ressource pour la locale courante ;</span></li>
-<li><span style="color: #000000">[MyResources.fr-FR] : ressource pour la locale [fr-FR] ;</span></li>
-<li><span style="color: #000000">[MyResources.en-US] : ressource pour la locale [en-US] ;</span></li>
+  <li><span style="color: #000000">[MyResources] : ressource par défaut lorsqu&#x27;il n&#x27;y a pas de ressource pour la locale courante ;</span>
+  </li>
+  <li><span style="color: #000000">[MyResources.fr-FR] : ressource pour la locale [fr-FR] ;</span>
+  </li>
+  <li><span style="color: #000000">[MyResources.en-US] : ressource pour la locale [en-US] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Pour créer un fichier de ressources on procède ainsi [1, 2, 3] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AE00000383A258F38F.png" style="display:inline-block; margin:4px;width:17.999cm;height:11.128cm;" class="odt-zoomable" data-zoom-src="images/10000000000005AE00000383A258F38F.png" /></td></tr></table>
 
@@ -1143,9 +1185,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">[ErrorMessageResourceType] : désigne le fichier des ressources. Le paramètre du [typeof] est le nom du fichier. Celui-ci est transformé en classe par le processus de compilation et son binaire inclus dans l&#x27;assembly du projet. Donc au final [MyResources] est le nom de la classe des ressources ;</span></li>
-<li><span style="color: #000000">[ErrorMessageResourceName = <span style="color: #a31515">&quot;infoRequise&quot;</span>] : désigne une clé dans le fichier des ressources. Au final, la ligne signifie que le message d&#x27;erreur à afficher est la valeur du fichier [MyResources] associée à la clé [<span style="color: #a31515">infoRequise</span>].</span></li>
+  <li><span style="color: #000000">[ErrorMessageResourceType] : désigne le fichier des ressources. Le paramètre du [typeof] est le nom du fichier. Celui-ci est transformé en classe par le processus de compilation et son binaire inclus dans l&#x27;assembly du projet. Donc au final [MyResources] est le nom de la classe des ressources ;</span>
+  </li>
+  <li><span style="color: #000000">[ErrorMessageResourceName = <span style="color: #a31515">&quot;infoRequise&quot;</span>] : désigne une clé dans le fichier des ressources. Au final, la ligne signifie que le message d&#x27;erreur à afficher est la valeur du fichier [MyResources] associée à la clé [<span style="color: #a31515">infoRequise</span>].</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Pour créer la clé [<span style="color: #a31515">infoRequise</span>] et la valeur associée dans le fichier [MyResources] on procède comme suit :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000045E000001151F627ABE.png" style="display:inline-block; margin:4px;width:14.79cm;height:3.665cm;" class="odt-zoomable" data-zoom-src="images/100000000000045E000001151F627ABE.png" /></td></tr></table>
 
@@ -1188,9 +1233,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 1 : l&#x27;espace de noms de la classe ;</span></li>
-<li><span style="color: #000000">ligne 11 : la clé [infoRequise] est devenue une propriété statique de la classe [MyResources]. Elle est accessible via la notation [MyResources.infoRequise]. Par ailleurs, on notera que cette propriété est de portée [public]. Sans cela, elle ne serait pas accessible. Il est bon de se le rappeler car malheureusement la portée par défaut est [internal] et cela est cause d&#x27;erreurs difficiles à comprendre lorsqu&#x27;on oublie de changer cette portée.</span></li>
+  <li><span style="color: #000000">ligne 1 : l&#x27;espace de noms de la classe ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : la clé [infoRequise] est devenue une propriété statique de la classe [MyResources]. Elle est accessible via la notation [MyResources.infoRequise]. Par ailleurs, on notera que cette propriété est de portée [public]. Sans cela, elle ne serait pas accessible. Il est bon de se le rappeler car malheureusement la portée par défaut est [internal] et cela est cause d&#x27;erreurs difficiles à comprendre lorsqu&#x27;on oublie de changer cette portée.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Pourquoi maintenant, trois fichiers de ressources ?</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000BA0000003919A6C624.png" style="display:inline-block; margin:4px;width:3.44cm;height:1.05cm;" class="odt-zoomable" data-zoom-src="images/10000000000000BA0000003919A6C624.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1225,10 +1273,14 @@
 
 <p><span style="color: #000000">La ligne 7 montre comment récupérer un message du fichier de ressources [MyResources]. Ici on veut récupérer le message associé à la clé [infoIncorrecte] et ceci dans la culture du moment :</span></p>
 <ul>
-<li><span style="color: #000000"><strong>MyResources.ResourceManager.GetObject(&quot;infoIncorrecte&quot;, new CultureInfo(&quot;en-US&quot;))</strong> : obtient l&#x27;objet associé à la clé [infoIncorrecte] dans le fichier de ressources [MyResources.en-US.resx] ;</span></li>
-<li><span style="color: #000000">nous avons vu que le contrôleur [I18NController] mettait la culture courante en session associée à la clé [lang]. La culture courante peut donc être récupérée par <strong>System.Web.HttpContext.Current.Session[&quot;lang&quot;] as string</strong> ;</span></li>
-<li><span style="color: #000000">la ressource est récupérée avec le type [object]. Pour avoir le message d&#x27;erreur, on lui applique la méthode [ToString].</span></li>
+  <li><span style="color: #000000"><b>MyResources.ResourceManager.GetObject(&quot;infoIncorrecte&quot;, new CultureInfo(&quot;en-US&quot;))</b> : obtient l&#x27;objet associé à la clé [infoIncorrecte] dans le fichier de ressources [MyResources.en-US.resx] ;</span>
+  </li>
+  <li><span style="color: #000000">nous avons vu que le contrôleur [I18NController] mettait la culture courante en session associée à la clé [lang]. La culture courante peut donc être récupérée par <b>System.Web.HttpContext.Current.Session[&quot;lang&quot;] as string</b> ;</span>
+  </li>
+  <li><span style="color: #000000">la ressource est récupérée avec le type [object]. Pour avoir le message d&#x27;erreur, on lui applique la méthode [ToString].</span>
+  </li>
 </ul>
+
 <p><a id="refheading58150676630786"></a></p>
 <h2 id="64-internationaliser-la-vue-action14getcshtml">6.4. Internationaliser la vue [Action14Get.cshtml]</h2>
 <p><span style="color: #000000">Nous faisons évoluer la vue d&#x27;affichage du formulaire de la façon suivante :</span></p>
@@ -1315,8 +1367,10 @@
 
 <p><span style="color: #000000">Maintenant, la culture n&#x27;est plus seulement [fr-FR], elle varie. Aussi ces lignes sont-elles désormais générées par la vue [Action14Get] elle-même aux lignes 21-26. Ces six lignes seront incluses dans la page HTML envoyée au client. </span></p>
 <ul>
-<li><span style="color: #000000">ligne 23 : la variable Javascript [culture] est initialisée avec la culture courante du thread de la requête en cours de traitement. On se souvient peut être que celle-ci a été initialisée par le constructeur de la classe [I18NController] :</span></li>
+  <li><span style="color: #000000">ligne 23 : la variable Javascript [culture] est initialisée avec la culture courante du thread de la requête en cours de traitement. On se souvient peut être que celle-ci a été initialisée par le constructeur de la classe [I18NController] :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line">      <span style="color:#008000">// on met la langue en session</span></span>
 <span class="odt-code-line"><span style="color:#000000">      httpContext.Session[</span><span style="color:#a31515">&quot;lang&quot;</span><span style="color:#000000">] = langue;</span></span>
@@ -1354,9 +1408,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014B000000AD2CD06CBB.png" style="display:inline-block; margin:4px;width:4.38cm;height:2.29cm;" class="odt-zoomable" data-zoom-src="images/100000000000014B000000AD2CD06CBB.png" /></td></tr></table>
 
 <ul>
-<li>ligne 2 : le formulaire est posté à l&#x27;action [Lang] du contrôleur [Second]. Pour l&#x27;instant on ne voit aucune valeur qui pourrait être postée ;</li>
-<li>lignes 6 et 7 : un clic sur les liens provoque l&#x27;exécution de la fonction Javascript [postForm]. Où se trouve cette fonction ? Dans le script [myscripts2.js] référencé ligne 20 de la vue :</li>
+  <li>ligne 2 : le formulaire est posté à l&#x27;action [Lang] du contrôleur [Second]. Pour l&#x27;instant on ne voit aucune valeur qui pourrait être postée ;
+  </li>
+  <li>lignes 6 et 7 : un clic sur les liens provoque l&#x27;exécution de la fonction Javascript [postForm]. Où se trouve cette fonction ? Dans le script [myscripts2.js] référencé ligne 20 de la vue :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001B10000027B2ED6BE37.png" style="display:inline-block; margin:4px;width:5.729cm;height:8.401cm;" class="odt-zoomable" data-zoom-src="images/10000000000001B10000027B2ED6BE37.png" /></td></tr></table>
 
 <p>Son contenu est le suivant :</p>
@@ -1405,30 +1462,40 @@
 
 <p>Les lignes 22-40 sont celles déjà présentes dans le script [myscripts.js] utilisé dans l&#x27;exemple précédent. Nous ne revenons pas dessus. La fonction [postForm] exécutée lors du clic sur les liens des langues est aux lignes 1-20 :</p>
 <ul>
-<li>ligne 1 : la fonction admet deux paramètres, [lang] qui est la culture choisie par l&#x27;utilisateur et [url] qui est l&#x27;URL vers laquelle doit être redirigé le navigateur client une fois le changement de culture opéré. Ces deux paramètres sont précisés à l&#x27;appel :</li>
+  <li>ligne 1 : la fonction admet deux paramètres, [lang] qui est la culture choisie par l&#x27;utilisateur et [url] qui est l&#x27;URL vers laquelle doit être redirigé le navigateur client une fois le changement de culture opéré. Ces deux paramètres sont précisés à l&#x27;appel :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;&lt;</span><span style="color:#800000">a</span><span style="color:#000000"> </span><span style="color:#ff0000">href</span><span style="color:#0000ff">=&quot;javascript:postForm(&#x27;fr-FR&#x27;,&#x27;/Second/Action14Get&#x27;)&quot;&gt;</span><span style="color:#000000">Français</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">a</span><span style="color:#0000ff">&gt;&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">&lt;</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;&lt;</span><span style="color:#800000">a</span><span style="color:#000000"> </span><span style="color:#ff0000">href</span><span style="color:#0000ff">=&quot;javascript:postForm(&#x27;en-US&#x27;,&#x27;/Second/Action14Get&#x27;)&quot;&gt;</span><span style="color:#000000">English</span><span style="color:#0000ff">&lt;/</span><span style="color:#800000">a</span><span style="color:#0000ff">&gt;&lt;/</span><span style="color:#800000">td</span><span style="color:#0000ff">&gt;</span></span>
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : on récupère une référence sur le deuxième formulaire du document ;</li>
-<li>lignes 5-8 : on crée par programmation la balise </li>
+  <li>ligne 3 : on récupère une référence sur le deuxième formulaire du document ;
+  </li>
+  <li>lignes 5-8 : on crée par programmation la balise 
+  </li>
 </ul>
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;xx-XX&quot;</span><span class="p">/&gt;</span>
 </code></pre></div>
 <p>où [xx-XX] est la valeur du paramètre [lang] de la fonction ;</p>
 <ul>
-<li>ligne 10 : toujours par programmation, on ajoute cette balise au second formulaire. Au final, tout se passe comme si cette balise était présente depuis le début dans le second formulaire. Sa valeur sera donc postée. C&#x27;est ce qu&#x27;on voulait ;</li>
-<li>lignes 11-17 : on répète le même mécanisme pour une balise </li>
+  <li>ligne 10 : toujours par programmation, on ajoute cette balise au second formulaire. Au final, tout se passe comme si cette balise était présente depuis le début dans le second formulaire. Sa valeur sera donc postée. C&#x27;est ce qu&#x27;on voulait ;
+  </li>
+  <li>lignes 11-17 : on répète le même mécanisme pour une balise 
+  </li>
 </ul>
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;url&quot;</span><span class="p">/&gt;</span>
 </code></pre></div>
 <p>où [url] est la valeur du paramètre [url] de la fonction ;</p>
 <ul>
-<li>ligne 19 : le second formulaire est maintenant posté. A quelle URL ?</li>
+  <li>ligne 19 : le second formulaire est maintenant posté. A quelle URL ?
+  </li>
 </ul>
+
 <p>Il faut revenir au code du second formulaire dans la page [Action14Get.cshtml] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000">@</span><span style="color:#0000ff">using</span><span style="color:#000000"> (Html.BeginForm(</span><span style="color:#a31515">&quot;Lang&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;Second&quot;</span><span style="color:#000000">))</span></span>
@@ -1467,10 +1534,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 18 : l&#x27;action ne répond qu&#x27;à un [POST] ;</li>
-<li>ligne 19 : elle ne récupère que le paramètre nommé [url] ;</li>
-<li>ligne 22 : elle répond au client de se rediriger vers cette URL.</li>
+  <li>ligne 18 : l&#x27;action ne répond qu&#x27;à un [POST] ;
+  </li>
+  <li>ligne 19 : elle ne récupère que le paramètre nommé [url] ;
+  </li>
+  <li>ligne 22 : elle répond au client de se rediriger vers cette URL.
+  </li>
 </ul>
+
 <p>Mais qu&#x27;est devenu le paramètre nommé [lang] ? Il faut maintenant se rappeler que le contrôleur [SecondController] dérive de la classe [I18NController] (ligne 1 ci-dessous). C&#x27;est ce contrôleur qui gère le paramètre [lang] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span style="color:#000000"> </span><span style="color:#000000"> </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">abstract</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">I18NController</span><span style="color:#000000"> : </span><span style="color:#2b91af">Controller</span></span>
@@ -1653,13 +1724,17 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000625000003765AA02931.png" style="display:inline-block; margin:4px;width:17.999cm;height:10.137cm;" class="odt-zoomable" data-zoom-src="images/1000000000000625000003765AA02931.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], le formulaire en français, en [2], le formulaire en anglais.</span></li>
+  <li><span style="color: #000000">en [1], le formulaire en français, en [2], le formulaire en anglais.</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051200000093F1A7932A.png" style="display:inline-block; margin:4px;width:17.171cm;height:1.946cm;" class="odt-zoomable" data-zoom-src="images/100000000000051200000093F1A7932A.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [3], côté client, les messages d&#x27;erreur sont désormais en anglais.</span></li>
+  <li><span style="color: #000000">en [3], côté client, les messages d&#x27;erreur sont désormais en anglais.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Si on regarde le code source de la page, on voit que ces messages d&#x27;erreur ont été embarqués dans la page, donc générés par la vue ASP.NET [Action14Get] et son modèle [ViewModel14] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line">        <span style="color:#008080">&lt;</span><span style="color:#3f7f7f">tr</span><span style="color:#008080">&gt;</span></span>
@@ -1697,9 +1772,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 6 : on récupère la culture dans la session ;</span></li>
-<li><span style="color: #000000">ligne 11 : on fixe l&#x27;attribut [lang] de la page avec cette valeur.</span></li>
+  <li><span style="color: #000000">ligne 6 : on récupère la culture dans la session ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : on fixe l&#x27;attribut [lang] de la page avec cette valeur.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Les tests montrent que le calendrier reste en français même lorsque la page est par ailleurs affichée en anglais. Il y a également un problème avec l&#x27;autre date du formulaire :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034A000001B65CBFA548.png" style="display:inline-block; margin:4px;width:11.139cm;height:5.794cm;" class="odt-zoomable" data-zoom-src="images/100000000000034A000001B65CBFA548.png" /></td></tr></table>
 
@@ -1714,9 +1792,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E10000014BD096A7F2.png" style="display:inline-block; margin:4px;width:13.137cm;height:4.38cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E10000014BD096A7F2.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], la bibliothèque [JQuery UI] en versions normale et minifiée ;</span></li>
-<li><span style="color: #000000">en [2], la feuille de style de [JQuery UI] ;</span></li>
+  <li><span style="color: #000000">en [1], la bibliothèque [JQuery UI] en versions normale et minifiée ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], la feuille de style de [JQuery UI] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le calendrier JQuery UI est par défaut en anglais. Pour être internationalisé, il faut ajouter des scripts qu&#x27;on peut trouver à l&#x27;URL [</span><a href="https://github.com/jquery/jquery-ui/tree/master/ui/i18n">https://github.com/jquery/jquery-ui/tree/master/ui/i18n</a><span style="color: #000000">] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000607000000B0116E25BF.png" style="display:inline-block; margin:4px;width:17.999cm;height:2.051cm;" class="odt-zoomable" data-zoom-src="images/1000000000000607000000B0116E25BF.png" /></td></tr></table>
 
@@ -1785,14 +1866,22 @@
 
 <p><span style="color: #000000"><strong>Note</strong> : ligne 16, adaptez la version de jQuery-ui à celle que vous avez téléchargée.</span></p>
 <ul>
-<li><span style="color: #000000">ligne 15 : on référence la feuille de style de JQuery UI ;</span></li>
-<li><span style="color: #000000">ligne 16 : on référence la version de JQuery UI téléchargée ;</span></li>
-<li><span style="color: #000000">ligne 17 : on référence le script du calendrier français que nous venons de télécharger ;</span></li>
-<li><span style="color: #000000">ligne 34 : la méthode [Html.TextBox] va générer ici une balise une balise [input] de type [text], d&#x27;id [Date1] et de name [Date1] ;</span></li>
-<li><span style="color: #000000">ligne 19 : lorsque le chargement de la page sera terminé, la fonction JQuery UI [datepicker] sera appliquée à l&#x27;élément d&#x27;<strong>id</strong> [Date1], donc l&#x27;élément de la ligne 34. Cette fonction fait que lorsque l&#x27;utilisateur va mettre le focus sur le champ de saisie de [Date1], un calendrier va apparaître lui permettant de saisir une date. La fonction [datepicker] admet un paramètre qui lui indique la langue du calendrier. La variable [@Model.Regionale] doit valoir :</span></li>
-<li><span style="color: #000000">&#x27;fr&#x27; pour un calendrier français,</span></li>
-<li><span style="color: #000000">&#x27;&#x27; pour un calendrier anglais ;</span></li>
+  <li><span style="color: #000000">ligne 15 : on référence la feuille de style de JQuery UI ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 16 : on référence la version de JQuery UI téléchargée ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 17 : on référence le script du calendrier français que nous venons de télécharger ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 34 : la méthode [Html.TextBox] va générer ici une balise une balise [input] de type [text], d&#x27;id [Date1] et de name [Date1] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 19 : lorsque le chargement de la page sera terminé, la fonction JQuery UI [datepicker] sera appliquée à l&#x27;élément d&#x27;<b>id</b> [Date1], donc l&#x27;élément de la ligne 34. Cette fonction fait que lorsque l&#x27;utilisateur va mettre le focus sur le champ de saisie de [Date1], un calendrier va apparaître lui permettant de saisir une date. La fonction [datepicker] admet un paramètre qui lui indique la langue du calendrier. La variable [@Model.Regionale] doit valoir :</span>
+  </li>
+  <li><span style="color: #000000">&#x27;fr&#x27; pour un calendrier français,</span>
+  </li>
+  <li><span style="color: #000000">&#x27;&#x27; pour un calendrier anglais ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le modèle de la vue précédente [Action15.cshtml] sera le modèle [ViewModel15] suivant :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000149000001E31DFED8CA.png" style="display:inline-block; margin:4px;width:4.353cm;height:6.391cm;" class="odt-zoomable" data-zoom-src="images/1000000000000149000001E31DFED8CA.png" /></td></tr></table>
 
@@ -1870,12 +1959,18 @@
 
 <p><span style="color: #000000">Par rapport au modèle précédent [ViewModel14], nous avons quatre propriétés supplémentaires :</span></p>
 <ul>
-<li><span style="color: #000000">ligne 60 : la culture de la vue, &#x27;fr-FR&#x27; ou &#x27;en-US&#x27;. Cette culture est initialisée dans le constructeur ligne 26 ;</span></li>
-<li><span style="color: #000000">ligne 61 : la culture régionale du calendrier JQuery, &#x27;fr&#x27; pour un calendrier français, &#x27;&#x27; pour un calendrier anglais. Ce champ est initialisé par la ligne 29 du constructeur ;</span></li>
-<li><span style="color: #000000">ligne 63 : le format de la date de la ligne 15 : &#x27;dd/MM/yyyy&#x27; pour une date française, &#x27;MM/dd/yyyy&#x27; pour une date anglaise. Ce champ est initialisé ligne 31 du constructeur ;</span></li>
-<li><span style="color: #000000">ligne 62 : la chaîne de caractères à afficher dans le champ de saisie de [Date1]. Ce champ sera initialisé par l&#x27;action ;</span></li>
-<li><span style="color: #000000">ligne 47 : la date [Regexp1] est maintenant vérifiée selon le format de la culture courante.</span></li>
+  <li><span style="color: #000000">ligne 60 : la culture de la vue, &#x27;fr-FR&#x27; ou &#x27;en-US&#x27;. Cette culture est initialisée dans le constructeur ligne 26 ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 61 : la culture régionale du calendrier JQuery, &#x27;fr&#x27; pour un calendrier français, &#x27;&#x27; pour un calendrier anglais. Ce champ est initialisé par la ligne 29 du constructeur ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 63 : le format de la date de la ligne 15 : &#x27;dd/MM/yyyy&#x27; pour une date française, &#x27;MM/dd/yyyy&#x27; pour une date anglaise. Ce champ est initialisé ligne 31 du constructeur ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 62 : la chaîne de caractères à afficher dans le champ de saisie de [Date1]. Ce champ sera initialisé par l&#x27;action ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 47 : la date [Regexp1] est maintenant vérifiée selon le format de la culture courante.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Les valeurs des propriétés [Regionale] et [FormatDate] sont trouvées dans les fichiers de ressources [MyResources]. Les fichiers de ressources français [MyResources] [MyResources.fr-FR] [1] et le fichier de ressources anglais [2] évoluent comme suit :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062F00000078EB3A38F2.png" style="display:inline-block; margin:4px;width:17.999cm;height:1.363cm;" class="odt-zoomable" data-zoom-src="images/100000000000062F00000078EB3A38F2.png" /></td></tr></table>
 
@@ -1903,26 +1998,40 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 2 : la méthode [Action15] traite aussi bien les [GET] que les [POST]. Dans ce dernier cas, les valeurs postées sont récupérées dans le paramètre [formData] ;</span></li>
-<li><span style="color: #000000">ligne 5 : on récupère la méthode HTTP de la requête ;</span></li>
-<li><span style="color: #000000">ligne 7 : on crée le modèle de la vue qui va être affichée (le formulaire) ;</span></li>
-<li><span style="color: #000000">lignes 8-11 : dans le cas d&#x27;une commande [GET], la zone de saisie de [Date1] est initialisée avec une chaîne vide ;</span></li>
-<li><span style="color: #000000">lignes 12-16 : dans le cas d&#x27;une commande [POST] :</span><ul>
-<li><span style="color: #000000">ligne 14 : le modèle est initialisé avec les valeurs postées,</span></li>
-<li><span style="color: #000000">ligne 15 : la zone de saisie de [Date1] est initialisée avec une chaîne de caractères qui est la valeur de [Date1] formatée selon la culture courante [dd/MM/yyyy] pour une date française, [MM/dd/yyyy] pour une date anglaise ;</span></li>
+  <li><span style="color: #000000">ligne 2 : la méthode [Action15] traite aussi bien les [GET] que les [POST]. Dans ce dernier cas, les valeurs postées sont récupérées dans le paramètre [formData] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 5 : on récupère la méthode HTTP de la requête ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : on crée le modèle de la vue qui va être affichée (le formulaire) ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 8-11 : dans le cas d&#x27;une commande [GET], la zone de saisie de [Date1] est initialisée avec une chaîne vide ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 12-16 : dans le cas d&#x27;une commande [POST] :</span>
+    <ul>
+      <li><span style="color: #000000">ligne 14 : le modèle est initialisé avec les valeurs postées,</span>
+      </li>
+      <li><span style="color: #000000">ligne 15 : la zone de saisie de [Date1] est initialisée avec une chaîne de caractères qui est la valeur de [Date1] formatée selon la culture courante [dd/MM/yyyy] pour une date française, [MM/dd/yyyy] pour une date anglaise ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">ligne 18 : la vue [Action15.cshtml] est affichée avec son modèle.</span>
+  </li>
 </ul>
-</li>
-<li><span style="color: #000000">ligne 18 : la vue [Action15.cshtml] est affichée avec son modèle.</span></li>
-</ul>
+
 <p><span style="color: #000000">Faisons des tests :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000634000001D3059F9786.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.293cm;" class="odt-zoomable" data-zoom-src="images/1000000000000634000001D3059F9786.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], un calendrier français lorsque la page est en français ;</span></li>
-<li><span style="color: #000000">en [2], un calendrier anglais lorsque la page est en anglais ;</span></li>
-<li><span style="color: #000000">en [3], une date au format français lorsque la page est en français ;</span></li>
-<li><span style="color: #000000">en [4], la même date au format anglais lorsque la page est en anglais ;</span></li>
+  <li><span style="color: #000000">en [1], un calendrier français lorsque la page est en français ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], un calendrier anglais lorsque la page est en anglais ;</span>
+  </li>
+  <li><span style="color: #000000">en [3], une date au format français lorsque la page est en français ;</span>
+  </li>
+  <li><span style="color: #000000">en [4], la même date au format anglais lorsque la page est en anglais ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading58156676630786"></a></p>
 <h2 id="67-conclusion">6.7. Conclusion</h2>
 <p><span style="color: #000000">On l&#x27;aura compris, le thème de l&#x27;internationalisation d&#x27;une application est un thème complexe...</span></p>
